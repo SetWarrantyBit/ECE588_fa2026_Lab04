@@ -32,6 +32,16 @@ void tiled_conv(
 
             //--------------------------------------------------------------------------
             // TODO: YOUR IMPLEMENTATION GOES HERE
+  	    // Load this tile (once per tile)
+            load_input_tile_from_DRAM(input_fm, conv_in_buf, tr, tc);
+
+            // Loop over all kernel groups (64 / 4 = 16)
+            for (int g = 0; g < N / OUT_BUF_DEPTH; g++)
+            {
+                load_layer_params_from_DRAM(weights, biases, conv_wt_buf, conv_bias_buf, g);
+                conv_3x3(conv_in_buf, conv_wt_buf, conv_bias_buf, conv_out_buf);
+                store_output_tile_to_DRAM(conv_out_buf, output_fm, tr, tc, g);
+            }
             //--------------------------------------------------------------------------
         }
     }

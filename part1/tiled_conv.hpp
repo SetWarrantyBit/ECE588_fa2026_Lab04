@@ -34,20 +34,20 @@ typedef float fm_t, wt_t;
 //                  Tile Size : 7x7
 //                  Number of kernel groups : 16
 //-------------------------------------------------------------------------- 
-// TILE_HEIGHT/WIDTH
+// TILE_HEIGHT/WIDTH = 7x7
 #define TILE_HW 7
-// NUM_TILES_ROW/COL
-#define NUM_TILE_RC
-// MARGIN
-#define MARGIN
-// IN_BUF_DEPTH
-#define IN_BUF_DEPTH
-// IN_BUF_HEIGHT/WIDTH
-#define IN_BUF_HW
-// OUT_BUF_DEPTH
+// NUM_TILES_ROW/COL = 32x32
+#define NUM_TILE_RC (I / TILE_HW)
+// MARGIN = 2 (padding)
+#define MARGIN (2 * P)
+// IN_BUF_DEPTH = 3 (R,G,B)
+#define IN_BUF_DEPTH M
+// IN_BUF_HEIGHT/WIDTH = 9*9 (added edge (2))
+#define IN_BUF_HW TILE_HW + MARGIN
+// OUT_BUF_DEPTH = 4 (per group)
 #define OUT_BUF_DEPTH 4
-// OUT_BUF_HEIGHT/WIDTH
-#define OUT_BUF_HW
+// OUT_BUF_HEIGHT/WIDTH = 7*7
+#define OUT_BUF_HW TILE_HW / S
 
 /**
  * @brief Perform tiled convolution on the input feature maps.
