@@ -1,0 +1,1033 @@
+INFO-FLOW: Workspace /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1 opened at Sun Oct 25 20:46:09 CDT 2026
+Execute       send_msg_by_id INFO @200-1505@%s%s default  vivado 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Execute       send_msg_by_id INFO @200-435@%s%s 'open_solution -flow_target vivado' config_interface -m_axi_latency=0 
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vivado' configuration: config_interface -m_axi_latency=0
+Execute       config_interface -m_axi_latency=0 
+Execute     set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+Execute       create_platform xc7z020clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: /apps/Xilinx/Vitis_HLS/2022.2/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /apps/Xilinx/Vivado/2022.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command       create_platform done; 0.64 sec.
+Execute       source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/util.gen 
+Execute         source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.12 sec.
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 0.78 sec.
+Execute     create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+Execute       ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     config_interface -m_axi_latency 64 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_latency 64 
+Execute     csynth_design 
+INFO: [HLS 200-1510] Running: csynth_design 
+Execute       elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 10.03 seconds; current allocated memory: 317.656 MB.
+INFO: [HLS 200-10] Analyzing design file 'tiled_conv.cpp' ... 
+INFO-FLOW: Compiling one TU...
+INFO-FLOW: Handling tiled_conv.cpp as C++
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+Execute         ap_eval exec -ignorestderr /apps/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang tiled_conv.cpp -foptimization-record-file=/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -gcc-toolchain /apps/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0 -fhls -fno-exceptions -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /apps/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot -I /apps/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -I /usr/include/x86_64-linux-gnu -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.pp.0.cpp -hls-platform-db-name=/apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg400-1 > /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.cpp.clang.out.log 2> /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.cpp.clang.err.log 
+Command         ap_eval done; 0.26 sec.
+INFO-FLOW: Done: GCC PP 39 time: 0.3 seconds per iteration
+Execute         set_directive_top tiled_conv -name=tiled_conv 
+Execute         source /apps/Xilinx/Vitis_HLS/2022.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute         source /apps/Xilinx/Vitis_HLS/2022.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+INFO-FLOW: Source syntax check for synthesis
+Execute         ap_eval exec -ignorestderr /apps/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.pp.0.cpp -hls-platform-db-name=/apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg400-1 > /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/clang.out.log 2> /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/clang.err.log 
+Command         ap_eval done; 0.44 sec.
+Execute         clang_tidy xilinx-systemc-detector -desc systemc-detector /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /apps/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/.systemc_flag -fix-errors /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 0.25 sec.
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute         clang_tidy xilinx-directive2pragma -desc directive2pragma /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /apps/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/all.directive.json -fix-errors /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 0.45 sec.
+Execute         clang_tidy xilinx-remove-assert -desc remove-assert /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.pp.0.cpp std=gnu++14 -target fpga  
+INFO-FLOW: exec /apps/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-remove-assert -fix-errors /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 0.24 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.7 seconds per iteration
+INFO-FLOW: Calling xilinx-label-all-loops ... 
+INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
+Execute         clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.pp.0.cpp std=gnu++14 -target fpga  
+Execute           ap_eval exec -ignorestderr /apps/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.pp.0.cpp.clang-tidy.loop-label.out.log 2> /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.pp.0.cpp.clang-tidy.loop-label.err.log 
+Command           ap_eval done; 0.51 sec.
+Execute           source /apps/Xilinx/Vitis_HLS/2022.2/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Command         clang_tidy done; 0.54 sec.
+Execute         ap_eval exec -ignorestderr /apps/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.pp.0.cpp.xilinx-dataflow-lawyer.err.log 
+Command         ap_eval done; 0.23 sec.
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: compiling source code to llvm bc
+Execute         ap_eval exec -ignorestderr /apps/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.pp.0.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /apps/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot -I /apps/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.bc -hls-platform-db-name=/apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg400-1 > /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.pp.0.cpp.clang.out.log 2> /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.pp.0.cpp.clang.err.log 
+Command         ap_eval done; 0.47 sec.
+INFO: [HLS 200-10] Analyzing design file 'utils.cpp' ... 
+INFO-FLOW: Compiling one TU...
+INFO-FLOW: Handling utils.cpp as C++
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+Execute         ap_eval exec -ignorestderr /apps/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang utils.cpp -foptimization-record-file=/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/utils.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -gcc-toolchain /apps/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0 -fhls -fno-exceptions -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /apps/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot -I /apps/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -I /usr/include/x86_64-linux-gnu -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp -hls-platform-db-name=/apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg400-1 > /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/utils.cpp.clang.out.log 2> /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/utils.cpp.clang.err.log 
+Command         ap_eval done; 0.26 sec.
+INFO-FLOW: Done: GCC PP 39 time: 0.3 seconds per iteration
+Execute         set_directive_top tiled_conv -name=tiled_conv 
+INFO-FLOW: Source syntax check for synthesis
+Execute         ap_eval exec -ignorestderr /apps/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp -hls-platform-db-name=/apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg400-1 > /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/clang.out.log 2> /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/clang.err.log 
+Command         ap_eval done; 0.42 sec.
+Execute         clang_tidy xilinx-systemc-detector -desc systemc-detector /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /apps/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/.systemc_flag -fix-errors /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 0.24 sec.
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute         clang_tidy xilinx-directive2pragma -desc directive2pragma /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /apps/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/all.directive.json -fix-errors /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 0.23 sec.
+Execute         clang_tidy xilinx-remove-assert -desc remove-assert /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp std=gnu++14 -target fpga  
+INFO-FLOW: exec /apps/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-remove-assert -fix-errors /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 0.24 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.5 seconds per iteration
+INFO-FLOW: Calling xilinx-label-all-loops ... 
+INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
+Execute         clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp std=gnu++14 -target fpga  
+Execute           ap_eval exec -ignorestderr /apps/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp.clang-tidy.loop-label.out.log 2> /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp.clang-tidy.loop-label.err.log 
+Command           ap_eval done; 0.55 sec.
+Command         clang_tidy done; 0.61 sec.
+Execute         ap_eval exec -ignorestderr /apps/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp.xilinx-dataflow-lawyer.err.log 
+Command         ap_eval done; 0.22 sec.
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: compiling source code to llvm bc
+Execute         ap_eval exec -ignorestderr /apps/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /apps/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot -I /apps/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/utils.bc -hls-platform-db-name=/apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg400-1 > /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp.clang.out.log 2> /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp.clang.err.log 
+Command         ap_eval done; 0.45 sec.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 4.45 seconds. CPU system time: 1.18 seconds. Elapsed time: 5.64 seconds; current allocated memory: 317.656 MB.
+INFO-FLOW: Linking Debug ...
+INFO-FLOW: Linking dut bc code.
+Execute         run_link_or_opt -out /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.ld.0.bc -args  "/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.g.bc" "/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/utils.g.bc"  
+Execute           ap_eval exec -ignorestderr /apps/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.g.bc /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/utils.g.bc -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.ld.0.bc > /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.ld.0.bc.llvm-link.out.log 2> /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.ld.0.bc.llvm-link.err.log 
+INFO-FLOW: 
+Execute         run_link_or_opt -opt -out /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.ld.1.lower.bc -args /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics 
+Execute           ap_eval exec -ignorestderr /apps/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.diag.yml /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.ld.1.lower.bc > /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.out.log 2> /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.err.log 
+INFO-FLOW: 
+INFO-FLOW: Linking math bc lib
+Execute         run_link_or_opt -out /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.ld.2.m1.bc -args /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /apps/Xilinx/Vitis_HLS/2022.2/lnx64/lib/libhlsm_39.bc /apps/Xilinx/Vitis_HLS/2022.2/lnx64/lib/libhlsmc++_39.bc 
+Execute           ap_eval exec -ignorestderr /apps/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /apps/Xilinx/Vitis_HLS/2022.2/lnx64/lib/libhlsm_39.bc /apps/Xilinx/Vitis_HLS/2022.2/lnx64/lib/libhlsmc++_39.bc -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.ld.2.m1.bc > /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.out.log 2> /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.err.log 
+Command           ap_eval done; 3.36 sec.
+INFO-FLOW: 
+Command         run_link_or_opt done; 3.36 sec.
+Execute         run_link_or_opt -opt -out /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.ld.3.fpc.bc -args /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=tiled_conv -reflow-float-conversion 
+Execute           ap_eval exec -ignorestderr /apps/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.diag.yml /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=tiled_conv -reflow-float-conversion -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.ld.3.fpc.bc > /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.out.log 2> /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.err.log 
+Command           ap_eval done; 1.21 sec.
+INFO-FLOW: 
+Command         run_link_or_opt done; 1.21 sec.
+Execute         run_link_or_opt -out /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.ld.4.m2.bc -args /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /apps/Xilinx/Vitis_HLS/2022.2/lnx64/lib/libfloatconversion_39.bc 
+Execute           ap_eval exec -ignorestderr /apps/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /apps/Xilinx/Vitis_HLS/2022.2/lnx64/lib/libfloatconversion_39.bc -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.ld.4.m2.bc > /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.out.log 2> /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.err.log 
+INFO-FLOW: 
+Execute         run_link_or_opt -opt -out /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.ld.5.gdce.bc -args /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=tiled_conv 
+Execute           ap_eval exec -ignorestderr /apps/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.diag.yml /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=tiled_conv -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.ld.5.gdce.bc > /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.out.log 2> /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.err.log 
+INFO-FLOW: 
+Execute         send_msg_by_id INFO @200-777@%s Vivado 
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+Execute         is_m_axi_addr64 
+INFO-FLOW: Doing LTO.
+Execute         ap_eval exec -ignorestderr /apps/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.ld.0.bc.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fhls -mllvm -hls-top-function-name=tiled_conv -mllvm -hls-db-dir -mllvm /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db -emit-llvm -c -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/kernel.internal.xml -mllvm -top-io-mapping-info=/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/top-io-fe.xml -mllvm -hls-bitcode-version=3.1 -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=false -mllvm -default-maxi-offset=slave -mllvm -maxi-latency=64 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=0 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -reflow-basic-block-instr-threshold=200000 -mllvm -reflow-auto-pipeline-threshold=64 -mllvm -reflow-enable-maxi-auto-id-channel=0 -mllvm -assume-maxi-align=1 -mllvm -reflow-pipeline-style-llvm-setting=2 -mllvm -reflow-enable-dataflow-strict-mode-checking=1 -mllvm -reflow-auto-array-partition-mode=default -mllvm -reflow-enable-auto-array-partition=true -mllvm -reflow-enable-auto-parallel-performance-driven=true -mllvm -reflow-enable-partition-for-automation=true -mllvm -reflow-aggregate-bitwidth-threshold=4096 -mllvm -reflow-assume-no-address-wrap=true -mllvm -hls -mllvm -disable-inlined-alloca-merging=true -mllvm -default-clock-period=10 -x ir /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.ld.5.gdce.bc -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.lto.bc -hls-platform-db-name=/apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg400-1 > /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.ld.0.bc.clang.out.log 2> /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.ld.0.bc.clang.err.log 
+Command         ap_eval done; 0.59 sec.
+INFO: [HLS 214-178] Inlining function 'load_input_tile_from_DRAM(float (*) [224][224], float (*) [58][58], int, int)' into 'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])' (tiled_conv.cpp:13:0)
+INFO: [HLS 214-178] Inlining function 'load_layer_params_from_DRAM(float (*) [3][3][3], float*, float (*) [3][3][3], float*, int)' into 'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])' (tiled_conv.cpp:13:0)
+INFO: [HLS 214-178] Inlining function 'conv_3x3(float (*) [58][58], float (*) [3][3][3], float*, float (*) [56][56])' into 'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])' (tiled_conv.cpp:13:0)
+INFO: [HLS 214-178] Inlining function 'store_output_tile_to_DRAM(float (*) [56][56], float (*) [224][224], int, int, int)' into 'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])' (tiled_conv.cpp:13:0)
+INFO: [HLS 214-115] Multiple burst writes of length 56 and bit width 32 in loop 'VITIS_LOOP_116_3'(utils.cpp:116:31) has been inferred on bundle 'fm'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (utils.cpp:116:31)
+INFO-FLOW: DBG:PUTS: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/kernel.internal.xml
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 4.79 seconds. CPU system time: 0.75 seconds. Elapsed time: 5.53 seconds; current allocated memory: 317.656 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 317.656 MB.
+Execute         opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute           cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+INFO-FLOW: Running Standard Transforms...
+Execute           transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top tiled_conv -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.0.bc -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 317.656 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute           transform -hls -syn-check -check-rec-only -scalarrepl -norm-name -dce -mem2reg -instcombine -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -directive-preproc -mem2reg -dse -dce -globaldce /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.1.bc -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute           transform -syn-check /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.2.prechk.bc -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 317.656 MB.
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.g.1.bc to /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute           transform -hls -tmp /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db -interface-port-rename -directive-preproc -mem2reg -dse -dce -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -directive-preproc -mem2reg -dse -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -prepare-dynamic-array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -accesses-merge -function-inline -complex-op-raise -inst-simplify -globaldce -func-legal -dce -loop-bound -arraycheck -bitwidthmin2 -bitwidthmin2 -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -duplicate-dataflow-processes -check-dataflow-syntax -legalize-stream-variable -globaldce -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -hls-dead-arg-elim -deadargelim -directive-preproc -canonicalize-dataflow -dce -globaldce -scalar-preprocessing -scalar-propagation2 -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -hls-display -norm-name /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.o.1.bc -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_33_3' (utils.cpp:33) in function 'tiled_conv' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_60_1' (utils.cpp:60) in function 'tiled_conv' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_84_3' (utils.cpp:84) in function 'tiled_conv' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_115_2' (utils.cpp:115) in function 'tiled_conv' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_60_1' (utils.cpp:60) in function 'tiled_conv' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_84_3' (utils.cpp:84) in function 'tiled_conv' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_115_2' (utils.cpp:115) in function 'tiled_conv' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_62_2' (utils.cpp:62) in function 'tiled_conv' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_63_3' (utils.cpp:63) in function 'tiled_conv' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_64_4' (utils.cpp:64) in function 'tiled_conv' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_88_4' (utils.cpp:86) in function 'tiled_conv' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_89_5' (utils.cpp:86) in function 'tiled_conv' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_90_6' (utils.cpp:86) in function 'tiled_conv' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_116_3' (utils.cpp:116) in function 'tiled_conv' completely with a factor of 56.
+INFO: [XFORM 203-102] Partitioning array 'conv_wt_buf' (tiled_conv.cpp:22) in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'conv_wt_buf.0' (tiled_conv.cpp:22) in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'conv_wt_buf.1' (tiled_conv.cpp:22) in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'conv_wt_buf.2' (tiled_conv.cpp:22) in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'conv_wt_buf.0.0' (tiled_conv.cpp:22) in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'conv_wt_buf.0.1' (tiled_conv.cpp:22) in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'conv_wt_buf.0.2' (tiled_conv.cpp:22) in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'conv_wt_buf.1.0' (tiled_conv.cpp:22) in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'conv_wt_buf.1.1' (tiled_conv.cpp:22) in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'conv_wt_buf.1.2' (tiled_conv.cpp:22) in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'conv_wt_buf.2.0' (tiled_conv.cpp:22) in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'conv_wt_buf.2.1' (tiled_conv.cpp:22) in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'conv_wt_buf.2.2' (tiled_conv.cpp:22) in dimension 2 automatically.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.0.0.0' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.0.0.1' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.0.0.2' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.0.1.0' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.0.1.1' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.0.1.2' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.0.2.0' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.0.2.1' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.0.2.2' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.1.0.0' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.1.0.1' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.1.0.2' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.1.1.0' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.1.1.1' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.1.1.2' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.1.2.0' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.1.2.1' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.1.2.2' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.2.0.0' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.2.0.1' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.2.0.2' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.2.1.0' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.2.1.1' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.2.1.2' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.2.2.0' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.2.2.1' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.2.2.2' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_bias_buf' (tiled_conv.cpp:23) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.0.0.0' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.0.0.1' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.0.0.2' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.0.1.0' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.0.1.1' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.0.1.2' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.0.2.0' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.0.2.1' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.0.2.2' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.1.0.0' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.1.0.1' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.1.0.2' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.1.1.0' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.1.1.1' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.1.1.2' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.1.2.0' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.1.2.1' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.1.2.2' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.2.0.0' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.2.0.1' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.2.0.2' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.2.1.0' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.2.1.1' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.2.1.2' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.2.2.0' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.2.2.1' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.2.2.2' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_bias_buf' (tiled_conv.cpp:23) in dimension 1 completely.
+Command           transform done; 0.36 sec.
+INFO-FLOW: Presyn 2...
+Execute           transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -barrier -norm-name /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.o.1.tmp.bc -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-11] Balancing expressions in function 'tiled_conv' (tiled_conv.cpp:9)...6 expression(s) balanced.
+Command           transform done; 0.14 sec.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.47 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.51 seconds; current allocated memory: 317.656 MB.
+INFO-FLOW: Building ssdm...
+Execute           transform -hls -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -loop-sink-hoist -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -deadargelim -dce -canonicalize-dataflow -dce -deadargelim -globaldce -mem2reg -bram-byte-enable -load-elim -read-loop-dep -loop-simplify -loop-extract-inner -directive-preproc -bitwidthmin2 -bitwidthmin2 -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable-spec-prop -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -float-op-raise -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -float-op-raise -fma-raise -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -dyn-mem-reuse -dce -recurrence-min -dce -share-scalar-alloca -deadargelim -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.o.2.bc -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_31_2' (utils.cpp:31:35) in function 'tiled_conv'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_29_1' (utils.cpp:29:31) in function 'tiled_conv'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_82_2' (utils.cpp:82:35) in function 'tiled_conv'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_80_1' (utils.cpp:80:31) in function 'tiled_conv'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_114_1' (utils.cpp:114:32) in function 'tiled_conv'.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_39_3' (tiled_conv.cpp:39:39) in function 'tiled_conv' more than one sub loop.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_28_2' (tiled_conv.cpp:28:35) in function 'tiled_conv' more than one sub loop.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_26_1' (tiled_conv.cpp:26:31) in function 'tiled_conv'.
+INFO: [HLS 200-472] Inferring partial write operation for 'conv_in_buf' (utils.cpp:40:40)
+INFO: [HLS 200-472] Inferring partial write operation for 'conv_out_buf' (utils.cpp:93:32)
+Command           transform done; 0.54 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.5 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.54 seconds; current allocated memory: 381.656 MB.
+INFO-FLOW: Finish building internal data model.
+Command         opt_and_import_c done; 1.14 sec.
+Command       elaborate done; 12.32 sec.
+Execute       ap_eval exec zip -j /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/dut.hcp $dbDir/a.o.3.bc $dbDir/${topname}.rtl_wrap.cfg.tcl $dbDir/apatb_${topname}.cpp $dbDir/apatb_${topname}_util.cpp $dbDir/apatb_${topname}_ir.ll $dbDir/mapper_${topname}.cpp $dbDir/top-io-fe.xml $dbDir/kernel.internal.xml $workdir/../hls.app 
+Execute       autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'tiled_conv' ...
+Execute         ap_set_top_model tiled_conv 
+Execute         get_model_list tiled_conv -filter all-wo-channel -topdown 
+Execute         preproc_iomode -model tiled_conv 
+Execute         preproc_iomode -model tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2 
+Execute         preproc_iomode -model tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 
+Execute         preproc_iomode -model tiled_conv_Pipeline_VITIS_LOOP_60_1 
+Execute         preproc_iomode -model tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 
+Execute         get_model_list tiled_conv -filter all-wo-channel 
+INFO-FLOW: Model list for configure: tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 tiled_conv_Pipeline_VITIS_LOOP_60_1 tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2 tiled_conv
+INFO-FLOW: Configuring Module : tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 ...
+Execute         set_default_model tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 
+Execute         apply_spec_resource_limit tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 
+INFO-FLOW: Configuring Module : tiled_conv_Pipeline_VITIS_LOOP_60_1 ...
+Execute         set_default_model tiled_conv_Pipeline_VITIS_LOOP_60_1 
+Execute         apply_spec_resource_limit tiled_conv_Pipeline_VITIS_LOOP_60_1 
+INFO-FLOW: Configuring Module : tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 ...
+Execute         set_default_model tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 
+Execute         apply_spec_resource_limit tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 
+INFO-FLOW: Configuring Module : tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2 ...
+Execute         set_default_model tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2 
+Execute         apply_spec_resource_limit tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2 
+INFO-FLOW: Configuring Module : tiled_conv ...
+Execute         set_default_model tiled_conv 
+Execute         apply_spec_resource_limit tiled_conv 
+INFO-FLOW: Model list for preprocess: tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 tiled_conv_Pipeline_VITIS_LOOP_60_1 tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2 tiled_conv
+INFO-FLOW: Preprocessing Module: tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 ...
+Execute         set_default_model tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 
+Execute         cdfg_preprocess -model tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 
+Execute         rtl_gen_preprocess tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 
+INFO-FLOW: Preprocessing Module: tiled_conv_Pipeline_VITIS_LOOP_60_1 ...
+Execute         set_default_model tiled_conv_Pipeline_VITIS_LOOP_60_1 
+Execute         cdfg_preprocess -model tiled_conv_Pipeline_VITIS_LOOP_60_1 
+Command         cdfg_preprocess done; 0.28 sec.
+Execute         rtl_gen_preprocess tiled_conv_Pipeline_VITIS_LOOP_60_1 
+INFO-FLOW: Preprocessing Module: tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 ...
+Execute         set_default_model tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 
+Execute         cdfg_preprocess -model tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 
+Execute         rtl_gen_preprocess tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 
+INFO-FLOW: Preprocessing Module: tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2 ...
+Execute         set_default_model tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2 
+Execute         cdfg_preprocess -model tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2 
+Execute         rtl_gen_preprocess tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2 
+INFO-FLOW: Preprocessing Module: tiled_conv ...
+Execute         set_default_model tiled_conv 
+Execute         cdfg_preprocess -model tiled_conv 
+Execute         rtl_gen_preprocess tiled_conv 
+INFO-FLOW: Model list for synthesis: tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 tiled_conv_Pipeline_VITIS_LOOP_60_1 tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2 tiled_conv
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 
+Execute         schedule -model tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln40) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'conv_in_buf'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 76, loop 'VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3'
+INFO: [SCHED 204-11] Finished scheduling.
+Command         schedule done; 0.24 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.65 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.67 seconds; current allocated memory: 381.656 MB.
+Execute         syn_report -verbosereport -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Command         syn_report done; 0.25 sec.
+Execute         db_write -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3.sched.adb -f 
+INFO-FLOW: Finish scheduling tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3.
+Execute         set_default_model tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 
+Execute         bind -model tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command         bind done; 0.18 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.44 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.44 seconds; current allocated memory: 381.656 MB.
+Execute         syn_report -verbosereport -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Command         syn_report done; 0.2 sec.
+Execute         db_write -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3.bind.adb -f 
+INFO-FLOW: Finish binding tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tiled_conv_Pipeline_VITIS_LOOP_60_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model tiled_conv_Pipeline_VITIS_LOOP_60_1 
+Execute         schedule -model tiled_conv_Pipeline_VITIS_LOOP_60_1 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_60_1'.
+WARNING: [HLS 200-885] The II Violation in module 'tiled_conv_Pipeline_VITIS_LOOP_60_1' (loop 'VITIS_LOOP_60_1'): Unable to schedule bus request operation ('wt_load_2_req', utils.cpp:65) on port 'wt' (utils.cpp:65) due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array.
+WARNING: [HLS 200-885] The II Violation in module 'tiled_conv_Pipeline_VITIS_LOOP_60_1' (loop 'VITIS_LOOP_60_1'): Unable to schedule bus request operation ('wt_load_3_req', utils.cpp:65) on port 'wt' (utils.cpp:65) due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array.
+WARNING: [HLS 200-885] The II Violation in module 'tiled_conv_Pipeline_VITIS_LOOP_60_1' (loop 'VITIS_LOOP_60_1'): Unable to schedule bus request operation ('wt_load_4_req', utils.cpp:65) on port 'wt' (utils.cpp:65) due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array.
+WARNING: [HLS 200-885] The II Violation in module 'tiled_conv_Pipeline_VITIS_LOOP_60_1' (loop 'VITIS_LOOP_60_1'): Unable to schedule bus request operation ('wt_load_5_req', utils.cpp:65) on port 'wt' (utils.cpp:65) due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array.
+WARNING: [HLS 200-885] The II Violation in module 'tiled_conv_Pipeline_VITIS_LOOP_60_1' (loop 'VITIS_LOOP_60_1'): Unable to schedule bus request operation ('wt_load_20_req', utils.cpp:65) on port 'wt' (utils.cpp:65) due to limited memory ports (II = 19). Please consider using a memory core with more ports or partitioning the array.
+WARNING: [HLS 200-885] The II Violation in module 'tiled_conv_Pipeline_VITIS_LOOP_60_1' (loop 'VITIS_LOOP_60_1'): Unable to schedule bus request operation ('wt_load_req', utils.cpp:67) on port 'wt' (utils.cpp:67) due to limited memory ports (II = 27). Please consider using a memory core with more ports or partitioning the array.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 28, Depth = 100, loop 'VITIS_LOOP_60_1'
+INFO: [SCHED 204-11] Finished scheduling.
+Command         schedule done; 2.08 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2.29 seconds. CPU system time: 0.01 seconds. Elapsed time: 2.29 seconds; current allocated memory: 381.656 MB.
+Execute         syn_report -verbosereport -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_60_1.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Command         syn_report done; 0.42 sec.
+Execute         db_write -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_60_1.sched.adb -f 
+INFO-FLOW: Finish scheduling tiled_conv_Pipeline_VITIS_LOOP_60_1.
+Execute         set_default_model tiled_conv_Pipeline_VITIS_LOOP_60_1 
+Execute         bind -model tiled_conv_Pipeline_VITIS_LOOP_60_1 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command         bind done; 0.29 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.75 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.77 seconds; current allocated memory: 381.656 MB.
+Execute         syn_report -verbosereport -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_60_1.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Command         syn_report done; 0.28 sec.
+Execute         db_write -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_60_1.bind.adb -f 
+INFO-FLOW: Finish binding tiled_conv_Pipeline_VITIS_LOOP_60_1.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 
+Execute         schedule -model tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'conv_out_buf'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'conv_in_buf'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3'.
+WARNING: [HLS 200-885] The II Violation in module 'tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3' (loop 'VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3'): Unable to schedule 'load' operation ('conv_in_buf_load_16', utils.cpp:91) on array 'conv_in_buf' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'conv_in_buf'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 145, loop 'VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3'
+INFO: [SCHED 204-11] Finished scheduling.
+Command         schedule done; 1.01 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.36 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.38 seconds; current allocated memory: 381.656 MB.
+Execute         syn_report -verbosereport -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Command         syn_report done; 0.78 sec.
+Execute         db_write -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3.sched.adb -f 
+INFO-FLOW: Finish scheduling tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3.
+Execute         set_default_model tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 
+Execute         bind -model tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command         bind done; 0.43 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.22 seconds. CPU system time: 0 seconds. Elapsed time: 1.23 seconds; current allocated memory: 381.656 MB.
+Execute         syn_report -verbosereport -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Command         syn_report done; 0.85 sec.
+Execute         db_write -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3.bind.adb -f 
+INFO-FLOW: Finish binding tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2 
+Execute         schedule -model tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln114) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'conv_out_buf'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_114_1_VITIS_LOOP_115_2'.
+WARNING: [HLS 200-880] The II Violation in module 'tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2' (loop 'VITIS_LOOP_114_1_VITIS_LOOP_115_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus write operation ('fm_addr_write_ln119', utils.cpp:119) on port 'fm' (utils.cpp:119) and bus write operation ('fm_addr_write_ln119', utils.cpp:119) on port 'fm' (utils.cpp:119).
+WARNING: [HLS 200-880] The II Violation in module 'tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2' (loop 'VITIS_LOOP_114_1_VITIS_LOOP_115_2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus write operation ('fm_addr_write_ln119', utils.cpp:119) on port 'fm' (utils.cpp:119) and bus write operation ('fm_addr_write_ln119', utils.cpp:119) on port 'fm' (utils.cpp:119).
+WARNING: [HLS 200-880] The II Violation in module 'tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2' (loop 'VITIS_LOOP_114_1_VITIS_LOOP_115_2'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus write operation ('fm_addr_write_ln119', utils.cpp:119) on port 'fm' (utils.cpp:119) and bus write operation ('fm_addr_write_ln119', utils.cpp:119) on port 'fm' (utils.cpp:119).
+WARNING: [HLS 200-880] The II Violation in module 'tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2' (loop 'VITIS_LOOP_114_1_VITIS_LOOP_115_2'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between bus write operation ('fm_addr_write_ln119', utils.cpp:119) on port 'fm' (utils.cpp:119) and bus write operation ('fm_addr_write_ln119', utils.cpp:119) on port 'fm' (utils.cpp:119).
+WARNING: [HLS 200-880] The II Violation in module 'tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2' (loop 'VITIS_LOOP_114_1_VITIS_LOOP_115_2'): Unable to enforce a carried dependence constraint (II = 35, distance = 1, offset = 1) between bus write operation ('fm_addr_write_ln119', utils.cpp:119) on port 'fm' (utils.cpp:119) and bus write operation ('fm_addr_write_ln119', utils.cpp:119) on port 'fm' (utils.cpp:119).
+WARNING: [HLS 200-880] The II Violation in module 'tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2' (loop 'VITIS_LOOP_114_1_VITIS_LOOP_115_2'): Unable to enforce a carried dependence constraint (II = 51, distance = 1, offset = 1) between bus write operation ('fm_addr_write_ln119', utils.cpp:119) on port 'fm' (utils.cpp:119) and bus write operation ('fm_addr_write_ln119', utils.cpp:119) on port 'fm' (utils.cpp:119).
+WARNING: [HLS 200-880] The II Violation in module 'tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2' (loop 'VITIS_LOOP_114_1_VITIS_LOOP_115_2'): Unable to enforce a carried dependence constraint (II = 55, distance = 1, offset = 1) between bus write operation ('fm_addr_write_ln119', utils.cpp:119) on port 'fm' (utils.cpp:119) and bus write operation ('fm_addr_write_ln119', utils.cpp:119) on port 'fm' (utils.cpp:119).
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 56, Depth = 129, loop 'VITIS_LOOP_114_1_VITIS_LOOP_115_2'
+INFO: [SCHED 204-11] Finished scheduling.
+Command         schedule done; 1.3 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2.18 seconds. CPU system time: 0.02 seconds. Elapsed time: 2.19 seconds; current allocated memory: 381.656 MB.
+Execute         syn_report -verbosereport -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Command         syn_report done; 0.77 sec.
+Execute         db_write -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2.sched.adb -f 
+INFO-FLOW: Finish scheduling tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2.
+Execute         set_default_model tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2 
+Execute         bind -model tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command         bind done; 0.67 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.47 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.49 seconds; current allocated memory: 381.656 MB.
+Execute         syn_report -verbosereport -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Command         syn_report done; 1.53 sec.
+Execute         db_write -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2.bind.adb -f 
+INFO-FLOW: Finish binding tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tiled_conv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model tiled_conv 
+Execute         schedule -model tiled_conv 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command         schedule done; 0.28 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.87 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.89 seconds; current allocated memory: 381.656 MB.
+Execute         syn_report -verbosereport -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.sched.adb -f 
+INFO-FLOW: Finish scheduling tiled_conv.
+Execute         set_default_model tiled_conv 
+Execute         bind -model tiled_conv 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command         bind done; 0.72 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.8 seconds. CPU system time: 0 seconds. Elapsed time: 0.8 seconds; current allocated memory: 381.656 MB.
+Execute         syn_report -verbosereport -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Command         syn_report done; 1.87 sec.
+Execute         db_write -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.bind.adb -f 
+INFO-FLOW: Finish binding tiled_conv.
+Execute         get_model_list tiled_conv -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute         rtl_gen_preprocess tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 
+Execute         rtl_gen_preprocess tiled_conv_Pipeline_VITIS_LOOP_60_1 
+Execute         rtl_gen_preprocess tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 
+Execute         rtl_gen_preprocess tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2 
+Execute         rtl_gen_preprocess tiled_conv 
+INFO-FLOW: Model list for RTL generation: tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 tiled_conv_Pipeline_VITIS_LOOP_60_1 tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2 tiled_conv
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         create_rtl_model tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 -top_prefix tiled_conv_ -sub_prefix tiled_conv_ -mg_file /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3' pipeline 'VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'ama_addmuladd_8ns_6ns_6ns_6ns_14_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_2ns_19ns_20_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_2ns_7ns_8_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3'.
+Command         create_rtl_model done; 0.11 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 2.03 seconds; current allocated memory: 381.656 MB.
+Execute         source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.rtl_wrap.cfg.tcl 
+Execute         gen_rtl tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 -style xilinx -f -lang vhdl -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/syn/vhdl/tiled_conv_tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 
+Execute         gen_rtl tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 -style xilinx -f -lang vlog -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/syn/verilog/tiled_conv_tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 
+Execute         syn_report -csynth -model tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/syn/report/tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Command         syn_report done; 0.13 sec.
+Execute         syn_report -rtlxml -model tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/syn/report/tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3_csynth.xml 
+Execute         syn_report -verbosereport -model tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Command         syn_report done; 0.28 sec.
+Execute         db_write -model tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 -f -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3.adb 
+Execute         db_write -model tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 -bindview -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 -p /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tiled_conv_Pipeline_VITIS_LOOP_60_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         create_rtl_model tiled_conv_Pipeline_VITIS_LOOP_60_1 -top_prefix tiled_conv_ -sub_prefix tiled_conv_ -mg_file /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_60_1.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'tiled_conv_Pipeline_VITIS_LOOP_60_1' pipeline 'VITIS_LOOP_60_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tiled_conv_Pipeline_VITIS_LOOP_60_1'.
+Command         create_rtl_model done; 2.04 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2.64 seconds. CPU system time: 0.04 seconds. Elapsed time: 2.67 seconds; current allocated memory: 381.656 MB.
+Execute         source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.rtl_wrap.cfg.tcl 
+Execute         gen_rtl tiled_conv_Pipeline_VITIS_LOOP_60_1 -style xilinx -f -lang vhdl -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/syn/vhdl/tiled_conv_tiled_conv_Pipeline_VITIS_LOOP_60_1 
+Execute         gen_rtl tiled_conv_Pipeline_VITIS_LOOP_60_1 -style xilinx -f -lang vlog -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/syn/verilog/tiled_conv_tiled_conv_Pipeline_VITIS_LOOP_60_1 
+Execute         syn_report -csynth -model tiled_conv_Pipeline_VITIS_LOOP_60_1 -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/syn/report/tiled_conv_Pipeline_VITIS_LOOP_60_1_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Command         syn_report done; 0.19 sec.
+Execute         syn_report -rtlxml -model tiled_conv_Pipeline_VITIS_LOOP_60_1 -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/syn/report/tiled_conv_Pipeline_VITIS_LOOP_60_1_csynth.xml 
+Execute         syn_report -verbosereport -model tiled_conv_Pipeline_VITIS_LOOP_60_1 -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_60_1.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Command         syn_report done; 0.38 sec.
+Execute         db_write -model tiled_conv_Pipeline_VITIS_LOOP_60_1 -f -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_60_1.adb 
+Command         db_write done; 0.17 sec.
+Execute         db_write -model tiled_conv_Pipeline_VITIS_LOOP_60_1 -bindview -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info tiled_conv_Pipeline_VITIS_LOOP_60_1 -p /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_60_1 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         create_rtl_model tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 -top_prefix tiled_conv_ -sub_prefix tiled_conv_ -mg_file /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3' pipeline 'VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3' is 18287 from HDL expression: ((1'b0 == ap_block_pp0_stage1_11001) & (1'b1 == ap_CS_fsm_pp0_stage1))
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 14 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 14 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_6ns_7ns_12_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_42_32_1_1': 29 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3'.
+Command         create_rtl_model done; 0.45 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.49 seconds. CPU system time: 0.05 seconds. Elapsed time: 1.54 seconds; current allocated memory: 449.664 MB.
+Execute         source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.rtl_wrap.cfg.tcl 
+Execute         gen_rtl tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 -style xilinx -f -lang vhdl -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/syn/vhdl/tiled_conv_tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 
+Execute         gen_rtl tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 -style xilinx -f -lang vlog -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/syn/verilog/tiled_conv_tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 
+Execute         syn_report -csynth -model tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/syn/report/tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Command         syn_report done; 0.39 sec.
+Execute         syn_report -rtlxml -model tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/syn/report/tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3_csynth.xml 
+Command         syn_report done; 0.2 sec.
+Execute         syn_report -verbosereport -model tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Command         syn_report done; 1.06 sec.
+Execute         db_write -model tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 -f -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3.adb 
+Command         db_write done; 0.23 sec.
+Execute         db_write -model tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 -bindview -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/design.bindinfo.xml 
+Command         db_write done; 0.18 sec.
+Execute         gen_tb_info tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 -p /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         create_rtl_model tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2 -top_prefix tiled_conv_ -sub_prefix tiled_conv_ -mg_file /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2' pipeline 'VITIS_LOOP_114_1_VITIS_LOOP_115_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_6ns_18ns_19s_25_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2'.
+Command         create_rtl_model done; 0.42 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2.61 seconds. CPU system time: 0.03 seconds. Elapsed time: 2.64 seconds; current allocated memory: 449.664 MB.
+Execute         source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.rtl_wrap.cfg.tcl 
+Execute         gen_rtl tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2 -style xilinx -f -lang vhdl -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/syn/vhdl/tiled_conv_tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2 
+Execute         gen_rtl tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2 -style xilinx -f -lang vlog -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/syn/verilog/tiled_conv_tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2 
+Execute         syn_report -csynth -model tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2 -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/syn/report/tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Command         syn_report done; 0.87 sec.
+Execute         syn_report -rtlxml -model tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2 -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/syn/report/tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2_csynth.xml 
+Command         syn_report done; 0.43 sec.
+Execute         syn_report -verbosereport -model tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2 -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Command         syn_report done; 1.99 sec.
+Execute         db_write -model tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2 -f -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2.adb 
+Command         db_write done; 0.5 sec.
+Execute         db_write -model tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2 -bindview -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2 -p /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tiled_conv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         create_rtl_model tiled_conv -top_prefix  -sub_prefix tiled_conv_ -mg_file /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.compgen.tcl 
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tiled_conv/fm' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tiled_conv/wt' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tiled_conv/input_fm' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tiled_conv/weights' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tiled_conv/biases' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tiled_conv/output_fm' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'tiled_conv' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'input_fm', 'weights', 'biases', 'output_fm' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tiled_conv'.
+INFO: [RTMG 210-278] Implementing memory 'tiled_conv_conv_in_buf_RAM_1WNR_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'tiled_conv_conv_out_buf_RAM_1WNR_AUTO_1R1W' using auto RAMs.
+Command         create_rtl_model done; 0.22 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 4.27 seconds. CPU system time: 0.08 seconds. Elapsed time: 4.35 seconds; current allocated memory: 449.664 MB.
+Execute         source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.rtl_wrap.cfg.tcl 
+Execute         gen_rtl tiled_conv -istop -style xilinx -f -lang vhdl -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/syn/vhdl/tiled_conv 
+Execute         gen_rtl tiled_conv -istop -style xilinx -f -lang vlog -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/syn/verilog/tiled_conv 
+Execute         syn_report -csynth -model tiled_conv -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/syn/report/tiled_conv_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         syn_report -rtlxml -model tiled_conv -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/syn/report/tiled_conv_csynth.xml 
+Execute         syn_report -verbosereport -model tiled_conv -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Command         syn_report done; 1.87 sec.
+Execute         db_write -model tiled_conv -f -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.adb 
+Execute         db_write -model tiled_conv -bindview -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info tiled_conv -p /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv 
+Execute         export_constraint_db -f -tool general -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.constraint.tcl 
+Execute         syn_report -designview -model tiled_conv -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.design.xml 
+Command         syn_report done; 1.6 sec.
+Execute         syn_report -csynthDesign -model tiled_conv -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/syn/report/csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         syn_report -wcfg -model tiled_conv -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_dataflow_ana.wcfg 
+Execute         syn_report -protoinst -model tiled_conv -o /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.protoinst 
+Execute         sc_get_clocks tiled_conv 
+Execute         sc_get_portdomain tiled_conv 
+INFO-FLOW: Model list for RTL component generation: tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 tiled_conv_Pipeline_VITIS_LOOP_60_1 tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2 tiled_conv
+INFO-FLOW: Handling components in module [tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3] ... 
+Execute         source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3.compgen.tcl 
+INFO-FLOW: Found component tiled_conv_mul_2ns_19ns_20_1_1.
+INFO-FLOW: Append model tiled_conv_mul_2ns_19ns_20_1_1
+INFO-FLOW: Found component tiled_conv_mul_2ns_7ns_8_1_1.
+INFO-FLOW: Append model tiled_conv_mul_2ns_7ns_8_1_1
+INFO-FLOW: Found component tiled_conv_ama_addmuladd_8ns_6ns_6ns_6ns_14_4_1.
+INFO-FLOW: Append model tiled_conv_ama_addmuladd_8ns_6ns_6ns_6ns_14_4_1
+INFO-FLOW: Found component tiled_conv_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model tiled_conv_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [tiled_conv_Pipeline_VITIS_LOOP_60_1] ... 
+Execute         source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_60_1.compgen.tcl 
+INFO-FLOW: Found component tiled_conv_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model tiled_conv_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3] ... 
+Execute         source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3.compgen.tcl 
+INFO-FLOW: Found component tiled_conv_fadd_32ns_32ns_32_5_full_dsp_1.
+INFO-FLOW: Append model tiled_conv_fadd_32ns_32ns_32_5_full_dsp_1
+INFO-FLOW: Found component tiled_conv_fmul_32ns_32ns_32_4_max_dsp_1.
+INFO-FLOW: Append model tiled_conv_fmul_32ns_32ns_32_4_max_dsp_1
+INFO-FLOW: Found component tiled_conv_mul_6ns_7ns_12_1_1.
+INFO-FLOW: Append model tiled_conv_mul_6ns_7ns_12_1_1
+INFO-FLOW: Found component tiled_conv_mux_42_32_1_1.
+INFO-FLOW: Append model tiled_conv_mux_42_32_1_1
+INFO-FLOW: Found component tiled_conv_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model tiled_conv_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2] ... 
+Execute         source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2.compgen.tcl 
+INFO-FLOW: Found component tiled_conv_fcmp_32ns_32ns_1_2_no_dsp_1.
+INFO-FLOW: Append model tiled_conv_fcmp_32ns_32ns_1_2_no_dsp_1
+INFO-FLOW: Found component tiled_conv_mac_muladd_6ns_18ns_19s_25_4_1.
+INFO-FLOW: Append model tiled_conv_mac_muladd_6ns_18ns_19s_25_4_1
+INFO-FLOW: Found component tiled_conv_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model tiled_conv_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [tiled_conv] ... 
+Execute         source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.compgen.tcl 
+INFO-FLOW: Found component tiled_conv_conv_in_buf_RAM_1WNR_AUTO_1R1W.
+INFO-FLOW: Append model tiled_conv_conv_in_buf_RAM_1WNR_AUTO_1R1W
+INFO-FLOW: Found component tiled_conv_conv_out_buf_RAM_1WNR_AUTO_1R1W.
+INFO-FLOW: Append model tiled_conv_conv_out_buf_RAM_1WNR_AUTO_1R1W
+INFO-FLOW: Found component tiled_conv_fm_m_axi.
+INFO-FLOW: Append model tiled_conv_fm_m_axi
+INFO-FLOW: Found component tiled_conv_wt_m_axi.
+INFO-FLOW: Append model tiled_conv_wt_m_axi
+INFO-FLOW: Found component tiled_conv_control_s_axi.
+INFO-FLOW: Append model tiled_conv_control_s_axi
+INFO-FLOW: Append model tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3
+INFO-FLOW: Append model tiled_conv_Pipeline_VITIS_LOOP_60_1
+INFO-FLOW: Append model tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3
+INFO-FLOW: Append model tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2
+INFO-FLOW: Append model tiled_conv
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: tiled_conv_mul_2ns_19ns_20_1_1 tiled_conv_mul_2ns_7ns_8_1_1 tiled_conv_ama_addmuladd_8ns_6ns_6ns_6ns_14_4_1 tiled_conv_flow_control_loop_pipe_sequential_init tiled_conv_flow_control_loop_pipe_sequential_init tiled_conv_fadd_32ns_32ns_32_5_full_dsp_1 tiled_conv_fmul_32ns_32ns_32_4_max_dsp_1 tiled_conv_mul_6ns_7ns_12_1_1 tiled_conv_mux_42_32_1_1 tiled_conv_flow_control_loop_pipe_sequential_init tiled_conv_fcmp_32ns_32ns_1_2_no_dsp_1 tiled_conv_mac_muladd_6ns_18ns_19s_25_4_1 tiled_conv_flow_control_loop_pipe_sequential_init tiled_conv_conv_in_buf_RAM_1WNR_AUTO_1R1W tiled_conv_conv_out_buf_RAM_1WNR_AUTO_1R1W tiled_conv_fm_m_axi tiled_conv_wt_m_axi tiled_conv_control_s_axi tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 tiled_conv_Pipeline_VITIS_LOOP_60_1 tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2 tiled_conv
+INFO-FLOW: Generating /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/autopilot.rtl.models.txt file...
+INFO-FLOW: To file: write model tiled_conv_mul_2ns_19ns_20_1_1
+INFO-FLOW: To file: write model tiled_conv_mul_2ns_7ns_8_1_1
+INFO-FLOW: To file: write model tiled_conv_ama_addmuladd_8ns_6ns_6ns_6ns_14_4_1
+INFO-FLOW: To file: write model tiled_conv_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model tiled_conv_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model tiled_conv_fadd_32ns_32ns_32_5_full_dsp_1
+INFO-FLOW: To file: write model tiled_conv_fmul_32ns_32ns_32_4_max_dsp_1
+INFO-FLOW: To file: write model tiled_conv_mul_6ns_7ns_12_1_1
+INFO-FLOW: To file: write model tiled_conv_mux_42_32_1_1
+INFO-FLOW: To file: write model tiled_conv_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model tiled_conv_fcmp_32ns_32ns_1_2_no_dsp_1
+INFO-FLOW: To file: write model tiled_conv_mac_muladd_6ns_18ns_19s_25_4_1
+INFO-FLOW: To file: write model tiled_conv_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model tiled_conv_conv_in_buf_RAM_1WNR_AUTO_1R1W
+INFO-FLOW: To file: write model tiled_conv_conv_out_buf_RAM_1WNR_AUTO_1R1W
+INFO-FLOW: To file: write model tiled_conv_fm_m_axi
+INFO-FLOW: To file: write model tiled_conv_wt_m_axi
+INFO-FLOW: To file: write model tiled_conv_control_s_axi
+INFO-FLOW: To file: write model tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3
+INFO-FLOW: To file: write model tiled_conv_Pipeline_VITIS_LOOP_60_1
+INFO-FLOW: To file: write model tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3
+INFO-FLOW: To file: write model tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2
+INFO-FLOW: To file: write model tiled_conv
+INFO-FLOW: Generating /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/autopilot.rtl.models.tcl file...
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::auto_generate_csynth_design
+INFO-FLOW: DBG:PUTS: read_platform_lib /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/global.setting.tcl
+Execute         source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/common.gen 
+Execute           source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute         source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/op.gen 
+Execute         source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute         source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/interface.gen 
+Execute         source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/util.gen 
+Execute           source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command         ap_source done; 0.13 sec.
+INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::generate_ip_cores gen_sim_model='1' gen_fp_models='0' gen_for_export='0' dstSCDir='' dstVhdlDir='/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/vhdl' dstVlogDir='/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/vlog' tclDir='/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db' modelList='tiled_conv_mul_2ns_19ns_20_1_1
+tiled_conv_mul_2ns_7ns_8_1_1
+tiled_conv_ama_addmuladd_8ns_6ns_6ns_6ns_14_4_1
+tiled_conv_flow_control_loop_pipe_sequential_init
+tiled_conv_flow_control_loop_pipe_sequential_init
+tiled_conv_fadd_32ns_32ns_32_5_full_dsp_1
+tiled_conv_fmul_32ns_32ns_32_4_max_dsp_1
+tiled_conv_mul_6ns_7ns_12_1_1
+tiled_conv_mux_42_32_1_1
+tiled_conv_flow_control_loop_pipe_sequential_init
+tiled_conv_fcmp_32ns_32ns_1_2_no_dsp_1
+tiled_conv_mac_muladd_6ns_18ns_19s_25_4_1
+tiled_conv_flow_control_loop_pipe_sequential_init
+tiled_conv_conv_in_buf_RAM_1WNR_AUTO_1R1W
+tiled_conv_conv_out_buf_RAM_1WNR_AUTO_1R1W
+tiled_conv_fm_m_axi
+tiled_conv_wt_m_axi
+tiled_conv_control_s_axi
+tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3
+tiled_conv_Pipeline_VITIS_LOOP_60_1
+tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3
+tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2
+tiled_conv
+' expOnly='0'
+Execute         source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3.compgen.tcl 
+Execute           ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_60_1.compgen.tcl 
+Execute         source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3.compgen.tcl 
+Execute           ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2.compgen.tcl 
+Execute           ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.compgen.tcl 
+Execute           source ./control.slave.tcl 
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 4.06 seconds. CPU system time: 0.11 seconds. Elapsed time: 4.16 seconds; current allocated memory: 449.664 MB.
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::create_csynth_xml bind_info_var='bind_info' RtlSubPrefix='tiled_conv_' outfile=''
+INFO-FLOW: Running: create_csynth_xml read xml data
+INFO-FLOW: Done: create_csynth_xml read xml data time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml bind info
+INFO-FLOW: Done: create_csynth_xml bind info time: 0.1 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml config info
+INFO-FLOW: Done: create_csynth_xml config info time: 0.1 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml write xml
+INFO-FLOW: Done: create_csynth_xml write xml time: 0 seconds per iteration
+INFO-FLOW: DBG:PUTS:      create_csynth_xml wrote csynth_xml=/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/syn/report/csynth.xml
+INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='0' modelList='tiled_conv_mul_2ns_19ns_20_1_1
+tiled_conv_mul_2ns_7ns_8_1_1
+tiled_conv_ama_addmuladd_8ns_6ns_6ns_6ns_14_4_1
+tiled_conv_flow_control_loop_pipe_sequential_init
+tiled_conv_flow_control_loop_pipe_sequential_init
+tiled_conv_fadd_32ns_32ns_32_5_full_dsp_1
+tiled_conv_fmul_32ns_32ns_32_4_max_dsp_1
+tiled_conv_mul_6ns_7ns_12_1_1
+tiled_conv_mux_42_32_1_1
+tiled_conv_flow_control_loop_pipe_sequential_init
+tiled_conv_fcmp_32ns_32ns_1_2_no_dsp_1
+tiled_conv_mac_muladd_6ns_18ns_19s_25_4_1
+tiled_conv_flow_control_loop_pipe_sequential_init
+tiled_conv_conv_in_buf_RAM_1WNR_AUTO_1R1W
+tiled_conv_conv_out_buf_RAM_1WNR_AUTO_1R1W
+tiled_conv_fm_m_axi
+tiled_conv_wt_m_axi
+tiled_conv_control_s_axi
+tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3
+tiled_conv_Pipeline_VITIS_LOOP_60_1
+tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3
+tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2
+tiled_conv
+' rtl_lang='both' bootstrap_tcl='false' outdir='' outfilename=''
+Execute         source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/top-io-be.tcl 
+Execute         source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.tbgen.tcl 
+Execute         source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.compgen.dataonly.tcl 
+Execute         source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.compgen.dataonly.tcl 
+Execute         source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.rtl_wrap.cfg.tcl 
+Execute         source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.compgen.dataonly.tcl 
+Execute         source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3.tbgen.tcl 
+Execute         source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_60_1.tbgen.tcl 
+Execute         source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3.tbgen.tcl 
+Execute         source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2.tbgen.tcl 
+Execute         source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.tbgen.tcl 
+Execute         source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.constraint.tcl 
+Execute         sc_get_clocks tiled_conv 
+Execute         source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/impl/misc/tiled_conv_fadd_32ns_32ns_32_5_full_dsp_1_ip.tcl 
+Execute         source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/impl/misc/tiled_conv_fcmp_32ns_32ns_1_2_no_dsp_1_ip.tcl 
+Execute         source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/impl/misc/tiled_conv_fmul_32ns_32ns_32_4_max_dsp_1_ip.tcl 
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {{BINDTYPE adapter DISPLAY {bind_adapter axilite} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME control_s_axi_U SOURCE {} VARIABLE {} MODULE tiled_conv LOOP {} BUNDLEDNAME control DSP 0 BRAM 0 URAM 0} {BINDTYPE adapter DISPLAY {bind_adapter axi_master} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME fm_m_axi_U SOURCE {} VARIABLE {} MODULE tiled_conv LOOP {} BUNDLEDNAME fm DSP 0 BRAM 0 URAM 0} {BINDTYPE adapter DISPLAY {bind_adapter axi_master} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME wt_m_axi_U SOURCE {} VARIABLE {} MODULE tiled_conv LOOP {} BUNDLEDNAME wt DSP 0 BRAM 0 URAM 0}} report_dict {TOPINST tiled_conv MODULE2INSTS {tiled_conv tiled_conv tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 grp_tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3_fu_1096 tiled_conv_Pipeline_VITIS_LOOP_60_1 grp_tiled_conv_Pipeline_VITIS_LOOP_60_1_fu_1108 tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 grp_tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3_fu_1340 tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2 grp_tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2_fu_1458} INST2MODULE {tiled_conv tiled_conv grp_tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3_fu_1096 tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 grp_tiled_conv_Pipeline_VITIS_LOOP_60_1_fu_1108 tiled_conv_Pipeline_VITIS_LOOP_60_1 grp_tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3_fu_1340 tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 grp_tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2_fu_1458 tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2} INSTDATA {tiled_conv {DEPTH 1 CHILDREN {grp_tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3_fu_1096 grp_tiled_conv_Pipeline_VITIS_LOOP_60_1_fu_1108 grp_tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3_fu_1340 grp_tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2_fu_1458}} grp_tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3_fu_1096 {DEPTH 2 CHILDREN {}} grp_tiled_conv_Pipeline_VITIS_LOOP_60_1_fu_1108 {DEPTH 2 CHILDREN {}} grp_tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3_fu_1340 {DEPTH 2 CHILDREN {}} grp_tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2_fu_1458 {DEPTH 2 CHILDREN {}}} MODULEDATA {tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME tmp_fu_375_p2 SOURCE utils.cpp:31 VARIABLE tmp LOOP VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_fu_385_p2 SOURCE utils.cpp:31 VARIABLE empty LOOP VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln42_fu_416_p2 SOURCE utils.cpp:42 VARIABLE sub_ln42 LOOP VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln29_2_fu_242_p2 SOURCE utils.cpp:29 VARIABLE add_ln29_2 LOOP VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln29_fu_287_p2 SOURCE utils.cpp:29 VARIABLE add_ln29 LOOP VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_2ns_7ns_8_1_1_U2 SOURCE utils.cpp:40 VARIABLE mul_ln40 LOOP VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_2ns_19ns_20_1_1_U1 SOURCE utils.cpp:29 VARIABLE mul_ln29 LOOP VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln29_1_fu_540_p2 SOURCE utils.cpp:29 VARIABLE add_ln29_1 LOOP VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln31_fu_324_p2 SOURCE utils.cpp:31 VARIABLE add_ln31 LOOP VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE add PRAGMA {} RTLNAME ama_addmuladd_8ns_6ns_6ns_6ns_14_4_1_U3 SOURCE utils.cpp:40 VARIABLE add_ln40 LOOP VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME ama_addmuladd_8ns_6ns_6ns_6ns_14_4_1_U3 SOURCE utils.cpp:40 VARIABLE mul_ln40_1 LOOP VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME tmp_mid1_fu_446_p2 SOURCE utils.cpp:31 VARIABLE tmp_mid1 LOOP VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME p_mid1_fu_456_p2 SOURCE utils.cpp:31 VARIABLE p_mid1 LOOP VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln42_2_fu_494_p2 SOURCE utils.cpp:42 VARIABLE sub_ln42_2 LOOP VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE add PRAGMA {} RTLNAME ama_addmuladd_8ns_6ns_6ns_6ns_14_4_1_U3 SOURCE utils.cpp:40 VARIABLE add_ln40_1 LOOP VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln39_fu_510_p2 SOURCE utils.cpp:39 VARIABLE add_ln39 LOOP VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln39_1_fu_520_p2 SOURCE utils.cpp:39 VARIABLE add_ln39_1 LOOP VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln42_fu_559_p2 SOURCE utils.cpp:42 VARIABLE add_ln42 LOOP VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln42_1_fu_569_p2 SOURCE utils.cpp:42 VARIABLE add_ln42_1 LOOP VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln33_fu_351_p2 SOURCE utils.cpp:33 VARIABLE add_ln33 LOOP VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln31_1_fu_254_p2 SOURCE utils.cpp:31 VARIABLE add_ln31_1 LOOP VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 1 BRAM 0 URAM 0}} tiled_conv_Pipeline_VITIS_LOOP_60_1 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln60_fu_3413_p2 SOURCE utils.cpp:60 VARIABLE add_ln60 LOOP VITIS_LOOP_60_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME next_mul_fu_3422_p2 SOURCE {} VARIABLE next_mul LOOP VITIS_LOOP_60_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln65_fu_3432_p2 SOURCE utils.cpp:65 VARIABLE add_ln65 LOOP VITIS_LOOP_60_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln65_1_fu_3462_p2 SOURCE utils.cpp:65 VARIABLE add_ln65_1 LOOP VITIS_LOOP_60_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln65_2_fu_3477_p2 SOURCE utils.cpp:65 VARIABLE add_ln65_2 LOOP VITIS_LOOP_60_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln65_3_fu_3492_p2 SOURCE utils.cpp:65 VARIABLE add_ln65_3 LOOP VITIS_LOOP_60_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln65_4_fu_3507_p2 SOURCE utils.cpp:65 VARIABLE add_ln65_4 LOOP VITIS_LOOP_60_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln65_5_fu_3522_p2 SOURCE utils.cpp:65 VARIABLE add_ln65_5 LOOP VITIS_LOOP_60_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln65_6_fu_3537_p2 SOURCE utils.cpp:65 VARIABLE add_ln65_6 LOOP VITIS_LOOP_60_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln65_7_fu_3552_p2 SOURCE utils.cpp:65 VARIABLE add_ln65_7 LOOP VITIS_LOOP_60_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln65_8_fu_3567_p2 SOURCE utils.cpp:65 VARIABLE add_ln65_8 LOOP VITIS_LOOP_60_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln65_9_fu_3582_p2 SOURCE utils.cpp:65 VARIABLE add_ln65_9 LOOP VITIS_LOOP_60_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln65_10_fu_3597_p2 SOURCE utils.cpp:65 VARIABLE add_ln65_10 LOOP VITIS_LOOP_60_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln65_11_fu_3612_p2 SOURCE utils.cpp:65 VARIABLE add_ln65_11 LOOP VITIS_LOOP_60_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln65_12_fu_3627_p2 SOURCE utils.cpp:65 VARIABLE add_ln65_12 LOOP VITIS_LOOP_60_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln65_13_fu_3642_p2 SOURCE utils.cpp:65 VARIABLE add_ln65_13 LOOP VITIS_LOOP_60_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln65_14_fu_3657_p2 SOURCE utils.cpp:65 VARIABLE add_ln65_14 LOOP VITIS_LOOP_60_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln65_15_fu_3672_p2 SOURCE utils.cpp:65 VARIABLE add_ln65_15 LOOP VITIS_LOOP_60_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln65_16_fu_3687_p2 SOURCE utils.cpp:65 VARIABLE add_ln65_16 LOOP VITIS_LOOP_60_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln65_17_fu_3702_p2 SOURCE utils.cpp:65 VARIABLE add_ln65_17 LOOP VITIS_LOOP_60_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln65_18_fu_3717_p2 SOURCE utils.cpp:65 VARIABLE add_ln65_18 LOOP VITIS_LOOP_60_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln65_19_fu_3732_p2 SOURCE utils.cpp:65 VARIABLE add_ln65_19 LOOP VITIS_LOOP_60_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln65_20_fu_3747_p2 SOURCE utils.cpp:65 VARIABLE add_ln65_20 LOOP VITIS_LOOP_60_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln65_21_fu_3762_p2 SOURCE utils.cpp:65 VARIABLE add_ln65_21 LOOP VITIS_LOOP_60_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln65_22_fu_3777_p2 SOURCE utils.cpp:65 VARIABLE add_ln65_22 LOOP VITIS_LOOP_60_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln65_23_fu_3792_p2 SOURCE utils.cpp:65 VARIABLE add_ln65_23 LOOP VITIS_LOOP_60_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln65_24_fu_3807_p2 SOURCE utils.cpp:65 VARIABLE add_ln65_24 LOOP VITIS_LOOP_60_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln65_25_fu_3822_p2 SOURCE utils.cpp:65 VARIABLE add_ln65_25 LOOP VITIS_LOOP_60_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln65_26_fu_3837_p2 SOURCE utils.cpp:65 VARIABLE add_ln65_26 LOOP VITIS_LOOP_60_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln67_fu_3855_p2 SOURCE utils.cpp:67 VARIABLE add_ln67 LOOP VITIS_LOOP_60_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_26_fu_1451_p2 SOURCE {} VARIABLE empty_26 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_27_fu_1456_p2 SOURCE {} VARIABLE empty_27 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln80_1_fu_1461_p2 SOURCE utils.cpp:80 VARIABLE add_ln80_1 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln80_fu_1611_p2 SOURCE utils.cpp:80 VARIABLE add_ln80 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln93_fu_1648_p2 SOURCE utils.cpp:93 VARIABLE sub_ln93 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME p_dup57_fu_1490_p2 SOURCE utils.cpp:80 VARIABLE p_dup57 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_6ns_7ns_12_1_1_U269 SOURCE utils.cpp:91 VARIABLE mul_ln91 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln91_2_fu_1664_p2 SOURCE utils.cpp:91 VARIABLE add_ln91_2 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln91_3_fu_1670_p2 SOURCE utils.cpp:91 VARIABLE add_ln91_3 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln93_fu_1888_p2 SOURCE utils.cpp:93 VARIABLE add_ln93 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME p_mid160_fu_1524_p2 SOURCE utils.cpp:80 VARIABLE p_mid160 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_6ns_7ns_12_1_1_U270 SOURCE utils.cpp:91 VARIABLE mul_ln91_1 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln91_4_fu_1679_p2 SOURCE utils.cpp:91 VARIABLE add_ln91_4 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln91_5_fu_1923_p2 SOURCE utils.cpp:91 VARIABLE add_ln91_5 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME p_mid162_fu_1547_p2 SOURCE utils.cpp:80 VARIABLE p_mid162 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_6ns_7ns_12_1_1_U271 SOURCE utils.cpp:91 VARIABLE mul_ln91_2 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln91_6_fu_1935_p2 SOURCE utils.cpp:91 VARIABLE add_ln91_6 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln91_7_fu_1941_p2 SOURCE utils.cpp:91 VARIABLE add_ln91_7 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln91_8_fu_1703_p2 SOURCE utils.cpp:91 VARIABLE add_ln91_8 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln91_9_fu_1713_p2 SOURCE utils.cpp:91 VARIABLE add_ln91_9 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln91_10_fu_1723_p2 SOURCE utils.cpp:91 VARIABLE add_ln91_10 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln91_11_fu_1729_p2 SOURCE utils.cpp:91 VARIABLE add_ln91_11 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln91_12_fu_1740_p2 SOURCE utils.cpp:91 VARIABLE add_ln91_12 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln91_13_fu_1951_p2 SOURCE utils.cpp:91 VARIABLE add_ln91_13 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln91_14_fu_1751_p2 SOURCE utils.cpp:91 VARIABLE add_ln91_14 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln91_15_fu_1961_p2 SOURCE utils.cpp:91 VARIABLE add_ln91_15 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln91_16_fu_1971_p2 SOURCE utils.cpp:91 VARIABLE add_ln91_16 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 3 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_4_max_dsp_1_U255 SOURCE utils.cpp:91 VARIABLE mul37_i LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 4 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_5_full_dsp_1_U241 SOURCE utils.cpp:91 VARIABLE sum_2 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln91_fu_1560_p2 SOURCE utils.cpp:91 VARIABLE add_ln91 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln91_17_fu_1771_p2 SOURCE utils.cpp:91 VARIABLE add_ln91_17 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln91_18_fu_1781_p2 SOURCE utils.cpp:91 VARIABLE add_ln91_18 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln91_19_fu_1996_p2 SOURCE utils.cpp:91 VARIABLE add_ln91_19 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln91_20_fu_1791_p2 SOURCE utils.cpp:91 VARIABLE add_ln91_20 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln91_21_fu_1802_p2 SOURCE utils.cpp:91 VARIABLE add_ln91_21 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln91_22_fu_2005_p2 SOURCE utils.cpp:91 VARIABLE add_ln91_22 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln91_23_fu_1813_p2 SOURCE utils.cpp:91 VARIABLE add_ln91_23 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln91_24_fu_2015_p2 SOURCE utils.cpp:91 VARIABLE add_ln91_24 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln91_25_fu_2025_p2 SOURCE utils.cpp:91 VARIABLE add_ln91_25 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 3 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_4_max_dsp_1_U256 SOURCE utils.cpp:91 VARIABLE mul37_i_0_0_1 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 4 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_5_full_dsp_1_U241 SOURCE utils.cpp:91 VARIABLE sum_2_0_0_1 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln91_1_fu_1566_p2 SOURCE utils.cpp:91 VARIABLE add_ln91_1 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln91_26_fu_1830_p2 SOURCE utils.cpp:91 VARIABLE add_ln91_26 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln91_27_fu_1840_p2 SOURCE utils.cpp:91 VARIABLE add_ln91_27 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln91_28_fu_2048_p2 SOURCE utils.cpp:91 VARIABLE add_ln91_28 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln91_29_fu_1850_p2 SOURCE utils.cpp:91 VARIABLE add_ln91_29 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln91_30_fu_1861_p2 SOURCE utils.cpp:91 VARIABLE add_ln91_30 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln91_31_fu_2057_p2 SOURCE utils.cpp:91 VARIABLE add_ln91_31 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln91_32_fu_2067_p2 SOURCE utils.cpp:91 VARIABLE add_ln91_32 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln91_33_fu_2077_p2 SOURCE utils.cpp:91 VARIABLE add_ln91_33 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln91_34_fu_2088_p2 SOURCE utils.cpp:91 VARIABLE add_ln91_34 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 3 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_4_max_dsp_1_U257 SOURCE utils.cpp:91 VARIABLE mul37_i_0_0_2 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 4 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_5_full_dsp_1_U242 SOURCE utils.cpp:91 VARIABLE sum_2_0_0_2 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 3 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_4_max_dsp_1_U258 SOURCE utils.cpp:91 VARIABLE mul37_i_0_1 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 4 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_5_full_dsp_1_U242 SOURCE utils.cpp:91 VARIABLE sum_2_0_1 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 3 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_4_max_dsp_1_U259 SOURCE utils.cpp:91 VARIABLE mul37_i_0_1_1 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 4 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_5_full_dsp_1_U243 SOURCE utils.cpp:91 VARIABLE sum_2_0_1_1 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 3 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_4_max_dsp_1_U260 SOURCE utils.cpp:91 VARIABLE mul37_i_0_1_2 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 4 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_5_full_dsp_1_U243 SOURCE utils.cpp:91 VARIABLE sum_2_0_1_2 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 3 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_4_max_dsp_1_U255 SOURCE utils.cpp:91 VARIABLE mul37_i_0_2 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 4 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_5_full_dsp_1_U244 SOURCE utils.cpp:91 VARIABLE sum_2_0_2 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 3 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_4_max_dsp_1_U256 SOURCE utils.cpp:91 VARIABLE mul37_i_0_2_1 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 4 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_5_full_dsp_1_U244 SOURCE utils.cpp:91 VARIABLE sum_2_0_2_1 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 3 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_4_max_dsp_1_U257 SOURCE utils.cpp:91 VARIABLE mul37_i_0_2_2 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 4 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_5_full_dsp_1_U245 SOURCE utils.cpp:91 VARIABLE sum_2_0_2_2 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 3 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_4_max_dsp_1_U261 SOURCE utils.cpp:91 VARIABLE mul37_i_1 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 4 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_5_full_dsp_1_U245 SOURCE utils.cpp:91 VARIABLE sum_2_1 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 3 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_4_max_dsp_1_U262 SOURCE utils.cpp:91 VARIABLE mul37_i_1_0_1 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 4 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_5_full_dsp_1_U246 SOURCE utils.cpp:91 VARIABLE sum_2_1_0_1 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 3 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_4_max_dsp_1_U263 SOURCE utils.cpp:91 VARIABLE mul37_i_1_0_2 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 4 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_5_full_dsp_1_U246 SOURCE utils.cpp:91 VARIABLE sum_2_1_0_2 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 3 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_4_max_dsp_1_U264 SOURCE utils.cpp:91 VARIABLE mul37_i_1_1 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 4 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_5_full_dsp_1_U247 SOURCE utils.cpp:91 VARIABLE sum_2_1_1 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 3 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_4_max_dsp_1_U265 SOURCE utils.cpp:91 VARIABLE mul37_i_1_1_1 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 4 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_5_full_dsp_1_U247 SOURCE utils.cpp:91 VARIABLE sum_2_1_1_1 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 3 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_4_max_dsp_1_U266 SOURCE utils.cpp:91 VARIABLE mul37_i_1_1_2 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 4 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_5_full_dsp_1_U248 SOURCE utils.cpp:91 VARIABLE sum_2_1_1_2 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 3 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_4_max_dsp_1_U258 SOURCE utils.cpp:91 VARIABLE mul37_i_1_2 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 4 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_5_full_dsp_1_U248 SOURCE utils.cpp:91 VARIABLE sum_2_1_2 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 3 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_4_max_dsp_1_U259 SOURCE utils.cpp:91 VARIABLE mul37_i_1_2_1 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 4 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_5_full_dsp_1_U249 SOURCE utils.cpp:91 VARIABLE sum_2_1_2_1 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 3 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_4_max_dsp_1_U260 SOURCE utils.cpp:91 VARIABLE mul37_i_1_2_2 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 4 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_5_full_dsp_1_U249 SOURCE utils.cpp:91 VARIABLE sum_2_1_2_2 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 3 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_4_max_dsp_1_U267 SOURCE utils.cpp:91 VARIABLE mul37_i_2 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 4 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_5_full_dsp_1_U250 SOURCE utils.cpp:91 VARIABLE sum_2_2 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 3 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_4_max_dsp_1_U268 SOURCE utils.cpp:91 VARIABLE mul37_i_2_0_1 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 4 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_5_full_dsp_1_U250 SOURCE utils.cpp:91 VARIABLE sum_2_2_0_1 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 3 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_4_max_dsp_1_U261 SOURCE utils.cpp:91 VARIABLE mul37_i_2_0_2 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 4 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_5_full_dsp_1_U251 SOURCE utils.cpp:91 VARIABLE sum_2_2_0_2 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 3 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_4_max_dsp_1_U262 SOURCE utils.cpp:91 VARIABLE mul37_i_2_1 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 4 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_5_full_dsp_1_U251 SOURCE utils.cpp:91 VARIABLE sum_2_2_1 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 3 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_4_max_dsp_1_U263 SOURCE utils.cpp:91 VARIABLE mul37_i_2_1_1 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 4 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_5_full_dsp_1_U252 SOURCE utils.cpp:91 VARIABLE sum_2_2_1_1 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 3 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_4_max_dsp_1_U264 SOURCE utils.cpp:91 VARIABLE mul37_i_2_1_2 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 4 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_5_full_dsp_1_U252 SOURCE utils.cpp:91 VARIABLE sum_2_2_1_2 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 3 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_4_max_dsp_1_U265 SOURCE utils.cpp:91 VARIABLE mul37_i_2_2 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 4 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_5_full_dsp_1_U253 SOURCE utils.cpp:91 VARIABLE sum_2_2_2 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 3 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_4_max_dsp_1_U266 SOURCE utils.cpp:91 VARIABLE mul37_i_2_2_1 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 4 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_5_full_dsp_1_U253 SOURCE utils.cpp:91 VARIABLE sum_2_2_2_1 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 3 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_4_max_dsp_1_U267 SOURCE utils.cpp:91 VARIABLE mul37_i_2_2_2 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 4 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_5_full_dsp_1_U254 SOURCE utils.cpp:91 VARIABLE sum_2_2_2_2 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln82_fu_1572_p2 SOURCE utils.cpp:82 VARIABLE add_ln82 LOOP VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 70 BRAM 0 URAM 0}} tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln114_2_fu_1286_p2 SOURCE utils.cpp:114 VARIABLE add_ln114_2 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln114_fu_1298_p2 SOURCE utils.cpp:114 VARIABLE add_ln114 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln118_fu_1350_p2 SOURCE utils.cpp:118 VARIABLE sub_ln118 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln114_1_fu_1360_p2 SOURCE utils.cpp:114 VARIABLE add_ln114_1 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mac_muladd_6ns_18ns_19s_25_4_1_U420 SOURCE utils.cpp:114 VARIABLE mul_ln114 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_fu_1386_p2 SOURCE utils.cpp:118 VARIABLE add_ln118 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln118_1_fu_1412_p2 SOURCE utils.cpp:118 VARIABLE sub_ln118_1 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_1_fu_1610_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_1 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_2_fu_1620_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_2 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_3_fu_1680_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_3 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_4_fu_1690_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_4 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_5_fu_1750_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_5 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_6_fu_1760_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_6 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_7_fu_1820_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_7 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_8_fu_1830_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_8 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_9_fu_1890_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_9 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_10_fu_1900_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_10 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_11_fu_1960_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_11 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_12_fu_1970_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_12 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_13_fu_2030_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_13 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_14_fu_2040_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_14 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_15_fu_2100_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_15 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_16_fu_2110_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_16 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_17_fu_2170_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_17 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_18_fu_2180_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_18 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_19_fu_2240_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_19 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_20_fu_2250_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_20 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_21_fu_2310_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_21 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_22_fu_2320_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_22 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_23_fu_2380_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_23 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_24_fu_2390_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_24 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_25_fu_2450_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_25 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_26_fu_2460_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_26 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_27_fu_2520_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_27 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_28_fu_2530_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_28 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_29_fu_2590_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_29 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_30_fu_2600_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_30 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_31_fu_2660_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_31 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_32_fu_2670_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_32 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_33_fu_2730_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_33 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_34_fu_2740_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_34 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_35_fu_2800_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_35 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_36_fu_2810_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_36 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_37_fu_2870_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_37 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_38_fu_2880_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_38 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_39_fu_2940_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_39 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_40_fu_2950_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_40 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_41_fu_3010_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_41 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_42_fu_3020_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_42 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_43_fu_3080_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_43 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_44_fu_3090_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_44 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_45_fu_3150_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_45 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_46_fu_3160_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_46 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_47_fu_3220_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_47 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_48_fu_3230_p2 SOURCE utils.cpp:118 VARIABLE add_ln118_48 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_32_fu_1457_p2 SOURCE utils.cpp:114 VARIABLE empty_32 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME empty_33_fu_1482_p2 SOURCE utils.cpp:114 VARIABLE empty_33 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE add PRAGMA {} RTLNAME mac_muladd_6ns_18ns_19s_25_4_1_U420 SOURCE utils.cpp:114 VARIABLE tmp119 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_34_fu_1515_p2 SOURCE utils.cpp:114 VARIABLE empty_34 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln115_fu_4627_p2 SOURCE utils.cpp:115 VARIABLE add_ln115 LOOP VITIS_LOOP_114_1_VITIS_LOOP_115_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 1 BRAM 0 URAM 0}} tiled_conv {BINDINFO {{BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_np PRAGMA {} RTLNAME conv_in_buf_U SOURCE tiled_conv.cpp:21 VARIABLE conv_in_buf LOOP {} BUNDLEDNAME {} DSP 0 BRAM 416 URAM 0 DISPNAME {bind_storage rom_np}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_np PRAGMA {} RTLNAME conv_out_buf_U SOURCE tiled_conv.cpp:24 VARIABLE conv_out_buf LOOP {} BUNDLEDNAME {} DSP 0 BRAM 32 URAM 0 DISPNAME {bind_storage rom_np}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME empty_37_fu_1517_p2 SOURCE {} VARIABLE empty_37 LOOP VITIS_LOOP_26_1_VITIS_LOOP_28_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln26_1_fu_1529_p2 SOURCE tiled_conv.cpp:26 VARIABLE add_ln26_1 LOOP VITIS_LOOP_26_1_VITIS_LOOP_28_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln26_fu_1538_p2 SOURCE tiled_conv.cpp:26 VARIABLE add_ln26 LOOP VITIS_LOOP_26_1_VITIS_LOOP_28_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME p_mid1107_fu_1578_p2 SOURCE tiled_conv.cpp:26 VARIABLE p_mid1107 LOOP VITIS_LOOP_26_1_VITIS_LOOP_28_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln27_fu_1634_p2 SOURCE utils.cpp:27 VARIABLE sub_ln27 LOOP VITIS_LOOP_26_1_VITIS_LOOP_28_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME p_mid125_fu_1641_p2 SOURCE utils.cpp:103 VARIABLE p_mid125 LOOP VITIS_LOOP_26_1_VITIS_LOOP_28_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln42_1_fu_1673_p2 SOURCE utils.cpp:42 VARIABLE sub_ln42_1 LOOP VITIS_LOOP_26_1_VITIS_LOOP_28_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME empty_41_fu_1704_p2 SOURCE utils.cpp:27 VARIABLE empty_41 LOOP VITIS_LOOP_26_1_VITIS_LOOP_28_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME tmp118_fu_1714_p2 SOURCE utils.cpp:105 VARIABLE tmp118 LOOP VITIS_LOOP_26_1_VITIS_LOOP_28_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln39_2_fu_1719_p2 SOURCE tiled_conv.cpp:39 VARIABLE add_ln39_2 LOOP VITIS_LOOP_39_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln39_fu_1731_p2 SOURCE tiled_conv.cpp:39 VARIABLE add_ln39 LOOP VITIS_LOOP_39_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln58_fu_2201_p2 SOURCE utils.cpp:58 VARIABLE add_ln58 LOOP VITIS_LOOP_39_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln58_1_fu_2210_p2 SOURCE utils.cpp:58 VARIABLE add_ln58_1 LOOP VITIS_LOOP_39_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln28_fu_2237_p2 SOURCE tiled_conv.cpp:28 VARIABLE add_ln28 LOOP VITIS_LOOP_26_1_VITIS_LOOP_28_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 72 BRAM 448 URAM 0}}}}'
+INFO-FLOW: DBG:PUTS:      update_csynth_reports json2rpt_hw_sw_interfaces
+Execute         send_msg_by_id INFO @200-1603@%s  and missed bursts 
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO-FLOW: Running: gen_csynth_sec_pragma
+INFO-FLOW: Done: gen_csynth_sec_pragma time: 0 seconds per iteration
+INFO-FLOW: DBG:PUTS:      update_csynth_reports wrote xml
+INFO-FLOW: DBG:PUTS:      update_csynth_reports appended to csynth rpt file
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1.24 seconds. CPU system time: 0.04 seconds. Elapsed time: 1.28 seconds; current allocated memory: 513.664 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for tiled_conv.
+INFO: [VLOG 209-307] Generating Verilog RTL for tiled_conv.
+Execute         syn_report -model tiled_conv -printsummary 
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
+Command       autosyn done; 31.88 sec.
+Command     csynth_design done; 44.23 sec.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 41.72 seconds. CPU system time: 2.51 seconds. Elapsed time: 44.23 seconds; current allocated memory: 196.008 MB.
+Execute     export_design -format ip_catalog 
+INFO: [HLS 200-1510] Running: export_design -format ip_catalog 
+Execute       config_export -format=ip_catalog 
+INFO-FLOW: DBG:PUTS: export_design_wrap: -format ip_catalog -rtl verilog
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS:   auto_impl: pack: -export -rtl verilog
+INFO-FLOW: DBG:PROC: ::AESL_AUTOIMPL::auto_impl args='-export -rtl verilog'
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS: automg_wrap -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::auto_generate args='-export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag'
+INFO-FLOW: DBG:PUTS:     auto_generate -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS: read_platform_lib /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/global.setting.tcl
+Execute       source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/common.gen 
+Execute         source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/op.gen 
+Execute       source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/interface.gen 
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/util.gen 
+Execute         source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.13 sec.
+INFO-FLOW: DBG:PUTS:       initCTypeInfo top_module=tiled_conv xml_exists=0
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.rtl_wrap.cfg.tcl 
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.rtl_wrap.cfg.tcl 
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.rtl_wrap.cfg.tcl 
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.tbgen.tcl 
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.tbgen.tcl 
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.tbgen.tcl 
+INFO-FLOW: DBG:PUTS:       cosim_export_main adding deadlock detection to tiled_conv
+INFO-FLOW: DBG:PUTS: Skipping loadAnalyze_DB, #g_database=6
+INFO-FLOW: DBG:PUTS:       generate_json generate_bd_files=0 generate_xo_files=false #modelList=23 #gSsdmPorts=0
+INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='false' modelList='tiled_conv_mul_2ns_19ns_20_1_1
+tiled_conv_mul_2ns_7ns_8_1_1
+tiled_conv_ama_addmuladd_8ns_6ns_6ns_6ns_14_4_1
+tiled_conv_flow_control_loop_pipe_sequential_init
+tiled_conv_flow_control_loop_pipe_sequential_init
+tiled_conv_fadd_32ns_32ns_32_5_full_dsp_1
+tiled_conv_fmul_32ns_32ns_32_4_max_dsp_1
+tiled_conv_mul_6ns_7ns_12_1_1
+tiled_conv_mux_42_32_1_1
+tiled_conv_flow_control_loop_pipe_sequential_init
+tiled_conv_fcmp_32ns_32ns_1_2_no_dsp_1
+tiled_conv_mac_muladd_6ns_18ns_19s_25_4_1
+tiled_conv_flow_control_loop_pipe_sequential_init
+tiled_conv_conv_in_buf_RAM_1WNR_AUTO_1R1W
+tiled_conv_conv_out_buf_RAM_1WNR_AUTO_1R1W
+tiled_conv_fm_m_axi
+tiled_conv_wt_m_axi
+tiled_conv_control_s_axi
+tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3
+tiled_conv_Pipeline_VITIS_LOOP_60_1
+tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3
+tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2
+tiled_conv
+' rtl_lang='vlog' bootstrap_tcl='false' outdir='' outfilename=''
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/top-io-be.tcl 
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.tbgen.tcl 
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.compgen.dataonly.tcl 
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.compgen.dataonly.tcl 
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.rtl_wrap.cfg.tcl 
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.compgen.dataonly.tcl 
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3.tbgen.tcl 
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_60_1.tbgen.tcl 
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3.tbgen.tcl 
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2.tbgen.tcl 
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.tbgen.tcl 
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.constraint.tcl 
+Execute       sc_get_clocks tiled_conv 
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/impl/misc/tiled_conv_fadd_32ns_32ns_32_5_full_dsp_1_ip.tcl 
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/impl/misc/tiled_conv_fcmp_32ns_32ns_1_2_no_dsp_1_ip.tcl 
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/impl/misc/tiled_conv_fmul_32ns_32ns_32_4_max_dsp_1_ip.tcl 
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.tbgen.tcl 
+INFO-FLOW: DBG:PUTS:       cosim_export_main adding deadlock detection to tiled_conv
+INFO-FLOW: DBG:PUTS:       copy ip_driver_dir 1_0 /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/driver
+INFO-FLOW: DBG:PUTS:       generate_ip_script #gSsdmPorts=0 g_lang=vlog is_sdaccel=false is_sdsoc=true xo_file=
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.tbgen.tcl 
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.compgen.dataonly.tcl 
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.compgen.dataonly.tcl 
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS:       generate_top_info
+INFO-FLOW: DBG:PUTS:       prepArgInfo -> loadAnalyze_DB top_module=tiled_conv
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.rtl_wrap.cfg.tcl 
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.rtl_wrap.cfg.tcl 
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.rtl_wrap.cfg.tcl 
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.tbgen.tcl 
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.tbgen.tcl 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.tbgen.tcl 
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.constraint.tcl 
+INFO-FLOW: DBG:PUTS:       generate_ipi_example_script
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO-FLOW: DBG:PUTS:       generate_syn_sh
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS:       generate_imp_constraints
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.constraint.tcl 
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.tbgen.tcl 
+INFO-FLOW: DBG:PUTS:       delete-temp-dirs (skipped for debug)
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO-FLOW: DBG:PUTS: read_platform_lib /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/global.setting.tcl
+Execute       source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/common.gen 
+Execute         source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/op.gen 
+Execute       source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/interface.gen 
+Execute       source /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/util.gen 
+Execute         source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /apps/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.12 sec.
+INFO-FLOW: DBG:PUTS:     IP package: exec /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/impl/ip/pack.sh
+INFO-FLOW: DBG:PUTS:     IP package: success /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/impl/ip/pack.sh
+Execute       send_msg_by_id INFO @200-802@%s vitis.prj/solution1/impl/export.zip 
+INFO: [HLS 200-802] Generated output file vitis.prj/solution1/impl/export.zip
+Command     export_design done; 37.4 sec.
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 27.2 seconds. CPU system time: 1.7 seconds. Elapsed time: 37.4 seconds; current allocated memory: 0.000 MB.
+Execute     cleanup_all 
+Command     cleanup_all done; 0.16 sec.

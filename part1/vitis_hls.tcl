@@ -28,6 +28,6 @@ csynth_design
 ############################################
 # Uncoment the below line to export the IP #
 ############################################ 
-# export_design -format ip_catalog
+export_design -format ip_catalog
 
 exit              

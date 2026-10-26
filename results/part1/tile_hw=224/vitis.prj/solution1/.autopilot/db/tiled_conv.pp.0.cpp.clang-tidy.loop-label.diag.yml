@@ -1,0 +1,31 @@
+---
+MainSourceFile:  /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_26_1:  '
+    FileOffset:      26
+    FilePath:        tiled_conv.cpp
+    Replacements:    
+      - FilePath:        /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.pp.0.cpp
+        Offset:          874919
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_26_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_28_2:  '
+    FileOffset:      28
+    FilePath:        tiled_conv.cpp
+    Replacements:    
+      - FilePath:        /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.pp.0.cpp
+        Offset:          874974
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_28_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_39_3:  '
+    FileOffset:      39
+    FilePath:        tiled_conv.cpp
+    Replacements:    
+      - FilePath:        /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.pp.0.cpp
+        Offset:          875259
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_39_3: '
+...

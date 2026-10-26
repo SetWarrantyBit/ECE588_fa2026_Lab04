@@ -1,0 +1,25 @@
+Sun Oct 25 20:29:25 2026: Running xcd server. This server was built by gradle.
+Sun Oct 25 20:29:25 2026: Server was asked to start on port: '40191'
+Sun Oct 25 20:29:25 2026: Server is using token UUID: 'd632a108-fe21-42cb-84cd-1d1c0db57cb9'
+Sun Oct 25 20:29:25 2026: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Sun Oct 25 20:29:25 2026: Attempting to start server on port '40191'
+Sun Oct 25 20:29:25 2026: XCD main fifo: created main fifo '/tmp/xcdmaind632a108-fe21-42cb-84cd-1d1c0db57cb9', fd read = 13
+Sun Oct 25 20:29:25 2026: Running Dispatch Server
+Sun Oct 25 20:29:25 2026: Version 2.2.0
+Sun Oct 25 20:29:34 2026: Dispatch Server: Accepted socket connection from client
+Sun Oct 25 20:29:34 2026: Starting Socket connection
+Sun Oct 25 20:29:34 2026: EXCHANGE_TOKEN received, server token: d632a108-fe21-42cb-84cd-1d1c0db57cb9, passed token: d632a108-fe21-42cb-84cd-1d1c0db57cb9
+Sun Oct 25 20:29:34 2026: SESSION_MGR: creating session with session uuid: '8f8b89ef-abac-459f-b73c-3fc4fb880145' and name 'vitis_hls'
+Sun Oct 25 20:29:34 2026: KERNEL_SVC: creating session with uuid: '8f8b89ef-abac-459f-b73c-3fc4fb880145' and name 'vitis_hls'
+Sun Oct 25 20:29:34 2026: GUIDANCE_SMGR: creating guidance session with uuid: '8f8b89ef-abac-459f-b73c-3fc4fb880145' and name 'vitis_hls'
+Sun Oct 25 20:30:49 2026: STOP_SERVER received, server token: d632a108-fe21-42cb-84cd-1d1c0db57cb9, passed token: d632a108-fe21-42cb-84cd-1d1c0db57cb9
+Sun Oct 25 20:30:49 2026: Socket received request to stop server.
+Sun Oct 25 20:30:49 2026: Dispatch Server: do_await_stop
+Sun Oct 25 20:30:49 2026: Dispatch Server: stopping mainFifo_
+Sun Oct 25 20:30:49 2026: XCD main fifo: Stopping
+Sun Oct 25 20:30:49 2026: XCD main fifo: do_read error code: Operation canceled
+Sun Oct 25 20:30:49 2026: XCD main fifo: bytes_transferred: 0
+Sun Oct 25 20:30:49 2026: SERVER: destructor for server bound to port 40191
+Sun Oct 25 20:30:49 2026: XCD main fifo: Good unlink of /tmp/xcdmaind632a108-fe21-42cb-84cd-1d1c0db57cb9
+Sun Oct 25 20:30:49 2026: Server exiting with status 0.
+Sun Oct 25 20:30:49 2026: Closing log file.
