@@ -1,0 +1,19 @@
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis_hls.tcl:26:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=tiled_conv_XLX_SEP_ PragmaOptions=name=tiled_conv_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=tiled_conv
+        ^
+tiled_conv.cpp:14:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tiled_conv_XLX_SEP_ PragmaOptions=m_axi depth = 1 port = input_fm bundle = fm_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth = 1 port = input_fm bundle = fm
+        ^
+tiled_conv.cpp:15:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tiled_conv_XLX_SEP_ PragmaOptions=m_axi depth = 1 port = weights bundle = wt_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth = 1 port = weights bundle = wt
+        ^
+tiled_conv.cpp:16:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tiled_conv_XLX_SEP_ PragmaOptions=m_axi depth = 1 port = biases bundle = wt_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth = 1 port = biases bundle = wt
+        ^
+tiled_conv.cpp:17:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tiled_conv_XLX_SEP_ PragmaOptions=m_axi depth = 1 port = output_fm bundle = fm_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth = 1 port = output_fm bundle = fm
+        ^
+tiled_conv.cpp:19:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tiled_conv_XLX_SEP_ PragmaOptions=s_axilite register port = return_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite register port = return
+        ^
+6 warnings generated.

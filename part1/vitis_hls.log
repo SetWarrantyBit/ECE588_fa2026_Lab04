@@ -6,7 +6,7 @@
 
 source /apps/Xilinx/Vitis_HLS/2022.2/scripts/vitis_hls/hls.tcl -notrace
 INFO: [HLS 200-10] Running '/apps/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/lnx64.o/vitis_hls'
-INFO: [HLS 200-10] For user 'ykim131_588fa26' on host 'hunmin.ece.iit.edu' (Linux_x86_64 version 3.10.0-1160.99.1.el7.x86_64) on Mon Oct 26 20:56:55 CDT 2026
+INFO: [HLS 200-10] For user 'ykim131_588fa26' on host 'hunmin.ece.iit.edu' (Linux_x86_64 version 3.10.0-1160.99.1.el7.x86_64) on Mon Oct 26 21:05:30 CDT 2026
 INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.9 (Maipo)"
 INFO: [HLS 200-10] In directory '/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1'
 Sourcing Tcl script 'vitis_hls.tcl'
@@ -30,23 +30,23 @@ INFO: [HLS 200-1510] Running: create_clock -period 10 -name default
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [HLS 200-1510] Running: config_interface -m_axi_latency 64 
 INFO: [HLS 200-1510] Running: csynth_design 
-Running Dispatch Server on port: 44954
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 10.02 seconds; current allocated memory: 269.660 MB.
+Running Dispatch Server on port: 34948
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 10.03 seconds; current allocated memory: 269.660 MB.
 INFO: [HLS 200-10] Analyzing design file 'tiled_conv.cpp' ... 
 INFO: [HLS 200-10] Analyzing design file 'utils.cpp' ... 
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 4.53 seconds. CPU system time: 1.16 seconds. Elapsed time: 5.69 seconds; current allocated memory: 269.660 MB.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 4.56 seconds. CPU system time: 1.2 seconds. Elapsed time: 5.75 seconds; current allocated memory: 269.660 MB.
 INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
 INFO: [HLS 214-178] Inlining function 'load_input_tile_from_DRAM(float (*) [224][224], float (*) [30][30], int, int)' into 'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])' (tiled_conv.cpp:13:0)
 INFO: [HLS 214-178] Inlining function 'load_layer_params_from_DRAM(float (*) [3][3][3], float*, float (*) [3][3][3], float*, int)' into 'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])' (tiled_conv.cpp:13:0)
 INFO: [HLS 214-178] Inlining function 'conv_3x3(float (*) [30][30], float (*) [3][3][3], float*, float (*) [28][28])' into 'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])' (tiled_conv.cpp:13:0)
 INFO: [HLS 214-178] Inlining function 'store_output_tile_to_DRAM(float (*) [28][28], float (*) [224][224], int, int, int)' into 'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])' (tiled_conv.cpp:13:0)
 INFO: [HLS 214-115] Multiple burst writes of length 28 and bit width 32 in loop 'VITIS_LOOP_116_3'(utils.cpp:116:31) has been inferred on bundle 'fm'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (utils.cpp:116:31)
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 4.58 seconds. CPU system time: 0.72 seconds. Elapsed time: 5.3 seconds; current allocated memory: 269.660 MB.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 4.72 seconds. CPU system time: 0.83 seconds. Elapsed time: 5.55 seconds; current allocated memory: 269.660 MB.
 INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 269.660 MB.
 INFO: [HLS 200-10] Starting code transformations ...
 INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 269.660 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 269.660 MB.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 269.660 MB.
 INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_33_3' (utils.cpp:33) in function 'tiled_conv' automatically.
 INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_60_1' (utils.cpp:60) in function 'tiled_conv' automatically.
 INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_84_3' (utils.cpp:84) in function 'tiled_conv' automatically.
@@ -74,8 +74,64 @@ INFO: [XFORM 203-102] Partitioning array 'conv_wt_buf.1.2' (tiled_conv.cpp:22) i
 INFO: [XFORM 203-102] Partitioning array 'conv_wt_buf.2.0' (tiled_conv.cpp:22) in dimension 2 automatically.
 INFO: [XFORM 203-102] Partitioning array 'conv_wt_buf.2.1' (tiled_conv.cpp:22) in dimension 2 automatically.
 INFO: [XFORM 203-102] Partitioning array 'conv_wt_buf.2.2' (tiled_conv.cpp:22) in dimension 2 automatically.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.0.0.0' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.0.0.1' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.0.0.2' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.0.1.0' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.0.1.1' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.0.1.2' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.0.2.0' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.0.2.1' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.0.2.2' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.1.0.0' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.1.0.1' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.1.0.2' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.1.1.0' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.1.1.1' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.1.1.2' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.1.2.0' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.1.2.1' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.1.2.2' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.2.0.0' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.2.0.1' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.2.0.2' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.2.1.0' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.2.1.1' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.2.1.2' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.2.2.0' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.2.2.1' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_wt_buf.2.2.2' (tiled_conv.cpp:22) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_bias_buf' (tiled_conv.cpp:23) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.0.0.0' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.0.0.1' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.0.0.2' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.0.1.0' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.0.1.1' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.0.1.2' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.0.2.0' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.0.2.1' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.0.2.2' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.1.0.0' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.1.0.1' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.1.0.2' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.1.1.0' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.1.1.1' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.1.1.2' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.1.2.0' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.1.2.1' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.1.2.2' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.2.0.0' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.2.0.1' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.2.0.2' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.2.1.0' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.2.1.1' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.2.1.2' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.2.2.0' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.2.2.1' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_wt_buf.2.2.2' (tiled_conv.cpp:22) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'conv_bias_buf' (tiled_conv.cpp:23) in dimension 1 completely.
 INFO: [XFORM 203-11] Balancing expressions in function 'tiled_conv' (tiled_conv.cpp:9)...6 expression(s) balanced.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.26 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.28 seconds; current allocated memory: 333.660 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.42 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.45 seconds; current allocated memory: 333.660 MB.
 INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_31_2' (utils.cpp:31:35) in function 'tiled_conv'.
 INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_29_1' (utils.cpp:29:31) in function 'tiled_conv'.
 INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_82_2' (utils.cpp:82:35) in function 'tiled_conv'.
@@ -87,10 +143,8 @@ WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_28_2' (tiled_conv.cpp:28:
 Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-960.html
 INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_26_1' (tiled_conv.cpp:26:31) in function 'tiled_conv'.
 INFO: [HLS 200-472] Inferring partial write operation for 'conv_in_buf' (utils.cpp:40:40)
-INFO: [HLS 200-472] Inferring partial write operation for 'conv_wt_buf[0][0][0]' (utils.cpp:65:47)
-INFO: [HLS 200-472] Inferring partial write operation for 'conv_bias_buf' (utils.cpp:67:23)
 INFO: [HLS 200-472] Inferring partial write operation for 'conv_out_buf' (utils.cpp:93:32)
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.27 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.29 seconds; current allocated memory: 333.660 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.41 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.46 seconds; current allocated memory: 333.660 MB.
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'tiled_conv' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -101,13 +155,13 @@ INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for
 INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 76, loop 'VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.29 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.33 seconds; current allocated memory: 333.660 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.68 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.73 seconds; current allocated memory: 333.855 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.44 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.45 seconds; current allocated memory: 333.660 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.44 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.45 seconds; current allocated memory: 333.855 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'tiled_conv_Pipeline_VITIS_LOOP_60_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -127,13 +181,13 @@ WARNING: [HLS 200-885] The II Violation in module 'tiled_conv_Pipeline_VITIS_LOO
 Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 28, Depth = 100, loop 'VITIS_LOOP_60_1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.87 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.87 seconds; current allocated memory: 333.660 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2.3 seconds. CPU system time: 0.01 seconds. Elapsed time: 2.32 seconds; current allocated memory: 397.855 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.66 seconds. CPU system time: 0 seconds. Elapsed time: 0.67 seconds; current allocated memory: 333.660 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.74 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.76 seconds; current allocated memory: 397.855 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -143,15 +197,15 @@ INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for
 INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3'.
 WARNING: [HLS 200-885] The II Violation in module 'tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3' (loop 'VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3'): Unable to schedule 'load' operation ('conv_in_buf_load_16', utils.cpp:91) on array 'conv_in_buf' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'conv_in_buf'.
 Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 144, loop 'VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3'
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 143, loop 'VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.19 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.22 seconds; current allocated memory: 397.660 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.33 seconds. CPU system time: 0.04 seconds. Elapsed time: 1.37 seconds; current allocated memory: 397.855 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1.21 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.22 seconds; current allocated memory: 397.660 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.26 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.27 seconds; current allocated memory: 397.855 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -173,47 +227,48 @@ WARNING: [HLS 200-880] The II Violation in module 'tiled_conv_Pipeline_VITIS_LOO
 Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 28, Depth = 101, loop 'VITIS_LOOP_114_1_VITIS_LOOP_115_2'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.53 seconds. CPU system time: 0.03 seconds. Elapsed time: 1.57 seconds; current allocated memory: 397.660 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.55 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.57 seconds; current allocated memory: 397.855 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.9 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.91 seconds; current allocated memory: 397.660 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.9 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.92 seconds; current allocated memory: 397.855 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'tiled_conv' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.93 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.95 seconds; current allocated memory: 397.660 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.12 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.14 seconds; current allocated memory: 397.855 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.53 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.53 seconds; current allocated memory: 397.660 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.67 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.69 seconds; current allocated memory: 397.855 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3' pipeline 'VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Generating core module 'mul_2ns_19ns_20_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.39 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.41 seconds; current allocated memory: 397.660 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.44 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.46 seconds; current allocated memory: 397.855 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'tiled_conv_Pipeline_VITIS_LOOP_60_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'tiled_conv_Pipeline_VITIS_LOOP_60_1' pipeline 'VITIS_LOOP_60_1' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Finished creating RTL model for 'tiled_conv_Pipeline_VITIS_LOOP_60_1'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.8 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.82 seconds; current allocated memory: 397.660 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2.7 seconds. CPU system time: 0.05 seconds. Elapsed time: 2.75 seconds; current allocated memory: 397.855 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3' pipeline 'VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-104] Estimated max fanout for 'tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3' is 18626 from HDL expression: ((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))
+INFO: [RTGEN 206-104] Estimated max fanout for 'tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3' is 17954 from HDL expression: ((1'b0 == ap_block_pp0_stage1_11001) & (1'b1 == ap_CS_fsm_pp0_stage1))
 INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 14 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 14 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_42_32_1_1': 29 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.05 seconds. CPU system time: 0.04 seconds. Elapsed time: 1.09 seconds; current allocated memory: 397.660 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.49 seconds. CPU system time: 0.07 seconds. Elapsed time: 1.56 seconds; current allocated memory: 397.855 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -221,7 +276,7 @@ INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'tiled_conv_Pipeli
 INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mac_muladd_6ns_18ns_19s_25_4_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2.18 seconds. CPU system time: 0.02 seconds. Elapsed time: 2.21 seconds; current allocated memory: 397.660 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2.31 seconds. CPU system time: 0.05 seconds. Elapsed time: 2.36 seconds; current allocated memory: 461.855 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'tiled_conv' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -236,17 +291,16 @@ INFO: [RTGEN 206-500] Setting interface mode on function 'tiled_conv' to 's_axil
 INFO: [RTGEN 206-100] Bundling port 'input_fm', 'weights', 'biases', 'output_fm' to AXI-Lite port control.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'tiled_conv'.
 INFO: [RTMG 210-278] Implementing memory 'tiled_conv_conv_in_buf_RAM_1WNR_AUTO_1R1W' using auto RAMs.
-INFO: [RTMG 210-278] Implementing memory 'tiled_conv_conv_wt_buf_0_0_0_RAM_AUTO_1R1W' using auto RAMs.
 INFO: [RTMG 210-278] Implementing memory 'tiled_conv_conv_out_buf_RAM_1WNR_AUTO_1R1W' using auto RAMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2.29 seconds. CPU system time: 0.05 seconds. Elapsed time: 2.34 seconds; current allocated memory: 397.660 MB.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 3.07 seconds. CPU system time: 0.11 seconds. Elapsed time: 3.17 seconds; current allocated memory: 397.660 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2.31 seconds. CPU system time: 0.04 seconds. Elapsed time: 2.37 seconds; current allocated memory: 461.855 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 3.1 seconds. CPU system time: 0.16 seconds. Elapsed time: 3.26 seconds; current allocated memory: 461.855 MB.
 INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1.04 seconds. CPU system time: 0.04 seconds. Elapsed time: 1.08 seconds; current allocated memory: 461.660 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1.13 seconds. CPU system time: 0.05 seconds. Elapsed time: 1.19 seconds; current allocated memory: 461.855 MB.
 INFO: [VHDL 208-304] Generating VHDL RTL for tiled_conv.
 INFO: [VLOG 209-307] Generating Verilog RTL for tiled_conv.
 INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
 INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
-INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 30.16 seconds. CPU system time: 2.39 seconds. Elapsed time: 32.55 seconds; current allocated memory: 192.000 MB.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 35.75 seconds. CPU system time: 2.77 seconds. Elapsed time: 38.53 seconds; current allocated memory: 192.195 MB.
 INFO: [HLS 200-1510] Running: export_design -format ip_catalog 
 INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
 
@@ -256,7 +310,7 @@ INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 
 source run_ippack.tcl -notrace
-create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1444.027 ; gain = 2.020 ; free physical = 163384 ; free virtual = 285267
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1444.027 ; gain = 2.020 ; free physical = 163278 ; free virtual = 285374
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/apps/Xilinx/Vivado/2022.2/data/ip'.
@@ -272,8 +326,8 @@ INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'tiled_conv_fmul_3
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/apps/Xilinx/Vivado/2022.2/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Mon Oct 26 20:58:06 2026...
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 26 21:06:47 2026...
 INFO: [HLS 200-802] Generated output file vitis.prj/solution1/impl/export.zip
-INFO: [HLS 200-111] Finished Command export_design CPU user time: 26.87 seconds. CPU system time: 1.68 seconds. Elapsed time: 37.07 seconds; current allocated memory: 0.000 MB.
-INFO: [HLS 200-112] Total CPU user time: 58.68 seconds. Total CPU system time: 4.47 seconds. Total elapsed time: 81.42 seconds; peak allocated memory: 461.660 MB.
-INFO: [Common 17-206] Exiting vitis_hls at Mon Oct 26 20:58:16 2026...
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 26.98 seconds. CPU system time: 1.63 seconds. Elapsed time: 37.12 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 64.4 seconds. Total CPU system time: 4.82 seconds. Total elapsed time: 87.5 seconds; peak allocated memory: 461.855 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Mon Oct 26 21:06:57 2026...

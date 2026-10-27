@@ -9,7 +9,7 @@
         VITIS_LOOP_28_2: 
 /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.pp.0.cpp:32853:9: note: FIX-IT applied suggested code changes
 /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.pp.0.cpp:32864:13: warning: Added loop label VITIS_LOOP_39_3:   [xilinx-label-all-loops]
-            for (int g = 0; g < 64 / 8; g++)
+            for (int g = 0; g < 64 / 4; g++)
             ^~~
             VITIS_LOOP_39_3: 
 /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/tiled_conv.pp.0.cpp:32864:13: note: FIX-IT applied suggested code changes
