@@ -1,0 +1,376 @@
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
+Function:        _Z10tiled_convPA224_A224_fPA3_A3_A3_fPfS1_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'load_input_tile_from_DRAM(float (*) [224][224], float (*) [30][30], int, int)'
+    DebugLoc:        { File: utils.cpp, Line: 23, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])'
+    DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
+Function:        _Z10tiled_convPA224_A224_fPA3_A3_A3_fPfS1_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'load_layer_params_from_DRAM(float (*) [3][3][3], float*, float (*) [3][3][3], float*, int)'
+    DebugLoc:        { File: utils.cpp, Line: 55, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])'
+    DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
+Function:        _Z10tiled_convPA224_A224_fPA3_A3_A3_fPfS1_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'conv_3x3(float (*) [30][30], float (*) [3][3][3], float*, float (*) [28][28])'
+    DebugLoc:        { File: utils.cpp, Line: 77, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])'
+    DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
+Function:        _Z10tiled_convPA224_A224_fPA3_A3_A3_fPfS1_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'store_output_tile_to_DRAM(float (*) [28][28], float (*) [224][224], int, int, int)'
+    DebugLoc:        { File: utils.cpp, Line: 106, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])'
+    DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: utils.cpp, Line: 60, Column: 22 }
+Function:        _Z10tiled_convPA224_A224_fPA3_A3_A3_fPfS1_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '432'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc.i9.load.5
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - String:          ' '
+  - ArrayName:       weights
+  - String:          ' '
+  - BundleName:      wt
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_60_1
+  - String:          ' '
+  - LoopLoc:         'utils.cpp:60:22'
+  - String:          ' '
+  - Function:        'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])'
+    DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: utils.cpp, Line: 60, Column: 22 }
+Function:        _Z10tiled_convPA224_A224_fPA3_A3_A3_fPfS1_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '16'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc38.i.load.2
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep103seq
+  - String:          ' '
+  - ArrayName:       biases
+  - String:          ' '
+  - BundleName:      wt
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_60_1
+  - String:          ' '
+  - LoopLoc:         'utils.cpp:60:22'
+  - String:          ' '
+  - Function:        'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])'
+    DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: utils.cpp, Line: 116, Column: 31 }
+Function:        _Z10tiled_convPA224_A224_fPA3_A3_A3_fPfS1_
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of length '
+  - Length:          '28'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.body11.i.store.10
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep104seq
+  - String:          ' '
+  - ArrayName:       output_fm
+  - String:          ' '
+  - BundleName:      fm
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_116_3
+  - String:          ' '
+  - LoopLoc:         'utils.cpp:116:31'
+  - String:          ' '
+  - Function:        'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])'
+    DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: utils.cpp, Line: 42, Column: 42 }
+Function:        _Z10tiled_convPA224_A224_fPA3_A3_A3_fPfS1_
+Args:            
+  - String:          'Access '
+  - Access:          load
+    DebugLoc:        { File: utils.cpp, Line: 42, Column: 42 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        if.else.i.load.1
+  - String:          ' '
+  - ArrayName:       input_fm
+  - String:          ' '
+  - BundleName:      fm
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_33_3
+  - String:          ' '
+  - LoopLoc:         'utils.cpp:33:30'
+  - String:          ' '
+  - Function:        'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])'
+    DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: utils.cpp, Line: 116, Column: 31 }
+Function:        _Z10tiled_convPA224_A224_fPA3_A3_A3_fPfS1_
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep104seq
+  - String:          ' '
+  - ArrayName:       output_fm
+  - String:          ' '
+  - BundleName:      fm
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_115_2
+  - String:          ' '
+  - LoopLoc:         'utils.cpp:115:27'
+  - String:          ' '
+  - Function:        'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])'
+    DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+DebugLoc:        { File: utils.cpp, Line: 60, Column: 22 }
+Function:        _Z10tiled_convPA224_A224_fPA3_A3_A3_fPfS1_
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     load
+    DebugLoc:        { File: utils.cpp, Line: 65, Column: 49 }
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep103seq
+  - String:          ' '
+  - ArrayName:       biases
+  - String:          ' '
+  - BundleName:      wt
+  - String:          ' '
+  - Function:        'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])'
+    DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+DebugLoc:        { File: utils.cpp, Line: 60, Column: 22 }
+Function:        _Z10tiled_convPA224_A224_fPA3_A3_A3_fPfS1_
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     load
+    DebugLoc:        { File: utils.cpp, Line: 67, Column: 25 }
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - String:          ' '
+  - ArrayName:       weights
+  - String:          ' '
+  - BundleName:      wt
+  - String:          ' '
+  - Function:        'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])'
+    DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: utils.cpp, Line: 116, Column: 31 }
+Function:        _Z10tiled_convPA224_A224_fPA3_A3_A3_fPfS1_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep104seq
+  - String:          ' '
+  - ArrayName:       output_fm
+  - String:          ' '
+  - BundleName:      fm
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_116_3
+  - String:          ' '
+  - LoopLoc:         'utils.cpp:116:31'
+  - String:          ' '
+  - Function:        'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])'
+    DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: utils.cpp, Line: 60, Column: 22 }
+Function:        _Z10tiled_convPA224_A224_fPA3_A3_A3_fPfS1_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep103seq
+  - String:          ' '
+  - ArrayName:       biases
+  - String:          ' '
+  - BundleName:      wt
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_60_1
+  - String:          ' '
+  - LoopLoc:         'utils.cpp:60:22'
+  - String:          ' '
+  - Function:        'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])'
+    DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: utils.cpp, Line: 60, Column: 22 }
+Function:        _Z10tiled_convPA224_A224_fPA3_A3_A3_fPfS1_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - String:          ' '
+  - ArrayName:       weights
+  - String:          ' '
+  - BundleName:      wt
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_64_4
+  - String:          ' '
+  - LoopLoc:         'utils.cpp:64:34'
+  - String:          ' '
+  - Function:        'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])'
+    DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            BurstConflict
+DebugLoc:        { File: utils.cpp, Line: 60, Column: 22 }
+Function:        _Z10tiled_convPA224_A224_fPA3_A3_A3_fPfS1_
+Args:            
+  - String:          'Could not burst due to multiple potential '
+  - Direction:       reads
+  - String:          ' to the same bundle in the same region.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      wt
+  - String:          ' '
+  - Function:        'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])'
+    DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: utils.cpp, Line: 116, Column: 31 }
+Function:        _Z10tiled_convPA224_A224_fPA3_A3_A3_fPfS1_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '28'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq2
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      fm
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_116_3
+  - String:          ' '
+  - LoopLoc:         'utils.cpp:116:31'
+  - String:          ' '
+  - Function:        'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])'
+    DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: utils.cpp, Line: 116, Column: 31 }
+Function:        _Z10tiled_convPA224_A224_fPA3_A3_A3_fPfS1_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '28'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_116_3
+  - String:          '''('
+  - LoopLoc:         'utils.cpp:116:31'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      fm
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...

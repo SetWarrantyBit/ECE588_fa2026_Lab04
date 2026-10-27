@@ -611,7 +611,7 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="32" bw="11" op_0_bw="32">
+<Node id="32" bw="8" op_0_bw="32">
 <![CDATA[
 newFuncRoot:0 %phi_mul = alloca i32 1
 
@@ -626,7 +626,7 @@ newFuncRoot:0 %phi_mul = alloca i32 1
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="33" bw="7" op_0_bw="32">
+<Node id="33" bw="4" op_0_bw="32">
 <![CDATA[
 newFuncRoot:1 %f = alloca i32 1
 
@@ -643,10 +643,10 @@ newFuncRoot:1 %f = alloca i32 1
 
 <Node id="34" bw="62" op_0_bw="62" op_1_bw="62">
 <![CDATA[
-newFuncRoot:2 %sext_ln26_read = read i62 @_ssdm_op_Read.ap_auto.i62, i62 %sext_ln26
+newFuncRoot:2 %sext_ln60_1_read = read i62 @_ssdm_op_Read.ap_auto.i62, i62 %sext_ln60_1
 
 ]]></Node>
-<StgValue><ssdm name="sext_ln26_read"/></StgValue>
+<StgValue><ssdm name="sext_ln60_1_read"/></StgValue>
 </operation>
 
 <operation id="106" st_id="1" stage="1" lat="1">
@@ -673,10 +673,10 @@ newFuncRoot:3 %sext_ln60_read = read i62 @_ssdm_op_Read.ap_auto.i62, i62 %sext_l
 
 <Node id="36" bw="63" op_0_bw="62">
 <![CDATA[
-newFuncRoot:4 %sext_ln26_cast = sext i62 %sext_ln26_read
+newFuncRoot:4 %sext_ln60_1_cast = sext i62 %sext_ln60_1_read
 
 ]]></Node>
-<StgValue><ssdm name="sext_ln26_cast"/></StgValue>
+<StgValue><ssdm name="sext_ln60_1_cast"/></StgValue>
 </operation>
 
 <operation id="108" st_id="1" stage="1" lat="1">
@@ -703,7 +703,7 @@ newFuncRoot:5 %sext_ln60_cast = sext i62 %sext_ln60_read
 
 <Node id="38" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-newFuncRoot:6 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %wt, void @empty_17, i32 0, i32 0, void @empty_9, i32 64, i32 1, void @empty_10, void @empty_5, void @empty_9, i32 16, i32 16, i32 16, i32 16, void @empty_9, void @empty_9, i32 4294967295, i32 0
+newFuncRoot:6 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %wt, void @empty_18, i32 0, i32 0, void @empty_11, i32 64, i32 1, void @empty_12, void @empty_5, void @empty_11, i32 16, i32 16, i32 16, i32 16, void @empty_11, void @empty_11, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -716,9 +716,9 @@ newFuncRoot:6 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="39" bw="0" op_0_bw="7" op_1_bw="7">
+<Node id="39" bw="0" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-newFuncRoot:7 %store_ln0 = store i7 0, i7 %f
+newFuncRoot:7 %store_ln0 = store i4 0, i4 %f
 
 ]]></Node>
 <StgValue><ssdm name="store_ln0"/></StgValue>
@@ -731,9 +731,9 @@ newFuncRoot:7 %store_ln0 = store i7 0, i7 %f
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="40" bw="0" op_0_bw="11" op_1_bw="11">
+<Node id="40" bw="0" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-newFuncRoot:8 %store_ln0 = store i11 0, i11 %phi_mul
+newFuncRoot:8 %store_ln0 = store i8 0, i8 %phi_mul
 
 ]]></Node>
 <StgValue><ssdm name="store_ln0"/></StgValue>
@@ -761,9 +761,9 @@ newFuncRoot:9 %br_ln0 = br void %VITIS_LOOP_62_2.i
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="43" bw="7" op_0_bw="7" op_1_bw="0">
+<Node id="43" bw="4" op_0_bw="4" op_1_bw="0">
 <![CDATA[
-VITIS_LOOP_62_2.i:0 %f_1 = load i7 %f
+VITIS_LOOP_62_2.i:0 %f_1 = load i4 %f
 
 ]]></Node>
 <StgValue><ssdm name="f_1"/></StgValue>
@@ -806,9 +806,9 @@ VITIS_LOOP_62_2.i:2 %specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="46" bw="1" op_0_bw="7" op_1_bw="7">
+<Node id="46" bw="1" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-VITIS_LOOP_62_2.i:3 %icmp_ln60 = icmp_eq  i7 %f_1, i7 64
+VITIS_LOOP_62_2.i:3 %icmp_ln60 = icmp_eq  i4 %f_1, i4 8
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln60"/></StgValue>
@@ -823,7 +823,7 @@ VITIS_LOOP_62_2.i:3 %icmp_ln60 = icmp_eq  i7 %f_1, i7 64
 
 <Node id="47" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-VITIS_LOOP_62_2.i:4 %empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 64, i64 64, i64 64
+VITIS_LOOP_62_2.i:4 %empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 8, i64 8, i64 8
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -836,9 +836,9 @@ VITIS_LOOP_62_2.i:4 %empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, 
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="48" bw="7" op_0_bw="7" op_1_bw="7">
+<Node id="48" bw="4" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-VITIS_LOOP_62_2.i:5 %add_ln60 = add i7 %f_1, i7 1
+VITIS_LOOP_62_2.i:5 %add_ln60 = add i4 %f_1, i4 1
 
 ]]></Node>
 <StgValue><ssdm name="add_ln60"/></StgValue>
@@ -867,9 +867,9 @@ VITIS_LOOP_62_2.i:6 %br_ln60 = br i1 %icmp_ln60, void %VITIS_LOOP_62_2.i.split, 
 </and_exp></or_exp>
 </condition>
 
-<Node id="51" bw="11" op_0_bw="11" op_1_bw="0">
+<Node id="51" bw="8" op_0_bw="8" op_1_bw="0">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:0 %phi_mul_load = load i11 %phi_mul
+VITIS_LOOP_62_2.i.split:0 %phi_mul_load = load i8 %phi_mul
 
 ]]></Node>
 <StgValue><ssdm name="phi_mul_load"/></StgValue>
@@ -883,9 +883,9 @@ VITIS_LOOP_62_2.i.split:0 %phi_mul_load = load i11 %phi_mul
 </and_exp></or_exp>
 </condition>
 
-<Node id="56" bw="63" op_0_bw="11">
+<Node id="56" bw="63" op_0_bw="8">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:5 %zext_ln65 = zext i11 %phi_mul_load
+VITIS_LOOP_62_2.i.split:5 %zext_ln65 = zext i8 %phi_mul_load
 
 ]]></Node>
 <StgValue><ssdm name="zext_ln65"/></StgValue>
@@ -915,9 +915,9 @@ VITIS_LOOP_62_2.i.split:6 %add_ln65 = add i63 %zext_ln65, i63 %sext_ln60_cast
 </and_exp></or_exp>
 </condition>
 
-<Node id="281" bw="0" op_0_bw="7" op_1_bw="7" op_2_bw="0" op_3_bw="0">
+<Node id="281" bw="0" op_0_bw="4" op_1_bw="4" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:230 %store_ln60 = store i7 %add_ln60, i7 %f
+VITIS_LOOP_62_2.i.split:230 %store_ln60 = store i4 %add_ln60, i4 %f
 
 ]]></Node>
 <StgValue><ssdm name="store_ln60"/></StgValue>
@@ -7908,12 +7908,12 @@ VITIS_LOOP_62_2.i.split:209 %wt_load_26_req = readreq i1 @_ssdm_op_ReadReq.m_axi
 </and_exp></or_exp>
 </condition>
 
-<Node id="53" bw="63" op_0_bw="7">
+<Node id="53" bw="63" op_0_bw="4">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:2 %f_cast10 = zext i7 %f_1
+VITIS_LOOP_62_2.i.split:2 %f_cast17 = zext i4 %f_1
 
 ]]></Node>
-<StgValue><ssdm name="f_cast10"/></StgValue>
+<StgValue><ssdm name="f_cast17"/></StgValue>
 </operation>
 
 <operation id="556" st_id="28" stage="1" lat="1">
@@ -7924,12 +7924,12 @@ VITIS_LOOP_62_2.i.split:2 %f_cast10 = zext i7 %f_1
 </and_exp></or_exp>
 </condition>
 
-<Node id="55" bw="11" op_0_bw="11" op_1_bw="11">
+<Node id="55" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:4 %add_ln62 = add i11 %phi_mul_load, i11 27
+VITIS_LOOP_62_2.i.split:4 %next_mul = add i8 %phi_mul_load, i8 27
 
 ]]></Node>
-<StgValue><ssdm name="add_ln62"/></StgValue>
+<StgValue><ssdm name="next_mul"/></StgValue>
 </operation>
 
 <operation id="557" st_id="28" stage="44" lat="70">
@@ -8374,7 +8374,7 @@ VITIS_LOOP_62_2.i.split:217 %wt_load_27_req = readreq i1 @_ssdm_op_ReadReq.m_axi
 
 <Node id="273" bw="63" op_0_bw="63" op_1_bw="63">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:222 %add_ln67 = add i63 %f_cast10, i63 %sext_ln26_cast
+VITIS_LOOP_62_2.i.split:222 %add_ln67 = add i63 %f_cast17, i63 %sext_ln60_1_cast
 
 ]]></Node>
 <StgValue><ssdm name="add_ln67"/></StgValue>
@@ -8420,9 +8420,9 @@ VITIS_LOOP_62_2.i.split:224 %wt_addr = getelementptr i32 %wt, i64 %sext_ln67
 </and_exp></or_exp>
 </condition>
 
-<Node id="282" bw="0" op_0_bw="11" op_1_bw="11" op_2_bw="0" op_3_bw="0">
+<Node id="282" bw="0" op_0_bw="8" op_1_bw="8" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:231 %store_ln60 = store i11 %add_ln62, i11 %phi_mul
+VITIS_LOOP_62_2.i.split:231 %store_ln60 = store i8 %next_mul, i8 %phi_mul
 
 ]]></Node>
 <StgValue><ssdm name="store_ln60"/></StgValue>
@@ -27066,12 +27066,12 @@ VITIS_LOOP_88_4.i.preheader.exitStub:0 %ret_ln0 = ret
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="52" bw="64" op_0_bw="7">
+<Node id="52" bw="64" op_0_bw="4">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:1 %f_cast18 = zext i7 %f_1
+VITIS_LOOP_62_2.i.split:1 %f_cast27 = zext i4 %f_1
 
 ]]></Node>
-<StgValue><ssdm name="f_cast18"/></StgValue>
+<StgValue><ssdm name="f_cast27"/></StgValue>
 </operation>
 
 <operation id="1821" st_id="73" stage="1" lat="1">
@@ -27096,9 +27096,9 @@ VITIS_LOOP_62_2.i.split:11 %bitcast_ln65 = bitcast i32 %wt_addr_1_read
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="63" bw="6" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<Node id="63" bw="3" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:12 %conv_wt_buf_0_0_0_addr = getelementptr i32 %conv_wt_buf_0_0_0, i64 0, i64 %f_cast18
+VITIS_LOOP_62_2.i.split:12 %conv_wt_buf_0_0_0_addr = getelementptr i32 %conv_wt_buf_0_0_0, i64 0, i64 %f_cast27
 
 ]]></Node>
 <StgValue><ssdm name="conv_wt_buf_0_0_0_addr"/></StgValue>
@@ -27111,9 +27111,9 @@ VITIS_LOOP_62_2.i.split:12 %conv_wt_buf_0_0_0_addr = getelementptr i32 %conv_wt_
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="64" bw="0" op_0_bw="32" op_1_bw="6">
+<Node id="64" bw="0" op_0_bw="32" op_1_bw="3">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:13 %store_ln65 = store i32 %bitcast_ln65, i6 %conv_wt_buf_0_0_0_addr
+VITIS_LOOP_62_2.i.split:13 %store_ln65 = store i32 %bitcast_ln65, i3 %conv_wt_buf_0_0_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln65"/></StgValue>
@@ -27549,9 +27549,9 @@ VITIS_LOOP_62_2.i.split:19 %bitcast_ln65_1 = bitcast i32 %wt_addr_2_read
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="71" bw="6" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<Node id="71" bw="3" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:20 %conv_wt_buf_0_0_1_addr = getelementptr i32 %conv_wt_buf_0_0_1, i64 0, i64 %f_cast18
+VITIS_LOOP_62_2.i.split:20 %conv_wt_buf_0_0_1_addr = getelementptr i32 %conv_wt_buf_0_0_1, i64 0, i64 %f_cast27
 
 ]]></Node>
 <StgValue><ssdm name="conv_wt_buf_0_0_1_addr"/></StgValue>
@@ -27564,9 +27564,9 @@ VITIS_LOOP_62_2.i.split:20 %conv_wt_buf_0_0_1_addr = getelementptr i32 %conv_wt_
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="72" bw="0" op_0_bw="32" op_1_bw="6">
+<Node id="72" bw="0" op_0_bw="32" op_1_bw="3">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:21 %store_ln65 = store i32 %bitcast_ln65_1, i6 %conv_wt_buf_0_0_1_addr
+VITIS_LOOP_62_2.i.split:21 %store_ln65 = store i32 %bitcast_ln65_1, i3 %conv_wt_buf_0_0_1_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln65"/></StgValue>
@@ -27987,9 +27987,9 @@ VITIS_LOOP_62_2.i.split:27 %bitcast_ln65_2 = bitcast i32 %wt_addr_3_read
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="79" bw="6" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<Node id="79" bw="3" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:28 %conv_wt_buf_0_0_2_addr = getelementptr i32 %conv_wt_buf_0_0_2, i64 0, i64 %f_cast18
+VITIS_LOOP_62_2.i.split:28 %conv_wt_buf_0_0_2_addr = getelementptr i32 %conv_wt_buf_0_0_2, i64 0, i64 %f_cast27
 
 ]]></Node>
 <StgValue><ssdm name="conv_wt_buf_0_0_2_addr"/></StgValue>
@@ -28002,9 +28002,9 @@ VITIS_LOOP_62_2.i.split:28 %conv_wt_buf_0_0_2_addr = getelementptr i32 %conv_wt_
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="80" bw="0" op_0_bw="32" op_1_bw="6">
+<Node id="80" bw="0" op_0_bw="32" op_1_bw="3">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:29 %store_ln65 = store i32 %bitcast_ln65_2, i6 %conv_wt_buf_0_0_2_addr
+VITIS_LOOP_62_2.i.split:29 %store_ln65 = store i32 %bitcast_ln65_2, i3 %conv_wt_buf_0_0_2_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln65"/></StgValue>
@@ -28410,9 +28410,9 @@ VITIS_LOOP_62_2.i.split:35 %bitcast_ln65_3 = bitcast i32 %wt_addr_4_read
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="87" bw="6" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<Node id="87" bw="3" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:36 %conv_wt_buf_0_1_0_addr = getelementptr i32 %conv_wt_buf_0_1_0, i64 0, i64 %f_cast18
+VITIS_LOOP_62_2.i.split:36 %conv_wt_buf_0_1_0_addr = getelementptr i32 %conv_wt_buf_0_1_0, i64 0, i64 %f_cast27
 
 ]]></Node>
 <StgValue><ssdm name="conv_wt_buf_0_1_0_addr"/></StgValue>
@@ -28425,9 +28425,9 @@ VITIS_LOOP_62_2.i.split:36 %conv_wt_buf_0_1_0_addr = getelementptr i32 %conv_wt_
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="88" bw="0" op_0_bw="32" op_1_bw="6">
+<Node id="88" bw="0" op_0_bw="32" op_1_bw="3">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:37 %store_ln65 = store i32 %bitcast_ln65_3, i6 %conv_wt_buf_0_1_0_addr
+VITIS_LOOP_62_2.i.split:37 %store_ln65 = store i32 %bitcast_ln65_3, i3 %conv_wt_buf_0_1_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln65"/></StgValue>
@@ -28818,9 +28818,9 @@ VITIS_LOOP_62_2.i.split:43 %bitcast_ln65_4 = bitcast i32 %wt_addr_5_read
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="95" bw="6" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<Node id="95" bw="3" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:44 %conv_wt_buf_0_1_1_addr = getelementptr i32 %conv_wt_buf_0_1_1, i64 0, i64 %f_cast18
+VITIS_LOOP_62_2.i.split:44 %conv_wt_buf_0_1_1_addr = getelementptr i32 %conv_wt_buf_0_1_1, i64 0, i64 %f_cast27
 
 ]]></Node>
 <StgValue><ssdm name="conv_wt_buf_0_1_1_addr"/></StgValue>
@@ -28833,9 +28833,9 @@ VITIS_LOOP_62_2.i.split:44 %conv_wt_buf_0_1_1_addr = getelementptr i32 %conv_wt_
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="96" bw="0" op_0_bw="32" op_1_bw="6">
+<Node id="96" bw="0" op_0_bw="32" op_1_bw="3">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:45 %store_ln65 = store i32 %bitcast_ln65_4, i6 %conv_wt_buf_0_1_1_addr
+VITIS_LOOP_62_2.i.split:45 %store_ln65 = store i32 %bitcast_ln65_4, i3 %conv_wt_buf_0_1_1_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln65"/></StgValue>
@@ -29211,9 +29211,9 @@ VITIS_LOOP_62_2.i.split:51 %bitcast_ln65_5 = bitcast i32 %wt_addr_6_read
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="103" bw="6" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<Node id="103" bw="3" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:52 %conv_wt_buf_0_1_2_addr = getelementptr i32 %conv_wt_buf_0_1_2, i64 0, i64 %f_cast18
+VITIS_LOOP_62_2.i.split:52 %conv_wt_buf_0_1_2_addr = getelementptr i32 %conv_wt_buf_0_1_2, i64 0, i64 %f_cast27
 
 ]]></Node>
 <StgValue><ssdm name="conv_wt_buf_0_1_2_addr"/></StgValue>
@@ -29226,9 +29226,9 @@ VITIS_LOOP_62_2.i.split:52 %conv_wt_buf_0_1_2_addr = getelementptr i32 %conv_wt_
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="104" bw="0" op_0_bw="32" op_1_bw="6">
+<Node id="104" bw="0" op_0_bw="32" op_1_bw="3">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:53 %store_ln65 = store i32 %bitcast_ln65_5, i6 %conv_wt_buf_0_1_2_addr
+VITIS_LOOP_62_2.i.split:53 %store_ln65 = store i32 %bitcast_ln65_5, i3 %conv_wt_buf_0_1_2_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln65"/></StgValue>
@@ -29589,9 +29589,9 @@ VITIS_LOOP_62_2.i.split:59 %bitcast_ln65_6 = bitcast i32 %wt_addr_7_read
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="111" bw="6" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<Node id="111" bw="3" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:60 %conv_wt_buf_0_2_0_addr = getelementptr i32 %conv_wt_buf_0_2_0, i64 0, i64 %f_cast18
+VITIS_LOOP_62_2.i.split:60 %conv_wt_buf_0_2_0_addr = getelementptr i32 %conv_wt_buf_0_2_0, i64 0, i64 %f_cast27
 
 ]]></Node>
 <StgValue><ssdm name="conv_wt_buf_0_2_0_addr"/></StgValue>
@@ -29604,9 +29604,9 @@ VITIS_LOOP_62_2.i.split:60 %conv_wt_buf_0_2_0_addr = getelementptr i32 %conv_wt_
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="112" bw="0" op_0_bw="32" op_1_bw="6">
+<Node id="112" bw="0" op_0_bw="32" op_1_bw="3">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:61 %store_ln65 = store i32 %bitcast_ln65_6, i6 %conv_wt_buf_0_2_0_addr
+VITIS_LOOP_62_2.i.split:61 %store_ln65 = store i32 %bitcast_ln65_6, i3 %conv_wt_buf_0_2_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln65"/></StgValue>
@@ -29952,9 +29952,9 @@ VITIS_LOOP_62_2.i.split:67 %bitcast_ln65_7 = bitcast i32 %wt_addr_8_read
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="119" bw="6" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<Node id="119" bw="3" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:68 %conv_wt_buf_0_2_1_addr = getelementptr i32 %conv_wt_buf_0_2_1, i64 0, i64 %f_cast18
+VITIS_LOOP_62_2.i.split:68 %conv_wt_buf_0_2_1_addr = getelementptr i32 %conv_wt_buf_0_2_1, i64 0, i64 %f_cast27
 
 ]]></Node>
 <StgValue><ssdm name="conv_wt_buf_0_2_1_addr"/></StgValue>
@@ -29967,9 +29967,9 @@ VITIS_LOOP_62_2.i.split:68 %conv_wt_buf_0_2_1_addr = getelementptr i32 %conv_wt_
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="120" bw="0" op_0_bw="32" op_1_bw="6">
+<Node id="120" bw="0" op_0_bw="32" op_1_bw="3">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:69 %store_ln65 = store i32 %bitcast_ln65_7, i6 %conv_wt_buf_0_2_1_addr
+VITIS_LOOP_62_2.i.split:69 %store_ln65 = store i32 %bitcast_ln65_7, i3 %conv_wt_buf_0_2_1_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln65"/></StgValue>
@@ -30300,9 +30300,9 @@ VITIS_LOOP_62_2.i.split:75 %bitcast_ln65_8 = bitcast i32 %wt_addr_9_read
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="127" bw="6" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<Node id="127" bw="3" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:76 %conv_wt_buf_0_2_2_addr = getelementptr i32 %conv_wt_buf_0_2_2, i64 0, i64 %f_cast18
+VITIS_LOOP_62_2.i.split:76 %conv_wt_buf_0_2_2_addr = getelementptr i32 %conv_wt_buf_0_2_2, i64 0, i64 %f_cast27
 
 ]]></Node>
 <StgValue><ssdm name="conv_wt_buf_0_2_2_addr"/></StgValue>
@@ -30315,9 +30315,9 @@ VITIS_LOOP_62_2.i.split:76 %conv_wt_buf_0_2_2_addr = getelementptr i32 %conv_wt_
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="128" bw="0" op_0_bw="32" op_1_bw="6">
+<Node id="128" bw="0" op_0_bw="32" op_1_bw="3">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:77 %store_ln65 = store i32 %bitcast_ln65_8, i6 %conv_wt_buf_0_2_2_addr
+VITIS_LOOP_62_2.i.split:77 %store_ln65 = store i32 %bitcast_ln65_8, i3 %conv_wt_buf_0_2_2_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln65"/></StgValue>
@@ -30633,9 +30633,9 @@ VITIS_LOOP_62_2.i.split:83 %bitcast_ln65_9 = bitcast i32 %wt_addr_10_read
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="135" bw="6" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<Node id="135" bw="3" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:84 %conv_wt_buf_1_0_0_addr = getelementptr i32 %conv_wt_buf_1_0_0, i64 0, i64 %f_cast18
+VITIS_LOOP_62_2.i.split:84 %conv_wt_buf_1_0_0_addr = getelementptr i32 %conv_wt_buf_1_0_0, i64 0, i64 %f_cast27
 
 ]]></Node>
 <StgValue><ssdm name="conv_wt_buf_1_0_0_addr"/></StgValue>
@@ -30648,9 +30648,9 @@ VITIS_LOOP_62_2.i.split:84 %conv_wt_buf_1_0_0_addr = getelementptr i32 %conv_wt_
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="136" bw="0" op_0_bw="32" op_1_bw="6">
+<Node id="136" bw="0" op_0_bw="32" op_1_bw="3">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:85 %store_ln65 = store i32 %bitcast_ln65_9, i6 %conv_wt_buf_1_0_0_addr
+VITIS_LOOP_62_2.i.split:85 %store_ln65 = store i32 %bitcast_ln65_9, i3 %conv_wt_buf_1_0_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln65"/></StgValue>
@@ -30951,9 +30951,9 @@ VITIS_LOOP_62_2.i.split:91 %bitcast_ln65_10 = bitcast i32 %wt_addr_11_read
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="143" bw="6" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<Node id="143" bw="3" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:92 %conv_wt_buf_1_0_1_addr = getelementptr i32 %conv_wt_buf_1_0_1, i64 0, i64 %f_cast18
+VITIS_LOOP_62_2.i.split:92 %conv_wt_buf_1_0_1_addr = getelementptr i32 %conv_wt_buf_1_0_1, i64 0, i64 %f_cast27
 
 ]]></Node>
 <StgValue><ssdm name="conv_wt_buf_1_0_1_addr"/></StgValue>
@@ -30966,9 +30966,9 @@ VITIS_LOOP_62_2.i.split:92 %conv_wt_buf_1_0_1_addr = getelementptr i32 %conv_wt_
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="144" bw="0" op_0_bw="32" op_1_bw="6">
+<Node id="144" bw="0" op_0_bw="32" op_1_bw="3">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:93 %store_ln65 = store i32 %bitcast_ln65_10, i6 %conv_wt_buf_1_0_1_addr
+VITIS_LOOP_62_2.i.split:93 %store_ln65 = store i32 %bitcast_ln65_10, i3 %conv_wt_buf_1_0_1_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln65"/></StgValue>
@@ -31254,9 +31254,9 @@ VITIS_LOOP_62_2.i.split:99 %bitcast_ln65_11 = bitcast i32 %wt_addr_12_read
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="151" bw="6" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<Node id="151" bw="3" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:100 %conv_wt_buf_1_0_2_addr = getelementptr i32 %conv_wt_buf_1_0_2, i64 0, i64 %f_cast18
+VITIS_LOOP_62_2.i.split:100 %conv_wt_buf_1_0_2_addr = getelementptr i32 %conv_wt_buf_1_0_2, i64 0, i64 %f_cast27
 
 ]]></Node>
 <StgValue><ssdm name="conv_wt_buf_1_0_2_addr"/></StgValue>
@@ -31269,9 +31269,9 @@ VITIS_LOOP_62_2.i.split:100 %conv_wt_buf_1_0_2_addr = getelementptr i32 %conv_wt
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="152" bw="0" op_0_bw="32" op_1_bw="6">
+<Node id="152" bw="0" op_0_bw="32" op_1_bw="3">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:101 %store_ln65 = store i32 %bitcast_ln65_11, i6 %conv_wt_buf_1_0_2_addr
+VITIS_LOOP_62_2.i.split:101 %store_ln65 = store i32 %bitcast_ln65_11, i3 %conv_wt_buf_1_0_2_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln65"/></StgValue>
@@ -31542,9 +31542,9 @@ VITIS_LOOP_62_2.i.split:107 %bitcast_ln65_12 = bitcast i32 %wt_addr_13_read
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="159" bw="6" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<Node id="159" bw="3" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:108 %conv_wt_buf_1_1_0_addr = getelementptr i32 %conv_wt_buf_1_1_0, i64 0, i64 %f_cast18
+VITIS_LOOP_62_2.i.split:108 %conv_wt_buf_1_1_0_addr = getelementptr i32 %conv_wt_buf_1_1_0, i64 0, i64 %f_cast27
 
 ]]></Node>
 <StgValue><ssdm name="conv_wt_buf_1_1_0_addr"/></StgValue>
@@ -31557,9 +31557,9 @@ VITIS_LOOP_62_2.i.split:108 %conv_wt_buf_1_1_0_addr = getelementptr i32 %conv_wt
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="160" bw="0" op_0_bw="32" op_1_bw="6">
+<Node id="160" bw="0" op_0_bw="32" op_1_bw="3">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:109 %store_ln65 = store i32 %bitcast_ln65_12, i6 %conv_wt_buf_1_1_0_addr
+VITIS_LOOP_62_2.i.split:109 %store_ln65 = store i32 %bitcast_ln65_12, i3 %conv_wt_buf_1_1_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln65"/></StgValue>
@@ -31815,9 +31815,9 @@ VITIS_LOOP_62_2.i.split:115 %bitcast_ln65_13 = bitcast i32 %wt_addr_14_read
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="167" bw="6" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<Node id="167" bw="3" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:116 %conv_wt_buf_1_1_1_addr = getelementptr i32 %conv_wt_buf_1_1_1, i64 0, i64 %f_cast18
+VITIS_LOOP_62_2.i.split:116 %conv_wt_buf_1_1_1_addr = getelementptr i32 %conv_wt_buf_1_1_1, i64 0, i64 %f_cast27
 
 ]]></Node>
 <StgValue><ssdm name="conv_wt_buf_1_1_1_addr"/></StgValue>
@@ -31830,9 +31830,9 @@ VITIS_LOOP_62_2.i.split:116 %conv_wt_buf_1_1_1_addr = getelementptr i32 %conv_wt
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="168" bw="0" op_0_bw="32" op_1_bw="6">
+<Node id="168" bw="0" op_0_bw="32" op_1_bw="3">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:117 %store_ln65 = store i32 %bitcast_ln65_13, i6 %conv_wt_buf_1_1_1_addr
+VITIS_LOOP_62_2.i.split:117 %store_ln65 = store i32 %bitcast_ln65_13, i3 %conv_wt_buf_1_1_1_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln65"/></StgValue>
@@ -32073,9 +32073,9 @@ VITIS_LOOP_62_2.i.split:123 %bitcast_ln65_14 = bitcast i32 %wt_addr_15_read
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="175" bw="6" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<Node id="175" bw="3" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:124 %conv_wt_buf_1_1_2_addr = getelementptr i32 %conv_wt_buf_1_1_2, i64 0, i64 %f_cast18
+VITIS_LOOP_62_2.i.split:124 %conv_wt_buf_1_1_2_addr = getelementptr i32 %conv_wt_buf_1_1_2, i64 0, i64 %f_cast27
 
 ]]></Node>
 <StgValue><ssdm name="conv_wt_buf_1_1_2_addr"/></StgValue>
@@ -32088,9 +32088,9 @@ VITIS_LOOP_62_2.i.split:124 %conv_wt_buf_1_1_2_addr = getelementptr i32 %conv_wt
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="176" bw="0" op_0_bw="32" op_1_bw="6">
+<Node id="176" bw="0" op_0_bw="32" op_1_bw="3">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:125 %store_ln65 = store i32 %bitcast_ln65_14, i6 %conv_wt_buf_1_1_2_addr
+VITIS_LOOP_62_2.i.split:125 %store_ln65 = store i32 %bitcast_ln65_14, i3 %conv_wt_buf_1_1_2_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln65"/></StgValue>
@@ -32316,9 +32316,9 @@ VITIS_LOOP_62_2.i.split:131 %bitcast_ln65_15 = bitcast i32 %wt_addr_16_read
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="183" bw="6" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<Node id="183" bw="3" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:132 %conv_wt_buf_1_2_0_addr = getelementptr i32 %conv_wt_buf_1_2_0, i64 0, i64 %f_cast18
+VITIS_LOOP_62_2.i.split:132 %conv_wt_buf_1_2_0_addr = getelementptr i32 %conv_wt_buf_1_2_0, i64 0, i64 %f_cast27
 
 ]]></Node>
 <StgValue><ssdm name="conv_wt_buf_1_2_0_addr"/></StgValue>
@@ -32331,9 +32331,9 @@ VITIS_LOOP_62_2.i.split:132 %conv_wt_buf_1_2_0_addr = getelementptr i32 %conv_wt
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="184" bw="0" op_0_bw="32" op_1_bw="6">
+<Node id="184" bw="0" op_0_bw="32" op_1_bw="3">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:133 %store_ln65 = store i32 %bitcast_ln65_15, i6 %conv_wt_buf_1_2_0_addr
+VITIS_LOOP_62_2.i.split:133 %store_ln65 = store i32 %bitcast_ln65_15, i3 %conv_wt_buf_1_2_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln65"/></StgValue>
@@ -32544,9 +32544,9 @@ VITIS_LOOP_62_2.i.split:139 %bitcast_ln65_16 = bitcast i32 %wt_addr_17_read
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="191" bw="6" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<Node id="191" bw="3" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:140 %conv_wt_buf_1_2_1_addr = getelementptr i32 %conv_wt_buf_1_2_1, i64 0, i64 %f_cast18
+VITIS_LOOP_62_2.i.split:140 %conv_wt_buf_1_2_1_addr = getelementptr i32 %conv_wt_buf_1_2_1, i64 0, i64 %f_cast27
 
 ]]></Node>
 <StgValue><ssdm name="conv_wt_buf_1_2_1_addr"/></StgValue>
@@ -32559,9 +32559,9 @@ VITIS_LOOP_62_2.i.split:140 %conv_wt_buf_1_2_1_addr = getelementptr i32 %conv_wt
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="192" bw="0" op_0_bw="32" op_1_bw="6">
+<Node id="192" bw="0" op_0_bw="32" op_1_bw="3">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:141 %store_ln65 = store i32 %bitcast_ln65_16, i6 %conv_wt_buf_1_2_1_addr
+VITIS_LOOP_62_2.i.split:141 %store_ln65 = store i32 %bitcast_ln65_16, i3 %conv_wt_buf_1_2_1_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln65"/></StgValue>
@@ -32757,9 +32757,9 @@ VITIS_LOOP_62_2.i.split:147 %bitcast_ln65_17 = bitcast i32 %wt_addr_18_read
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="199" bw="6" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<Node id="199" bw="3" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:148 %conv_wt_buf_1_2_2_addr = getelementptr i32 %conv_wt_buf_1_2_2, i64 0, i64 %f_cast18
+VITIS_LOOP_62_2.i.split:148 %conv_wt_buf_1_2_2_addr = getelementptr i32 %conv_wt_buf_1_2_2, i64 0, i64 %f_cast27
 
 ]]></Node>
 <StgValue><ssdm name="conv_wt_buf_1_2_2_addr"/></StgValue>
@@ -32772,9 +32772,9 @@ VITIS_LOOP_62_2.i.split:148 %conv_wt_buf_1_2_2_addr = getelementptr i32 %conv_wt
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="200" bw="0" op_0_bw="32" op_1_bw="6">
+<Node id="200" bw="0" op_0_bw="32" op_1_bw="3">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:149 %store_ln65 = store i32 %bitcast_ln65_17, i6 %conv_wt_buf_1_2_2_addr
+VITIS_LOOP_62_2.i.split:149 %store_ln65 = store i32 %bitcast_ln65_17, i3 %conv_wt_buf_1_2_2_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln65"/></StgValue>
@@ -32955,9 +32955,9 @@ VITIS_LOOP_62_2.i.split:155 %bitcast_ln65_18 = bitcast i32 %wt_addr_19_read
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="207" bw="6" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<Node id="207" bw="3" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:156 %conv_wt_buf_2_0_0_addr = getelementptr i32 %conv_wt_buf_2_0_0, i64 0, i64 %f_cast18
+VITIS_LOOP_62_2.i.split:156 %conv_wt_buf_2_0_0_addr = getelementptr i32 %conv_wt_buf_2_0_0, i64 0, i64 %f_cast27
 
 ]]></Node>
 <StgValue><ssdm name="conv_wt_buf_2_0_0_addr"/></StgValue>
@@ -32970,9 +32970,9 @@ VITIS_LOOP_62_2.i.split:156 %conv_wt_buf_2_0_0_addr = getelementptr i32 %conv_wt
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="208" bw="0" op_0_bw="32" op_1_bw="6">
+<Node id="208" bw="0" op_0_bw="32" op_1_bw="3">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:157 %store_ln65 = store i32 %bitcast_ln65_18, i6 %conv_wt_buf_2_0_0_addr
+VITIS_LOOP_62_2.i.split:157 %store_ln65 = store i32 %bitcast_ln65_18, i3 %conv_wt_buf_2_0_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln65"/></StgValue>
@@ -33138,9 +33138,9 @@ VITIS_LOOP_62_2.i.split:163 %bitcast_ln65_19 = bitcast i32 %wt_addr_20_read
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="215" bw="6" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<Node id="215" bw="3" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:164 %conv_wt_buf_2_0_1_addr = getelementptr i32 %conv_wt_buf_2_0_1, i64 0, i64 %f_cast18
+VITIS_LOOP_62_2.i.split:164 %conv_wt_buf_2_0_1_addr = getelementptr i32 %conv_wt_buf_2_0_1, i64 0, i64 %f_cast27
 
 ]]></Node>
 <StgValue><ssdm name="conv_wt_buf_2_0_1_addr"/></StgValue>
@@ -33153,9 +33153,9 @@ VITIS_LOOP_62_2.i.split:164 %conv_wt_buf_2_0_1_addr = getelementptr i32 %conv_wt
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="216" bw="0" op_0_bw="32" op_1_bw="6">
+<Node id="216" bw="0" op_0_bw="32" op_1_bw="3">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:165 %store_ln65 = store i32 %bitcast_ln65_19, i6 %conv_wt_buf_2_0_1_addr
+VITIS_LOOP_62_2.i.split:165 %store_ln65 = store i32 %bitcast_ln65_19, i3 %conv_wt_buf_2_0_1_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln65"/></StgValue>
@@ -33306,9 +33306,9 @@ VITIS_LOOP_62_2.i.split:171 %bitcast_ln65_20 = bitcast i32 %wt_addr_21_read
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="223" bw="6" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<Node id="223" bw="3" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:172 %conv_wt_buf_2_0_2_addr = getelementptr i32 %conv_wt_buf_2_0_2, i64 0, i64 %f_cast18
+VITIS_LOOP_62_2.i.split:172 %conv_wt_buf_2_0_2_addr = getelementptr i32 %conv_wt_buf_2_0_2, i64 0, i64 %f_cast27
 
 ]]></Node>
 <StgValue><ssdm name="conv_wt_buf_2_0_2_addr"/></StgValue>
@@ -33321,9 +33321,9 @@ VITIS_LOOP_62_2.i.split:172 %conv_wt_buf_2_0_2_addr = getelementptr i32 %conv_wt
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="224" bw="0" op_0_bw="32" op_1_bw="6">
+<Node id="224" bw="0" op_0_bw="32" op_1_bw="3">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:173 %store_ln65 = store i32 %bitcast_ln65_20, i6 %conv_wt_buf_2_0_2_addr
+VITIS_LOOP_62_2.i.split:173 %store_ln65 = store i32 %bitcast_ln65_20, i3 %conv_wt_buf_2_0_2_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln65"/></StgValue>
@@ -33459,9 +33459,9 @@ VITIS_LOOP_62_2.i.split:179 %bitcast_ln65_21 = bitcast i32 %wt_addr_22_read
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="231" bw="6" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<Node id="231" bw="3" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:180 %conv_wt_buf_2_1_0_addr = getelementptr i32 %conv_wt_buf_2_1_0, i64 0, i64 %f_cast18
+VITIS_LOOP_62_2.i.split:180 %conv_wt_buf_2_1_0_addr = getelementptr i32 %conv_wt_buf_2_1_0, i64 0, i64 %f_cast27
 
 ]]></Node>
 <StgValue><ssdm name="conv_wt_buf_2_1_0_addr"/></StgValue>
@@ -33474,9 +33474,9 @@ VITIS_LOOP_62_2.i.split:180 %conv_wt_buf_2_1_0_addr = getelementptr i32 %conv_wt
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="232" bw="0" op_0_bw="32" op_1_bw="6">
+<Node id="232" bw="0" op_0_bw="32" op_1_bw="3">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:181 %store_ln65 = store i32 %bitcast_ln65_21, i6 %conv_wt_buf_2_1_0_addr
+VITIS_LOOP_62_2.i.split:181 %store_ln65 = store i32 %bitcast_ln65_21, i3 %conv_wt_buf_2_1_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln65"/></StgValue>
@@ -33597,9 +33597,9 @@ VITIS_LOOP_62_2.i.split:187 %bitcast_ln65_22 = bitcast i32 %wt_addr_23_read
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="239" bw="6" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<Node id="239" bw="3" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:188 %conv_wt_buf_2_1_1_addr = getelementptr i32 %conv_wt_buf_2_1_1, i64 0, i64 %f_cast18
+VITIS_LOOP_62_2.i.split:188 %conv_wt_buf_2_1_1_addr = getelementptr i32 %conv_wt_buf_2_1_1, i64 0, i64 %f_cast27
 
 ]]></Node>
 <StgValue><ssdm name="conv_wt_buf_2_1_1_addr"/></StgValue>
@@ -33612,9 +33612,9 @@ VITIS_LOOP_62_2.i.split:188 %conv_wt_buf_2_1_1_addr = getelementptr i32 %conv_wt
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="240" bw="0" op_0_bw="32" op_1_bw="6">
+<Node id="240" bw="0" op_0_bw="32" op_1_bw="3">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:189 %store_ln65 = store i32 %bitcast_ln65_22, i6 %conv_wt_buf_2_1_1_addr
+VITIS_LOOP_62_2.i.split:189 %store_ln65 = store i32 %bitcast_ln65_22, i3 %conv_wt_buf_2_1_1_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln65"/></StgValue>
@@ -33720,9 +33720,9 @@ VITIS_LOOP_62_2.i.split:195 %bitcast_ln65_23 = bitcast i32 %wt_addr_24_read
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="247" bw="6" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<Node id="247" bw="3" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:196 %conv_wt_buf_2_1_2_addr = getelementptr i32 %conv_wt_buf_2_1_2, i64 0, i64 %f_cast18
+VITIS_LOOP_62_2.i.split:196 %conv_wt_buf_2_1_2_addr = getelementptr i32 %conv_wt_buf_2_1_2, i64 0, i64 %f_cast27
 
 ]]></Node>
 <StgValue><ssdm name="conv_wt_buf_2_1_2_addr"/></StgValue>
@@ -33735,9 +33735,9 @@ VITIS_LOOP_62_2.i.split:196 %conv_wt_buf_2_1_2_addr = getelementptr i32 %conv_wt
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="248" bw="0" op_0_bw="32" op_1_bw="6">
+<Node id="248" bw="0" op_0_bw="32" op_1_bw="3">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:197 %store_ln65 = store i32 %bitcast_ln65_23, i6 %conv_wt_buf_2_1_2_addr
+VITIS_LOOP_62_2.i.split:197 %store_ln65 = store i32 %bitcast_ln65_23, i3 %conv_wt_buf_2_1_2_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln65"/></StgValue>
@@ -33828,9 +33828,9 @@ VITIS_LOOP_62_2.i.split:203 %bitcast_ln65_24 = bitcast i32 %wt_addr_25_read
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="255" bw="6" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<Node id="255" bw="3" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:204 %conv_wt_buf_2_2_0_addr = getelementptr i32 %conv_wt_buf_2_2_0, i64 0, i64 %f_cast18
+VITIS_LOOP_62_2.i.split:204 %conv_wt_buf_2_2_0_addr = getelementptr i32 %conv_wt_buf_2_2_0, i64 0, i64 %f_cast27
 
 ]]></Node>
 <StgValue><ssdm name="conv_wt_buf_2_2_0_addr"/></StgValue>
@@ -33843,9 +33843,9 @@ VITIS_LOOP_62_2.i.split:204 %conv_wt_buf_2_2_0_addr = getelementptr i32 %conv_wt
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="256" bw="0" op_0_bw="32" op_1_bw="6">
+<Node id="256" bw="0" op_0_bw="32" op_1_bw="3">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:205 %store_ln65 = store i32 %bitcast_ln65_24, i6 %conv_wt_buf_2_2_0_addr
+VITIS_LOOP_62_2.i.split:205 %store_ln65 = store i32 %bitcast_ln65_24, i3 %conv_wt_buf_2_2_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln65"/></StgValue>
@@ -33921,9 +33921,9 @@ VITIS_LOOP_62_2.i.split:211 %bitcast_ln65_25 = bitcast i32 %wt_addr_26_read
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="263" bw="6" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<Node id="263" bw="3" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:212 %conv_wt_buf_2_2_1_addr = getelementptr i32 %conv_wt_buf_2_2_1, i64 0, i64 %f_cast18
+VITIS_LOOP_62_2.i.split:212 %conv_wt_buf_2_2_1_addr = getelementptr i32 %conv_wt_buf_2_2_1, i64 0, i64 %f_cast27
 
 ]]></Node>
 <StgValue><ssdm name="conv_wt_buf_2_2_1_addr"/></StgValue>
@@ -33936,9 +33936,9 @@ VITIS_LOOP_62_2.i.split:212 %conv_wt_buf_2_2_1_addr = getelementptr i32 %conv_wt
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="264" bw="0" op_0_bw="32" op_1_bw="6">
+<Node id="264" bw="0" op_0_bw="32" op_1_bw="3">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:213 %store_ln65 = store i32 %bitcast_ln65_25, i6 %conv_wt_buf_2_2_1_addr
+VITIS_LOOP_62_2.i.split:213 %store_ln65 = store i32 %bitcast_ln65_25, i3 %conv_wt_buf_2_2_1_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln65"/></StgValue>
@@ -33999,9 +33999,9 @@ VITIS_LOOP_62_2.i.split:219 %bitcast_ln65_26 = bitcast i32 %wt_addr_27_read
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="271" bw="6" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<Node id="271" bw="3" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:220 %conv_wt_buf_2_2_2_addr = getelementptr i32 %conv_wt_buf_2_2_2, i64 0, i64 %f_cast18
+VITIS_LOOP_62_2.i.split:220 %conv_wt_buf_2_2_2_addr = getelementptr i32 %conv_wt_buf_2_2_2, i64 0, i64 %f_cast27
 
 ]]></Node>
 <StgValue><ssdm name="conv_wt_buf_2_2_2_addr"/></StgValue>
@@ -34014,9 +34014,9 @@ VITIS_LOOP_62_2.i.split:220 %conv_wt_buf_2_2_2_addr = getelementptr i32 %conv_wt
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="272" bw="0" op_0_bw="32" op_1_bw="6">
+<Node id="272" bw="0" op_0_bw="32" op_1_bw="3">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:221 %store_ln65 = store i32 %bitcast_ln65_26, i6 %conv_wt_buf_2_2_2_addr
+VITIS_LOOP_62_2.i.split:221 %store_ln65 = store i32 %bitcast_ln65_26, i3 %conv_wt_buf_2_2_2_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln65"/></StgValue>
@@ -34049,7 +34049,7 @@ VITIS_LOOP_62_2.i.split:226 %wt_addr_read = read i32 @_ssdm_op_Read.m_axi.i32P1A
 
 <Node id="54" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:3 %specloopname_ln60 = specloopname void @_ssdm_op_SpecLoopName, void @empty_12
+VITIS_LOOP_62_2.i.split:3 %specloopname_ln60 = specloopname void @_ssdm_op_SpecLoopName, void @empty_14
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln60"/></StgValue>
@@ -34077,9 +34077,9 @@ VITIS_LOOP_62_2.i.split:227 %bitcast_ln67 = bitcast i32 %wt_addr_read
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="279" bw="6" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<Node id="279" bw="3" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:228 %conv_bias_buf_addr = getelementptr i32 %conv_bias_buf, i64 0, i64 %f_cast18
+VITIS_LOOP_62_2.i.split:228 %conv_bias_buf_addr = getelementptr i32 %conv_bias_buf, i64 0, i64 %f_cast27
 
 ]]></Node>
 <StgValue><ssdm name="conv_bias_buf_addr"/></StgValue>
@@ -34092,9 +34092,9 @@ VITIS_LOOP_62_2.i.split:228 %conv_bias_buf_addr = getelementptr i32 %conv_bias_b
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="280" bw="0" op_0_bw="32" op_1_bw="6">
+<Node id="280" bw="0" op_0_bw="32" op_1_bw="3">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:229 %store_ln67 = store i32 %bitcast_ln67, i6 %conv_bias_buf_addr
+VITIS_LOOP_62_2.i.split:229 %store_ln67 = store i32 %bitcast_ln67, i3 %conv_bias_buf_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln67"/></StgValue>
@@ -34233,8 +34233,8 @@ VITIS_LOOP_62_2.i.split:232 %br_ln60 = br void %VITIS_LOOP_62_2.i
 <core>RAM</core><StgValue><ssdm name="conv_wt_buf_2_2_2"/><MemPortTyVec>0 3 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="2520" name="sext_ln26" dir="0" iftype="0">
-<core>NULL</core><StgValue><ssdm name="sext_ln26"/></StgValue>
+<port id="2520" name="sext_ln60_1" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="sext_ln60_1"/></StgValue>
 </port>
 <port id="2521" name="conv_bias_buf" dir="1" iftype="1">
 <core>RAM</core><StgValue><ssdm name="conv_bias_buf"/><MemPortTyVec>0 3 </MemPortTyVec>
@@ -34248,15 +34248,15 @@ VITIS_LOOP_62_2.i.split:232 %br_ln60 = br void %VITIS_LOOP_62_2.i
 </dataflow>
 <dataflow id="2524" from="StgValue_2522" to="f" fromId="2522" toId="104">
 </dataflow>
-<dataflow id="2526" from="_ssdm_op_Read.ap_auto.i62" to="sext_ln26_read" fromId="2525" toId="105">
+<dataflow id="2526" from="_ssdm_op_Read.ap_auto.i62" to="sext_ln60_1_read" fromId="2525" toId="105">
 </dataflow>
-<dataflow id="2527" from="sext_ln26" to="sext_ln26_read" fromId="2520" toId="105">
+<dataflow id="2527" from="sext_ln60_1" to="sext_ln60_1_read" fromId="2520" toId="105">
 </dataflow>
 <dataflow id="2528" from="_ssdm_op_Read.ap_auto.i62" to="sext_ln60_read" fromId="2525" toId="106">
 </dataflow>
 <dataflow id="2529" from="sext_ln60" to="sext_ln60_read" fromId="2492" toId="106">
 </dataflow>
-<dataflow id="2530" from="sext_ln26_read" to="sext_ln26_cast" fromId="105" toId="107">
+<dataflow id="2530" from="sext_ln60_1_read" to="sext_ln60_1_cast" fromId="105" toId="107">
 </dataflow>
 <dataflow id="2531" from="sext_ln60_read" to="sext_ln60_cast" fromId="106" toId="108">
 </dataflow>
@@ -34264,23 +34264,23 @@ VITIS_LOOP_62_2.i.split:232 %br_ln60 = br void %VITIS_LOOP_62_2.i
 </dataflow>
 <dataflow id="2534" from="wt" to="specinterface_ln0" fromId="2491" toId="109">
 </dataflow>
-<dataflow id="2536" from="empty_17" to="specinterface_ln0" fromId="2535" toId="109">
+<dataflow id="2536" from="empty_18" to="specinterface_ln0" fromId="2535" toId="109">
 </dataflow>
 <dataflow id="2538" from="StgValue_2537" to="specinterface_ln0" fromId="2537" toId="109">
 </dataflow>
 <dataflow id="2539" from="StgValue_2537" to="specinterface_ln0" fromId="2537" toId="109">
 </dataflow>
-<dataflow id="2541" from="empty_9" to="specinterface_ln0" fromId="2540" toId="109">
+<dataflow id="2541" from="empty_11" to="specinterface_ln0" fromId="2540" toId="109">
 </dataflow>
 <dataflow id="2543" from="StgValue_2542" to="specinterface_ln0" fromId="2542" toId="109">
 </dataflow>
 <dataflow id="2544" from="StgValue_2522" to="specinterface_ln0" fromId="2522" toId="109">
 </dataflow>
-<dataflow id="2546" from="empty_10" to="specinterface_ln0" fromId="2545" toId="109">
+<dataflow id="2546" from="empty_12" to="specinterface_ln0" fromId="2545" toId="109">
 </dataflow>
 <dataflow id="2548" from="empty_5" to="specinterface_ln0" fromId="2547" toId="109">
 </dataflow>
-<dataflow id="2549" from="empty_9" to="specinterface_ln0" fromId="2540" toId="109">
+<dataflow id="2549" from="empty_11" to="specinterface_ln0" fromId="2540" toId="109">
 </dataflow>
 <dataflow id="2551" from="StgValue_2550" to="specinterface_ln0" fromId="2550" toId="109">
 </dataflow>
@@ -34290,9 +34290,9 @@ VITIS_LOOP_62_2.i.split:232 %br_ln60 = br void %VITIS_LOOP_62_2.i
 </dataflow>
 <dataflow id="2554" from="StgValue_2550" to="specinterface_ln0" fromId="2550" toId="109">
 </dataflow>
-<dataflow id="2555" from="empty_9" to="specinterface_ln0" fromId="2540" toId="109">
+<dataflow id="2555" from="empty_11" to="specinterface_ln0" fromId="2540" toId="109">
 </dataflow>
-<dataflow id="2556" from="empty_9" to="specinterface_ln0" fromId="2540" toId="109">
+<dataflow id="2556" from="empty_11" to="specinterface_ln0" fromId="2540" toId="109">
 </dataflow>
 <dataflow id="2558" from="StgValue_2557" to="specinterface_ln0" fromId="2557" toId="109">
 </dataflow>
@@ -36726,11 +36726,11 @@ VITIS_LOOP_62_2.i.split:232 %br_ln60 = br void %VITIS_LOOP_62_2.i
 </dataflow>
 <dataflow id="3809" from="StgValue_2522" to="wt_load_26_req" fromId="2522" toId="554">
 </dataflow>
-<dataflow id="3810" from="f_1" to="f_cast10" fromId="113" toId="555">
+<dataflow id="3810" from="f_1" to="f_cast17" fromId="113" toId="555">
 </dataflow>
-<dataflow id="3811" from="phi_mul_load" to="add_ln62" fromId="120" toId="556">
+<dataflow id="3811" from="phi_mul_load" to="next_mul" fromId="120" toId="556">
 </dataflow>
-<dataflow id="3813" from="StgValue_3812" to="add_ln62" fromId="3812" toId="556">
+<dataflow id="3813" from="StgValue_3812" to="next_mul" fromId="3812" toId="556">
 </dataflow>
 <dataflow id="3814" from="_ssdm_op_ReadReq.m_axi.i32P1A" to="wt_load_1_req" fromId="2600" toId="557">
 </dataflow>
@@ -36894,9 +36894,9 @@ VITIS_LOOP_62_2.i.split:232 %br_ln60 = br void %VITIS_LOOP_62_2.i
 </dataflow>
 <dataflow id="3894" from="StgValue_2522" to="wt_load_27_req" fromId="2522" toId="583">
 </dataflow>
-<dataflow id="3895" from="f_cast10" to="add_ln67" fromId="555" toId="584">
+<dataflow id="3895" from="f_cast17" to="add_ln67" fromId="555" toId="584">
 </dataflow>
-<dataflow id="3896" from="sext_ln26_cast" to="add_ln67" fromId="107" toId="584">
+<dataflow id="3896" from="sext_ln60_1_cast" to="add_ln67" fromId="107" toId="584">
 </dataflow>
 <dataflow id="3897" from="add_ln67" to="sext_ln67" fromId="584" toId="585">
 </dataflow>
@@ -36904,7 +36904,7 @@ VITIS_LOOP_62_2.i.split:232 %br_ln60 = br void %VITIS_LOOP_62_2.i
 </dataflow>
 <dataflow id="3899" from="sext_ln67" to="wt_addr" fromId="585" toId="586">
 </dataflow>
-<dataflow id="3900" from="add_ln62" to="store_ln60" fromId="556" toId="587">
+<dataflow id="3900" from="next_mul" to="store_ln60" fromId="556" toId="587">
 </dataflow>
 <dataflow id="3901" from="phi_mul" to="store_ln60" fromId="103" toId="587">
 </dataflow>
@@ -44298,7 +44298,7 @@ VITIS_LOOP_62_2.i.split:232 %br_ln60 = br void %VITIS_LOOP_62_2.i
 </dataflow>
 <dataflow id="7597" from="StgValue_2522" to="wt_load_req" fromId="2522" toId="1819">
 </dataflow>
-<dataflow id="7598" from="f_1" to="f_cast18" fromId="113" toId="1820">
+<dataflow id="7598" from="f_1" to="f_cast27" fromId="113" toId="1820">
 </dataflow>
 <dataflow id="7599" from="wt_addr_1_read" to="bitcast_ln65" fromId="1792" toId="1821">
 </dataflow>
@@ -44306,7 +44306,7 @@ VITIS_LOOP_62_2.i.split:232 %br_ln60 = br void %VITIS_LOOP_62_2.i
 </dataflow>
 <dataflow id="7602" from="StgValue_7601" to="conv_wt_buf_0_0_0_addr" fromId="7601" toId="1822">
 </dataflow>
-<dataflow id="7603" from="f_cast18" to="conv_wt_buf_0_0_0_addr" fromId="1820" toId="1822">
+<dataflow id="7603" from="f_cast27" to="conv_wt_buf_0_0_0_addr" fromId="1820" toId="1822">
 </dataflow>
 <dataflow id="7604" from="bitcast_ln65" to="store_ln65" fromId="1821" toId="1823">
 </dataflow>
@@ -44478,7 +44478,7 @@ VITIS_LOOP_62_2.i.split:232 %br_ln60 = br void %VITIS_LOOP_62_2.i
 </dataflow>
 <dataflow id="7688" from="StgValue_7601" to="conv_wt_buf_0_0_1_addr" fromId="7601" toId="1852">
 </dataflow>
-<dataflow id="7689" from="f_cast18" to="conv_wt_buf_0_0_1_addr" fromId="1820" toId="1852">
+<dataflow id="7689" from="f_cast27" to="conv_wt_buf_0_0_1_addr" fromId="1820" toId="1852">
 </dataflow>
 <dataflow id="7690" from="bitcast_ln65_1" to="store_ln65" fromId="1851" toId="1853">
 </dataflow>
@@ -44644,7 +44644,7 @@ VITIS_LOOP_62_2.i.split:232 %br_ln60 = br void %VITIS_LOOP_62_2.i
 </dataflow>
 <dataflow id="7771" from="StgValue_7601" to="conv_wt_buf_0_0_2_addr" fromId="7601" toId="1881">
 </dataflow>
-<dataflow id="7772" from="f_cast18" to="conv_wt_buf_0_0_2_addr" fromId="1820" toId="1881">
+<dataflow id="7772" from="f_cast27" to="conv_wt_buf_0_0_2_addr" fromId="1820" toId="1881">
 </dataflow>
 <dataflow id="7773" from="bitcast_ln65_2" to="store_ln65" fromId="1880" toId="1882">
 </dataflow>
@@ -44804,7 +44804,7 @@ VITIS_LOOP_62_2.i.split:232 %br_ln60 = br void %VITIS_LOOP_62_2.i
 </dataflow>
 <dataflow id="7851" from="StgValue_7601" to="conv_wt_buf_0_1_0_addr" fromId="7601" toId="1909">
 </dataflow>
-<dataflow id="7852" from="f_cast18" to="conv_wt_buf_0_1_0_addr" fromId="1820" toId="1909">
+<dataflow id="7852" from="f_cast27" to="conv_wt_buf_0_1_0_addr" fromId="1820" toId="1909">
 </dataflow>
 <dataflow id="7853" from="bitcast_ln65_3" to="store_ln65" fromId="1908" toId="1910">
 </dataflow>
@@ -44958,7 +44958,7 @@ VITIS_LOOP_62_2.i.split:232 %br_ln60 = br void %VITIS_LOOP_62_2.i
 </dataflow>
 <dataflow id="7928" from="StgValue_7601" to="conv_wt_buf_0_1_1_addr" fromId="7601" toId="1936">
 </dataflow>
-<dataflow id="7929" from="f_cast18" to="conv_wt_buf_0_1_1_addr" fromId="1820" toId="1936">
+<dataflow id="7929" from="f_cast27" to="conv_wt_buf_0_1_1_addr" fromId="1820" toId="1936">
 </dataflow>
 <dataflow id="7930" from="bitcast_ln65_4" to="store_ln65" fromId="1935" toId="1937">
 </dataflow>
@@ -45106,7 +45106,7 @@ VITIS_LOOP_62_2.i.split:232 %br_ln60 = br void %VITIS_LOOP_62_2.i
 </dataflow>
 <dataflow id="8002" from="StgValue_7601" to="conv_wt_buf_0_1_2_addr" fromId="7601" toId="1962">
 </dataflow>
-<dataflow id="8003" from="f_cast18" to="conv_wt_buf_0_1_2_addr" fromId="1820" toId="1962">
+<dataflow id="8003" from="f_cast27" to="conv_wt_buf_0_1_2_addr" fromId="1820" toId="1962">
 </dataflow>
 <dataflow id="8004" from="bitcast_ln65_5" to="store_ln65" fromId="1961" toId="1963">
 </dataflow>
@@ -45248,7 +45248,7 @@ VITIS_LOOP_62_2.i.split:232 %br_ln60 = br void %VITIS_LOOP_62_2.i
 </dataflow>
 <dataflow id="8073" from="StgValue_7601" to="conv_wt_buf_0_2_0_addr" fromId="7601" toId="1987">
 </dataflow>
-<dataflow id="8074" from="f_cast18" to="conv_wt_buf_0_2_0_addr" fromId="1820" toId="1987">
+<dataflow id="8074" from="f_cast27" to="conv_wt_buf_0_2_0_addr" fromId="1820" toId="1987">
 </dataflow>
 <dataflow id="8075" from="bitcast_ln65_6" to="store_ln65" fromId="1986" toId="1988">
 </dataflow>
@@ -45384,7 +45384,7 @@ VITIS_LOOP_62_2.i.split:232 %br_ln60 = br void %VITIS_LOOP_62_2.i
 </dataflow>
 <dataflow id="8141" from="StgValue_7601" to="conv_wt_buf_0_2_1_addr" fromId="7601" toId="2011">
 </dataflow>
-<dataflow id="8142" from="f_cast18" to="conv_wt_buf_0_2_1_addr" fromId="1820" toId="2011">
+<dataflow id="8142" from="f_cast27" to="conv_wt_buf_0_2_1_addr" fromId="1820" toId="2011">
 </dataflow>
 <dataflow id="8143" from="bitcast_ln65_7" to="store_ln65" fromId="2010" toId="2012">
 </dataflow>
@@ -45514,7 +45514,7 @@ VITIS_LOOP_62_2.i.split:232 %br_ln60 = br void %VITIS_LOOP_62_2.i
 </dataflow>
 <dataflow id="8206" from="StgValue_7601" to="conv_wt_buf_0_2_2_addr" fromId="7601" toId="2034">
 </dataflow>
-<dataflow id="8207" from="f_cast18" to="conv_wt_buf_0_2_2_addr" fromId="1820" toId="2034">
+<dataflow id="8207" from="f_cast27" to="conv_wt_buf_0_2_2_addr" fromId="1820" toId="2034">
 </dataflow>
 <dataflow id="8208" from="bitcast_ln65_8" to="store_ln65" fromId="2033" toId="2035">
 </dataflow>
@@ -45638,7 +45638,7 @@ VITIS_LOOP_62_2.i.split:232 %br_ln60 = br void %VITIS_LOOP_62_2.i
 </dataflow>
 <dataflow id="8268" from="StgValue_7601" to="conv_wt_buf_1_0_0_addr" fromId="7601" toId="2056">
 </dataflow>
-<dataflow id="8269" from="f_cast18" to="conv_wt_buf_1_0_0_addr" fromId="1820" toId="2056">
+<dataflow id="8269" from="f_cast27" to="conv_wt_buf_1_0_0_addr" fromId="1820" toId="2056">
 </dataflow>
 <dataflow id="8270" from="bitcast_ln65_9" to="store_ln65" fromId="2055" toId="2057">
 </dataflow>
@@ -45756,7 +45756,7 @@ VITIS_LOOP_62_2.i.split:232 %br_ln60 = br void %VITIS_LOOP_62_2.i
 </dataflow>
 <dataflow id="8327" from="StgValue_7601" to="conv_wt_buf_1_0_1_addr" fromId="7601" toId="2077">
 </dataflow>
-<dataflow id="8328" from="f_cast18" to="conv_wt_buf_1_0_1_addr" fromId="1820" toId="2077">
+<dataflow id="8328" from="f_cast27" to="conv_wt_buf_1_0_1_addr" fromId="1820" toId="2077">
 </dataflow>
 <dataflow id="8329" from="bitcast_ln65_10" to="store_ln65" fromId="2076" toId="2078">
 </dataflow>
@@ -45868,7 +45868,7 @@ VITIS_LOOP_62_2.i.split:232 %br_ln60 = br void %VITIS_LOOP_62_2.i
 </dataflow>
 <dataflow id="8383" from="StgValue_7601" to="conv_wt_buf_1_0_2_addr" fromId="7601" toId="2097">
 </dataflow>
-<dataflow id="8384" from="f_cast18" to="conv_wt_buf_1_0_2_addr" fromId="1820" toId="2097">
+<dataflow id="8384" from="f_cast27" to="conv_wt_buf_1_0_2_addr" fromId="1820" toId="2097">
 </dataflow>
 <dataflow id="8385" from="bitcast_ln65_11" to="store_ln65" fromId="2096" toId="2098">
 </dataflow>
@@ -45974,7 +45974,7 @@ VITIS_LOOP_62_2.i.split:232 %br_ln60 = br void %VITIS_LOOP_62_2.i
 </dataflow>
 <dataflow id="8436" from="StgValue_7601" to="conv_wt_buf_1_1_0_addr" fromId="7601" toId="2116">
 </dataflow>
-<dataflow id="8437" from="f_cast18" to="conv_wt_buf_1_1_0_addr" fromId="1820" toId="2116">
+<dataflow id="8437" from="f_cast27" to="conv_wt_buf_1_1_0_addr" fromId="1820" toId="2116">
 </dataflow>
 <dataflow id="8438" from="bitcast_ln65_12" to="store_ln65" fromId="2115" toId="2117">
 </dataflow>
@@ -46074,7 +46074,7 @@ VITIS_LOOP_62_2.i.split:232 %br_ln60 = br void %VITIS_LOOP_62_2.i
 </dataflow>
 <dataflow id="8486" from="StgValue_7601" to="conv_wt_buf_1_1_1_addr" fromId="7601" toId="2134">
 </dataflow>
-<dataflow id="8487" from="f_cast18" to="conv_wt_buf_1_1_1_addr" fromId="1820" toId="2134">
+<dataflow id="8487" from="f_cast27" to="conv_wt_buf_1_1_1_addr" fromId="1820" toId="2134">
 </dataflow>
 <dataflow id="8488" from="bitcast_ln65_13" to="store_ln65" fromId="2133" toId="2135">
 </dataflow>
@@ -46168,7 +46168,7 @@ VITIS_LOOP_62_2.i.split:232 %br_ln60 = br void %VITIS_LOOP_62_2.i
 </dataflow>
 <dataflow id="8533" from="StgValue_7601" to="conv_wt_buf_1_1_2_addr" fromId="7601" toId="2151">
 </dataflow>
-<dataflow id="8534" from="f_cast18" to="conv_wt_buf_1_1_2_addr" fromId="1820" toId="2151">
+<dataflow id="8534" from="f_cast27" to="conv_wt_buf_1_1_2_addr" fromId="1820" toId="2151">
 </dataflow>
 <dataflow id="8535" from="bitcast_ln65_14" to="store_ln65" fromId="2150" toId="2152">
 </dataflow>
@@ -46256,7 +46256,7 @@ VITIS_LOOP_62_2.i.split:232 %br_ln60 = br void %VITIS_LOOP_62_2.i
 </dataflow>
 <dataflow id="8577" from="StgValue_7601" to="conv_wt_buf_1_2_0_addr" fromId="7601" toId="2167">
 </dataflow>
-<dataflow id="8578" from="f_cast18" to="conv_wt_buf_1_2_0_addr" fromId="1820" toId="2167">
+<dataflow id="8578" from="f_cast27" to="conv_wt_buf_1_2_0_addr" fromId="1820" toId="2167">
 </dataflow>
 <dataflow id="8579" from="bitcast_ln65_15" to="store_ln65" fromId="2166" toId="2168">
 </dataflow>
@@ -46338,7 +46338,7 @@ VITIS_LOOP_62_2.i.split:232 %br_ln60 = br void %VITIS_LOOP_62_2.i
 </dataflow>
 <dataflow id="8618" from="StgValue_7601" to="conv_wt_buf_1_2_1_addr" fromId="7601" toId="2182">
 </dataflow>
-<dataflow id="8619" from="f_cast18" to="conv_wt_buf_1_2_1_addr" fromId="1820" toId="2182">
+<dataflow id="8619" from="f_cast27" to="conv_wt_buf_1_2_1_addr" fromId="1820" toId="2182">
 </dataflow>
 <dataflow id="8620" from="bitcast_ln65_16" to="store_ln65" fromId="2181" toId="2183">
 </dataflow>
@@ -46414,7 +46414,7 @@ VITIS_LOOP_62_2.i.split:232 %br_ln60 = br void %VITIS_LOOP_62_2.i
 </dataflow>
 <dataflow id="8656" from="StgValue_7601" to="conv_wt_buf_1_2_2_addr" fromId="7601" toId="2196">
 </dataflow>
-<dataflow id="8657" from="f_cast18" to="conv_wt_buf_1_2_2_addr" fromId="1820" toId="2196">
+<dataflow id="8657" from="f_cast27" to="conv_wt_buf_1_2_2_addr" fromId="1820" toId="2196">
 </dataflow>
 <dataflow id="8658" from="bitcast_ln65_17" to="store_ln65" fromId="2195" toId="2197">
 </dataflow>
@@ -46484,7 +46484,7 @@ VITIS_LOOP_62_2.i.split:232 %br_ln60 = br void %VITIS_LOOP_62_2.i
 </dataflow>
 <dataflow id="8691" from="StgValue_7601" to="conv_wt_buf_2_0_0_addr" fromId="7601" toId="2209">
 </dataflow>
-<dataflow id="8692" from="f_cast18" to="conv_wt_buf_2_0_0_addr" fromId="1820" toId="2209">
+<dataflow id="8692" from="f_cast27" to="conv_wt_buf_2_0_0_addr" fromId="1820" toId="2209">
 </dataflow>
 <dataflow id="8693" from="bitcast_ln65_18" to="store_ln65" fromId="2208" toId="2210">
 </dataflow>
@@ -46548,7 +46548,7 @@ VITIS_LOOP_62_2.i.split:232 %br_ln60 = br void %VITIS_LOOP_62_2.i
 </dataflow>
 <dataflow id="8723" from="StgValue_7601" to="conv_wt_buf_2_0_1_addr" fromId="7601" toId="2221">
 </dataflow>
-<dataflow id="8724" from="f_cast18" to="conv_wt_buf_2_0_1_addr" fromId="1820" toId="2221">
+<dataflow id="8724" from="f_cast27" to="conv_wt_buf_2_0_1_addr" fromId="1820" toId="2221">
 </dataflow>
 <dataflow id="8725" from="bitcast_ln65_19" to="store_ln65" fromId="2220" toId="2222">
 </dataflow>
@@ -46606,7 +46606,7 @@ VITIS_LOOP_62_2.i.split:232 %br_ln60 = br void %VITIS_LOOP_62_2.i
 </dataflow>
 <dataflow id="8752" from="StgValue_7601" to="conv_wt_buf_2_0_2_addr" fromId="7601" toId="2232">
 </dataflow>
-<dataflow id="8753" from="f_cast18" to="conv_wt_buf_2_0_2_addr" fromId="1820" toId="2232">
+<dataflow id="8753" from="f_cast27" to="conv_wt_buf_2_0_2_addr" fromId="1820" toId="2232">
 </dataflow>
 <dataflow id="8754" from="bitcast_ln65_20" to="store_ln65" fromId="2231" toId="2233">
 </dataflow>
@@ -46658,7 +46658,7 @@ VITIS_LOOP_62_2.i.split:232 %br_ln60 = br void %VITIS_LOOP_62_2.i
 </dataflow>
 <dataflow id="8778" from="StgValue_7601" to="conv_wt_buf_2_1_0_addr" fromId="7601" toId="2242">
 </dataflow>
-<dataflow id="8779" from="f_cast18" to="conv_wt_buf_2_1_0_addr" fromId="1820" toId="2242">
+<dataflow id="8779" from="f_cast27" to="conv_wt_buf_2_1_0_addr" fromId="1820" toId="2242">
 </dataflow>
 <dataflow id="8780" from="bitcast_ln65_21" to="store_ln65" fromId="2241" toId="2243">
 </dataflow>
@@ -46704,7 +46704,7 @@ VITIS_LOOP_62_2.i.split:232 %br_ln60 = br void %VITIS_LOOP_62_2.i
 </dataflow>
 <dataflow id="8801" from="StgValue_7601" to="conv_wt_buf_2_1_1_addr" fromId="7601" toId="2251">
 </dataflow>
-<dataflow id="8802" from="f_cast18" to="conv_wt_buf_2_1_1_addr" fromId="1820" toId="2251">
+<dataflow id="8802" from="f_cast27" to="conv_wt_buf_2_1_1_addr" fromId="1820" toId="2251">
 </dataflow>
 <dataflow id="8803" from="bitcast_ln65_22" to="store_ln65" fromId="2250" toId="2252">
 </dataflow>
@@ -46744,7 +46744,7 @@ VITIS_LOOP_62_2.i.split:232 %br_ln60 = br void %VITIS_LOOP_62_2.i
 </dataflow>
 <dataflow id="8821" from="StgValue_7601" to="conv_wt_buf_2_1_2_addr" fromId="7601" toId="2259">
 </dataflow>
-<dataflow id="8822" from="f_cast18" to="conv_wt_buf_2_1_2_addr" fromId="1820" toId="2259">
+<dataflow id="8822" from="f_cast27" to="conv_wt_buf_2_1_2_addr" fromId="1820" toId="2259">
 </dataflow>
 <dataflow id="8823" from="bitcast_ln65_23" to="store_ln65" fromId="2258" toId="2260">
 </dataflow>
@@ -46778,7 +46778,7 @@ VITIS_LOOP_62_2.i.split:232 %br_ln60 = br void %VITIS_LOOP_62_2.i
 </dataflow>
 <dataflow id="8838" from="StgValue_7601" to="conv_wt_buf_2_2_0_addr" fromId="7601" toId="2266">
 </dataflow>
-<dataflow id="8839" from="f_cast18" to="conv_wt_buf_2_2_0_addr" fromId="1820" toId="2266">
+<dataflow id="8839" from="f_cast27" to="conv_wt_buf_2_2_0_addr" fromId="1820" toId="2266">
 </dataflow>
 <dataflow id="8840" from="bitcast_ln65_24" to="store_ln65" fromId="2265" toId="2267">
 </dataflow>
@@ -46806,7 +46806,7 @@ VITIS_LOOP_62_2.i.split:232 %br_ln60 = br void %VITIS_LOOP_62_2.i
 </dataflow>
 <dataflow id="8852" from="StgValue_7601" to="conv_wt_buf_2_2_1_addr" fromId="7601" toId="2272">
 </dataflow>
-<dataflow id="8853" from="f_cast18" to="conv_wt_buf_2_2_1_addr" fromId="1820" toId="2272">
+<dataflow id="8853" from="f_cast27" to="conv_wt_buf_2_2_1_addr" fromId="1820" toId="2272">
 </dataflow>
 <dataflow id="8854" from="bitcast_ln65_25" to="store_ln65" fromId="2271" toId="2273">
 </dataflow>
@@ -46828,7 +46828,7 @@ VITIS_LOOP_62_2.i.split:232 %br_ln60 = br void %VITIS_LOOP_62_2.i
 </dataflow>
 <dataflow id="8863" from="StgValue_7601" to="conv_wt_buf_2_2_2_addr" fromId="7601" toId="2277">
 </dataflow>
-<dataflow id="8864" from="f_cast18" to="conv_wt_buf_2_2_2_addr" fromId="1820" toId="2277">
+<dataflow id="8864" from="f_cast27" to="conv_wt_buf_2_2_2_addr" fromId="1820" toId="2277">
 </dataflow>
 <dataflow id="8865" from="bitcast_ln65_26" to="store_ln65" fromId="2276" toId="2278">
 </dataflow>
@@ -46840,7 +46840,7 @@ VITIS_LOOP_62_2.i.split:232 %br_ln60 = br void %VITIS_LOOP_62_2.i
 </dataflow>
 <dataflow id="8870" from="_ssdm_op_SpecLoopName" to="specloopname_ln60" fromId="8869" toId="2280">
 </dataflow>
-<dataflow id="8872" from="empty_12" to="specloopname_ln60" fromId="8871" toId="2280">
+<dataflow id="8872" from="empty_14" to="specloopname_ln60" fromId="8871" toId="2280">
 </dataflow>
 <dataflow id="8873" from="wt_addr_read" to="bitcast_ln67" fromId="2279" toId="2281">
 </dataflow>
@@ -46848,7 +46848,7 @@ VITIS_LOOP_62_2.i.split:232 %br_ln60 = br void %VITIS_LOOP_62_2.i
 </dataflow>
 <dataflow id="8875" from="StgValue_7601" to="conv_bias_buf_addr" fromId="7601" toId="2282">
 </dataflow>
-<dataflow id="8876" from="f_cast18" to="conv_bias_buf_addr" fromId="1820" toId="2282">
+<dataflow id="8876" from="f_cast27" to="conv_bias_buf_addr" fromId="1820" toId="2282">
 </dataflow>
 <dataflow id="8877" from="bitcast_ln67" to="store_ln67" fromId="2281" toId="2283">
 </dataflow>

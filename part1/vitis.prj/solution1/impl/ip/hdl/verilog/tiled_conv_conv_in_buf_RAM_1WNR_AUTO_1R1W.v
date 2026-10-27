@@ -65,8 +65,8 @@ module tiled_conv_conv_in_buf_RAM_1WNR_AUTO_1R1W (
     reset, clk);
 
 parameter DataWidth = 32;
-parameter AddressWidth = 8;
-parameter AddressRange = 243;
+parameter AddressWidth = 12;
+parameter AddressRange = 2700;
 
 input[AddressWidth-1:0] address0;
 input ce0;

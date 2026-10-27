@@ -32799,25 +32799,25 @@ __attribute__((sdx_kernel("tiled_conv", 0))) void tiled_conv(
 # 24 "./utils.hpp"
 void load_input_tile_from_DRAM(
     fm_t in_fm[3][224][224],
-    fm_t in_fm_buf[3][7 + (2 * 1)][7 + (2 * 1)],
+    fm_t in_fm_buf[3][28 + (2 * 1)][28 + (2 * 1)],
     int tr,
     int tc);
 # 39 "./utils.hpp"
 void load_layer_params_from_DRAM(
     wt_t weights[64][3][3][3],
     wt_t biases[64],
-    wt_t weights_buf[64][3][3][3],
-    wt_t biases_buf[64],
+    wt_t weights_buf[8][3][3][3],
+    wt_t biases_buf[8],
     int kernel_group);
 # 54 "./utils.hpp"
 void conv_3x3(
-    fm_t X_buf[3][7 + (2 * 1)][7 + (2 * 1)],
-    wt_t W_buf[64][3][3][3],
-    wt_t B_buf[64],
-    fm_t Y_buf[64][7 / 1][7 / 1]);
+    fm_t X_buf[3][28 + (2 * 1)][28 + (2 * 1)],
+    wt_t W_buf[8][3][3][3],
+    wt_t B_buf[8],
+    fm_t Y_buf[8][28 / 1][28 / 1]);
 # 69 "./utils.hpp"
 void store_output_tile_to_DRAM(
-    fm_t out_fm_buf[64][7 / 1][7 / 1],
+    fm_t out_fm_buf[8][28 / 1][28 / 1],
     fm_t out_fm[64][224][224],
     int tr,
     int tc,
@@ -32843,17 +32843,17 @@ __attribute__((sdx_kernel("tiled_conv", 0))) void tiled_conv(
 
 #pragma HLS INTERFACE s_axilite register port = return
 
- fm_t conv_in_buf[3][7 + (2 * 1)][7 + (2 * 1)];
-    wt_t conv_wt_buf[64][3][3][3];
-    wt_t conv_bias_buf[64];
-    fm_t conv_out_buf[64][7 / 1][7 / 1];
+ fm_t conv_in_buf[3][28 + (2 * 1)][28 + (2 * 1)];
+    wt_t conv_wt_buf[8][3][3][3];
+    wt_t conv_bias_buf[8];
+    fm_t conv_out_buf[8][28 / 1][28 / 1];
 
-    VITIS_LOOP_26_1: for (int tr = 0; tr < (224 / 7); tr++)
+    VITIS_LOOP_26_1: for (int tr = 0; tr < (224 / 28); tr++)
     {
-        VITIS_LOOP_28_2: for (int tc = 0; tc < (224 / 7); tc++)
+        VITIS_LOOP_28_2: for (int tc = 0; tc < (224 / 28); tc++)
         {
-            std::cout << "Processing Tile " << tr * (224 / 7) + tc + 1;
-            std::cout << "/" << (224 / 7) * (224 / 7) << std::endl;
+            std::cout << "Processing Tile " << tr * (224 / 28) + tc + 1;
+            std::cout << "/" << (224 / 28) * (224 / 28) << std::endl;
 
 
 
@@ -32861,7 +32861,7 @@ __attribute__((sdx_kernel("tiled_conv", 0))) void tiled_conv(
             load_input_tile_from_DRAM(input_fm, conv_in_buf, tr, tc);
 
 
-            VITIS_LOOP_39_3: for (int g = 0; g < 64 / 64; g++)
+            VITIS_LOOP_39_3: for (int g = 0; g < 64 / 8; g++)
             {
                 load_layer_params_from_DRAM(weights, biases, conv_wt_buf, conv_bias_buf, g);
                 conv_3x3(conv_in_buf, conv_wt_buf, conv_bias_buf, conv_out_buf);

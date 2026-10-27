@@ -7,7 +7,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 
 
 set id 102
-set name tiled_conv_mac_muladd_7ns_18ns_20s_25_4_1
+set name tiled_conv_mac_muladd_6ns_18ns_19s_25_4_1
 set corename simcore_mac
 set op mac
 set stage_num 4
@@ -15,16 +15,16 @@ set clk_width 1
 set clk_signed 0
 set reset_width 1
 set reset_signed 0
-set in0_width 7
+set in0_width 6
 set in0_signed 0
 set in1_width 18
 set in1_signed 0
-set in2_width 20
+set in2_width 19
 set in2_signed 1
 set ce_width 1
 set ce_signed 0
 set out_width 25
-set arg_lists {i0 {7 0 +} i1 {18 0 +} m {25 1 +} i2 {20 1 +} p {25 1 +} c_reg {1} rnd {0} acc {0} }
+set arg_lists {i0 {6 0 +} i1 {18 0 +} m {24 0 +} i2 {19 1 +} p {25 1 +} c_reg {1} rnd {0} acc {0} }
 set TrueReset 0
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {all} IMPL {dsp48} LATENCY 3 ALLOW_PRAGMA 1
@@ -76,14 +76,14 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 106 \
+    id 107 \
     name conv_out_buf \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename conv_out_buf \
     op interface \
-    ports { conv_out_buf_address0 { O 12 vector } conv_out_buf_ce0 { O 1 bit } conv_out_buf_q0 { I 32 vector } conv_out_buf_address1 { O 12 vector } conv_out_buf_ce1 { O 1 bit } conv_out_buf_q1 { I 32 vector } } \
+    ports { conv_out_buf_address0 { O 13 vector } conv_out_buf_ce0 { O 1 bit } conv_out_buf_q0 { I 32 vector } conv_out_buf_address1 { O 13 vector } conv_out_buf_ce1 { O 1 bit } conv_out_buf_q1 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv_out_buf'"
@@ -109,7 +109,22 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 107 \
+    id 106 \
+    name shl_ln2 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_shl_ln2 \
+    op interface \
+    ports { shl_ln2 { I 6 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 108 \
     name select_ln103_1 \
     type other \
     dir I \
@@ -124,7 +139,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 108 \
+    id 109 \
     name tmp6 \
     type other \
     dir I \

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'tiled_conv_Pipeline_VITIS_LOOP_60_1'" level="0">
-<item name = "Date">Sun Oct 25 21:17:47 2026
+<item name = "Date">Mon Oct 26 20:57:20 2026
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">vitis.prj</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">1865, 1865, 18.650 us, 18.650 us, 1865, 1865, no</column>
+<column name="">297, 297, 2.970 us, 2.970 us, 297, 297, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- VITIS_LOOP_60_1">1863, 1863, 100, 28, 1, 64, yes</column>
+<column name="- VITIS_LOOP_60_1">295, 295, 100, 28, 1, 8, yes</column>
 </table>
 </item>
 </section>

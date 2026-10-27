@@ -15,7 +15,7 @@ set SynModuleInfo {
   {SRCNAME tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2 MODELNAME tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2 RTLNAME tiled_conv_tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2
     SUBMODULES {
       {MODELNAME tiled_conv_fcmp_32ns_32ns_1_2_no_dsp_1 RTLNAME tiled_conv_fcmp_32ns_32ns_1_2_no_dsp_1 BINDTYPE op TYPE fcmp IMPL auto LATENCY 1 ALLOW_PRAGMA 1}
-      {MODELNAME tiled_conv_mac_muladd_7ns_18ns_20s_25_4_1 RTLNAME tiled_conv_mac_muladd_7ns_18ns_20s_25_4_1 BINDTYPE op TYPE all IMPL dsp48 LATENCY 3 ALLOW_PRAGMA 1}
+      {MODELNAME tiled_conv_mac_muladd_6ns_18ns_19s_25_4_1 RTLNAME tiled_conv_mac_muladd_6ns_18ns_19s_25_4_1 BINDTYPE op TYPE all IMPL dsp48 LATENCY 3 ALLOW_PRAGMA 1}
     }
   }
   {SRCNAME tiled_conv MODELNAME tiled_conv RTLNAME tiled_conv IS_TOP 1

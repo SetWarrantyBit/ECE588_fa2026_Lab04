@@ -22,23 +22,23 @@
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>318</Best-caseLatency>
-<Average-caseLatency>318</Average-caseLatency>
-<Worst-caseLatency>318</Worst-caseLatency>
-<Best-caseRealTimeLatency>3.180 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>3.180 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>3.180 us</Worst-caseRealTimeLatency>
-<Interval-min>318</Interval-min>
-<Interval-max>318</Interval-max>
+<Best-caseLatency>2776</Best-caseLatency>
+<Average-caseLatency>2776</Average-caseLatency>
+<Worst-caseLatency>2776</Worst-caseLatency>
+<Best-caseRealTimeLatency>27.760 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>27.760 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>27.760 us</Worst-caseRealTimeLatency>
+<Interval-min>2776</Interval-min>
+<Interval-max>2776</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3>
 <Slack>7.30</Slack>
-<TripCount>243</TripCount>
-<Latency>316</Latency>
-<AbsoluteTimeLatency>3160</AbsoluteTimeLatency>
+<TripCount>2700</TripCount>
+<Latency>2774</Latency>
+<AbsoluteTimeLatency>27740</AbsoluteTimeLatency>
 <PipelineII>1</PipelineII>
-<PipelineDepth>75</PipelineDepth>
+<PipelineDepth>76</PipelineDepth>
 <InstanceList>
 </InstanceList>
 </VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3>
@@ -48,8 +48,8 @@
 <AreaEstimates>
 <Resources>
 <DSP>0</DSP>
-<FF>2907</FF>
-<LUT>766</LUT>
+<FF>2971</FF>
+<LUT>793</LUT>
 <BRAM_18K>0</BRAM_18K>
 <URAM>0</URAM>
 </Resources>
@@ -658,8 +658,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>p_mid133</name>
-<Object>p_mid133</Object>
+<name>p_mid137</name>
+<Object>p_mid137</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -676,7 +676,7 @@
 <IOProtocol>ap_none</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>19</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -687,7 +687,7 @@
 <IOProtocol>ap_memory</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
-<Bits>8</Bits>
+<Bits>12</Bits>
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>

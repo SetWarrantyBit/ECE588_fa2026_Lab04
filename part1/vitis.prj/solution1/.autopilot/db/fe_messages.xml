@@ -17,17 +17,17 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="tiled_conv.cpp:19:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="tiled_conv" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite register port = return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="tiled_conv.cpp:13:0" msg_body="Inlining function 'load_input_tile_from_DRAM(float (*) [224][224], float (*) [9][9], int, int)' into 'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])'">
-        <args Callee="load_input_tile_from_DRAM(float (*) [224][224], float (*) [9][9], int, int)" Caller="tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="tiled_conv.cpp:13:0" msg_body="Inlining function 'load_input_tile_from_DRAM(float (*) [224][224], float (*) [30][30], int, int)' into 'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])'">
+        <args Callee="load_input_tile_from_DRAM(float (*) [224][224], float (*) [30][30], int, int)" Caller="tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])"/>
     </msg>
     <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="tiled_conv.cpp:13:0" msg_body="Inlining function 'load_layer_params_from_DRAM(float (*) [3][3][3], float*, float (*) [3][3][3], float*, int)' into 'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])'">
         <args Callee="load_layer_params_from_DRAM(float (*) [3][3][3], float*, float (*) [3][3][3], float*, int)" Caller="tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="tiled_conv.cpp:13:0" msg_body="Inlining function 'conv_3x3(float (*) [9][9], float (*) [3][3][3], float*, float (*) [7][7])' into 'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])'">
-        <args Callee="conv_3x3(float (*) [9][9], float (*) [3][3][3], float*, float (*) [7][7])" Caller="tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="tiled_conv.cpp:13:0" msg_body="Inlining function 'conv_3x3(float (*) [30][30], float (*) [3][3][3], float*, float (*) [28][28])' into 'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])'">
+        <args Callee="conv_3x3(float (*) [30][30], float (*) [3][3][3], float*, float (*) [28][28])" Caller="tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="tiled_conv.cpp:13:0" msg_body="Inlining function 'store_output_tile_to_DRAM(float (*) [7][7], float (*) [224][224], int, int, int)' into 'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])'">
-        <args Callee="store_output_tile_to_DRAM(float (*) [7][7], float (*) [224][224], int, int, int)" Caller="tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="tiled_conv.cpp:13:0" msg_body="Inlining function 'store_output_tile_to_DRAM(float (*) [28][28], float (*) [224][224], int, int, int)' into 'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])'">
+        <args Callee="store_output_tile_to_DRAM(float (*) [28][28], float (*) [224][224], int, int, int)" Caller="tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])"/>
     </msg>
 </xilinx:hls_fe_msgs>
 

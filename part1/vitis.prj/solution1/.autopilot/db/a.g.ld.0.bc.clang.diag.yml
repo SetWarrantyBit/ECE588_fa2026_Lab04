@@ -5,7 +5,7 @@ DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
 Function:        _Z10tiled_convPA224_A224_fPA3_A3_A3_fPfS1_
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'load_input_tile_from_DRAM(float (*) [224][224], float (*) [9][9], int, int)'
+  - Callee:          'load_input_tile_from_DRAM(float (*) [224][224], float (*) [30][30], int, int)'
     DebugLoc:        { File: utils.cpp, Line: 23, Column: 0 }
   - String:          ''' into '''
   - Caller:          'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])'
@@ -33,7 +33,7 @@ DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
 Function:        _Z10tiled_convPA224_A224_fPA3_A3_A3_fPfS1_
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'conv_3x3(float (*) [9][9], float (*) [3][3][3], float*, float (*) [7][7])'
+  - Callee:          'conv_3x3(float (*) [30][30], float (*) [3][3][3], float*, float (*) [28][28])'
     DebugLoc:        { File: utils.cpp, Line: 77, Column: 0 }
   - String:          ''' into '''
   - Caller:          'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])'
@@ -47,7 +47,7 @@ DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
 Function:        _Z10tiled_convPA224_A224_fPA3_A3_A3_fPfS1_
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'store_output_tile_to_DRAM(float (*) [7][7], float (*) [224][224], int, int, int)'
+  - Callee:          'store_output_tile_to_DRAM(float (*) [28][28], float (*) [224][224], int, int, int)'
     DebugLoc:        { File: utils.cpp, Line: 106, Column: 0 }
   - String:          ''' into '''
   - Caller:          'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])'
@@ -63,13 +63,13 @@ Args:
   - String:          'Sequential '
   - Direction:       read
   - String:          ' of length '
-  - Length:          '1728'
+  - Length:          '216'
   - String:          ' has been inferred'
   - String:          ' _XLX_SEP_ OldID='
-  - String:          for.inc.i7.load.5
+  - String:          for.inc.i9.load.5
   - String:          ', '
   - String:          ' _XLX_SEP_ '
-  - AccessID:        weights93seq
+  - AccessID:        scevgepseq
   - String:          ' '
   - ArrayName:       weights
   - String:          ' '
@@ -92,13 +92,13 @@ Args:
   - String:          'Sequential '
   - Direction:       read
   - String:          ' of length '
-  - Length:          '64'
+  - Length:          '8'
   - String:          ' has been inferred'
   - String:          ' _XLX_SEP_ OldID='
   - String:          for.inc38.i.load.2
   - String:          ', '
   - String:          ' _XLX_SEP_ '
-  - AccessID:        biasesseq
+  - AccessID:        scevgep103seq
   - String:          ' '
   - ArrayName:       biases
   - String:          ' '
@@ -121,13 +121,13 @@ Args:
   - String:          'Sequential '
   - Direction:       write
   - String:          ' of length '
-  - Length:          '7'
+  - Length:          '28'
   - String:          ' has been inferred'
   - String:          ' _XLX_SEP_ OldID='
   - String:          for.body11.i.store.10
   - String:          ', '
   - String:          ' _XLX_SEP_ '
-  - AccessID:        scevgepseq
+  - AccessID:        scevgep104seq
   - String:          ' '
   - ArrayName:       output_fm
   - String:          ' '
@@ -174,7 +174,7 @@ Function:        _Z10tiled_convPA224_A224_fPA3_A3_A3_fPfS1_
 Args:            
   - String:          Stride is incompatible
   - String:          ' _XLX_SEP_ '
-  - AccessID:        scevgepseq
+  - AccessID:        scevgep104seq
   - String:          ' '
   - ArrayName:       output_fm
   - String:          ' '
@@ -190,21 +190,19 @@ Args:
 ...
 --- !Missed
 Pass:            reflow-burst-inference
-Name:            CouldNotAnalyzePattern
+Name:            AccessClobbered
 DebugLoc:        { File: utils.cpp, Line: 60, Column: 22 }
 Function:        _Z10tiled_convPA224_A224_fPA3_A3_A3_fPfS1_
 Args:            
-  - String:          Could not analyze pattern
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     load
+    DebugLoc:        { File: utils.cpp, Line: 65, Column: 49 }
   - String:          ' _XLX_SEP_ '
-  - AccessID:        biasesseq
+  - AccessID:        scevgep103seq
   - String:          ' '
   - ArrayName:       biases
   - String:          ' '
   - BundleName:      wt
-  - String:          ' '
-  - LoopName:        VITIS_LOOP_28_2
-  - String:          ' '
-  - LoopLoc:         'tiled_conv.cpp:28:26'
   - String:          ' '
   - Function:        'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])'
     DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
@@ -212,21 +210,19 @@ Args:
 ...
 --- !Missed
 Pass:            reflow-burst-inference
-Name:            CouldNotAnalyzePattern
+Name:            AccessClobbered
 DebugLoc:        { File: utils.cpp, Line: 60, Column: 22 }
 Function:        _Z10tiled_convPA224_A224_fPA3_A3_A3_fPfS1_
 Args:            
-  - String:          Could not analyze pattern
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     load
+    DebugLoc:        { File: utils.cpp, Line: 67, Column: 25 }
   - String:          ' _XLX_SEP_ '
-  - AccessID:        weights93seq
+  - AccessID:        scevgepseq
   - String:          ' '
   - ArrayName:       weights
   - String:          ' '
   - BundleName:      wt
-  - String:          ' '
-  - LoopName:        VITIS_LOOP_28_2
-  - String:          ' '
-  - LoopLoc:         'tiled_conv.cpp:28:26'
   - String:          ' '
   - Function:        'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])'
     DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
@@ -243,7 +239,7 @@ Args:
   - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
   - Threshold:       '0'
   - String:          ' _XLX_SEP_ '
-  - AccessID:        scevgepseq
+  - AccessID:        scevgep104seq
   - String:          ' '
   - ArrayName:       output_fm
   - String:          ' '
@@ -268,7 +264,7 @@ Args:
   - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
   - Threshold:       '0'
   - String:          ' _XLX_SEP_ '
-  - AccessID:        biasesseq
+  - AccessID:        scevgep103seq
   - String:          ' '
   - ArrayName:       biases
   - String:          ' '
@@ -293,7 +289,7 @@ Args:
   - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
   - Threshold:       '0'
   - String:          ' _XLX_SEP_ '
-  - AccessID:        weights93seq
+  - AccessID:        scevgepseq
   - String:          ' '
   - ArrayName:       weights
   - String:          ' '
@@ -336,7 +332,7 @@ Args:
   - String:          'Multiple burst '
   - Direction:       writes
   - String:          ' of length '
-  - Length:          '7'
+  - Length:          '28'
   - String:          ' and bit width '
   - Width:           '32'
   - String:          ' has been inferred.'
@@ -365,7 +361,7 @@ Args:
   - String:          'Multiple burst '
   - Direction:       writes
   - String:          ' of length '
-  - Length:          '7'
+  - Length:          '28'
   - String:          ' and bit width '
   - Width:           '32'
   - String:          ' in loop '''

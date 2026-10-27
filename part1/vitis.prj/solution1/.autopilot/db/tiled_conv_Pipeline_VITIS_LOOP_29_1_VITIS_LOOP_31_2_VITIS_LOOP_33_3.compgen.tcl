@@ -24,7 +24,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename conv_in_buf \
     op interface \
-    ports { conv_in_buf_address0 { O 8 vector } conv_in_buf_ce0 { O 1 bit } conv_in_buf_we0 { O 1 bit } conv_in_buf_d0 { O 32 vector } } \
+    ports { conv_in_buf_address0 { O 12 vector } conv_in_buf_ce0 { O 1 bit } conv_in_buf_we0 { O 1 bit } conv_in_buf_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv_in_buf'"
@@ -81,14 +81,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 6 \
-    name p_mid133 \
+    name p_mid137 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_p_mid133 \
+    corename dc_p_mid137 \
     op interface \
-    ports { p_mid133 { I 1 vector } } \
+    ports { p_mid137 { I 1 vector } } \
 } "
 }
 
@@ -103,7 +103,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_sub_ln42_1 \
     op interface \
-    ports { sub_ln42_1 { I 20 vector } } \
+    ports { sub_ln42_1 { I 19 vector } } \
 } "
 }
 

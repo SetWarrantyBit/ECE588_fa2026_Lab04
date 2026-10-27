@@ -1,0 +1,51 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'tiled_conv'" level="0">
+<item name = "Date">Mon Oct 26 20:54:32 2026
+</item>
+<item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
+<item name = "Project">vitis.prj</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.300 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">9964161, 9964161, 99.642 ms, 99.642 ms, 9964162, 9964162, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3_fu_312">tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3, 2776, 2776, 27.760 us, 27.760 us, 2776, 2776, no</column>
+<column name="grp_tiled_conv_Pipeline_VITIS_LOOP_60_1_fu_324">tiled_conv_Pipeline_VITIS_LOOP_60_1, 969, 969, 9.690 us, 9.690 us, 969, 969, no</column>
+<column name="grp_tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3_fu_360">tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3, 50318, 50318, 0.503 ms, 0.503 ms, 50318, 50318, no</column>
+<column name="grp_tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2_fu_394">tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2, 25162, 25162, 0.252 ms, 0.252 ms, 25162, 25162, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_26_1_VITIS_LOOP_28_2">9964160, 9964160, 155690, -, -, 64, no</column>
+<column name=" + VITIS_LOOP_39_3">152910, 152910, 76455, -, -, 2, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

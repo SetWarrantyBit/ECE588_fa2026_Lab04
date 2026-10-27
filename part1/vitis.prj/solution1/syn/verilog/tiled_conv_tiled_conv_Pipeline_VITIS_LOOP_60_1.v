@@ -169,7 +169,7 @@ module tiled_conv_tiled_conv_Pipeline_VITIS_LOOP_60_1 (
         conv_wt_buf_2_2_2_ce0,
         conv_wt_buf_2_2_2_we0,
         conv_wt_buf_2_2_2_d0,
-        sext_ln26,
+        sext_ln60_1,
         conv_bias_buf_address0,
         conv_bias_buf_ce0,
         conv_bias_buf_we0,
@@ -258,116 +258,116 @@ input  [1:0] m_axi_wt_BRESP;
 input  [0:0] m_axi_wt_BID;
 input  [0:0] m_axi_wt_BUSER;
 input  [61:0] sext_ln60;
-output  [5:0] conv_wt_buf_0_0_0_address0;
+output  [2:0] conv_wt_buf_0_0_0_address0;
 output   conv_wt_buf_0_0_0_ce0;
 output   conv_wt_buf_0_0_0_we0;
 output  [31:0] conv_wt_buf_0_0_0_d0;
-output  [5:0] conv_wt_buf_0_0_1_address0;
+output  [2:0] conv_wt_buf_0_0_1_address0;
 output   conv_wt_buf_0_0_1_ce0;
 output   conv_wt_buf_0_0_1_we0;
 output  [31:0] conv_wt_buf_0_0_1_d0;
-output  [5:0] conv_wt_buf_0_0_2_address0;
+output  [2:0] conv_wt_buf_0_0_2_address0;
 output   conv_wt_buf_0_0_2_ce0;
 output   conv_wt_buf_0_0_2_we0;
 output  [31:0] conv_wt_buf_0_0_2_d0;
-output  [5:0] conv_wt_buf_0_1_0_address0;
+output  [2:0] conv_wt_buf_0_1_0_address0;
 output   conv_wt_buf_0_1_0_ce0;
 output   conv_wt_buf_0_1_0_we0;
 output  [31:0] conv_wt_buf_0_1_0_d0;
-output  [5:0] conv_wt_buf_0_1_1_address0;
+output  [2:0] conv_wt_buf_0_1_1_address0;
 output   conv_wt_buf_0_1_1_ce0;
 output   conv_wt_buf_0_1_1_we0;
 output  [31:0] conv_wt_buf_0_1_1_d0;
-output  [5:0] conv_wt_buf_0_1_2_address0;
+output  [2:0] conv_wt_buf_0_1_2_address0;
 output   conv_wt_buf_0_1_2_ce0;
 output   conv_wt_buf_0_1_2_we0;
 output  [31:0] conv_wt_buf_0_1_2_d0;
-output  [5:0] conv_wt_buf_0_2_0_address0;
+output  [2:0] conv_wt_buf_0_2_0_address0;
 output   conv_wt_buf_0_2_0_ce0;
 output   conv_wt_buf_0_2_0_we0;
 output  [31:0] conv_wt_buf_0_2_0_d0;
-output  [5:0] conv_wt_buf_0_2_1_address0;
+output  [2:0] conv_wt_buf_0_2_1_address0;
 output   conv_wt_buf_0_2_1_ce0;
 output   conv_wt_buf_0_2_1_we0;
 output  [31:0] conv_wt_buf_0_2_1_d0;
-output  [5:0] conv_wt_buf_0_2_2_address0;
+output  [2:0] conv_wt_buf_0_2_2_address0;
 output   conv_wt_buf_0_2_2_ce0;
 output   conv_wt_buf_0_2_2_we0;
 output  [31:0] conv_wt_buf_0_2_2_d0;
-output  [5:0] conv_wt_buf_1_0_0_address0;
+output  [2:0] conv_wt_buf_1_0_0_address0;
 output   conv_wt_buf_1_0_0_ce0;
 output   conv_wt_buf_1_0_0_we0;
 output  [31:0] conv_wt_buf_1_0_0_d0;
-output  [5:0] conv_wt_buf_1_0_1_address0;
+output  [2:0] conv_wt_buf_1_0_1_address0;
 output   conv_wt_buf_1_0_1_ce0;
 output   conv_wt_buf_1_0_1_we0;
 output  [31:0] conv_wt_buf_1_0_1_d0;
-output  [5:0] conv_wt_buf_1_0_2_address0;
+output  [2:0] conv_wt_buf_1_0_2_address0;
 output   conv_wt_buf_1_0_2_ce0;
 output   conv_wt_buf_1_0_2_we0;
 output  [31:0] conv_wt_buf_1_0_2_d0;
-output  [5:0] conv_wt_buf_1_1_0_address0;
+output  [2:0] conv_wt_buf_1_1_0_address0;
 output   conv_wt_buf_1_1_0_ce0;
 output   conv_wt_buf_1_1_0_we0;
 output  [31:0] conv_wt_buf_1_1_0_d0;
-output  [5:0] conv_wt_buf_1_1_1_address0;
+output  [2:0] conv_wt_buf_1_1_1_address0;
 output   conv_wt_buf_1_1_1_ce0;
 output   conv_wt_buf_1_1_1_we0;
 output  [31:0] conv_wt_buf_1_1_1_d0;
-output  [5:0] conv_wt_buf_1_1_2_address0;
+output  [2:0] conv_wt_buf_1_1_2_address0;
 output   conv_wt_buf_1_1_2_ce0;
 output   conv_wt_buf_1_1_2_we0;
 output  [31:0] conv_wt_buf_1_1_2_d0;
-output  [5:0] conv_wt_buf_1_2_0_address0;
+output  [2:0] conv_wt_buf_1_2_0_address0;
 output   conv_wt_buf_1_2_0_ce0;
 output   conv_wt_buf_1_2_0_we0;
 output  [31:0] conv_wt_buf_1_2_0_d0;
-output  [5:0] conv_wt_buf_1_2_1_address0;
+output  [2:0] conv_wt_buf_1_2_1_address0;
 output   conv_wt_buf_1_2_1_ce0;
 output   conv_wt_buf_1_2_1_we0;
 output  [31:0] conv_wt_buf_1_2_1_d0;
-output  [5:0] conv_wt_buf_1_2_2_address0;
+output  [2:0] conv_wt_buf_1_2_2_address0;
 output   conv_wt_buf_1_2_2_ce0;
 output   conv_wt_buf_1_2_2_we0;
 output  [31:0] conv_wt_buf_1_2_2_d0;
-output  [5:0] conv_wt_buf_2_0_0_address0;
+output  [2:0] conv_wt_buf_2_0_0_address0;
 output   conv_wt_buf_2_0_0_ce0;
 output   conv_wt_buf_2_0_0_we0;
 output  [31:0] conv_wt_buf_2_0_0_d0;
-output  [5:0] conv_wt_buf_2_0_1_address0;
+output  [2:0] conv_wt_buf_2_0_1_address0;
 output   conv_wt_buf_2_0_1_ce0;
 output   conv_wt_buf_2_0_1_we0;
 output  [31:0] conv_wt_buf_2_0_1_d0;
-output  [5:0] conv_wt_buf_2_0_2_address0;
+output  [2:0] conv_wt_buf_2_0_2_address0;
 output   conv_wt_buf_2_0_2_ce0;
 output   conv_wt_buf_2_0_2_we0;
 output  [31:0] conv_wt_buf_2_0_2_d0;
-output  [5:0] conv_wt_buf_2_1_0_address0;
+output  [2:0] conv_wt_buf_2_1_0_address0;
 output   conv_wt_buf_2_1_0_ce0;
 output   conv_wt_buf_2_1_0_we0;
 output  [31:0] conv_wt_buf_2_1_0_d0;
-output  [5:0] conv_wt_buf_2_1_1_address0;
+output  [2:0] conv_wt_buf_2_1_1_address0;
 output   conv_wt_buf_2_1_1_ce0;
 output   conv_wt_buf_2_1_1_we0;
 output  [31:0] conv_wt_buf_2_1_1_d0;
-output  [5:0] conv_wt_buf_2_1_2_address0;
+output  [2:0] conv_wt_buf_2_1_2_address0;
 output   conv_wt_buf_2_1_2_ce0;
 output   conv_wt_buf_2_1_2_we0;
 output  [31:0] conv_wt_buf_2_1_2_d0;
-output  [5:0] conv_wt_buf_2_2_0_address0;
+output  [2:0] conv_wt_buf_2_2_0_address0;
 output   conv_wt_buf_2_2_0_ce0;
 output   conv_wt_buf_2_2_0_we0;
 output  [31:0] conv_wt_buf_2_2_0_d0;
-output  [5:0] conv_wt_buf_2_2_1_address0;
+output  [2:0] conv_wt_buf_2_2_1_address0;
 output   conv_wt_buf_2_2_1_ce0;
 output   conv_wt_buf_2_2_1_we0;
 output  [31:0] conv_wt_buf_2_2_1_d0;
-output  [5:0] conv_wt_buf_2_2_2_address0;
+output  [2:0] conv_wt_buf_2_2_2_address0;
 output   conv_wt_buf_2_2_2_ce0;
 output   conv_wt_buf_2_2_2_we0;
 output  [31:0] conv_wt_buf_2_2_2_d0;
-input  [61:0] sext_ln26;
-output  [5:0] conv_bias_buf_address0;
+input  [61:0] sext_ln60_1;
+output  [2:0] conv_bias_buf_address0;
 output   conv_bias_buf_ce0;
 output   conv_bias_buf_we0;
 output  [31:0] conv_bias_buf_d0;
@@ -506,20 +506,20 @@ wire    ap_block_pp0_stage27;
 wire    ap_CS_fsm_pp0_stage14;
 wire    ap_block_pp0_stage14;
 wire    ap_block_pp0_stage0;
-wire  signed [62:0] sext_ln26_cast_fu_886_p1;
-reg  signed [62:0] sext_ln26_cast_reg_1495;
+wire  signed [62:0] sext_ln60_1_cast_fu_886_p1;
+reg  signed [62:0] sext_ln60_1_cast_reg_1495;
 wire    ap_block_state1_pp0_stage0_iter0;
 wire    ap_block_state29_pp0_stage0_iter1;
 wire    ap_block_state57_pp0_stage0_iter2;
 reg    ap_block_state85_pp0_stage0_iter3;
 reg    ap_block_pp0_stage0_11001;
-reg   [6:0] f_1_reg_1500;
-reg   [6:0] f_1_reg_1500_pp0_iter1_reg;
-reg   [6:0] f_1_reg_1500_pp0_iter2_reg;
+reg   [3:0] f_1_reg_1500;
+reg   [3:0] f_1_reg_1500_pp0_iter1_reg;
+reg   [3:0] f_1_reg_1500_pp0_iter2_reg;
 wire   [0:0] icmp_ln60_fu_907_p2;
 reg   [0:0] icmp_ln60_reg_1506_pp0_iter1_reg;
 reg   [0:0] icmp_ln60_reg_1506_pp0_iter2_reg;
-reg   [10:0] phi_mul_load_reg_1510;
+reg   [7:0] phi_mul_load_reg_1510;
 wire  signed [62:0] add_ln65_fu_926_p2;
 reg  signed [62:0] add_ln65_reg_1515;
 wire    ap_block_state2_pp0_stage1_iter0;
@@ -686,8 +686,8 @@ reg   [63:0] wt_addr_27_reg_1702;
 reg   [63:0] wt_addr_reg_1708;
 reg    ap_block_pp0_stage27_11001;
 reg   [31:0] wt_addr_1_read_reg_1714;
-wire   [63:0] f_cast18_fu_1365_p1;
-reg   [63:0] f_cast18_reg_1719;
+wire   [63:0] f_cast27_fu_1365_p1;
+reg   [63:0] f_cast27_reg_1719;
 reg   [31:0] wt_addr_2_read_reg_1750;
 reg   [31:0] wt_addr_3_read_reg_1755;
 reg   [31:0] wt_addr_4_read_reg_1760;
@@ -755,13 +755,13 @@ wire  signed [63:0] sext_ln65_24_fu_1297_p1;
 wire  signed [63:0] sext_ln65_25_fu_1312_p1;
 wire  signed [63:0] sext_ln65_26_fu_1327_p1;
 wire  signed [63:0] sext_ln67_fu_1350_p1;
-reg   [10:0] phi_mul_fu_166;
-wire   [10:0] add_ln62_fu_1340_p2;
+reg   [7:0] phi_mul_fu_166;
+wire   [7:0] next_mul_fu_1340_p2;
 wire    ap_loop_init;
-reg   [10:0] ap_sig_allocacmp_phi_mul_load;
-reg   [6:0] f_fu_170;
-wire   [6:0] add_ln60_fu_913_p2;
-reg   [6:0] ap_sig_allocacmp_f_1;
+reg   [7:0] ap_sig_allocacmp_phi_mul_load;
+reg   [3:0] f_fu_170;
+wire   [3:0] add_ln60_fu_913_p2;
+reg   [3:0] ap_sig_allocacmp_f_1;
 wire   [62:0] zext_ln65_fu_922_p1;
 wire  signed [62:0] sext_ln60_cast_fu_890_p1;
 wire   [62:0] add_ln65_1_fu_947_p2;
@@ -790,7 +790,7 @@ wire   [62:0] add_ln65_23_fu_1277_p2;
 wire   [62:0] add_ln65_24_fu_1292_p2;
 wire   [62:0] add_ln65_25_fu_1307_p2;
 wire   [62:0] add_ln65_26_fu_1322_p2;
-wire   [62:0] f_cast10_fu_1337_p1;
+wire   [62:0] f_cast17_fu_1337_p1;
 wire   [62:0] add_ln67_fu_1345_p2;
 reg    ap_done_reg;
 wire    ap_continue_int;
@@ -941,16 +941,16 @@ always @ (posedge ap_clk) begin
         if (((icmp_ln60_fu_907_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
             f_fu_170 <= add_ln60_fu_913_p2;
         end else if ((ap_loop_init == 1'b1)) begin
-            f_fu_170 <= 7'd0;
+            f_fu_170 <= 4'd0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b1 == ap_CS_fsm_pp0_stage0) & (ap_loop_init == 1'b1) & (1'b0 == ap_block_pp0_stage0_11001))) begin
-        phi_mul_fu_166 <= 11'd0;
+        phi_mul_fu_166 <= 8'd0;
     end else if (((ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage27) & (1'b0 == ap_block_pp0_stage27_11001) & (icmp_ln60_reg_1506 == 1'd0))) begin
-        phi_mul_fu_166 <= add_ln62_fu_1340_p2;
+        phi_mul_fu_166 <= next_mul_fu_1340_p2;
     end
 end
 
@@ -969,14 +969,14 @@ always @ (posedge ap_clk) begin
         icmp_ln60_reg_1506 <= icmp_ln60_fu_907_p2;
         icmp_ln60_reg_1506_pp0_iter1_reg <= icmp_ln60_reg_1506;
         icmp_ln60_reg_1506_pp0_iter2_reg <= icmp_ln60_reg_1506_pp0_iter1_reg;
-        sext_ln26_cast_reg_1495 <= sext_ln26_cast_fu_886_p1;
+        sext_ln60_1_cast_reg_1495 <= sext_ln60_1_cast_fu_886_p1;
         wt_addr_14_read_reg_1810 <= m_axi_wt_RDATA;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b1 == ap_CS_fsm_pp0_stage16) & (1'b0 == ap_block_pp0_stage16_11001))) begin
-        f_cast18_reg_1719[6 : 0] <= f_cast18_fu_1365_p1[6 : 0];
+        f_cast27_reg_1719[3 : 0] <= f_cast27_fu_1365_p1[3 : 0];
         wt_addr_2_read_reg_1750 <= m_axi_wt_RDATA;
     end
 end
@@ -1363,7 +1363,7 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_pp0_stage0) & (ap_loop_init == 1'b1) & (1'b0 == ap_block_pp0_stage0))) begin
-        ap_sig_allocacmp_f_1 = 7'd0;
+        ap_sig_allocacmp_f_1 = 4'd0;
     end else begin
         ap_sig_allocacmp_f_1 = f_fu_170;
     end
@@ -1371,7 +1371,7 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_pp0_stage0) & (ap_loop_init == 1'b1) & (1'b0 == ap_block_pp0_stage0))) begin
-        ap_sig_allocacmp_phi_mul_load = 11'd0;
+        ap_sig_allocacmp_phi_mul_load = 8'd0;
     end else begin
         ap_sig_allocacmp_phi_mul_load = phi_mul_fu_166;
     end
@@ -2125,9 +2125,7 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln60_fu_913_p2 = (ap_sig_allocacmp_f_1 + 7'd1);
-
-assign add_ln62_fu_1340_p2 = (phi_mul_load_reg_1510 + 11'd27);
+assign add_ln60_fu_913_p2 = (ap_sig_allocacmp_f_1 + 4'd1);
 
 assign add_ln65_10_fu_1082_p2 = ($signed(add_ln65_reg_1515) + $signed(63'd10));
 
@@ -2183,7 +2181,7 @@ assign add_ln65_9_fu_1067_p2 = ($signed(add_ln65_reg_1515) + $signed(63'd9));
 
 assign add_ln65_fu_926_p2 = ($signed(zext_ln65_fu_922_p1) + $signed(sext_ln60_cast_fu_890_p1));
 
-assign add_ln67_fu_1345_p2 = ($signed(f_cast10_fu_1337_p1) + $signed(sext_ln26_cast_reg_1495));
+assign add_ln67_fu_1345_p2 = ($signed(f_cast17_fu_1337_p1) + $signed(sext_ln60_1_cast_reg_1495));
 
 assign ap_CS_fsm_pp0_stage0 = ap_CS_fsm[32'd0];
 
@@ -2889,123 +2887,123 @@ assign ap_enable_pp0 = (ap_idle_pp0 ^ 1'b1);
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage27;
 
-assign conv_bias_buf_address0 = f_cast18_reg_1719;
+assign conv_bias_buf_address0 = f_cast27_reg_1719;
 
 assign conv_bias_buf_d0 = wt_addr_read_reg_1880;
 
-assign conv_wt_buf_0_0_0_address0 = f_cast18_fu_1365_p1;
+assign conv_wt_buf_0_0_0_address0 = f_cast27_fu_1365_p1;
 
 assign conv_wt_buf_0_0_0_d0 = wt_addr_1_read_reg_1714;
 
-assign conv_wt_buf_0_0_1_address0 = f_cast18_reg_1719;
+assign conv_wt_buf_0_0_1_address0 = f_cast27_reg_1719;
 
 assign conv_wt_buf_0_0_1_d0 = wt_addr_2_read_reg_1750;
 
-assign conv_wt_buf_0_0_2_address0 = f_cast18_reg_1719;
+assign conv_wt_buf_0_0_2_address0 = f_cast27_reg_1719;
 
 assign conv_wt_buf_0_0_2_d0 = wt_addr_3_read_reg_1755;
 
-assign conv_wt_buf_0_1_0_address0 = f_cast18_reg_1719;
+assign conv_wt_buf_0_1_0_address0 = f_cast27_reg_1719;
 
 assign conv_wt_buf_0_1_0_d0 = wt_addr_4_read_reg_1760;
 
-assign conv_wt_buf_0_1_1_address0 = f_cast18_reg_1719;
+assign conv_wt_buf_0_1_1_address0 = f_cast27_reg_1719;
 
 assign conv_wt_buf_0_1_1_d0 = wt_addr_5_read_reg_1765;
 
-assign conv_wt_buf_0_1_2_address0 = f_cast18_reg_1719;
+assign conv_wt_buf_0_1_2_address0 = f_cast27_reg_1719;
 
 assign conv_wt_buf_0_1_2_d0 = wt_addr_6_read_reg_1770;
 
-assign conv_wt_buf_0_2_0_address0 = f_cast18_reg_1719;
+assign conv_wt_buf_0_2_0_address0 = f_cast27_reg_1719;
 
 assign conv_wt_buf_0_2_0_d0 = wt_addr_7_read_reg_1775;
 
-assign conv_wt_buf_0_2_1_address0 = f_cast18_reg_1719;
+assign conv_wt_buf_0_2_1_address0 = f_cast27_reg_1719;
 
 assign conv_wt_buf_0_2_1_d0 = wt_addr_8_read_reg_1780;
 
-assign conv_wt_buf_0_2_2_address0 = f_cast18_reg_1719;
+assign conv_wt_buf_0_2_2_address0 = f_cast27_reg_1719;
 
 assign conv_wt_buf_0_2_2_d0 = wt_addr_9_read_reg_1785;
 
-assign conv_wt_buf_1_0_0_address0 = f_cast18_reg_1719;
+assign conv_wt_buf_1_0_0_address0 = f_cast27_reg_1719;
 
 assign conv_wt_buf_1_0_0_d0 = wt_addr_10_read_reg_1790;
 
-assign conv_wt_buf_1_0_1_address0 = f_cast18_reg_1719;
+assign conv_wt_buf_1_0_1_address0 = f_cast27_reg_1719;
 
 assign conv_wt_buf_1_0_1_d0 = wt_addr_11_read_reg_1795;
 
-assign conv_wt_buf_1_0_2_address0 = f_cast18_reg_1719;
+assign conv_wt_buf_1_0_2_address0 = f_cast27_reg_1719;
 
 assign conv_wt_buf_1_0_2_d0 = wt_addr_12_read_reg_1800;
 
-assign conv_wt_buf_1_1_0_address0 = f_cast18_reg_1719;
+assign conv_wt_buf_1_1_0_address0 = f_cast27_reg_1719;
 
 assign conv_wt_buf_1_1_0_d0 = wt_addr_13_read_reg_1805;
 
-assign conv_wt_buf_1_1_1_address0 = f_cast18_reg_1719;
+assign conv_wt_buf_1_1_1_address0 = f_cast27_reg_1719;
 
 assign conv_wt_buf_1_1_1_d0 = wt_addr_14_read_reg_1810;
 
-assign conv_wt_buf_1_1_2_address0 = f_cast18_reg_1719;
+assign conv_wt_buf_1_1_2_address0 = f_cast27_reg_1719;
 
 assign conv_wt_buf_1_1_2_d0 = wt_addr_15_read_reg_1815;
 
-assign conv_wt_buf_1_2_0_address0 = f_cast18_reg_1719;
+assign conv_wt_buf_1_2_0_address0 = f_cast27_reg_1719;
 
 assign conv_wt_buf_1_2_0_d0 = wt_addr_16_read_reg_1820;
 
-assign conv_wt_buf_1_2_1_address0 = f_cast18_reg_1719;
+assign conv_wt_buf_1_2_1_address0 = f_cast27_reg_1719;
 
 assign conv_wt_buf_1_2_1_d0 = wt_addr_17_read_reg_1825;
 
-assign conv_wt_buf_1_2_2_address0 = f_cast18_reg_1719;
+assign conv_wt_buf_1_2_2_address0 = f_cast27_reg_1719;
 
 assign conv_wt_buf_1_2_2_d0 = wt_addr_18_read_reg_1830;
 
-assign conv_wt_buf_2_0_0_address0 = f_cast18_reg_1719;
+assign conv_wt_buf_2_0_0_address0 = f_cast27_reg_1719;
 
 assign conv_wt_buf_2_0_0_d0 = wt_addr_19_read_reg_1835;
 
-assign conv_wt_buf_2_0_1_address0 = f_cast18_reg_1719;
+assign conv_wt_buf_2_0_1_address0 = f_cast27_reg_1719;
 
 assign conv_wt_buf_2_0_1_d0 = wt_addr_20_read_reg_1840;
 
-assign conv_wt_buf_2_0_2_address0 = f_cast18_reg_1719;
+assign conv_wt_buf_2_0_2_address0 = f_cast27_reg_1719;
 
 assign conv_wt_buf_2_0_2_d0 = wt_addr_21_read_reg_1845;
 
-assign conv_wt_buf_2_1_0_address0 = f_cast18_reg_1719;
+assign conv_wt_buf_2_1_0_address0 = f_cast27_reg_1719;
 
 assign conv_wt_buf_2_1_0_d0 = wt_addr_22_read_reg_1850;
 
-assign conv_wt_buf_2_1_1_address0 = f_cast18_reg_1719;
+assign conv_wt_buf_2_1_1_address0 = f_cast27_reg_1719;
 
 assign conv_wt_buf_2_1_1_d0 = wt_addr_23_read_reg_1855;
 
-assign conv_wt_buf_2_1_2_address0 = f_cast18_reg_1719;
+assign conv_wt_buf_2_1_2_address0 = f_cast27_reg_1719;
 
 assign conv_wt_buf_2_1_2_d0 = wt_addr_24_read_reg_1860;
 
-assign conv_wt_buf_2_2_0_address0 = f_cast18_reg_1719;
+assign conv_wt_buf_2_2_0_address0 = f_cast27_reg_1719;
 
 assign conv_wt_buf_2_2_0_d0 = wt_addr_25_read_reg_1865;
 
-assign conv_wt_buf_2_2_1_address0 = f_cast18_reg_1719;
+assign conv_wt_buf_2_2_1_address0 = f_cast27_reg_1719;
 
 assign conv_wt_buf_2_2_1_d0 = wt_addr_26_read_reg_1870;
 
-assign conv_wt_buf_2_2_2_address0 = f_cast18_reg_1719;
+assign conv_wt_buf_2_2_2_address0 = f_cast27_reg_1719;
 
 assign conv_wt_buf_2_2_2_d0 = wt_addr_27_read_reg_1875;
 
-assign f_cast10_fu_1337_p1 = f_1_reg_1500;
+assign f_cast17_fu_1337_p1 = f_1_reg_1500;
 
-assign f_cast18_fu_1365_p1 = f_1_reg_1500_pp0_iter2_reg;
+assign f_cast27_fu_1365_p1 = f_1_reg_1500_pp0_iter2_reg;
 
-assign icmp_ln60_fu_907_p2 = ((ap_sig_allocacmp_f_1 == 7'd64) ? 1'b1 : 1'b0);
+assign icmp_ln60_fu_907_p2 = ((ap_sig_allocacmp_f_1 == 4'd8) ? 1'b1 : 1'b0);
 
 assign m_axi_wt_ARBURST = 2'd0;
 
@@ -3065,7 +3063,9 @@ assign m_axi_wt_WUSER = 1'd0;
 
 assign m_axi_wt_WVALID = 1'b0;
 
-assign sext_ln26_cast_fu_886_p1 = $signed(sext_ln26);
+assign next_mul_fu_1340_p2 = (phi_mul_load_reg_1510 + 8'd27);
+
+assign sext_ln60_1_cast_fu_886_p1 = $signed(sext_ln60_1);
 
 assign sext_ln60_cast_fu_890_p1 = $signed(sext_ln60);
 
@@ -3128,7 +3128,7 @@ assign sext_ln67_fu_1350_p1 = $signed(add_ln67_fu_1345_p2);
 assign zext_ln65_fu_922_p1 = ap_sig_allocacmp_phi_mul_load;
 
 always @ (posedge ap_clk) begin
-    f_cast18_reg_1719[63:7] <= 57'b000000000000000000000000000000000000000000000000000000000;
+    f_cast27_reg_1719[63:4] <= 60'b000000000000000000000000000000000000000000000000000000000000;
 end
 
 endmodule //tiled_conv_tiled_conv_Pipeline_VITIS_LOOP_60_1

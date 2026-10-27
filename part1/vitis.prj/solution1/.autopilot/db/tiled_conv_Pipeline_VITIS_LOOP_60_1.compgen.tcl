@@ -18,7 +18,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename conv_wt_buf_0_0_0 \
     op interface \
-    ports { conv_wt_buf_0_0_0_address0 { O 6 vector } conv_wt_buf_0_0_0_ce0 { O 1 bit } conv_wt_buf_0_0_0_we0 { O 1 bit } conv_wt_buf_0_0_0_d0 { O 32 vector } } \
+    ports { conv_wt_buf_0_0_0_address0 { O 3 vector } conv_wt_buf_0_0_0_ce0 { O 1 bit } conv_wt_buf_0_0_0_we0 { O 1 bit } conv_wt_buf_0_0_0_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv_wt_buf_0_0_0'"
@@ -37,7 +37,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename conv_wt_buf_0_0_1 \
     op interface \
-    ports { conv_wt_buf_0_0_1_address0 { O 6 vector } conv_wt_buf_0_0_1_ce0 { O 1 bit } conv_wt_buf_0_0_1_we0 { O 1 bit } conv_wt_buf_0_0_1_d0 { O 32 vector } } \
+    ports { conv_wt_buf_0_0_1_address0 { O 3 vector } conv_wt_buf_0_0_1_ce0 { O 1 bit } conv_wt_buf_0_0_1_we0 { O 1 bit } conv_wt_buf_0_0_1_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv_wt_buf_0_0_1'"
@@ -56,7 +56,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename conv_wt_buf_0_0_2 \
     op interface \
-    ports { conv_wt_buf_0_0_2_address0 { O 6 vector } conv_wt_buf_0_0_2_ce0 { O 1 bit } conv_wt_buf_0_0_2_we0 { O 1 bit } conv_wt_buf_0_0_2_d0 { O 32 vector } } \
+    ports { conv_wt_buf_0_0_2_address0 { O 3 vector } conv_wt_buf_0_0_2_ce0 { O 1 bit } conv_wt_buf_0_0_2_we0 { O 1 bit } conv_wt_buf_0_0_2_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv_wt_buf_0_0_2'"
@@ -75,7 +75,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename conv_wt_buf_0_1_0 \
     op interface \
-    ports { conv_wt_buf_0_1_0_address0 { O 6 vector } conv_wt_buf_0_1_0_ce0 { O 1 bit } conv_wt_buf_0_1_0_we0 { O 1 bit } conv_wt_buf_0_1_0_d0 { O 32 vector } } \
+    ports { conv_wt_buf_0_1_0_address0 { O 3 vector } conv_wt_buf_0_1_0_ce0 { O 1 bit } conv_wt_buf_0_1_0_we0 { O 1 bit } conv_wt_buf_0_1_0_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv_wt_buf_0_1_0'"
@@ -94,7 +94,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename conv_wt_buf_0_1_1 \
     op interface \
-    ports { conv_wt_buf_0_1_1_address0 { O 6 vector } conv_wt_buf_0_1_1_ce0 { O 1 bit } conv_wt_buf_0_1_1_we0 { O 1 bit } conv_wt_buf_0_1_1_d0 { O 32 vector } } \
+    ports { conv_wt_buf_0_1_1_address0 { O 3 vector } conv_wt_buf_0_1_1_ce0 { O 1 bit } conv_wt_buf_0_1_1_we0 { O 1 bit } conv_wt_buf_0_1_1_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv_wt_buf_0_1_1'"
@@ -113,7 +113,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename conv_wt_buf_0_1_2 \
     op interface \
-    ports { conv_wt_buf_0_1_2_address0 { O 6 vector } conv_wt_buf_0_1_2_ce0 { O 1 bit } conv_wt_buf_0_1_2_we0 { O 1 bit } conv_wt_buf_0_1_2_d0 { O 32 vector } } \
+    ports { conv_wt_buf_0_1_2_address0 { O 3 vector } conv_wt_buf_0_1_2_ce0 { O 1 bit } conv_wt_buf_0_1_2_we0 { O 1 bit } conv_wt_buf_0_1_2_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv_wt_buf_0_1_2'"
@@ -132,7 +132,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename conv_wt_buf_0_2_0 \
     op interface \
-    ports { conv_wt_buf_0_2_0_address0 { O 6 vector } conv_wt_buf_0_2_0_ce0 { O 1 bit } conv_wt_buf_0_2_0_we0 { O 1 bit } conv_wt_buf_0_2_0_d0 { O 32 vector } } \
+    ports { conv_wt_buf_0_2_0_address0 { O 3 vector } conv_wt_buf_0_2_0_ce0 { O 1 bit } conv_wt_buf_0_2_0_we0 { O 1 bit } conv_wt_buf_0_2_0_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv_wt_buf_0_2_0'"
@@ -151,7 +151,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename conv_wt_buf_0_2_1 \
     op interface \
-    ports { conv_wt_buf_0_2_1_address0 { O 6 vector } conv_wt_buf_0_2_1_ce0 { O 1 bit } conv_wt_buf_0_2_1_we0 { O 1 bit } conv_wt_buf_0_2_1_d0 { O 32 vector } } \
+    ports { conv_wt_buf_0_2_1_address0 { O 3 vector } conv_wt_buf_0_2_1_ce0 { O 1 bit } conv_wt_buf_0_2_1_we0 { O 1 bit } conv_wt_buf_0_2_1_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv_wt_buf_0_2_1'"
@@ -170,7 +170,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename conv_wt_buf_0_2_2 \
     op interface \
-    ports { conv_wt_buf_0_2_2_address0 { O 6 vector } conv_wt_buf_0_2_2_ce0 { O 1 bit } conv_wt_buf_0_2_2_we0 { O 1 bit } conv_wt_buf_0_2_2_d0 { O 32 vector } } \
+    ports { conv_wt_buf_0_2_2_address0 { O 3 vector } conv_wt_buf_0_2_2_ce0 { O 1 bit } conv_wt_buf_0_2_2_we0 { O 1 bit } conv_wt_buf_0_2_2_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv_wt_buf_0_2_2'"
@@ -189,7 +189,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename conv_wt_buf_1_0_0 \
     op interface \
-    ports { conv_wt_buf_1_0_0_address0 { O 6 vector } conv_wt_buf_1_0_0_ce0 { O 1 bit } conv_wt_buf_1_0_0_we0 { O 1 bit } conv_wt_buf_1_0_0_d0 { O 32 vector } } \
+    ports { conv_wt_buf_1_0_0_address0 { O 3 vector } conv_wt_buf_1_0_0_ce0 { O 1 bit } conv_wt_buf_1_0_0_we0 { O 1 bit } conv_wt_buf_1_0_0_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv_wt_buf_1_0_0'"
@@ -208,7 +208,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename conv_wt_buf_1_0_1 \
     op interface \
-    ports { conv_wt_buf_1_0_1_address0 { O 6 vector } conv_wt_buf_1_0_1_ce0 { O 1 bit } conv_wt_buf_1_0_1_we0 { O 1 bit } conv_wt_buf_1_0_1_d0 { O 32 vector } } \
+    ports { conv_wt_buf_1_0_1_address0 { O 3 vector } conv_wt_buf_1_0_1_ce0 { O 1 bit } conv_wt_buf_1_0_1_we0 { O 1 bit } conv_wt_buf_1_0_1_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv_wt_buf_1_0_1'"
@@ -227,7 +227,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename conv_wt_buf_1_0_2 \
     op interface \
-    ports { conv_wt_buf_1_0_2_address0 { O 6 vector } conv_wt_buf_1_0_2_ce0 { O 1 bit } conv_wt_buf_1_0_2_we0 { O 1 bit } conv_wt_buf_1_0_2_d0 { O 32 vector } } \
+    ports { conv_wt_buf_1_0_2_address0 { O 3 vector } conv_wt_buf_1_0_2_ce0 { O 1 bit } conv_wt_buf_1_0_2_we0 { O 1 bit } conv_wt_buf_1_0_2_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv_wt_buf_1_0_2'"
@@ -246,7 +246,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename conv_wt_buf_1_1_0 \
     op interface \
-    ports { conv_wt_buf_1_1_0_address0 { O 6 vector } conv_wt_buf_1_1_0_ce0 { O 1 bit } conv_wt_buf_1_1_0_we0 { O 1 bit } conv_wt_buf_1_1_0_d0 { O 32 vector } } \
+    ports { conv_wt_buf_1_1_0_address0 { O 3 vector } conv_wt_buf_1_1_0_ce0 { O 1 bit } conv_wt_buf_1_1_0_we0 { O 1 bit } conv_wt_buf_1_1_0_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv_wt_buf_1_1_0'"
@@ -265,7 +265,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename conv_wt_buf_1_1_1 \
     op interface \
-    ports { conv_wt_buf_1_1_1_address0 { O 6 vector } conv_wt_buf_1_1_1_ce0 { O 1 bit } conv_wt_buf_1_1_1_we0 { O 1 bit } conv_wt_buf_1_1_1_d0 { O 32 vector } } \
+    ports { conv_wt_buf_1_1_1_address0 { O 3 vector } conv_wt_buf_1_1_1_ce0 { O 1 bit } conv_wt_buf_1_1_1_we0 { O 1 bit } conv_wt_buf_1_1_1_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv_wt_buf_1_1_1'"
@@ -284,7 +284,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename conv_wt_buf_1_1_2 \
     op interface \
-    ports { conv_wt_buf_1_1_2_address0 { O 6 vector } conv_wt_buf_1_1_2_ce0 { O 1 bit } conv_wt_buf_1_1_2_we0 { O 1 bit } conv_wt_buf_1_1_2_d0 { O 32 vector } } \
+    ports { conv_wt_buf_1_1_2_address0 { O 3 vector } conv_wt_buf_1_1_2_ce0 { O 1 bit } conv_wt_buf_1_1_2_we0 { O 1 bit } conv_wt_buf_1_1_2_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv_wt_buf_1_1_2'"
@@ -303,7 +303,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename conv_wt_buf_1_2_0 \
     op interface \
-    ports { conv_wt_buf_1_2_0_address0 { O 6 vector } conv_wt_buf_1_2_0_ce0 { O 1 bit } conv_wt_buf_1_2_0_we0 { O 1 bit } conv_wt_buf_1_2_0_d0 { O 32 vector } } \
+    ports { conv_wt_buf_1_2_0_address0 { O 3 vector } conv_wt_buf_1_2_0_ce0 { O 1 bit } conv_wt_buf_1_2_0_we0 { O 1 bit } conv_wt_buf_1_2_0_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv_wt_buf_1_2_0'"
@@ -322,7 +322,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename conv_wt_buf_1_2_1 \
     op interface \
-    ports { conv_wt_buf_1_2_1_address0 { O 6 vector } conv_wt_buf_1_2_1_ce0 { O 1 bit } conv_wt_buf_1_2_1_we0 { O 1 bit } conv_wt_buf_1_2_1_d0 { O 32 vector } } \
+    ports { conv_wt_buf_1_2_1_address0 { O 3 vector } conv_wt_buf_1_2_1_ce0 { O 1 bit } conv_wt_buf_1_2_1_we0 { O 1 bit } conv_wt_buf_1_2_1_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv_wt_buf_1_2_1'"
@@ -341,7 +341,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename conv_wt_buf_1_2_2 \
     op interface \
-    ports { conv_wt_buf_1_2_2_address0 { O 6 vector } conv_wt_buf_1_2_2_ce0 { O 1 bit } conv_wt_buf_1_2_2_we0 { O 1 bit } conv_wt_buf_1_2_2_d0 { O 32 vector } } \
+    ports { conv_wt_buf_1_2_2_address0 { O 3 vector } conv_wt_buf_1_2_2_ce0 { O 1 bit } conv_wt_buf_1_2_2_we0 { O 1 bit } conv_wt_buf_1_2_2_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv_wt_buf_1_2_2'"
@@ -360,7 +360,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename conv_wt_buf_2_0_0 \
     op interface \
-    ports { conv_wt_buf_2_0_0_address0 { O 6 vector } conv_wt_buf_2_0_0_ce0 { O 1 bit } conv_wt_buf_2_0_0_we0 { O 1 bit } conv_wt_buf_2_0_0_d0 { O 32 vector } } \
+    ports { conv_wt_buf_2_0_0_address0 { O 3 vector } conv_wt_buf_2_0_0_ce0 { O 1 bit } conv_wt_buf_2_0_0_we0 { O 1 bit } conv_wt_buf_2_0_0_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv_wt_buf_2_0_0'"
@@ -379,7 +379,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename conv_wt_buf_2_0_1 \
     op interface \
-    ports { conv_wt_buf_2_0_1_address0 { O 6 vector } conv_wt_buf_2_0_1_ce0 { O 1 bit } conv_wt_buf_2_0_1_we0 { O 1 bit } conv_wt_buf_2_0_1_d0 { O 32 vector } } \
+    ports { conv_wt_buf_2_0_1_address0 { O 3 vector } conv_wt_buf_2_0_1_ce0 { O 1 bit } conv_wt_buf_2_0_1_we0 { O 1 bit } conv_wt_buf_2_0_1_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv_wt_buf_2_0_1'"
@@ -398,7 +398,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename conv_wt_buf_2_0_2 \
     op interface \
-    ports { conv_wt_buf_2_0_2_address0 { O 6 vector } conv_wt_buf_2_0_2_ce0 { O 1 bit } conv_wt_buf_2_0_2_we0 { O 1 bit } conv_wt_buf_2_0_2_d0 { O 32 vector } } \
+    ports { conv_wt_buf_2_0_2_address0 { O 3 vector } conv_wt_buf_2_0_2_ce0 { O 1 bit } conv_wt_buf_2_0_2_we0 { O 1 bit } conv_wt_buf_2_0_2_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv_wt_buf_2_0_2'"
@@ -417,7 +417,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename conv_wt_buf_2_1_0 \
     op interface \
-    ports { conv_wt_buf_2_1_0_address0 { O 6 vector } conv_wt_buf_2_1_0_ce0 { O 1 bit } conv_wt_buf_2_1_0_we0 { O 1 bit } conv_wt_buf_2_1_0_d0 { O 32 vector } } \
+    ports { conv_wt_buf_2_1_0_address0 { O 3 vector } conv_wt_buf_2_1_0_ce0 { O 1 bit } conv_wt_buf_2_1_0_we0 { O 1 bit } conv_wt_buf_2_1_0_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv_wt_buf_2_1_0'"
@@ -436,7 +436,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename conv_wt_buf_2_1_1 \
     op interface \
-    ports { conv_wt_buf_2_1_1_address0 { O 6 vector } conv_wt_buf_2_1_1_ce0 { O 1 bit } conv_wt_buf_2_1_1_we0 { O 1 bit } conv_wt_buf_2_1_1_d0 { O 32 vector } } \
+    ports { conv_wt_buf_2_1_1_address0 { O 3 vector } conv_wt_buf_2_1_1_ce0 { O 1 bit } conv_wt_buf_2_1_1_we0 { O 1 bit } conv_wt_buf_2_1_1_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv_wt_buf_2_1_1'"
@@ -455,7 +455,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename conv_wt_buf_2_1_2 \
     op interface \
-    ports { conv_wt_buf_2_1_2_address0 { O 6 vector } conv_wt_buf_2_1_2_ce0 { O 1 bit } conv_wt_buf_2_1_2_we0 { O 1 bit } conv_wt_buf_2_1_2_d0 { O 32 vector } } \
+    ports { conv_wt_buf_2_1_2_address0 { O 3 vector } conv_wt_buf_2_1_2_ce0 { O 1 bit } conv_wt_buf_2_1_2_we0 { O 1 bit } conv_wt_buf_2_1_2_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv_wt_buf_2_1_2'"
@@ -474,7 +474,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename conv_wt_buf_2_2_0 \
     op interface \
-    ports { conv_wt_buf_2_2_0_address0 { O 6 vector } conv_wt_buf_2_2_0_ce0 { O 1 bit } conv_wt_buf_2_2_0_we0 { O 1 bit } conv_wt_buf_2_2_0_d0 { O 32 vector } } \
+    ports { conv_wt_buf_2_2_0_address0 { O 3 vector } conv_wt_buf_2_2_0_ce0 { O 1 bit } conv_wt_buf_2_2_0_we0 { O 1 bit } conv_wt_buf_2_2_0_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv_wt_buf_2_2_0'"
@@ -493,7 +493,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename conv_wt_buf_2_2_1 \
     op interface \
-    ports { conv_wt_buf_2_2_1_address0 { O 6 vector } conv_wt_buf_2_2_1_ce0 { O 1 bit } conv_wt_buf_2_2_1_we0 { O 1 bit } conv_wt_buf_2_2_1_d0 { O 32 vector } } \
+    ports { conv_wt_buf_2_2_1_address0 { O 3 vector } conv_wt_buf_2_2_1_ce0 { O 1 bit } conv_wt_buf_2_2_1_we0 { O 1 bit } conv_wt_buf_2_2_1_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv_wt_buf_2_2_1'"
@@ -512,7 +512,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename conv_wt_buf_2_2_2 \
     op interface \
-    ports { conv_wt_buf_2_2_2_address0 { O 6 vector } conv_wt_buf_2_2_2_ce0 { O 1 bit } conv_wt_buf_2_2_2_we0 { O 1 bit } conv_wt_buf_2_2_2_d0 { O 32 vector } } \
+    ports { conv_wt_buf_2_2_2_address0 { O 3 vector } conv_wt_buf_2_2_2_ce0 { O 1 bit } conv_wt_buf_2_2_2_we0 { O 1 bit } conv_wt_buf_2_2_2_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv_wt_buf_2_2_2'"
@@ -531,7 +531,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename conv_bias_buf \
     op interface \
-    ports { conv_bias_buf_address0 { O 6 vector } conv_bias_buf_ce0 { O 1 bit } conv_bias_buf_we0 { O 1 bit } conv_bias_buf_d0 { O 32 vector } } \
+    ports { conv_bias_buf_address0 { O 3 vector } conv_bias_buf_ce0 { O 1 bit } conv_bias_buf_we0 { O 1 bit } conv_bias_buf_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv_bias_buf'"
@@ -573,14 +573,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 39 \
-    name sext_ln26 \
+    name sext_ln60_1 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_sext_ln26 \
+    corename dc_sext_ln60_1 \
     op interface \
-    ports { sext_ln26 { I 62 vector } } \
+    ports { sext_ln60_1 { I 62 vector } } \
 } "
 }
 

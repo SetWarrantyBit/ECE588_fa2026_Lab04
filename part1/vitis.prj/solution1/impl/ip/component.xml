@@ -1579,7 +1579,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>bf575325</spirit:value>
+            <spirit:value>58e9ddba</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1598,7 +1598,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>2f0c7c22</spirit:value>
+            <spirit:value>59d69886</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1617,7 +1617,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>691759f2</spirit:value>
+            <spirit:value>a7dae8e1</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1636,7 +1636,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>f450c348</spirit:value>
+            <spirit:value>43201acf</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -3854,7 +3854,7 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/tiled_conv_mac_muladd_7ns_18ns_20s_25_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/tiled_conv_mac_muladd_6ns_18ns_19s_25_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -3952,7 +3952,7 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/tiled_conv_mac_muladd_7ns_18ns_20s_25_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/tiled_conv_mac_muladd_6ns_18ns_19s_25_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -4073,7 +4073,7 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/tiled_conv_mac_muladd_7ns_18ns_20s_25_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/tiled_conv_mac_muladd_6ns_18ns_19s_25_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -4103,7 +4103,7 @@
       <spirit:file>
         <spirit:name>hdl/vhdl/tiled_conv.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_f8043cf9</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_ab9c04f4</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -4164,7 +4164,7 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/tiled_conv_mac_muladd_7ns_18ns_20s_25_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/tiled_conv_mac_muladd_6ns_18ns_19s_25_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -4534,7 +4534,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>latency</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="29">11771905</spirit:value>
+      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="29">10077441</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>II</spirit:name>
@@ -4551,8 +4551,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Tiled_conv</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2114845098</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2026-10-26T02:18:28Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2114846517</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2026-10-27T01:58:06Z</xilinx:coreCreationDateTime>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
@@ -4563,10 +4563,10 @@
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="b545aaa0"/>
       <xilinx:checksum xilinx:scope="addressSpaces" xilinx:value="9c7afaea"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="5085f7e1"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="58a64902"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="d68147e8"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="75a9fa97"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="42e43959"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="6e256024"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="d67a384d"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>
