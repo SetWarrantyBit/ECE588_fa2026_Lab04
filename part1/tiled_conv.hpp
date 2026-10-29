@@ -35,7 +35,7 @@ typedef float fm_t, wt_t;
 //                  Number of kernel groups : 16
 //-------------------------------------------------------------------------- 
 // TILE_HEIGHT/WIDTH = 7x7
-#define TILE_HW 28
+#define TILE_HW 56
 // NUM_TILES_ROW/COL = 32x32
 #define NUM_TILE_RC (I / TILE_HW)
 // MARGIN = 2 (padding)

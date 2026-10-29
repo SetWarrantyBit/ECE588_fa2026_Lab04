@@ -32800,7 +32800,7 @@ void tiled_conv(
 # 24 "./utils.hpp"
 void load_input_tile_from_DRAM(
     fm_t in_fm[3][224][224],
-    fm_t in_fm_buf[3][28 + (2 * 1)][28 + (2 * 1)],
+    fm_t in_fm_buf[3][56 + (2 * 1)][56 + (2 * 1)],
     int tr,
     int tc);
 # 39 "./utils.hpp"
@@ -32812,13 +32812,13 @@ void load_layer_params_from_DRAM(
     int kernel_group);
 # 54 "./utils.hpp"
 void conv_3x3(
-    fm_t X_buf[3][28 + (2 * 1)][28 + (2 * 1)],
+    fm_t X_buf[3][56 + (2 * 1)][56 + (2 * 1)],
     wt_t W_buf[8][3][3][3],
     wt_t B_buf[8],
-    fm_t Y_buf[8][28 / 1][28 / 1]);
+    fm_t Y_buf[8][56 / 1][56 / 1]);
 # 69 "./utils.hpp"
 void store_output_tile_to_DRAM(
-    fm_t out_fm_buf[8][28 / 1][28 / 1],
+    fm_t out_fm_buf[8][56 / 1][56 / 1],
     fm_t out_fm[64][224][224],
     int tr,
     int tc,
@@ -32829,20 +32829,20 @@ using namespace std;
 
 void load_input_tile_from_DRAM(
     fm_t in_fm[3][224][224],
-    fm_t in_fm_buf[3][28 + (2 * 1)][28 + (2 * 1)],
+    fm_t in_fm_buf[3][56 + (2 * 1)][56 + (2 * 1)],
     int tr,
     int tc)
 {
 
 
-    const int height_offset = tr * 28;
-    const int width_offset = tc * 28;
+    const int height_offset = tr * 56;
+    const int width_offset = tc * 56;
 
     VITIS_LOOP_29_1: for (int c = 0; c < 3; c++)
     {
-        VITIS_LOOP_31_2: for (int i = 0; i < 28 + (2 * 1); i++)
+        VITIS_LOOP_31_2: for (int i = 0; i < 56 + (2 * 1); i++)
         {
-            VITIS_LOOP_33_3: for (int j = 0; j < 28 + (2 * 1); j++)
+            VITIS_LOOP_33_3: for (int j = 0; j < 56 + (2 * 1); j++)
             {
 
                 int row = height_offset - 1 + i;
@@ -32882,18 +32882,18 @@ void load_layer_params_from_DRAM(
 }
 
 void conv_3x3(
-    fm_t X_buf[3][28 + (2 * 1)][28 + (2 * 1)],
+    fm_t X_buf[3][56 + (2 * 1)][56 + (2 * 1)],
     wt_t W_buf[8][3][3][3],
     wt_t B_buf[8],
-    fm_t Y_buf[8][28 / 1][28 / 1])
+    fm_t Y_buf[8][56 / 1][56 / 1])
 {
 
 
     VITIS_LOOP_80_1: for (int f = 0; f < 8; f++)
     {
-        VITIS_LOOP_82_2: for (int i = 0; i < 28 / 1; i++)
+        VITIS_LOOP_82_2: for (int i = 0; i < 56 / 1; i++)
         {
-            VITIS_LOOP_84_3: for (int j = 0; j < 28 / 1; j++)
+            VITIS_LOOP_84_3: for (int j = 0; j < 56 / 1; j++)
             {
 #pragma HLS PIPELINE II=1
  fm_t sum = B_buf[f];
@@ -32911,7 +32911,7 @@ void conv_3x3(
 }
 
 void store_output_tile_to_DRAM(
-    fm_t out_fm_buf[8][28 / 1][28 / 1],
+    fm_t out_fm_buf[8][56 / 1][56 / 1],
     fm_t out_fm[64][224][224],
     int tr,
     int tc,
@@ -32921,12 +32921,12 @@ void store_output_tile_to_DRAM(
 
 
     const int depth_offset = kernel_group * 8;
-    const int height_offset = tr * 28 / 1;
-    const int width_offset = tc * 28 / 1;
+    const int height_offset = tr * 56 / 1;
+    const int width_offset = tc * 56 / 1;
 
     VITIS_LOOP_115_1: for (int f = 0; f < 8; f++)
-        VITIS_LOOP_116_2: for (int i = 0; i < 28 / 1; i++)
-            VITIS_LOOP_117_3: for (int j = 0; j < 28 / 1; j++)
+        VITIS_LOOP_116_2: for (int i = 0; i < 56 / 1; i++)
+            VITIS_LOOP_117_3: for (int j = 0; j < 56 / 1; j++)
             {
                 fm_t val = out_fm_buf[f][i][j];
                 out_fm[depth_offset + f][height_offset + i][width_offset + j] =

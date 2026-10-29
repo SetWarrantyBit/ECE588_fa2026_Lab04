@@ -1,8 +1,8 @@
 set SynModuleInfo {
   {SRCNAME tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 MODELNAME tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 RTLNAME tiled_conv_tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3
     SUBMODULES {
-      {MODELNAME tiled_conv_urem_5ns_3ns_2_9_1 RTLNAME tiled_conv_urem_5ns_3ns_2_9_1 BINDTYPE op TYPE urem IMPL auto LATENCY 8 ALLOW_PRAGMA 1}
-      {MODELNAME tiled_conv_mul_5ns_7ns_11_1_1 RTLNAME tiled_conv_mul_5ns_7ns_11_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+      {MODELNAME tiled_conv_urem_6ns_3ns_2_10_1 RTLNAME tiled_conv_urem_6ns_3ns_2_10_1 BINDTYPE op TYPE urem IMPL auto LATENCY 9 ALLOW_PRAGMA 1}
+      {MODELNAME tiled_conv_mul_6ns_8ns_13_1_1 RTLNAME tiled_conv_mul_6ns_8ns_13_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
       {MODELNAME tiled_conv_mul_2ns_19ns_20_1_1 RTLNAME tiled_conv_mul_2ns_19ns_20_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
       {MODELNAME tiled_conv_flow_control_loop_pipe_sequential_init RTLNAME tiled_conv_flow_control_loop_pipe_sequential_init BINDTYPE interface TYPE internal_upc_flow_control INSTNAME tiled_conv_flow_control_loop_pipe_sequential_init_U}
     }

@@ -83,7 +83,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir I \
     corename conv_out_buf \
     op interface \
-    ports { conv_out_buf_address0 { O 13 vector } conv_out_buf_ce0 { O 1 bit } conv_out_buf_q0 { I 32 vector } conv_out_buf_address1 { O 13 vector } conv_out_buf_ce1 { O 1 bit } conv_out_buf_q1 { I 32 vector } } \
+    ports { conv_out_buf_address0 { O 15 vector } conv_out_buf_ce0 { O 1 bit } conv_out_buf_q0 { I 32 vector } conv_out_buf_address1 { O 15 vector } conv_out_buf_ce1 { O 1 bit } conv_out_buf_q1 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv_out_buf'"

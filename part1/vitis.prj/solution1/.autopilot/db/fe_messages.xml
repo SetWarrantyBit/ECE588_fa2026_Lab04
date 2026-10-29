@@ -56,14 +56,14 @@
     <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="utils.cpp:77:0" msg_body="Unrolling loop 'VITIS_LOOP_91_6' (utils.cpp:91:42) in function 'conv_3x3' completely with a factor of 3">
         <args Factor="3" LoopLoc="utils.cpp:91:42" LoopName="VITIS_LOOP_91_6"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="tiled_conv.cpp:13:0" msg_body="Inlining function 'load_input_tile_from_DRAM(float (*) [224][224], float (*) [30][30], int, int)' into 'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])'">
-        <args Callee="load_input_tile_from_DRAM(float (*) [224][224], float (*) [30][30], int, int)" Caller="tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="tiled_conv.cpp:13:0" msg_body="Inlining function 'load_input_tile_from_DRAM(float (*) [224][224], float (*) [58][58], int, int)' into 'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])'">
+        <args Callee="load_input_tile_from_DRAM(float (*) [224][224], float (*) [58][58], int, int)" Caller="tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])"/>
     </msg>
     <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="tiled_conv.cpp:13:0" msg_body="Inlining function 'load_layer_params_from_DRAM(float (*) [3][3][3], float*, float (*) [3][3][3], float*, int)' into 'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])'">
         <args Callee="load_layer_params_from_DRAM(float (*) [3][3][3], float*, float (*) [3][3][3], float*, int)" Caller="tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="tiled_conv.cpp:13:0" msg_body="Inlining function 'store_output_tile_to_DRAM(float (*) [28][28], float (*) [224][224], int, int, int)' into 'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])'">
-        <args Callee="store_output_tile_to_DRAM(float (*) [28][28], float (*) [224][224], int, int, int)" Caller="tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="tiled_conv.cpp:13:0" msg_body="Inlining function 'store_output_tile_to_DRAM(float (*) [56][56], float (*) [224][224], int, int, int)' into 'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])'">
+        <args Callee="store_output_tile_to_DRAM(float (*) [56][56], float (*) [224][224], int, int, int)" Caller="tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])"/>
     </msg>
     <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="tiled_conv.cpp:21:7" msg_body="Applying array_partition to 'conv_in_buf': Complete partitioning on dimension 1. Cyclic partitioning with factor 3 on dimension 2. Cyclic partitioning with factor 3 on dimension 3.">
         <args Dim="islist 1 2 3" Factor="islist 3 3" Mode="islist Complete Cyclic Cyclic" UOName="conv_in_buf"/>

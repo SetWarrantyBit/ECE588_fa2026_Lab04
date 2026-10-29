@@ -86,7 +86,7 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="7" bw="4" op_0_bw="32">
+<Node id="7" bw="3" op_0_bw="32">
 <![CDATA[
 entry:0 %tc = alloca i32 1
 
@@ -101,7 +101,7 @@ entry:0 %tc = alloca i32 1
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="8" bw="4" op_0_bw="32">
+<Node id="8" bw="3" op_0_bw="32">
 <![CDATA[
 entry:1 %tr = alloca i32 1
 
@@ -116,7 +116,7 @@ entry:1 %tr = alloca i32 1
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="9" bw="7" op_0_bw="32">
+<Node id="9" bw="5" op_0_bw="32">
 <![CDATA[
 entry:2 %indvar_flatten86 = alloca i32 1
 
@@ -1241,9 +1241,9 @@ entry:76 %conv_out_buf = alloca i64 1
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="84" bw="0" op_0_bw="7" op_1_bw="7">
+<Node id="84" bw="0" op_0_bw="5" op_1_bw="5">
 <![CDATA[
-entry:77 %store_ln33 = store i7 0, i7 %indvar_flatten86
+entry:77 %store_ln33 = store i5 0, i5 %indvar_flatten86
 
 ]]></Node>
 <StgValue><ssdm name="store_ln33"/></StgValue>
@@ -1256,9 +1256,9 @@ entry:77 %store_ln33 = store i7 0, i7 %indvar_flatten86
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="85" bw="0" op_0_bw="4" op_1_bw="4">
+<Node id="85" bw="0" op_0_bw="3" op_1_bw="3">
 <![CDATA[
-entry:78 %store_ln33 = store i4 0, i4 %tr
+entry:78 %store_ln33 = store i3 0, i3 %tr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln33"/></StgValue>
@@ -1271,9 +1271,9 @@ entry:78 %store_ln33 = store i4 0, i4 %tr
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="86" bw="0" op_0_bw="4" op_1_bw="4">
+<Node id="86" bw="0" op_0_bw="3" op_1_bw="3">
 <![CDATA[
-entry:79 %store_ln33 = store i4 0, i4 %tc
+entry:79 %store_ln33 = store i3 0, i3 %tc
 
 ]]></Node>
 <StgValue><ssdm name="store_ln33"/></StgValue>
@@ -1304,9 +1304,9 @@ entry:80 %br_ln33 = br void %VITIS_LOOP_46_3
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="89" bw="4" op_0_bw="4" op_1_bw="0">
+<Node id="89" bw="3" op_0_bw="3" op_1_bw="0">
 <![CDATA[
-VITIS_LOOP_46_3:0 %tr_1 = load i4 %tr
+VITIS_LOOP_46_3:0 %tr_1 = load i3 %tr
 
 ]]></Node>
 <StgValue><ssdm name="tr_1"/></StgValue>
@@ -1319,9 +1319,9 @@ VITIS_LOOP_46_3:0 %tr_1 = load i4 %tr
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="90" bw="7" op_0_bw="7" op_1_bw="0">
+<Node id="90" bw="5" op_0_bw="5" op_1_bw="0">
 <![CDATA[
-VITIS_LOOP_46_3:1 %indvar_flatten86_load = load i7 %indvar_flatten86
+VITIS_LOOP_46_3:1 %indvar_flatten86_load = load i5 %indvar_flatten86
 
 ]]></Node>
 <StgValue><ssdm name="indvar_flatten86_load"/></StgValue>
@@ -1334,9 +1334,9 @@ VITIS_LOOP_46_3:1 %indvar_flatten86_load = load i7 %indvar_flatten86
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="91" bw="3" op_0_bw="4">
+<Node id="91" bw="2" op_0_bw="3">
 <![CDATA[
-VITIS_LOOP_46_3:2 %empty = trunc i4 %tr_1
+VITIS_LOOP_46_3:2 %empty = trunc i3 %tr_1
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -1349,9 +1349,9 @@ VITIS_LOOP_46_3:2 %empty = trunc i4 %tr_1
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="92" bw="8" op_0_bw="8" op_1_bw="3" op_2_bw="5">
+<Node id="92" bw="8" op_0_bw="8" op_1_bw="2" op_2_bw="6">
 <![CDATA[
-VITIS_LOOP_46_3:3 %p_shl = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i3.i5, i3 %empty, i5 0
+VITIS_LOOP_46_3:3 %p_shl = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i2.i6, i2 %empty, i6 0
 
 ]]></Node>
 <StgValue><ssdm name="p_shl"/></StgValue>
@@ -1379,9 +1379,9 @@ VITIS_LOOP_46_3:4 %p_shl_cast = zext i8 %p_shl
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="94" bw="5" op_0_bw="5" op_1_bw="3" op_2_bw="2">
+<Node id="94" bw="5" op_0_bw="5" op_1_bw="2" op_2_bw="3">
 <![CDATA[
-VITIS_LOOP_46_3:5 %p_shl1 = bitconcatenate i5 @_ssdm_op_BitConcatenate.i5.i3.i2, i3 %empty, i2 0
+VITIS_LOOP_46_3:5 %p_shl1 = bitconcatenate i5 @_ssdm_op_BitConcatenate.i5.i2.i3, i2 %empty, i3 0
 
 ]]></Node>
 <StgValue><ssdm name="p_shl1"/></StgValue>
@@ -1424,9 +1424,9 @@ VITIS_LOOP_46_3:7 %empty_38 = sub i9 %p_shl_cast, i9 %p_shl1_cast
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="97" bw="1" op_0_bw="7" op_1_bw="7">
+<Node id="97" bw="1" op_0_bw="5" op_1_bw="5">
 <![CDATA[
-VITIS_LOOP_46_3:8 %icmp_ln33 = icmp_eq  i7 %indvar_flatten86_load, i7 64
+VITIS_LOOP_46_3:8 %icmp_ln33 = icmp_eq  i5 %indvar_flatten86_load, i5 16
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln33"/></StgValue>
@@ -1439,9 +1439,9 @@ VITIS_LOOP_46_3:8 %icmp_ln33 = icmp_eq  i7 %indvar_flatten86_load, i7 64
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="98" bw="7" op_0_bw="7" op_1_bw="7">
+<Node id="98" bw="5" op_0_bw="5" op_1_bw="5">
 <![CDATA[
-VITIS_LOOP_46_3:9 %add_ln33_1 = add i7 %indvar_flatten86_load, i7 1
+VITIS_LOOP_46_3:9 %add_ln33_1 = add i5 %indvar_flatten86_load, i5 1
 
 ]]></Node>
 <StgValue><ssdm name="add_ln33_1"/></StgValue>
@@ -1470,9 +1470,9 @@ VITIS_LOOP_46_3:10 %br_ln33 = br i1 %icmp_ln33, void %for.inc24, void %for.end26
 </and_exp></or_exp>
 </condition>
 
-<Node id="101" bw="4" op_0_bw="4" op_1_bw="0">
+<Node id="101" bw="3" op_0_bw="3" op_1_bw="0">
 <![CDATA[
-for.inc24:0 %tc_load = load i4 %tc
+for.inc24:0 %tc_load = load i3 %tc
 
 ]]></Node>
 <StgValue><ssdm name="tc_load"/></StgValue>
@@ -1486,9 +1486,9 @@ for.inc24:0 %tc_load = load i4 %tc
 </and_exp></or_exp>
 </condition>
 
-<Node id="102" bw="4" op_0_bw="4" op_1_bw="4">
+<Node id="102" bw="3" op_0_bw="3" op_1_bw="3">
 <![CDATA[
-for.inc24:1 %add_ln33 = add i4 %tr_1, i4 1
+for.inc24:1 %add_ln33 = add i3 %tr_1, i3 1
 
 ]]></Node>
 <StgValue><ssdm name="add_ln33"/></StgValue>
@@ -1502,9 +1502,9 @@ for.inc24:1 %add_ln33 = add i4 %tr_1, i4 1
 </and_exp></or_exp>
 </condition>
 
-<Node id="105" bw="1" op_0_bw="4" op_1_bw="4">
+<Node id="105" bw="1" op_0_bw="3" op_1_bw="3">
 <![CDATA[
-for.inc24:4 %icmp_ln35 = icmp_eq  i4 %tc_load, i4 8
+for.inc24:4 %icmp_ln35 = icmp_eq  i3 %tc_load, i3 4
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln35"/></StgValue>
@@ -1518,9 +1518,9 @@ for.inc24:4 %icmp_ln35 = icmp_eq  i4 %tc_load, i4 8
 </and_exp></or_exp>
 </condition>
 
-<Node id="107" bw="3" op_0_bw="4">
+<Node id="107" bw="2" op_0_bw="3">
 <![CDATA[
-for.inc24:6 %empty_41 = trunc i4 %add_ln33
+for.inc24:6 %empty_41 = trunc i3 %add_ln33
 
 ]]></Node>
 <StgValue><ssdm name="empty_41"/></StgValue>
@@ -1534,9 +1534,9 @@ for.inc24:6 %empty_41 = trunc i4 %add_ln33
 </and_exp></or_exp>
 </condition>
 
-<Node id="108" bw="8" op_0_bw="8" op_1_bw="3" op_2_bw="5">
+<Node id="108" bw="8" op_0_bw="8" op_1_bw="2" op_2_bw="6">
 <![CDATA[
-for.inc24:7 %p_shl_mid1 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i3.i5, i3 %empty_41, i5 0
+for.inc24:7 %p_shl_mid1 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i2.i6, i2 %empty_41, i6 0
 
 ]]></Node>
 <StgValue><ssdm name="p_shl_mid1"/></StgValue>
@@ -1566,9 +1566,9 @@ for.inc24:8 %p_shl_cast_mid1 = zext i8 %p_shl_mid1
 </and_exp></or_exp>
 </condition>
 
-<Node id="110" bw="5" op_0_bw="5" op_1_bw="3" op_2_bw="2">
+<Node id="110" bw="5" op_0_bw="5" op_1_bw="2" op_2_bw="3">
 <![CDATA[
-for.inc24:9 %p_shl1_mid1 = bitconcatenate i5 @_ssdm_op_BitConcatenate.i5.i3.i2, i3 %empty_41, i2 0
+for.inc24:9 %p_shl1_mid1 = bitconcatenate i5 @_ssdm_op_BitConcatenate.i5.i2.i3, i2 %empty_41, i3 0
 
 ]]></Node>
 <StgValue><ssdm name="p_shl1_mid1"/></StgValue>
@@ -1630,9 +1630,9 @@ for.inc24:12 %select_ln33_1 = select i1 %icmp_ln35, i9 %p_mid184, i9 %empty_38
 </and_exp></or_exp>
 </condition>
 
-<Node id="114" bw="4" op_0_bw="1" op_1_bw="4" op_2_bw="4">
+<Node id="114" bw="3" op_0_bw="1" op_1_bw="3" op_2_bw="3">
 <![CDATA[
-for.inc24:13 %select_ln33_2 = select i1 %icmp_ln35, i4 %add_ln33, i4 %tr_1
+for.inc24:13 %select_ln33_2 = select i1 %icmp_ln35, i3 %add_ln33, i3 %tr_1
 
 ]]></Node>
 <StgValue><ssdm name="select_ln33_2"/></StgValue>
@@ -1664,9 +1664,9 @@ for.end26:0 %ret_ln55 = ret
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="106" bw="4" op_0_bw="1" op_1_bw="4" op_2_bw="4">
+<Node id="106" bw="3" op_0_bw="1" op_1_bw="3" op_2_bw="3">
 <![CDATA[
-for.inc24:5 %select_ln33 = select i1 %icmp_ln35, i4 0, i4 %tc_load
+for.inc24:5 %select_ln33 = select i1 %icmp_ln35, i3 0, i3 %tc_load
 
 ]]></Node>
 <StgValue><ssdm name="select_ln33"/></StgValue>
@@ -1679,9 +1679,9 @@ for.inc24:5 %select_ln33 = select i1 %icmp_ln35, i4 0, i4 %tc_load
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="116" bw="3" op_0_bw="4">
+<Node id="116" bw="2" op_0_bw="3">
 <![CDATA[
-for.inc24:15 %trunc_ln27 = trunc i4 %select_ln33
+for.inc24:15 %trunc_ln27 = trunc i3 %select_ln33
 
 ]]></Node>
 <StgValue><ssdm name="trunc_ln27"/></StgValue>
@@ -1694,9 +1694,9 @@ for.inc24:15 %trunc_ln27 = trunc i4 %select_ln33
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="117" bw="8" op_0_bw="8" op_1_bw="3" op_2_bw="5">
+<Node id="117" bw="8" op_0_bw="8" op_1_bw="2" op_2_bw="6">
 <![CDATA[
-for.inc24:16 %shl_ln = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i3.i5, i3 %trunc_ln27, i5 0
+for.inc24:16 %shl_ln = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i2.i6, i2 %trunc_ln27, i6 0
 
 ]]></Node>
 <StgValue><ssdm name="shl_ln"/></StgValue>
@@ -1724,9 +1724,9 @@ for.inc24:17 %zext_ln27 = zext i8 %shl_ln
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="119" bw="5" op_0_bw="5" op_1_bw="3" op_2_bw="2">
+<Node id="119" bw="5" op_0_bw="5" op_1_bw="2" op_2_bw="3">
 <![CDATA[
-for.inc24:18 %shl_ln27_1 = bitconcatenate i5 @_ssdm_op_BitConcatenate.i5.i3.i2, i3 %trunc_ln27, i2 0
+for.inc24:18 %shl_ln27_1 = bitconcatenate i5 @_ssdm_op_BitConcatenate.i5.i2.i3, i2 %trunc_ln27, i3 0
 
 ]]></Node>
 <StgValue><ssdm name="shl_ln27_1"/></StgValue>
@@ -1874,9 +1874,9 @@ for.inc24:27 %call_ln33 = call void @tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_L
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="129" bw="10" op_0_bw="10" op_1_bw="3" op_2_bw="7">
+<Node id="129" bw="10" op_0_bw="10" op_1_bw="2" op_2_bw="8">
 <![CDATA[
-for.inc24:28 %p_shl4 = bitconcatenate i10 @_ssdm_op_BitConcatenate.i10.i3.i7, i3 %trunc_ln27, i7 0
+for.inc24:28 %p_shl4 = bitconcatenate i10 @_ssdm_op_BitConcatenate.i10.i2.i8, i2 %trunc_ln27, i8 0
 
 ]]></Node>
 <StgValue><ssdm name="p_shl4"/></StgValue>
@@ -1904,9 +1904,9 @@ for.inc24:29 %p_shl4_cast = zext i10 %p_shl4
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="131" bw="7" op_0_bw="7" op_1_bw="3" op_2_bw="4">
+<Node id="131" bw="7" op_0_bw="7" op_1_bw="2" op_2_bw="5">
 <![CDATA[
-for.inc24:30 %p_shl5 = bitconcatenate i7 @_ssdm_op_BitConcatenate.i7.i3.i4, i3 %trunc_ln27, i4 0
+for.inc24:30 %p_shl5 = bitconcatenate i7 @_ssdm_op_BitConcatenate.i7.i2.i5, i2 %trunc_ln27, i5 0
 
 ]]></Node>
 <StgValue><ssdm name="p_shl5"/></StgValue>
@@ -1999,7 +1999,7 @@ for.inc24:2 %specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @
 
 <Node id="104" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-for.inc24:3 %empty_40 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 64, i64 64, i64 64
+for.inc24:3 %empty_40 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 16, i64 16, i64 16
 
 ]]></Node>
 <StgValue><ssdm name="empty_40"/></StgValue>
@@ -2310,9 +2310,9 @@ for.inc.split:10 %call_ln60 = call void @tiled_conv_Pipeline_VITIS_LOOP_60_1, i3
 </and_exp></or_exp>
 </condition>
 
-<Node id="161" bw="4" op_0_bw="4" op_1_bw="4">
+<Node id="161" bw="3" op_0_bw="3" op_1_bw="3">
 <![CDATA[
-for.inc21:0 %add_ln35 = add i4 %select_ln33, i4 1
+for.inc21:0 %add_ln35 = add i3 %select_ln33, i3 1
 
 ]]></Node>
 <StgValue><ssdm name="add_ln35"/></StgValue>
@@ -2326,9 +2326,9 @@ for.inc21:0 %add_ln35 = add i4 %select_ln33, i4 1
 </and_exp></or_exp>
 </condition>
 
-<Node id="162" bw="0" op_0_bw="7" op_1_bw="7" op_2_bw="0" op_3_bw="0">
+<Node id="162" bw="0" op_0_bw="5" op_1_bw="5" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-for.inc21:1 %store_ln35 = store i7 %add_ln33_1, i7 %indvar_flatten86
+for.inc21:1 %store_ln35 = store i5 %add_ln33_1, i5 %indvar_flatten86
 
 ]]></Node>
 <StgValue><ssdm name="store_ln35"/></StgValue>
@@ -2342,9 +2342,9 @@ for.inc21:1 %store_ln35 = store i7 %add_ln33_1, i7 %indvar_flatten86
 </and_exp></or_exp>
 </condition>
 
-<Node id="163" bw="0" op_0_bw="4" op_1_bw="4" op_2_bw="0" op_3_bw="0">
+<Node id="163" bw="0" op_0_bw="3" op_1_bw="3" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-for.inc21:2 %store_ln35 = store i4 %select_ln33_2, i4 %tr
+for.inc21:2 %store_ln35 = store i3 %select_ln33_2, i3 %tr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln35"/></StgValue>
@@ -2358,9 +2358,9 @@ for.inc21:2 %store_ln35 = store i4 %select_ln33_2, i4 %tr
 </and_exp></or_exp>
 </condition>
 
-<Node id="164" bw="0" op_0_bw="4" op_1_bw="4" op_2_bw="0" op_3_bw="0">
+<Node id="164" bw="0" op_0_bw="3" op_1_bw="3" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-for.inc21:3 %store_ln35 = store i4 %add_ln35, i4 %tc
+for.inc21:3 %store_ln35 = store i3 %add_ln35, i3 %tc
 
 ]]></Node>
 <StgValue><ssdm name="store_ln35"/></StgValue>

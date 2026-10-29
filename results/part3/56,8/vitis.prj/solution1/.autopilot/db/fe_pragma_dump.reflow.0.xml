@@ -1,0 +1,14 @@
+<pragmas>
+<pragma file="utils.cpp" line="86" pragmaType="pipeline" parentfunction="conv_3x3" off="0" ii="1" rewind="0" style=""/>
+<pragma file="tiled_conv.cpp" line="14" pragmaType="interface" parentfunction="tiled_conv" mode="m_axi" port="input_fm" bundle="fm" offset="" name="" depth="1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="tiled_conv.cpp" line="15" pragmaType="interface" parentfunction="tiled_conv" mode="m_axi" port="weights" bundle="wt" offset="" name="" depth="1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="tiled_conv.cpp" line="16" pragmaType="interface" parentfunction="tiled_conv" mode="m_axi" port="biases" bundle="wt" offset="" name="" depth="1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="tiled_conv.cpp" line="17" pragmaType="interface" parentfunction="tiled_conv" mode="m_axi" port="output_fm" bundle="fm" offset="" name="" depth="1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="tiled_conv.cpp" line="19" pragmaType="interface" parentfunction="tiled_conv" mode="s_axilite" port="" bundle="" offset="-1" name="" clock="" impl="" register="1"/>
+<pragma file="tiled_conv.cpp" line="26" pragmaType="array_partition" parentfunction="tiled_conv" dim="1" factor="0" mode="complete" dynamic="0" variable="conv_in_buf"/>
+<pragma file="tiled_conv.cpp" line="27" pragmaType="array_partition" parentfunction="tiled_conv" dim="2" factor="3" mode="cyclic" dynamic="0" variable="conv_in_buf"/>
+<pragma file="tiled_conv.cpp" line="28" pragmaType="array_partition" parentfunction="tiled_conv" dim="3" factor="3" mode="cyclic" dynamic="0" variable="conv_in_buf"/>
+<pragma file="tiled_conv.cpp" line="29" pragmaType="array_partition" parentfunction="tiled_conv" dim="2" factor="0" mode="complete" dynamic="0" variable="conv_wt_buf"/>
+<pragma file="tiled_conv.cpp" line="30" pragmaType="array_partition" parentfunction="tiled_conv" dim="3" factor="0" mode="complete" dynamic="0" variable="conv_wt_buf"/>
+<pragma file="tiled_conv.cpp" line="31" pragmaType="array_partition" parentfunction="tiled_conv" dim="4" factor="0" mode="complete" dynamic="0" variable="conv_wt_buf"/>
+</pragmas>

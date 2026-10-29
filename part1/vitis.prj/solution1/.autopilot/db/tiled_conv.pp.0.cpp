@@ -32799,7 +32799,7 @@ __attribute__((sdx_kernel("tiled_conv", 0))) void tiled_conv(
 # 24 "./utils.hpp"
 void load_input_tile_from_DRAM(
     fm_t in_fm[3][224][224],
-    fm_t in_fm_buf[3][28 + (2 * 1)][28 + (2 * 1)],
+    fm_t in_fm_buf[3][56 + (2 * 1)][56 + (2 * 1)],
     int tr,
     int tc);
 # 39 "./utils.hpp"
@@ -32811,13 +32811,13 @@ void load_layer_params_from_DRAM(
     int kernel_group);
 # 54 "./utils.hpp"
 void conv_3x3(
-    fm_t X_buf[3][28 + (2 * 1)][28 + (2 * 1)],
+    fm_t X_buf[3][56 + (2 * 1)][56 + (2 * 1)],
     wt_t W_buf[8][3][3][3],
     wt_t B_buf[8],
-    fm_t Y_buf[8][28 / 1][28 / 1]);
+    fm_t Y_buf[8][56 / 1][56 / 1]);
 # 69 "./utils.hpp"
 void store_output_tile_to_DRAM(
-    fm_t out_fm_buf[8][28 / 1][28 / 1],
+    fm_t out_fm_buf[8][56 / 1][56 / 1],
     fm_t out_fm[64][224][224],
     int tr,
     int tc,
@@ -32843,10 +32843,10 @@ __attribute__((sdx_kernel("tiled_conv", 0))) void tiled_conv(
 
 #pragma HLS INTERFACE s_axilite register port = return
 
- fm_t conv_in_buf[3][28 + (2 * 1)][28 + (2 * 1)];
+ fm_t conv_in_buf[3][56 + (2 * 1)][56 + (2 * 1)];
     wt_t conv_wt_buf[8][3][3][3];
     wt_t conv_bias_buf[8];
-    fm_t conv_out_buf[8][28 / 1][28 / 1];
+    fm_t conv_out_buf[8][56 / 1][56 / 1];
 
 #pragma HLS ARRAY_PARTITION variable=conv_in_buf complete dim=1
 #pragma HLS ARRAY_PARTITION variable=conv_in_buf cyclic factor=3 dim=2
@@ -32855,12 +32855,12 @@ __attribute__((sdx_kernel("tiled_conv", 0))) void tiled_conv(
 #pragma HLS ARRAY_PARTITION variable=conv_wt_buf complete dim=3
 #pragma HLS ARRAY_PARTITION variable=conv_wt_buf complete dim=4
 
- VITIS_LOOP_33_1: for (int tr = 0; tr < (224 / 28); tr++)
+ VITIS_LOOP_33_1: for (int tr = 0; tr < (224 / 56); tr++)
     {
-        VITIS_LOOP_35_2: for (int tc = 0; tc < (224 / 28); tc++)
+        VITIS_LOOP_35_2: for (int tc = 0; tc < (224 / 56); tc++)
         {
-            std::cout << "Processing Tile " << tr * (224 / 28) + tc + 1;
-            std::cout << "/" << (224 / 28) * (224 / 28) << std::endl;
+            std::cout << "Processing Tile " << tr * (224 / 56) + tc + 1;
+            std::cout << "/" << (224 / 56) * (224 / 56) << std::endl;
 
 
 
