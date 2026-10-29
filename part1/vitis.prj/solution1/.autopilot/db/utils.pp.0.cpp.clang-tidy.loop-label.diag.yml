@@ -29,120 +29,120 @@ Diagnostics:
         Length:          0
         ReplacementText: 'VITIS_LOOP_33_3: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_60_1:  '
-    FileOffset:      60
+    Message:         'Added loop label VITIS_LOOP_61_1:  '
+    FileOffset:      61
     FilePath:        utils.cpp
     Replacements:    
       - FilePath:        /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp
-        Offset:          874970
+        Offset:          874981
         Length:          0
-        ReplacementText: 'VITIS_LOOP_60_1: '
+        ReplacementText: 'VITIS_LOOP_61_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_62_2:  '
-    FileOffset:      62
-    FilePath:        utils.cpp
-    Replacements:    
-      - FilePath:        /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp
-        Offset:          875012
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_62_2: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_63_3:  '
+    Message:         'Added loop label VITIS_LOOP_63_2:  '
     FileOffset:      63
     FilePath:        utils.cpp
     Replacements:    
       - FilePath:        /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp
-        Offset:          875052
+        Offset:          875023
         Length:          0
-        ReplacementText: 'VITIS_LOOP_63_3: '
+        ReplacementText: 'VITIS_LOOP_63_2: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_64_4:  '
+    Message:         'Added loop label VITIS_LOOP_64_3:  '
     FileOffset:      64
     FilePath:        utils.cpp
     Replacements:    
       - FilePath:        /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp
-        Offset:          875099
+        Offset:          875063
         Length:          0
-        ReplacementText: 'VITIS_LOOP_64_4: '
+        ReplacementText: 'VITIS_LOOP_64_3: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_80_1:  '
-    FileOffset:      80
+    Message:         'Added loop label VITIS_LOOP_65_4:  '
+    FileOffset:      65
     FilePath:        utils.cpp
     Replacements:    
       - FilePath:        /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp
-        Offset:          875431
+        Offset:          875110
         Length:          0
-        ReplacementText: 'VITIS_LOOP_80_1: '
+        ReplacementText: 'VITIS_LOOP_65_4: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_82_2:  '
-    FileOffset:      82
+    Message:         'Added loop label VITIS_LOOP_81_1:  '
+    FileOffset:      81
     FilePath:        utils.cpp
     Replacements:    
       - FilePath:        /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp
-        Offset:          875473
+        Offset:          875442
         Length:          0
-        ReplacementText: 'VITIS_LOOP_82_2: '
+        ReplacementText: 'VITIS_LOOP_81_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_84_3:  '
-    FileOffset:      84
+    Message:         'Added loop label VITIS_LOOP_83_2:  '
+    FileOffset:      83
     FilePath:        utils.cpp
     Replacements:    
       - FilePath:        /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp
-        Offset:          875528
+        Offset:          875484
         Length:          0
-        ReplacementText: 'VITIS_LOOP_84_3: '
+        ReplacementText: 'VITIS_LOOP_83_2: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_88_4:  '
-    FileOffset:      88
+    Message:         'Added loop label VITIS_LOOP_85_3:  '
+    FileOffset:      85
     FilePath:        utils.cpp
     Replacements:    
       - FilePath:        /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp
-        Offset:          875629
+        Offset:          875539
         Length:          0
-        ReplacementText: 'VITIS_LOOP_88_4: '
+        ReplacementText: 'VITIS_LOOP_85_3: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_89_5:  '
+    Message:         'Added loop label VITIS_LOOP_89_4:  '
     FileOffset:      89
     FilePath:        utils.cpp
     Replacements:    
       - FilePath:        /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp
-        Offset:          875677
+        Offset:          875640
         Length:          0
-        ReplacementText: 'VITIS_LOOP_89_5: '
+        ReplacementText: 'VITIS_LOOP_89_4: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_90_6:  '
+    Message:         'Added loop label VITIS_LOOP_90_5:  '
     FileOffset:      90
     FilePath:        utils.cpp
     Replacements:    
       - FilePath:        /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp
-        Offset:          875732
+        Offset:          875688
         Length:          0
-        ReplacementText: 'VITIS_LOOP_90_6: '
+        ReplacementText: 'VITIS_LOOP_90_5: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_114_1:  '
-    FileOffset:      114
+    Message:         'Added loop label VITIS_LOOP_91_6:  '
+    FileOffset:      91
     FilePath:        utils.cpp
     Replacements:    
       - FilePath:        /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp
-        Offset:          876218
+        Offset:          875743
         Length:          0
-        ReplacementText: 'VITIS_LOOP_114_1: '
+        ReplacementText: 'VITIS_LOOP_91_6: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_115_2:  '
+    Message:         'Added loop label VITIS_LOOP_115_1:  '
     FileOffset:      115
     FilePath:        utils.cpp
     Replacements:    
       - FilePath:        /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp
-        Offset:          876254
+        Offset:          876229
         Length:          0
-        ReplacementText: 'VITIS_LOOP_115_2: '
+        ReplacementText: 'VITIS_LOOP_115_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_116_3:  '
+    Message:         'Added loop label VITIS_LOOP_116_2:  '
     FileOffset:      116
     FilePath:        utils.cpp
     Replacements:    
       - FilePath:        /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp
-        Offset:          876299
+        Offset:          876265
         Length:          0
-        ReplacementText: 'VITIS_LOOP_116_3: '
+        ReplacementText: 'VITIS_LOOP_116_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_117_3:  '
+    FileOffset:      117
+    FilePath:        utils.cpp
+    Replacements:    
+      - FilePath:        /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part1/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp
+        Offset:          876310
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_117_3: '
 ...

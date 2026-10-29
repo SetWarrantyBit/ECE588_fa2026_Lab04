@@ -16,4 +16,22 @@ tiled_conv.cpp:17:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_
 tiled_conv.cpp:19:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tiled_conv_XLX_SEP_ PragmaOptions=s_axilite register port = return_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS INTERFACE s_axilite register port = return
         ^
-6 warnings generated.
+tiled_conv.cpp:26:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tiled_conv_XLX_SEP_ PragmaOptions=variable=conv_in_buf complete dim=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION variable=conv_in_buf complete dim=1
+        ^
+tiled_conv.cpp:27:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tiled_conv_XLX_SEP_ PragmaOptions=variable=conv_in_buf cyclic factor=3 dim=2_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION variable=conv_in_buf cyclic factor=3 dim=2
+        ^
+tiled_conv.cpp:28:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tiled_conv_XLX_SEP_ PragmaOptions=variable=conv_in_buf cyclic factor=3 dim=3_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION variable=conv_in_buf cyclic factor=3 dim=3
+        ^
+tiled_conv.cpp:29:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tiled_conv_XLX_SEP_ PragmaOptions=variable=conv_wt_buf complete dim=2_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION variable=conv_wt_buf complete dim=2
+        ^
+tiled_conv.cpp:30:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tiled_conv_XLX_SEP_ PragmaOptions=variable=conv_wt_buf complete dim=3_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION variable=conv_wt_buf complete dim=3
+        ^
+tiled_conv.cpp:31:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tiled_conv_XLX_SEP_ PragmaOptions=variable=conv_wt_buf complete dim=4_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION variable=conv_wt_buf complete dim=4
+        ^
+12 warnings generated.

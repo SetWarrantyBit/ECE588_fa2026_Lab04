@@ -18,47 +18,47 @@
 <PipelineType>no</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>7.300</EstimatedClockPeriod>
+<EstimatedClockPeriod>8.424</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>10077441</Best-caseLatency>
-<Average-caseLatency>10077441</Average-caseLatency>
-<Worst-caseLatency>10077441</Worst-caseLatency>
-<Best-caseRealTimeLatency>0.101 sec</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>0.101 sec</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>0.101 sec</Worst-caseRealTimeLatency>
-<Interval-min>10077442</Interval-min>
-<Interval-max>10077442</Interval-max>
+<Best-caseLatency>19715329</Best-caseLatency>
+<Average-caseLatency>19715329</Average-caseLatency>
+<Worst-caseLatency>19715329</Worst-caseLatency>
+<Best-caseRealTimeLatency>0.197 sec</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>0.197 sec</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0.197 sec</Worst-caseRealTimeLatency>
+<Interval-min>19715330</Interval-min>
+<Interval-max>19715330</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
-<VITIS_LOOP_26_1_VITIS_LOOP_28_2>
+<VITIS_LOOP_33_1_VITIS_LOOP_35_2>
 <Slack>7.30</Slack>
 <TripCount>64</TripCount>
-<Latency>10077440</Latency>
-<AbsoluteTimeLatency>100774400</AbsoluteTimeLatency>
-<IterationLatency>157460</IterationLatency>
+<Latency>19715328</Latency>
+<AbsoluteTimeLatency>197153280</AbsoluteTimeLatency>
+<IterationLatency>308052</IterationLatency>
 <InstanceList>
 </InstanceList>
-<VITIS_LOOP_39_3>
+<VITIS_LOOP_46_3>
 <Slack>7.30</Slack>
 <TripCount>8</TripCount>
-<Latency>154680</Latency>
-<AbsoluteTimeLatency>1546800</AbsoluteTimeLatency>
-<IterationLatency>19335</IterationLatency>
+<Latency>305272</Latency>
+<AbsoluteTimeLatency>3052720</AbsoluteTimeLatency>
+<IterationLatency>38159</IterationLatency>
 <InstanceList>
 </InstanceList>
-</VITIS_LOOP_39_3>
-</VITIS_LOOP_26_1_VITIS_LOOP_28_2>
+</VITIS_LOOP_46_3>
+</VITIS_LOOP_33_1_VITIS_LOOP_35_2>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 
 <AreaEstimates>
 <Resources>
-<BRAM_18K>120</BRAM_18K>
-<DSP>71</DSP>
-<FF>21169</FF>
-<LUT>24028</LUT>
+<BRAM_18K>70</BRAM_18K>
+<DSP>31</DSP>
+<FF>21249</FF>
+<LUT>24845</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>

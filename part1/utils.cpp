@@ -32,6 +32,7 @@ void load_input_tile_from_DRAM(
         {
             for (int j = 0; j < IN_BUF_HW; j++)
             {
+#pragma HLS PIPELINE II=1
                 // Real position in the full image (shifted back by padding)
                 int row = height_offset - P + i;
                 int col = width_offset  - P + j;

@@ -32848,9 +32848,16 @@ __attribute__((sdx_kernel("tiled_conv", 0))) void tiled_conv(
     wt_t conv_bias_buf[8];
     fm_t conv_out_buf[8][28 / 1][28 / 1];
 
-    VITIS_LOOP_26_1: for (int tr = 0; tr < (224 / 28); tr++)
+#pragma HLS ARRAY_PARTITION variable=conv_in_buf complete dim=1
+#pragma HLS ARRAY_PARTITION variable=conv_in_buf cyclic factor=3 dim=2
+#pragma HLS ARRAY_PARTITION variable=conv_in_buf cyclic factor=3 dim=3
+#pragma HLS ARRAY_PARTITION variable=conv_wt_buf complete dim=2
+#pragma HLS ARRAY_PARTITION variable=conv_wt_buf complete dim=3
+#pragma HLS ARRAY_PARTITION variable=conv_wt_buf complete dim=4
+
+ VITIS_LOOP_33_1: for (int tr = 0; tr < (224 / 28); tr++)
     {
-        VITIS_LOOP_28_2: for (int tc = 0; tc < (224 / 28); tc++)
+        VITIS_LOOP_35_2: for (int tc = 0; tc < (224 / 28); tc++)
         {
             std::cout << "Processing Tile " << tr * (224 / 28) + tc + 1;
             std::cout << "/" << (224 / 28) * (224 / 28) << std::endl;
@@ -32861,7 +32868,7 @@ __attribute__((sdx_kernel("tiled_conv", 0))) void tiled_conv(
             load_input_tile_from_DRAM(input_fm, conv_in_buf, tr, tc);
 
 
-            VITIS_LOOP_39_3: for (int g = 0; g < 64 / 8; g++)
+            VITIS_LOOP_46_3: for (int g = 0; g < 64 / 8; g++)
             {
                 load_layer_params_from_DRAM(weights, biases, conv_wt_buf, conv_bias_buf, g);
                 conv_3x3(conv_in_buf, conv_wt_buf, conv_bias_buf, conv_out_buf);
