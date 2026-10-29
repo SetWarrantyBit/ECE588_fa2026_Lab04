@@ -22,21 +22,21 @@
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>3210</Best-caseLatency>
-<Average-caseLatency>3210</Average-caseLatency>
-<Worst-caseLatency>3210</Worst-caseLatency>
-<Best-caseRealTimeLatency>32.100 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>32.100 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>32.100 us</Worst-caseRealTimeLatency>
-<Interval-min>3210</Interval-min>
-<Interval-max>3210</Interval-max>
+<Best-caseLatency>6346</Best-caseLatency>
+<Average-caseLatency>6346</Average-caseLatency>
+<Worst-caseLatency>6346</Worst-caseLatency>
+<Best-caseRealTimeLatency>63.460 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>63.460 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>63.460 us</Worst-caseRealTimeLatency>
+<Interval-min>6346</Interval-min>
+<Interval-max>6346</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <VITIS_LOOP_114_1_VITIS_LOOP_115_2>
 <Slack>7.30</Slack>
-<TripCount>112</TripCount>
-<Latency>3208</Latency>
-<AbsoluteTimeLatency>32080</AbsoluteTimeLatency>
+<TripCount>224</TripCount>
+<Latency>6344</Latency>
+<AbsoluteTimeLatency>63440</AbsoluteTimeLatency>
 <PipelineII>28</PipelineII>
 <PipelineDepth>101</PipelineDepth>
 <InstanceList>
@@ -48,8 +48,8 @@
 <AreaEstimates>
 <Resources>
 <DSP>1</DSP>
-<FF>1609</FF>
-<LUT>3039</LUT>
+<FF>1613</FF>
+<LUT>3095</LUT>
 <BRAM_18K>0</BRAM_18K>
 <URAM>0</URAM>
 </Resources>
@@ -654,7 +654,7 @@
 <IOProtocol>ap_memory</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
-<Bits>12</Bits>
+<Bits>13</Bits>
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -687,7 +687,7 @@
 <IOProtocol>ap_memory</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
-<Bits>12</Bits>
+<Bits>13</Bits>
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -724,8 +724,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>tmp118</name>
-<Object>tmp118</Object>
+<name>tmp6</name>
+<Object>tmp6</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>

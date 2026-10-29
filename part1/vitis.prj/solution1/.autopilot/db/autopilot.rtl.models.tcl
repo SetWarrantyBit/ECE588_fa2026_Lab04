@@ -10,7 +10,6 @@ set SynModuleInfo {
     SUBMODULES {
       {MODELNAME tiled_conv_fadd_32ns_32ns_32_5_full_dsp_1 RTLNAME tiled_conv_fadd_32ns_32ns_32_5_full_dsp_1 BINDTYPE op TYPE fadd IMPL fulldsp LATENCY 4 ALLOW_PRAGMA 1}
       {MODELNAME tiled_conv_fmul_32ns_32ns_32_4_max_dsp_1 RTLNAME tiled_conv_fmul_32ns_32ns_32_4_max_dsp_1 BINDTYPE op TYPE fmul IMPL maxdsp LATENCY 3 ALLOW_PRAGMA 1}
-      {MODELNAME tiled_conv_mux_42_32_1_1 RTLNAME tiled_conv_mux_42_32_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
     }
   }
   {SRCNAME tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2 MODELNAME tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2 RTLNAME tiled_conv_tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2
@@ -22,6 +21,7 @@ set SynModuleInfo {
   {SRCNAME tiled_conv MODELNAME tiled_conv RTLNAME tiled_conv IS_TOP 1
     SUBMODULES {
       {MODELNAME tiled_conv_conv_in_buf_RAM_1WNR_AUTO_1R1W RTLNAME tiled_conv_conv_in_buf_RAM_1WNR_AUTO_1R1W BINDTYPE storage TYPE ram_1wnr IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME tiled_conv_conv_wt_buf_0_0_0_RAM_AUTO_1R1W RTLNAME tiled_conv_conv_wt_buf_0_0_0_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
       {MODELNAME tiled_conv_conv_out_buf_RAM_1WNR_AUTO_1R1W RTLNAME tiled_conv_conv_out_buf_RAM_1WNR_AUTO_1R1W BINDTYPE storage TYPE ram_1wnr IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
       {MODELNAME tiled_conv_fm_m_axi RTLNAME tiled_conv_fm_m_axi BINDTYPE interface TYPE adapter IMPL m_axi}
       {MODELNAME tiled_conv_wt_m_axi RTLNAME tiled_conv_wt_m_axi BINDTYPE interface TYPE adapter IMPL m_axi}

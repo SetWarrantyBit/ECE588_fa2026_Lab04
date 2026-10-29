@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'tiled_conv'" level="0">
-<item name = "Date">Mon Oct 26 21:06:05 2026
+<item name = "Date">Wed Oct 28 23:21:42 2026
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">vitis.prj</item>
@@ -24,23 +24,23 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">10228481, 10228481, 0.102 sec, 0.102 sec, 10228482, 10228482, no</column>
+<column name="">10077441, 10077441, 0.101 sec, 0.101 sec, 10077442, 10077442, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3_fu_1096">tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3, 2776, 2776, 27.760 us, 27.760 us, 2776, 2776, no</column>
-<column name="grp_tiled_conv_Pipeline_VITIS_LOOP_60_1_fu_1108">tiled_conv_Pipeline_VITIS_LOOP_60_1, 185, 185, 1.850 us, 1.850 us, 185, 185, no</column>
-<column name="grp_tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3_fu_1340">tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3, 6414, 6414, 64.140 us, 64.140 us, 6414, 6414, no</column>
-<column name="grp_tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2_fu_1458">tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2, 3210, 3210, 32.100 us, 32.100 us, 3210, 3210, no</column>
+<column name="grp_tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3_fu_308">tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3, 2776, 2776, 27.760 us, 27.760 us, 2776, 2776, no</column>
+<column name="grp_tiled_conv_Pipeline_VITIS_LOOP_60_1_fu_320">tiled_conv_Pipeline_VITIS_LOOP_60_1, 297, 297, 2.970 us, 2.970 us, 297, 297, no</column>
+<column name="grp_tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3_fu_356">tiled_conv_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3, 12686, 12686, 0.127 ms, 0.127 ms, 12686, 12686, no</column>
+<column name="grp_tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2_fu_390">tiled_conv_Pipeline_VITIS_LOOP_114_1_VITIS_LOOP_115_2, 6346, 6346, 63.460 us, 63.460 us, 6346, 6346, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- VITIS_LOOP_26_1_VITIS_LOOP_28_2">10228480, 10228480, 159820, -, -, 64, no</column>
-<column name=" + VITIS_LOOP_39_3">157040, 157040, 9815, -, -, 16, no</column>
+<column name="- VITIS_LOOP_26_1_VITIS_LOOP_28_2">10077440, 10077440, 157460, -, -, 64, no</column>
+<column name=" + VITIS_LOOP_39_3">154680, 154680, 19335, -, -, 8, no</column>
 </table>
 </item>
 </section>

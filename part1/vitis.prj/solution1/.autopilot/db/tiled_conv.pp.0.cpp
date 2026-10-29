@@ -32806,18 +32806,18 @@ void load_input_tile_from_DRAM(
 void load_layer_params_from_DRAM(
     wt_t weights[64][3][3][3],
     wt_t biases[64],
-    wt_t weights_buf[4][3][3][3],
-    wt_t biases_buf[4],
+    wt_t weights_buf[8][3][3][3],
+    wt_t biases_buf[8],
     int kernel_group);
 # 54 "./utils.hpp"
 void conv_3x3(
     fm_t X_buf[3][28 + (2 * 1)][28 + (2 * 1)],
-    wt_t W_buf[4][3][3][3],
-    wt_t B_buf[4],
-    fm_t Y_buf[4][28 / 1][28 / 1]);
+    wt_t W_buf[8][3][3][3],
+    wt_t B_buf[8],
+    fm_t Y_buf[8][28 / 1][28 / 1]);
 # 69 "./utils.hpp"
 void store_output_tile_to_DRAM(
-    fm_t out_fm_buf[4][28 / 1][28 / 1],
+    fm_t out_fm_buf[8][28 / 1][28 / 1],
     fm_t out_fm[64][224][224],
     int tr,
     int tc,
@@ -32844,9 +32844,9 @@ __attribute__((sdx_kernel("tiled_conv", 0))) void tiled_conv(
 #pragma HLS INTERFACE s_axilite register port = return
 
  fm_t conv_in_buf[3][28 + (2 * 1)][28 + (2 * 1)];
-    wt_t conv_wt_buf[4][3][3][3];
-    wt_t conv_bias_buf[4];
-    fm_t conv_out_buf[4][28 / 1][28 / 1];
+    wt_t conv_wt_buf[8][3][3][3];
+    wt_t conv_bias_buf[8];
+    fm_t conv_out_buf[8][28 / 1][28 / 1];
 
     VITIS_LOOP_26_1: for (int tr = 0; tr < (224 / 28); tr++)
     {
@@ -32861,7 +32861,7 @@ __attribute__((sdx_kernel("tiled_conv", 0))) void tiled_conv(
             load_input_tile_from_DRAM(input_fm, conv_in_buf, tr, tc);
 
 
-            VITIS_LOOP_39_3: for (int g = 0; g < 64 / 4; g++)
+            VITIS_LOOP_39_3: for (int g = 0; g < 64 / 8; g++)
             {
                 load_layer_params_from_DRAM(weights, biases, conv_wt_buf, conv_bias_buf, g);
                 conv_3x3(conv_in_buf, conv_wt_buf, conv_bias_buf, conv_out_buf);

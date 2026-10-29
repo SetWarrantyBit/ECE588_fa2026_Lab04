@@ -32807,18 +32807,18 @@ void load_input_tile_from_DRAM(
 void load_layer_params_from_DRAM(
     wt_t weights[64][3][3][3],
     wt_t biases[64],
-    wt_t weights_buf[4][3][3][3],
-    wt_t biases_buf[4],
+    wt_t weights_buf[8][3][3][3],
+    wt_t biases_buf[8],
     int kernel_group);
 # 54 "./utils.hpp"
 void conv_3x3(
     fm_t X_buf[3][28 + (2 * 1)][28 + (2 * 1)],
-    wt_t W_buf[4][3][3][3],
-    wt_t B_buf[4],
-    fm_t Y_buf[4][28 / 1][28 / 1]);
+    wt_t W_buf[8][3][3][3],
+    wt_t B_buf[8],
+    fm_t Y_buf[8][28 / 1][28 / 1]);
 # 69 "./utils.hpp"
 void store_output_tile_to_DRAM(
-    fm_t out_fm_buf[4][28 / 1][28 / 1],
+    fm_t out_fm_buf[8][28 / 1][28 / 1],
     fm_t out_fm[64][224][224],
     int tr,
     int tc,
@@ -32861,15 +32861,15 @@ void load_input_tile_from_DRAM(
 void load_layer_params_from_DRAM(
     wt_t weights[64][3][3][3],
     wt_t biases[64],
-    wt_t weights_buf[4][3][3][3],
-    wt_t biases_buf[4],
+    wt_t weights_buf[8][3][3][3],
+    wt_t biases_buf[8],
     int kernel_group)
 {
 
 
-    const int kernel_offset = kernel_group * 4;
+    const int kernel_offset = kernel_group * 8;
 
-    VITIS_LOOP_60_1: for (int f = 0; f < 4; f++)
+    VITIS_LOOP_60_1: for (int f = 0; f < 8; f++)
     {
         VITIS_LOOP_62_2: for (int c = 0; c < 3; c++)
             VITIS_LOOP_63_3: for (int kh = 0; kh < 3; kh++)
@@ -32883,13 +32883,13 @@ void load_layer_params_from_DRAM(
 
 void conv_3x3(
     fm_t X_buf[3][28 + (2 * 1)][28 + (2 * 1)],
-    wt_t W_buf[4][3][3][3],
-    wt_t B_buf[4],
-    fm_t Y_buf[4][28 / 1][28 / 1])
+    wt_t W_buf[8][3][3][3],
+    wt_t B_buf[8],
+    fm_t Y_buf[8][28 / 1][28 / 1])
 {
 
 
-    VITIS_LOOP_80_1: for (int f = 0; f < 4; f++)
+    VITIS_LOOP_80_1: for (int f = 0; f < 8; f++)
     {
         VITIS_LOOP_82_2: for (int i = 0; i < 28 / 1; i++)
         {
@@ -32910,7 +32910,7 @@ void conv_3x3(
 }
 
 void store_output_tile_to_DRAM(
-    fm_t out_fm_buf[4][28 / 1][28 / 1],
+    fm_t out_fm_buf[8][28 / 1][28 / 1],
     fm_t out_fm[64][224][224],
     int tr,
     int tc,
@@ -32919,11 +32919,11 @@ void store_output_tile_to_DRAM(
 
 
 
-    const int depth_offset = kernel_group * 4;
+    const int depth_offset = kernel_group * 8;
     const int height_offset = tr * 28 / 1;
     const int width_offset = tc * 28 / 1;
 
-    VITIS_LOOP_114_1: for (int f = 0; f < 4; f++)
+    VITIS_LOOP_114_1: for (int f = 0; f < 8; f++)
         VITIS_LOOP_115_2: for (int i = 0; i < 28 / 1; i++)
             VITIS_LOOP_116_3: for (int j = 0; j < 28 / 1; j++)
             {

@@ -63,7 +63,7 @@ Args:
   - String:          'Sequential '
   - Direction:       read
   - String:          ' of length '
-  - Length:          '108'
+  - Length:          '216'
   - String:          ' has been inferred'
   - String:          ' _XLX_SEP_ OldID='
   - String:          for.inc.i9.load.5
@@ -92,7 +92,7 @@ Args:
   - String:          'Sequential '
   - Direction:       read
   - String:          ' of length '
-  - Length:          '4'
+  - Length:          '8'
   - String:          ' has been inferred'
   - String:          ' _XLX_SEP_ OldID='
   - String:          for.inc38.i.load.2
