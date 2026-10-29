@@ -1579,7 +1579,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>3ba7c6e6</spirit:value>
+            <spirit:value>eecf3833</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1598,7 +1598,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>4eb1e138</spirit:value>
+            <spirit:value>9c0d9fd0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1617,7 +1617,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>2c84f2f7</spirit:value>
+            <spirit:value>a182c17b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1636,7 +1636,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>973709a6</spirit:value>
+            <spirit:value>e95c4428</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -3814,6 +3814,10 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>hdl/verilog/tiled_conv_conv_3x3.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>hdl/verilog/tiled_conv_conv_in_buf_RAM_AUTO_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
@@ -3870,11 +3874,7 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/tiled_conv_tiled_conv_Pipeline_VITIS_LOOP_61_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/tiled_conv_tiled_conv_Pipeline_VITIS_LOOP_81_1_VITIS_LOOP_83_2_VITIS_LOOP_85_3.v</spirit:name>
+        <spirit:name>hdl/verilog/tiled_conv_tiled_conv_Pipeline_VITIS_LOOP_60_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -3912,6 +3912,11 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>hdl/verilog/tiled_conv_conv_3x3.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>hdl/verilog/tiled_conv_conv_in_buf_RAM_AUTO_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
@@ -3981,12 +3986,7 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/tiled_conv_tiled_conv_Pipeline_VITIS_LOOP_61_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/tiled_conv_tiled_conv_Pipeline_VITIS_LOOP_81_1_VITIS_LOOP_83_2_VITIS_LOOP_85_3.v</spirit:name>
+        <spirit:name>hdl/verilog/tiled_conv_tiled_conv_Pipeline_VITIS_LOOP_60_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -4060,6 +4060,10 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>hdl/vhdl/tiled_conv_conv_3x3.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>hdl/vhdl/tiled_conv_conv_in_buf_RAM_AUTO_1R1W.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
@@ -4112,11 +4116,7 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/tiled_conv_tiled_conv_Pipeline_VITIS_LOOP_61_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/tiled_conv_tiled_conv_Pipeline_VITIS_LOOP_81_1_VITIS_LOOP_83_2_VITIS_LOOP_85_3.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/tiled_conv_tiled_conv_Pipeline_VITIS_LOOP_60_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -4134,7 +4134,7 @@
       <spirit:file>
         <spirit:name>hdl/vhdl/tiled_conv.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_61ce678e</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_fcbd3fb2</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -4155,6 +4155,11 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>hdl/vhdl/tiled_conv_conv_3x3.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>hdl/vhdl/tiled_conv_conv_in_buf_RAM_AUTO_1R1W.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
@@ -4220,12 +4225,7 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/tiled_conv_tiled_conv_Pipeline_VITIS_LOOP_61_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/tiled_conv_tiled_conv_Pipeline_VITIS_LOOP_81_1_VITIS_LOOP_83_2_VITIS_LOOP_85_3.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/tiled_conv_tiled_conv_Pipeline_VITIS_LOOP_60_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -4580,7 +4580,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>latency</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="29">19715329</spirit:value>
+      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="29">6871297</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>II</spirit:name>
@@ -4597,8 +4597,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Tiled_conv</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2114849555</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2026-10-29T04:36:07Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2114849567</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2026-10-29T04:47:57Z</xilinx:coreCreationDateTime>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
@@ -4609,10 +4609,10 @@
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="b545aaa0"/>
       <xilinx:checksum xilinx:scope="addressSpaces" xilinx:value="9c7afaea"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="5085f7e1"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="0d6f79df"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="6de5a5a1"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="75a9fa97"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="42e43959"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="29416ba6"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="4f86118f"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

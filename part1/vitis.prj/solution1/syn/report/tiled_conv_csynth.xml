@@ -18,34 +18,34 @@
 <PipelineType>no</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>8.424</EstimatedClockPeriod>
+<EstimatedClockPeriod>7.300</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>19715329</Best-caseLatency>
-<Average-caseLatency>19715329</Average-caseLatency>
-<Worst-caseLatency>19715329</Worst-caseLatency>
-<Best-caseRealTimeLatency>0.197 sec</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>0.197 sec</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>0.197 sec</Worst-caseRealTimeLatency>
-<Interval-min>19715330</Interval-min>
-<Interval-max>19715330</Interval-max>
+<Best-caseLatency>6871297</Best-caseLatency>
+<Average-caseLatency>6871297</Average-caseLatency>
+<Worst-caseLatency>6871297</Worst-caseLatency>
+<Best-caseRealTimeLatency>68.713 ms</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>68.713 ms</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>68.713 ms</Worst-caseRealTimeLatency>
+<Interval-min>6871298</Interval-min>
+<Interval-max>6871298</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <VITIS_LOOP_33_1_VITIS_LOOP_35_2>
 <Slack>7.30</Slack>
 <TripCount>64</TripCount>
-<Latency>19715328</Latency>
-<AbsoluteTimeLatency>197153280</AbsoluteTimeLatency>
-<IterationLatency>308052</IterationLatency>
+<Latency>6871296</Latency>
+<AbsoluteTimeLatency>68712960</AbsoluteTimeLatency>
+<IterationLatency>107364</IterationLatency>
 <InstanceList>
 </InstanceList>
 <VITIS_LOOP_46_3>
 <Slack>7.30</Slack>
 <TripCount>8</TripCount>
-<Latency>305272</Latency>
-<AbsoluteTimeLatency>3052720</AbsoluteTimeLatency>
-<IterationLatency>38159</IterationLatency>
+<Latency>104584</Latency>
+<AbsoluteTimeLatency>1045840</AbsoluteTimeLatency>
+<IterationLatency>13073</IterationLatency>
 <InstanceList>
 </InstanceList>
 </VITIS_LOOP_46_3>
@@ -55,10 +55,10 @@
 
 <AreaEstimates>
 <Resources>
-<BRAM_18K>70</BRAM_18K>
-<DSP>31</DSP>
-<FF>21249</FF>
-<LUT>24845</LUT>
+<BRAM_18K>43</BRAM_18K>
+<DSP>136</DSP>
+<FF>26720</FF>
+<LUT>38408</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>

@@ -32844,9 +32844,8 @@ void load_input_tile_from_DRAM(
         {
             VITIS_LOOP_33_3: for (int j = 0; j < 28 + (2 * 1); j++)
             {
-#pragma HLS PIPELINE II=1
 
- int row = height_offset - 1 + i;
+                int row = height_offset - 1 + i;
                 int col = width_offset - 1 + j;
 
                 if (row < 0 || row >= 224 || col < 0 || col >= 224)
@@ -32870,11 +32869,11 @@ void load_layer_params_from_DRAM(
 
     const int kernel_offset = kernel_group * 8;
 
-    VITIS_LOOP_61_1: for (int f = 0; f < 8; f++)
+    VITIS_LOOP_60_1: for (int f = 0; f < 8; f++)
     {
-        VITIS_LOOP_63_2: for (int c = 0; c < 3; c++)
-            VITIS_LOOP_64_3: for (int kh = 0; kh < 3; kh++)
-                VITIS_LOOP_65_4: for (int kw = 0; kw < 3; kw++)
+        VITIS_LOOP_62_2: for (int c = 0; c < 3; c++)
+            VITIS_LOOP_63_3: for (int kh = 0; kh < 3; kh++)
+                VITIS_LOOP_64_4: for (int kw = 0; kw < 3; kw++)
                     weights_buf[f][c][kh][kw] = weights[kernel_offset + f][c][kh][kw];
 
         biases_buf[f] = biases[kernel_offset + f];
@@ -32890,13 +32889,14 @@ void conv_3x3(
 {
 
 
-    VITIS_LOOP_81_1: for (int f = 0; f < 8; f++)
+    VITIS_LOOP_80_1: for (int f = 0; f < 8; f++)
     {
-        VITIS_LOOP_83_2: for (int i = 0; i < 28 / 1; i++)
+        VITIS_LOOP_82_2: for (int i = 0; i < 28 / 1; i++)
         {
-            VITIS_LOOP_85_3: for (int j = 0; j < 28 / 1; j++)
+            VITIS_LOOP_84_3: for (int j = 0; j < 28 / 1; j++)
             {
-                fm_t sum = B_buf[f];
+#pragma HLS PIPELINE II=1
+ fm_t sum = B_buf[f];
 
                 VITIS_LOOP_89_4: for (int c = 0; c < 3; c++)
                     VITIS_LOOP_90_5: for (int kh = 0; kh < 3; kh++)

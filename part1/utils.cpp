@@ -32,7 +32,6 @@ void load_input_tile_from_DRAM(
         {
             for (int j = 0; j < IN_BUF_HW; j++)
             {
-#pragma HLS PIPELINE II=1
                 // Real position in the full image (shifted back by padding)
                 int row = height_offset - P + i;
                 int col = width_offset  - P + j;
@@ -84,6 +83,7 @@ void conv_3x3(
         {
             for (int j = 0; j < OUT_BUF_HW; j++)     // output col (0~6)
             {
+#pragma HLS PIPELINE II=1   
                 fm_t sum = B_buf[f];                 // start with bias
 
                 for (int c = 0; c < IN_BUF_DEPTH; c++)       // input channel (R,G,B)

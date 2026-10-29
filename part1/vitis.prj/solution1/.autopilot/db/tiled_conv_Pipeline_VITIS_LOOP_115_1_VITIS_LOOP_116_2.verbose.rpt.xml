@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'tiled_conv_Pipeline_VITIS_LOOP_115_1_VITIS_LOOP_116_2'" level="0">
-<item name = "Date">Wed Oct 28 23:35:34 2026
+<item name = "Date">Wed Oct 28 23:47:23 2026
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">vitis.prj</item>
@@ -62,12 +62,12 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="fcmp_32ns_32ns_1_2_no_dsp_1_U254">fcmp_32ns_32ns_1_2_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="fcmp_32ns_32ns_1_2_no_dsp_1_U308">fcmp_32ns_32ns_1_2_no_dsp_1, 0, 0, 0, 0, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
 <keys size="3">Instance, Module, Expression</keys>
-<column name="mac_muladd_6ns_18ns_19s_25_4_1_U255">mac_muladd_6ns_18ns_19s_25_4_1, i0 * i1 + i2</column>
+<column name="mac_muladd_6ns_18ns_19s_25_4_1_U309">mac_muladd_6ns_18ns_19s_25_4_1, i0 * i1 + i2</column>
 </table>
 </item>
 <item name = "Memory"><table name="" hasTotal="1">
@@ -109,9 +109,9 @@
 <column name="add_ln119_8_fu_1146_p2">+, 0, 0, 14, 13, 4</column>
 <column name="add_ln119_9_fu_1206_p2">+, 0, 0, 14, 13, 4</column>
 <column name="add_ln119_fu_842_p2">+, 0, 0, 12, 11, 11</column>
-<column name="empty_52_fu_913_p2">+, 0, 0, 14, 9, 9</column>
-<column name="empty_54_fu_971_p2">+, 0, 0, 71, 64, 64</column>
-<column name="empty_53_fu_938_p2">-, 0, 0, 26, 19, 19</column>
+<column name="empty_33_fu_913_p2">+, 0, 0, 14, 9, 9</column>
+<column name="empty_35_fu_971_p2">+, 0, 0, 71, 64, 64</column>
+<column name="empty_34_fu_938_p2">-, 0, 0, 26, 19, 19</column>
 <column name="sub_ln119_1_fu_868_p2">-, 0, 0, 14, 13, 13</column>
 <column name="sub_ln119_fu_806_p2">-, 0, 0, 13, 10, 10</column>
 <column name="and_ln121_10_fu_1752_p2">and, 0, 0, 2, 1, 1</column>
@@ -301,18 +301,18 @@
 <column name="ap_enable_reg_pp0_iter3">9, 2, 1, 2</column>
 <column name="ap_loop_exit_ready_pp0_iter1_reg">9, 2, 1, 2</column>
 <column name="ap_loop_exit_ready_pp0_iter2_reg">9, 2, 1, 2</column>
-<column name="ap_sig_allocacmp_f_load">9, 2, 4, 8</column>
-<column name="ap_sig_allocacmp_i_2_load">9, 2, 5, 10</column>
-<column name="ap_sig_allocacmp_indvar_flatten177_load">9, 2, 8, 16</column>
+<column name="ap_sig_allocacmp_f_1_load">9, 2, 4, 8</column>
+<column name="ap_sig_allocacmp_i_1_load">9, 2, 5, 10</column>
+<column name="ap_sig_allocacmp_indvar_flatten76_load">9, 2, 8, 16</column>
 <column name="conv_out_buf_address0">65, 15, 13, 195</column>
 <column name="conv_out_buf_address1">65, 15, 13, 195</column>
-<column name="f_fu_176">9, 2, 4, 8</column>
+<column name="f_1_fu_176">9, 2, 4, 8</column>
 <column name="fm_blk_n_AW">9, 2, 1, 2</column>
 <column name="fm_blk_n_B">9, 2, 1, 2</column>
 <column name="fm_blk_n_W">9, 2, 1, 2</column>
 <column name="grp_fu_667_p0">81, 17, 32, 544</column>
-<column name="i_2_fu_172">9, 2, 5, 10</column>
-<column name="indvar_flatten177_fu_180">9, 2, 8, 16</column>
+<column name="i_1_fu_172">9, 2, 5, 10</column>
+<column name="indvar_flatten76_fu_180">9, 2, 8, 16</column>
 <column name="m_axi_fm_WDATA">130, 29, 32, 928</column>
 <column name="reg_677">9, 2, 32, 64</column>
 <column name="reg_688">9, 2, 32, 64</column>
@@ -340,11 +340,11 @@
 <column name="conv_out_buf_load_23_reg_2957">32, 0, 32, 0</column>
 <column name="conv_out_buf_load_25_reg_2978">32, 0, 32, 0</column>
 <column name="conv_out_buf_load_27_reg_2989">32, 0, 32, 0</column>
-<column name="f_fu_176">4, 0, 4, 0</column>
+<column name="f_1_fu_176">4, 0, 4, 0</column>
 <column name="fm_addr_reg_2744">64, 0, 64, 0</column>
-<column name="i_2_fu_172">5, 0, 5, 0</column>
+<column name="i_1_fu_172">5, 0, 5, 0</column>
 <column name="icmp_ln115_reg_2658">1, 0, 1, 0</column>
-<column name="indvar_flatten177_fu_180">8, 0, 8, 0</column>
+<column name="indvar_flatten76_fu_180">8, 0, 8, 0</column>
 <column name="reg_672">32, 0, 32, 0</column>
 <column name="reg_677">32, 0, 32, 0</column>
 <column name="reg_683">32, 0, 32, 0</column>
@@ -453,7 +453,7 @@
 <column name="conv_out_buf_address1">out, 13, ap_memory, conv_out_buf, array</column>
 <column name="conv_out_buf_ce1">out, 1, ap_memory, conv_out_buf, array</column>
 <column name="conv_out_buf_q1">in, 32, ap_memory, conv_out_buf, array</column>
-<column name="select_ln104_1">in, 9, ap_none, select_ln104_1, scalar</column>
+<column name="select_ln33_1">in, 9, ap_none, select_ln33_1, scalar</column>
 <column name="tmp6">in, 64, ap_none, tmp6, scalar</column>
 </table>
 </item>

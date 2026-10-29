@@ -7,8 +7,8 @@ set SynModuleInfo {
       {MODELNAME tiled_conv_flow_control_loop_pipe_sequential_init RTLNAME tiled_conv_flow_control_loop_pipe_sequential_init BINDTYPE interface TYPE internal_upc_flow_control INSTNAME tiled_conv_flow_control_loop_pipe_sequential_init_U}
     }
   }
-  {SRCNAME tiled_conv_Pipeline_VITIS_LOOP_61_1 MODELNAME tiled_conv_Pipeline_VITIS_LOOP_61_1 RTLNAME tiled_conv_tiled_conv_Pipeline_VITIS_LOOP_61_1}
-  {SRCNAME tiled_conv_Pipeline_VITIS_LOOP_81_1_VITIS_LOOP_83_2_VITIS_LOOP_85_3 MODELNAME tiled_conv_Pipeline_VITIS_LOOP_81_1_VITIS_LOOP_83_2_VITIS_LOOP_85_3 RTLNAME tiled_conv_tiled_conv_Pipeline_VITIS_LOOP_81_1_VITIS_LOOP_83_2_VITIS_LOOP_85_3
+  {SRCNAME tiled_conv_Pipeline_VITIS_LOOP_60_1 MODELNAME tiled_conv_Pipeline_VITIS_LOOP_60_1 RTLNAME tiled_conv_tiled_conv_Pipeline_VITIS_LOOP_60_1}
+  {SRCNAME conv_3x3 MODELNAME conv_3x3 RTLNAME tiled_conv_conv_3x3
     SUBMODULES {
       {MODELNAME tiled_conv_fadd_32ns_32ns_32_5_full_dsp_1 RTLNAME tiled_conv_fadd_32ns_32ns_32_5_full_dsp_1 BINDTYPE op TYPE fadd IMPL fulldsp LATENCY 4 ALLOW_PRAGMA 1}
       {MODELNAME tiled_conv_fmul_32ns_32ns_32_4_max_dsp_1 RTLNAME tiled_conv_fmul_32ns_32ns_32_4_max_dsp_1 BINDTYPE op TYPE fmul IMPL maxdsp LATENCY 3 ALLOW_PRAGMA 1}

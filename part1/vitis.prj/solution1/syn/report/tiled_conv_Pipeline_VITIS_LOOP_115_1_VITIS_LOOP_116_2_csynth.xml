@@ -713,8 +713,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>select_ln104_1</name>
-<Object>select_ln104_1</Object>
+<name>select_ln33_1</name>
+<Object>select_ln33_1</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>

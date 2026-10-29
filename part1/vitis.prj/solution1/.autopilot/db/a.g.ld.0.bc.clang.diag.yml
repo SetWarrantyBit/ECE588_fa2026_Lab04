@@ -1,4 +1,242 @@
 --- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: utils.cpp, Line: 89, Column: 34 }
+Function:        _Z8conv_3x3PA30_A30_fPA3_A3_A3_fPfPA28_A28_f
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_89_4
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: utils.cpp, Line: 90, Column: 38 }
+Function:        _Z8conv_3x3PA30_A30_fPA3_A3_A3_fPfPA28_A28_f
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_90_5
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: utils.cpp, Line: 91, Column: 42 }
+Function:        _Z8conv_3x3PA30_A30_fPA3_A3_A3_fPfPA28_A28_f
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_91_6
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: utils.cpp, Line: 77, Column: 0 }
+Function:        _Z8conv_3x3PA30_A30_fPA3_A3_A3_fPfPA28_A28_f
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_89_4
+  - String:          ''' ('
+  - LoopLoc:         'utils.cpp:89:34'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv_3x3
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: utils.cpp, Line: 77, Column: 0 }
+Function:        _Z8conv_3x3PA30_A30_fPA3_A3_A3_fPfPA28_A28_f
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_90_5
+  - String:          ''' ('
+  - LoopLoc:         'utils.cpp:90:38'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv_3x3
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: utils.cpp, Line: 77, Column: 0 }
+Function:        _Z8conv_3x3PA30_A30_fPA3_A3_A3_fPfPA28_A28_f
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_91_6
+  - String:          ''' ('
+  - LoopLoc:         'utils.cpp:91:42'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv_3x3
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: utils.cpp, Line: 77, Column: 0 }
+Function:        _Z8conv_3x3PA30_A30_fPA3_A3_A3_fPfPA28_A28_f
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_91_6
+  - String:          ''' ('
+  - LoopLoc:         'utils.cpp:91:42'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv_3x3
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: utils.cpp, Line: 77, Column: 0 }
+Function:        _Z8conv_3x3PA30_A30_fPA3_A3_A3_fPfPA28_A28_f
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_91_6
+  - String:          ''' ('
+  - LoopLoc:         'utils.cpp:91:42'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv_3x3
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: utils.cpp, Line: 77, Column: 0 }
+Function:        _Z8conv_3x3PA30_A30_fPA3_A3_A3_fPfPA28_A28_f
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_90_5
+  - String:          ''' ('
+  - LoopLoc:         'utils.cpp:90:38'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv_3x3
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: utils.cpp, Line: 77, Column: 0 }
+Function:        _Z8conv_3x3PA30_A30_fPA3_A3_A3_fPfPA28_A28_f
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_91_6
+  - String:          ''' ('
+  - LoopLoc:         'utils.cpp:91:42'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv_3x3
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: utils.cpp, Line: 77, Column: 0 }
+Function:        _Z8conv_3x3PA30_A30_fPA3_A3_A3_fPfPA28_A28_f
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_91_6
+  - String:          ''' ('
+  - LoopLoc:         'utils.cpp:91:42'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv_3x3
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: utils.cpp, Line: 77, Column: 0 }
+Function:        _Z8conv_3x3PA30_A30_fPA3_A3_A3_fPfPA28_A28_f
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_91_6
+  - String:          ''' ('
+  - LoopLoc:         'utils.cpp:91:42'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv_3x3
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: utils.cpp, Line: 77, Column: 0 }
+Function:        _Z8conv_3x3PA30_A30_fPA3_A3_A3_fPfPA28_A28_f
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_90_5
+  - String:          ''' ('
+  - LoopLoc:         'utils.cpp:90:38'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv_3x3
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: utils.cpp, Line: 77, Column: 0 }
+Function:        _Z8conv_3x3PA30_A30_fPA3_A3_A3_fPfPA28_A28_f
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_91_6
+  - String:          ''' ('
+  - LoopLoc:         'utils.cpp:91:42'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv_3x3
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: utils.cpp, Line: 77, Column: 0 }
+Function:        _Z8conv_3x3PA30_A30_fPA3_A3_A3_fPfPA28_A28_f
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_91_6
+  - String:          ''' ('
+  - LoopLoc:         'utils.cpp:91:42'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv_3x3
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: utils.cpp, Line: 77, Column: 0 }
+Function:        _Z8conv_3x3PA30_A30_fPA3_A3_A3_fPfPA28_A28_f
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_91_6
+  - String:          ''' ('
+  - LoopLoc:         'utils.cpp:91:42'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv_3x3
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
 DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
@@ -20,21 +258,7 @@ Function:        _Z10tiled_convPA224_A224_fPA3_A3_A3_fPfS1_
 Args:            
   - String:          'Inlining function '''
   - Callee:          'load_layer_params_from_DRAM(float (*) [3][3][3], float*, float (*) [3][3][3], float*, int)'
-    DebugLoc:        { File: utils.cpp, Line: 56, Column: 0 }
-  - String:          ''' into '''
-  - Caller:          'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])'
-    DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
-  - String:          ''''
-...
---- !Passed
-Pass:            reflow-inliner
-Name:            AutoInline
-DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
-Function:        _Z10tiled_convPA224_A224_fPA3_A3_A3_fPfS1_
-Args:            
-  - String:          'Inlining function '''
-  - Callee:          'conv_3x3(float (*) [30][30], float (*) [3][3][3], float*, float (*) [28][28])'
-    DebugLoc:        { File: utils.cpp, Line: 78, Column: 0 }
+    DebugLoc:        { File: utils.cpp, Line: 55, Column: 0 }
   - String:          ''' into '''
   - Caller:          'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])'
     DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
@@ -121,7 +345,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: utils.cpp, Line: 61, Column: 22 }
+DebugLoc:        { File: utils.cpp, Line: 60, Column: 22 }
 Function:        _Z10tiled_convPA224_A224_fPA3_A3_A3_fPfS1_
 Args:            
   - String:          'Sequential '
@@ -139,9 +363,9 @@ Args:
   - String:          ' '
   - BundleName:      wt
   - String:          ' '
-  - LoopName:        VITIS_LOOP_61_1
+  - LoopName:        VITIS_LOOP_60_1
   - String:          ' '
-  - LoopLoc:         'utils.cpp:61:22'
+  - LoopLoc:         'utils.cpp:60:22'
   - String:          ' '
   - Function:        'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])'
     DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
@@ -150,7 +374,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: utils.cpp, Line: 61, Column: 22 }
+DebugLoc:        { File: utils.cpp, Line: 60, Column: 22 }
 Function:        _Z10tiled_convPA224_A224_fPA3_A3_A3_fPfS1_
 Args:            
   - String:          'Sequential '
@@ -162,15 +386,15 @@ Args:
   - String:          for.inc38.i.load.2
   - String:          ', '
   - String:          ' _XLX_SEP_ '
-  - AccessID:        scevgep362seq
+  - AccessID:        scevgep254seq
   - String:          ' '
   - ArrayName:       biases
   - String:          ' '
   - BundleName:      wt
   - String:          ' '
-  - LoopName:        VITIS_LOOP_61_1
+  - LoopName:        VITIS_LOOP_60_1
   - String:          ' '
-  - LoopLoc:         'utils.cpp:61:22'
+  - LoopLoc:         'utils.cpp:60:22'
   - String:          ' '
   - Function:        'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])'
     DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
@@ -191,7 +415,7 @@ Args:
   - String:          for.body11.i.store.10
   - String:          ', '
   - String:          ' _XLX_SEP_ '
-  - AccessID:        scevgep363seq
+  - AccessID:        scevgep255seq
   - String:          ' '
   - ArrayName:       output_fm
   - String:          ' '
@@ -208,12 +432,12 @@ Args:
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            AccessInCondBranch
-DebugLoc:        { File: utils.cpp, Line: 43, Column: 42 }
+DebugLoc:        { File: utils.cpp, Line: 42, Column: 42 }
 Function:        _Z10tiled_convPA224_A224_fPA3_A3_A3_fPfS1_
 Args:            
   - String:          'Access '
   - Access:          load
-    DebugLoc:        { File: utils.cpp, Line: 43, Column: 42 }
+    DebugLoc:        { File: utils.cpp, Line: 42, Column: 42 }
   - String:          ' is in the conditional branch'
   - String:          ' _XLX_SEP_ '
   - AccessID:        if.else.i.load.1
@@ -238,7 +462,7 @@ Function:        _Z10tiled_convPA224_A224_fPA3_A3_A3_fPfS1_
 Args:            
   - String:          Stride is incompatible
   - String:          ' _XLX_SEP_ '
-  - AccessID:        scevgep363seq
+  - AccessID:        scevgep255seq
   - String:          ' '
   - ArrayName:       output_fm
   - String:          ' '
@@ -255,14 +479,14 @@ Args:
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            AccessClobbered
-DebugLoc:        { File: utils.cpp, Line: 61, Column: 22 }
+DebugLoc:        { File: utils.cpp, Line: 60, Column: 22 }
 Function:        _Z10tiled_convPA224_A224_fPA3_A3_A3_fPfS1_
 Args:            
   - String:          'Access is clobbered by '
   - ClobberedBy:     load
-    DebugLoc:        { File: utils.cpp, Line: 66, Column: 49 }
+    DebugLoc:        { File: utils.cpp, Line: 65, Column: 49 }
   - String:          ' _XLX_SEP_ '
-  - AccessID:        scevgep362seq
+  - AccessID:        scevgep254seq
   - String:          ' '
   - ArrayName:       biases
   - String:          ' '
@@ -275,12 +499,12 @@ Args:
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            AccessClobbered
-DebugLoc:        { File: utils.cpp, Line: 61, Column: 22 }
+DebugLoc:        { File: utils.cpp, Line: 60, Column: 22 }
 Function:        _Z10tiled_convPA224_A224_fPA3_A3_A3_fPfS1_
 Args:            
   - String:          'Access is clobbered by '
   - ClobberedBy:     load
-    DebugLoc:        { File: utils.cpp, Line: 68, Column: 25 }
+    DebugLoc:        { File: utils.cpp, Line: 67, Column: 25 }
   - String:          ' _XLX_SEP_ '
   - AccessID:        scevgepseq
   - String:          ' '
@@ -303,7 +527,7 @@ Args:
   - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
   - Threshold:       '0'
   - String:          ' _XLX_SEP_ '
-  - AccessID:        scevgep363seq
+  - AccessID:        scevgep255seq
   - String:          ' '
   - ArrayName:       output_fm
   - String:          ' '
@@ -320,7 +544,7 @@ Args:
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualThreshold
-DebugLoc:        { File: utils.cpp, Line: 61, Column: 22 }
+DebugLoc:        { File: utils.cpp, Line: 60, Column: 22 }
 Function:        _Z10tiled_convPA224_A224_fPA3_A3_A3_fPfS1_
 Args:            
   - String:          'Could not widen since type '
@@ -328,15 +552,15 @@ Args:
   - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
   - Threshold:       '0'
   - String:          ' _XLX_SEP_ '
-  - AccessID:        scevgep362seq
+  - AccessID:        scevgep254seq
   - String:          ' '
   - ArrayName:       biases
   - String:          ' '
   - BundleName:      wt
   - String:          ' '
-  - LoopName:        VITIS_LOOP_61_1
+  - LoopName:        VITIS_LOOP_60_1
   - String:          ' '
-  - LoopLoc:         'utils.cpp:61:22'
+  - LoopLoc:         'utils.cpp:60:22'
   - String:          ' '
   - Function:        'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])'
     DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
@@ -345,7 +569,7 @@ Args:
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualThreshold
-DebugLoc:        { File: utils.cpp, Line: 61, Column: 22 }
+DebugLoc:        { File: utils.cpp, Line: 60, Column: 22 }
 Function:        _Z10tiled_convPA224_A224_fPA3_A3_A3_fPfS1_
 Args:            
   - String:          'Could not widen since type '
@@ -359,9 +583,9 @@ Args:
   - String:          ' '
   - BundleName:      wt
   - String:          ' '
-  - LoopName:        VITIS_LOOP_65_4
+  - LoopName:        VITIS_LOOP_64_4
   - String:          ' '
-  - LoopLoc:         'utils.cpp:65:34'
+  - LoopLoc:         'utils.cpp:64:34'
   - String:          ' '
   - Function:        'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])'
     DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
@@ -370,7 +594,7 @@ Args:
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            BurstConflict
-DebugLoc:        { File: utils.cpp, Line: 61, Column: 22 }
+DebugLoc:        { File: utils.cpp, Line: 60, Column: 22 }
 Function:        _Z10tiled_convPA224_A224_fPA3_A3_A3_fPfS1_
 Args:            
   - String:          'Could not burst due to multiple potential '
