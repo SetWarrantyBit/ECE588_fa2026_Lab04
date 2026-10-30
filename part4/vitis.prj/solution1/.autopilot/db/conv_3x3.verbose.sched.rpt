@@ -1,0 +1,353 @@
+
+
+================================================================
+== Vitis HLS Report for 'conv_3x3'
+================================================================
+* Date:           Thu Oct 29 19:32:57 2026
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        vitis.prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.994 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     6621|     6621|  66.210 us|  66.210 us|  6621|  6621|       no|
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_80_1  |     6620|     6620|      1655|          -|          -|     4|        no|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 2 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.58>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%f = alloca i32 1"   --->   Operation 7 'alloca' 'f' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (1.58ns)   --->   "%store_ln80 = store i4 0, i4 %f" [utils.cpp:80]   --->   Operation 8 'store' 'store_ln80' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%br_ln80 = br void %VITIS_LOOP_83_2" [utils.cpp:80]   --->   Operation 9 'br' 'br_ln80' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 3.32>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%f_2 = load i4 %f" [utils.cpp:80]   --->   Operation 10 'load' 'f_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i4.i32, i4 %f_2, i32 3" [utils.cpp:80]   --->   Operation 11 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 4, i64 4, i64 4"   --->   Operation 12 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%br_ln80 = br i1 %tmp, void %VITIS_LOOP_83_2.split, void %for.end57" [utils.cpp:80]   --->   Operation 13 'br' 'br_ln80' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%zext_ln80 = zext i4 %f_2" [utils.cpp:80]   --->   Operation 14 'zext' 'zext_ln80' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%B_buf_addr = getelementptr i16 %B_buf, i64 0, i64 %zext_ln80" [utils.cpp:80]   --->   Operation 15 'getelementptr' 'B_buf_addr' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 16 [2/2] (2.32ns)   --->   "%B_buf_load = load i3 %B_buf_addr" [utils.cpp:80]   --->   Operation 16 'load' 'B_buf_load' <Predicate = (!tmp)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%W_buf_0_0_0_addr = getelementptr i16 %W_buf_0_0_0, i64 0, i64 %zext_ln80" [utils.cpp:80]   --->   Operation 17 'getelementptr' 'W_buf_0_0_0_addr' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 18 [2/2] (2.32ns)   --->   "%W_buf_0_0_0_load = load i3 %W_buf_0_0_0_addr" [utils.cpp:80]   --->   Operation 18 'load' 'W_buf_0_0_0_load' <Predicate = (!tmp)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%W_buf_0_0_1_addr = getelementptr i16 %W_buf_0_0_1, i64 0, i64 %zext_ln80" [utils.cpp:80]   --->   Operation 19 'getelementptr' 'W_buf_0_0_1_addr' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 20 [2/2] (2.32ns)   --->   "%W_buf_0_0_1_load = load i3 %W_buf_0_0_1_addr" [utils.cpp:80]   --->   Operation 20 'load' 'W_buf_0_0_1_load' <Predicate = (!tmp)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%W_buf_0_0_2_addr = getelementptr i16 %W_buf_0_0_2, i64 0, i64 %zext_ln80" [utils.cpp:80]   --->   Operation 21 'getelementptr' 'W_buf_0_0_2_addr' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 22 [2/2] (2.32ns)   --->   "%W_buf_0_0_2_load = load i3 %W_buf_0_0_2_addr" [utils.cpp:80]   --->   Operation 22 'load' 'W_buf_0_0_2_load' <Predicate = (!tmp)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%W_buf_0_1_0_addr = getelementptr i16 %W_buf_0_1_0, i64 0, i64 %zext_ln80" [utils.cpp:80]   --->   Operation 23 'getelementptr' 'W_buf_0_1_0_addr' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 24 [2/2] (2.32ns)   --->   "%W_buf_0_1_0_load = load i3 %W_buf_0_1_0_addr" [utils.cpp:80]   --->   Operation 24 'load' 'W_buf_0_1_0_load' <Predicate = (!tmp)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%W_buf_0_1_1_addr = getelementptr i16 %W_buf_0_1_1, i64 0, i64 %zext_ln80" [utils.cpp:80]   --->   Operation 25 'getelementptr' 'W_buf_0_1_1_addr' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 26 [2/2] (2.32ns)   --->   "%W_buf_0_1_1_load = load i3 %W_buf_0_1_1_addr" [utils.cpp:80]   --->   Operation 26 'load' 'W_buf_0_1_1_load' <Predicate = (!tmp)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%W_buf_0_1_2_addr = getelementptr i16 %W_buf_0_1_2, i64 0, i64 %zext_ln80" [utils.cpp:80]   --->   Operation 27 'getelementptr' 'W_buf_0_1_2_addr' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 28 [2/2] (2.32ns)   --->   "%W_buf_0_1_2_load = load i3 %W_buf_0_1_2_addr" [utils.cpp:80]   --->   Operation 28 'load' 'W_buf_0_1_2_load' <Predicate = (!tmp)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%W_buf_0_2_0_addr = getelementptr i16 %W_buf_0_2_0, i64 0, i64 %zext_ln80" [utils.cpp:80]   --->   Operation 29 'getelementptr' 'W_buf_0_2_0_addr' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 30 [2/2] (2.32ns)   --->   "%W_buf_0_2_0_load = load i3 %W_buf_0_2_0_addr" [utils.cpp:80]   --->   Operation 30 'load' 'W_buf_0_2_0_load' <Predicate = (!tmp)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%W_buf_0_2_1_addr = getelementptr i16 %W_buf_0_2_1, i64 0, i64 %zext_ln80" [utils.cpp:80]   --->   Operation 31 'getelementptr' 'W_buf_0_2_1_addr' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 32 [2/2] (2.32ns)   --->   "%W_buf_0_2_1_load = load i3 %W_buf_0_2_1_addr" [utils.cpp:80]   --->   Operation 32 'load' 'W_buf_0_2_1_load' <Predicate = (!tmp)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%W_buf_0_2_2_addr = getelementptr i16 %W_buf_0_2_2, i64 0, i64 %zext_ln80" [utils.cpp:80]   --->   Operation 33 'getelementptr' 'W_buf_0_2_2_addr' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 34 [2/2] (2.32ns)   --->   "%W_buf_0_2_2_load = load i3 %W_buf_0_2_2_addr" [utils.cpp:80]   --->   Operation 34 'load' 'W_buf_0_2_2_load' <Predicate = (!tmp)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%W_buf_1_0_0_addr = getelementptr i16 %W_buf_1_0_0, i64 0, i64 %zext_ln80" [utils.cpp:80]   --->   Operation 35 'getelementptr' 'W_buf_1_0_0_addr' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 36 [2/2] (2.32ns)   --->   "%W_buf_1_0_0_load = load i3 %W_buf_1_0_0_addr" [utils.cpp:80]   --->   Operation 36 'load' 'W_buf_1_0_0_load' <Predicate = (!tmp)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%W_buf_1_0_1_addr = getelementptr i16 %W_buf_1_0_1, i64 0, i64 %zext_ln80" [utils.cpp:80]   --->   Operation 37 'getelementptr' 'W_buf_1_0_1_addr' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 38 [2/2] (2.32ns)   --->   "%W_buf_1_0_1_load = load i3 %W_buf_1_0_1_addr" [utils.cpp:80]   --->   Operation 38 'load' 'W_buf_1_0_1_load' <Predicate = (!tmp)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%W_buf_1_0_2_addr = getelementptr i16 %W_buf_1_0_2, i64 0, i64 %zext_ln80" [utils.cpp:80]   --->   Operation 39 'getelementptr' 'W_buf_1_0_2_addr' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 40 [2/2] (2.32ns)   --->   "%W_buf_1_0_2_load = load i3 %W_buf_1_0_2_addr" [utils.cpp:80]   --->   Operation 40 'load' 'W_buf_1_0_2_load' <Predicate = (!tmp)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%W_buf_1_1_0_addr = getelementptr i16 %W_buf_1_1_0, i64 0, i64 %zext_ln80" [utils.cpp:80]   --->   Operation 41 'getelementptr' 'W_buf_1_1_0_addr' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 42 [2/2] (2.32ns)   --->   "%W_buf_1_1_0_load = load i3 %W_buf_1_1_0_addr" [utils.cpp:80]   --->   Operation 42 'load' 'W_buf_1_1_0_load' <Predicate = (!tmp)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "%W_buf_1_1_1_addr = getelementptr i16 %W_buf_1_1_1, i64 0, i64 %zext_ln80" [utils.cpp:80]   --->   Operation 43 'getelementptr' 'W_buf_1_1_1_addr' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 44 [2/2] (2.32ns)   --->   "%W_buf_1_1_1_load = load i3 %W_buf_1_1_1_addr" [utils.cpp:80]   --->   Operation 44 'load' 'W_buf_1_1_1_load' <Predicate = (!tmp)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_2 : Operation 45 [1/1] (0.00ns)   --->   "%W_buf_1_1_2_addr = getelementptr i16 %W_buf_1_1_2, i64 0, i64 %zext_ln80" [utils.cpp:80]   --->   Operation 45 'getelementptr' 'W_buf_1_1_2_addr' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 46 [2/2] (2.32ns)   --->   "%W_buf_1_1_2_load = load i3 %W_buf_1_1_2_addr" [utils.cpp:80]   --->   Operation 46 'load' 'W_buf_1_1_2_load' <Predicate = (!tmp)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%W_buf_1_2_0_addr = getelementptr i16 %W_buf_1_2_0, i64 0, i64 %zext_ln80" [utils.cpp:80]   --->   Operation 47 'getelementptr' 'W_buf_1_2_0_addr' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 48 [2/2] (2.32ns)   --->   "%W_buf_1_2_0_load = load i3 %W_buf_1_2_0_addr" [utils.cpp:80]   --->   Operation 48 'load' 'W_buf_1_2_0_load' <Predicate = (!tmp)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_2 : Operation 49 [1/1] (0.00ns)   --->   "%W_buf_1_2_1_addr = getelementptr i16 %W_buf_1_2_1, i64 0, i64 %zext_ln80" [utils.cpp:80]   --->   Operation 49 'getelementptr' 'W_buf_1_2_1_addr' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 50 [2/2] (2.32ns)   --->   "%W_buf_1_2_1_load = load i3 %W_buf_1_2_1_addr" [utils.cpp:80]   --->   Operation 50 'load' 'W_buf_1_2_1_load' <Predicate = (!tmp)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_2 : Operation 51 [1/1] (0.00ns)   --->   "%W_buf_1_2_2_addr = getelementptr i16 %W_buf_1_2_2, i64 0, i64 %zext_ln80" [utils.cpp:80]   --->   Operation 51 'getelementptr' 'W_buf_1_2_2_addr' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 52 [2/2] (2.32ns)   --->   "%W_buf_1_2_2_load = load i3 %W_buf_1_2_2_addr" [utils.cpp:80]   --->   Operation 52 'load' 'W_buf_1_2_2_load' <Predicate = (!tmp)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_2 : Operation 53 [1/1] (0.00ns)   --->   "%W_buf_2_0_0_addr = getelementptr i16 %W_buf_2_0_0, i64 0, i64 %zext_ln80" [utils.cpp:80]   --->   Operation 53 'getelementptr' 'W_buf_2_0_0_addr' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 54 [2/2] (2.32ns)   --->   "%W_buf_2_0_0_load = load i3 %W_buf_2_0_0_addr" [utils.cpp:80]   --->   Operation 54 'load' 'W_buf_2_0_0_load' <Predicate = (!tmp)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_2 : Operation 55 [1/1] (0.00ns)   --->   "%W_buf_2_0_1_addr = getelementptr i16 %W_buf_2_0_1, i64 0, i64 %zext_ln80" [utils.cpp:80]   --->   Operation 55 'getelementptr' 'W_buf_2_0_1_addr' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 56 [2/2] (2.32ns)   --->   "%W_buf_2_0_1_load = load i3 %W_buf_2_0_1_addr" [utils.cpp:80]   --->   Operation 56 'load' 'W_buf_2_0_1_load' <Predicate = (!tmp)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_2 : Operation 57 [1/1] (0.00ns)   --->   "%W_buf_2_0_2_addr = getelementptr i16 %W_buf_2_0_2, i64 0, i64 %zext_ln80" [utils.cpp:80]   --->   Operation 57 'getelementptr' 'W_buf_2_0_2_addr' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 58 [2/2] (2.32ns)   --->   "%W_buf_2_0_2_load = load i3 %W_buf_2_0_2_addr" [utils.cpp:80]   --->   Operation 58 'load' 'W_buf_2_0_2_load' <Predicate = (!tmp)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_2 : Operation 59 [1/1] (0.00ns)   --->   "%W_buf_2_1_0_addr = getelementptr i16 %W_buf_2_1_0, i64 0, i64 %zext_ln80" [utils.cpp:80]   --->   Operation 59 'getelementptr' 'W_buf_2_1_0_addr' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 60 [2/2] (2.32ns)   --->   "%W_buf_2_1_0_load = load i3 %W_buf_2_1_0_addr" [utils.cpp:80]   --->   Operation 60 'load' 'W_buf_2_1_0_load' <Predicate = (!tmp)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_2 : Operation 61 [1/1] (0.00ns)   --->   "%W_buf_2_1_1_addr = getelementptr i16 %W_buf_2_1_1, i64 0, i64 %zext_ln80" [utils.cpp:80]   --->   Operation 61 'getelementptr' 'W_buf_2_1_1_addr' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 62 [2/2] (2.32ns)   --->   "%W_buf_2_1_1_load = load i3 %W_buf_2_1_1_addr" [utils.cpp:80]   --->   Operation 62 'load' 'W_buf_2_1_1_load' <Predicate = (!tmp)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_2 : Operation 63 [1/1] (0.00ns)   --->   "%W_buf_2_1_2_addr = getelementptr i16 %W_buf_2_1_2, i64 0, i64 %zext_ln80" [utils.cpp:80]   --->   Operation 63 'getelementptr' 'W_buf_2_1_2_addr' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 64 [2/2] (2.32ns)   --->   "%W_buf_2_1_2_load = load i3 %W_buf_2_1_2_addr" [utils.cpp:80]   --->   Operation 64 'load' 'W_buf_2_1_2_load' <Predicate = (!tmp)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_2 : Operation 65 [1/1] (0.00ns)   --->   "%W_buf_2_2_0_addr = getelementptr i16 %W_buf_2_2_0, i64 0, i64 %zext_ln80" [utils.cpp:80]   --->   Operation 65 'getelementptr' 'W_buf_2_2_0_addr' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 66 [2/2] (2.32ns)   --->   "%W_buf_2_2_0_load = load i3 %W_buf_2_2_0_addr" [utils.cpp:80]   --->   Operation 66 'load' 'W_buf_2_2_0_load' <Predicate = (!tmp)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_2 : Operation 67 [1/1] (0.00ns)   --->   "%W_buf_2_2_1_addr = getelementptr i16 %W_buf_2_2_1, i64 0, i64 %zext_ln80" [utils.cpp:80]   --->   Operation 67 'getelementptr' 'W_buf_2_2_1_addr' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 68 [2/2] (2.32ns)   --->   "%W_buf_2_2_1_load = load i3 %W_buf_2_2_1_addr" [utils.cpp:80]   --->   Operation 68 'load' 'W_buf_2_2_1_load' <Predicate = (!tmp)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_2 : Operation 69 [1/1] (0.00ns)   --->   "%W_buf_2_2_2_addr = getelementptr i16 %W_buf_2_2_2, i64 0, i64 %zext_ln80" [utils.cpp:80]   --->   Operation 69 'getelementptr' 'W_buf_2_2_2_addr' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 70 [2/2] (2.32ns)   --->   "%W_buf_2_2_2_load = load i3 %W_buf_2_2_2_addr" [utils.cpp:80]   --->   Operation 70 'load' 'W_buf_2_2_2_load' <Predicate = (!tmp)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_2 : Operation 71 [1/1] (1.73ns)   --->   "%add_ln80 = add i4 %f_2, i4 2" [utils.cpp:80]   --->   Operation 71 'add' 'add_ln80' <Predicate = (!tmp)> <Delay = 1.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 72 [1/1] (1.58ns)   --->   "%store_ln80 = store i4 %add_ln80, i4 %f" [utils.cpp:80]   --->   Operation 72 'store' 'store_ln80' <Predicate = (!tmp)> <Delay = 1.58>
+ST_2 : Operation 73 [1/1] (0.00ns)   --->   "%ret_ln100 = ret" [utils.cpp:100]   --->   Operation 73 'ret' 'ret_ln100' <Predicate = (tmp)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 2.32>
+ST_3 : Operation 74 [1/1] (0.00ns)   --->   "%tmp_20 = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i4.i5, i4 %f_2, i5 0" [utils.cpp:95]   --->   Operation 74 'bitconcatenate' 'tmp_20' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 75 [1/1] (0.00ns)   --->   "%zext_ln95 = zext i9 %tmp_20" [utils.cpp:95]   --->   Operation 75 'zext' 'zext_ln95' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 76 [1/1] (0.00ns)   --->   "%tmp_24 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i4.i2, i4 %f_2, i2 0" [utils.cpp:95]   --->   Operation 76 'bitconcatenate' 'tmp_24' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 77 [1/1] (0.00ns)   --->   "%zext_ln95_5 = zext i6 %tmp_24" [utils.cpp:95]   --->   Operation 77 'zext' 'zext_ln95_5' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 78 [1/1] (1.82ns)   --->   "%sub_ln95 = sub i10 %zext_ln95, i10 %zext_ln95_5" [utils.cpp:95]   --->   Operation 78 'sub' 'sub_ln95' <Predicate = true> <Delay = 1.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 79 [1/1] (0.00ns)   --->   "%trunc_ln80 = trunc i4 %f_2" [utils.cpp:80]   --->   Operation 79 'trunc' 'trunc_ln80' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 80 [1/2] (2.32ns)   --->   "%B_buf_load = load i3 %B_buf_addr" [utils.cpp:80]   --->   Operation 80 'load' 'B_buf_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_3 : Operation 81 [1/2] (2.32ns)   --->   "%W_buf_0_0_0_load = load i3 %W_buf_0_0_0_addr" [utils.cpp:80]   --->   Operation 81 'load' 'W_buf_0_0_0_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_3 : Operation 82 [1/1] (0.00ns)   --->   "%lhs_1 = bitconcatenate i28 @_ssdm_op_BitConcatenate.i28.i16.i12, i16 %B_buf_load, i12 0" [utils.cpp:80]   --->   Operation 82 'bitconcatenate' 'lhs_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 83 [1/2] (2.32ns)   --->   "%W_buf_0_0_1_load = load i3 %W_buf_0_0_1_addr" [utils.cpp:80]   --->   Operation 83 'load' 'W_buf_0_0_1_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_3 : Operation 84 [1/2] (2.32ns)   --->   "%W_buf_0_0_2_load = load i3 %W_buf_0_0_2_addr" [utils.cpp:80]   --->   Operation 84 'load' 'W_buf_0_0_2_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_3 : Operation 85 [1/2] (2.32ns)   --->   "%W_buf_0_1_0_load = load i3 %W_buf_0_1_0_addr" [utils.cpp:80]   --->   Operation 85 'load' 'W_buf_0_1_0_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_3 : Operation 86 [1/2] (2.32ns)   --->   "%W_buf_0_1_1_load = load i3 %W_buf_0_1_1_addr" [utils.cpp:80]   --->   Operation 86 'load' 'W_buf_0_1_1_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_3 : Operation 87 [1/2] (2.32ns)   --->   "%W_buf_0_1_2_load = load i3 %W_buf_0_1_2_addr" [utils.cpp:80]   --->   Operation 87 'load' 'W_buf_0_1_2_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_3 : Operation 88 [1/2] (2.32ns)   --->   "%W_buf_0_2_0_load = load i3 %W_buf_0_2_0_addr" [utils.cpp:80]   --->   Operation 88 'load' 'W_buf_0_2_0_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_3 : Operation 89 [1/2] (2.32ns)   --->   "%W_buf_0_2_1_load = load i3 %W_buf_0_2_1_addr" [utils.cpp:80]   --->   Operation 89 'load' 'W_buf_0_2_1_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_3 : Operation 90 [1/2] (2.32ns)   --->   "%W_buf_0_2_2_load = load i3 %W_buf_0_2_2_addr" [utils.cpp:80]   --->   Operation 90 'load' 'W_buf_0_2_2_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_3 : Operation 91 [1/2] (2.32ns)   --->   "%W_buf_1_0_0_load = load i3 %W_buf_1_0_0_addr" [utils.cpp:80]   --->   Operation 91 'load' 'W_buf_1_0_0_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_3 : Operation 92 [1/2] (2.32ns)   --->   "%W_buf_1_0_1_load = load i3 %W_buf_1_0_1_addr" [utils.cpp:80]   --->   Operation 92 'load' 'W_buf_1_0_1_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_3 : Operation 93 [1/2] (2.32ns)   --->   "%W_buf_1_0_2_load = load i3 %W_buf_1_0_2_addr" [utils.cpp:80]   --->   Operation 93 'load' 'W_buf_1_0_2_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_3 : Operation 94 [1/2] (2.32ns)   --->   "%W_buf_1_1_0_load = load i3 %W_buf_1_1_0_addr" [utils.cpp:80]   --->   Operation 94 'load' 'W_buf_1_1_0_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_3 : Operation 95 [1/2] (2.32ns)   --->   "%W_buf_1_1_1_load = load i3 %W_buf_1_1_1_addr" [utils.cpp:80]   --->   Operation 95 'load' 'W_buf_1_1_1_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_3 : Operation 96 [1/2] (2.32ns)   --->   "%W_buf_1_1_2_load = load i3 %W_buf_1_1_2_addr" [utils.cpp:80]   --->   Operation 96 'load' 'W_buf_1_1_2_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_3 : Operation 97 [1/2] (2.32ns)   --->   "%W_buf_1_2_0_load = load i3 %W_buf_1_2_0_addr" [utils.cpp:80]   --->   Operation 97 'load' 'W_buf_1_2_0_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_3 : Operation 98 [1/2] (2.32ns)   --->   "%W_buf_1_2_1_load = load i3 %W_buf_1_2_1_addr" [utils.cpp:80]   --->   Operation 98 'load' 'W_buf_1_2_1_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_3 : Operation 99 [1/2] (2.32ns)   --->   "%W_buf_1_2_2_load = load i3 %W_buf_1_2_2_addr" [utils.cpp:80]   --->   Operation 99 'load' 'W_buf_1_2_2_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_3 : Operation 100 [1/2] (2.32ns)   --->   "%W_buf_2_0_0_load = load i3 %W_buf_2_0_0_addr" [utils.cpp:80]   --->   Operation 100 'load' 'W_buf_2_0_0_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_3 : Operation 101 [1/2] (2.32ns)   --->   "%W_buf_2_0_1_load = load i3 %W_buf_2_0_1_addr" [utils.cpp:80]   --->   Operation 101 'load' 'W_buf_2_0_1_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_3 : Operation 102 [1/2] (2.32ns)   --->   "%W_buf_2_0_2_load = load i3 %W_buf_2_0_2_addr" [utils.cpp:80]   --->   Operation 102 'load' 'W_buf_2_0_2_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_3 : Operation 103 [1/2] (2.32ns)   --->   "%W_buf_2_1_0_load = load i3 %W_buf_2_1_0_addr" [utils.cpp:80]   --->   Operation 103 'load' 'W_buf_2_1_0_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_3 : Operation 104 [1/2] (2.32ns)   --->   "%W_buf_2_1_1_load = load i3 %W_buf_2_1_1_addr" [utils.cpp:80]   --->   Operation 104 'load' 'W_buf_2_1_1_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_3 : Operation 105 [1/2] (2.32ns)   --->   "%W_buf_2_1_2_load = load i3 %W_buf_2_1_2_addr" [utils.cpp:80]   --->   Operation 105 'load' 'W_buf_2_1_2_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_3 : Operation 106 [1/2] (2.32ns)   --->   "%W_buf_2_2_0_load = load i3 %W_buf_2_2_0_addr" [utils.cpp:80]   --->   Operation 106 'load' 'W_buf_2_2_0_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_3 : Operation 107 [1/2] (2.32ns)   --->   "%W_buf_2_2_1_load = load i3 %W_buf_2_2_1_addr" [utils.cpp:80]   --->   Operation 107 'load' 'W_buf_2_2_1_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_3 : Operation 108 [1/2] (2.32ns)   --->   "%W_buf_2_2_2_load = load i3 %W_buf_2_2_2_addr" [utils.cpp:80]   --->   Operation 108 'load' 'W_buf_2_2_2_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_3 : Operation 109 [2/2] (0.00ns)   --->   "%call_ln95 = call void @conv_3x3_Pipeline_VITIS_LOOP_83_2_VITIS_LOOP_85_3, i10 %sub_ln95, i16 %Y_buf, i16 %X_buf_0_0_0, i16 %X_buf_0_0_1, i16 %X_buf_0_0_2, i16 %X_buf_0_1_0, i16 %X_buf_0_1_1, i16 %X_buf_0_1_2, i16 %X_buf_0_2_0, i16 %X_buf_0_2_1, i16 %X_buf_0_2_2, i16 %X_buf_1_0_0, i16 %X_buf_1_0_1, i16 %X_buf_1_0_2, i16 %X_buf_1_1_0, i16 %X_buf_1_1_1, i16 %X_buf_1_1_2, i16 %X_buf_1_2_0, i16 %X_buf_1_2_1, i16 %X_buf_1_2_2, i16 %X_buf_2_0_0, i16 %X_buf_2_0_1, i16 %X_buf_2_0_2, i16 %X_buf_2_1_0, i16 %X_buf_2_1_1, i16 %X_buf_2_1_2, i16 %X_buf_2_2_0, i16 %X_buf_2_2_1, i16 %X_buf_2_2_2, i16 %W_buf_0_0_0_load, i28 %lhs_1, i16 %W_buf_0_0_1_load, i16 %W_buf_0_0_2_load, i16 %W_buf_0_1_0_load, i16 %W_buf_0_1_1_load, i16 %W_buf_0_1_2_load, i16 %W_buf_0_2_0_load, i16 %W_buf_0_2_1_load, i16 %W_buf_0_2_2_load, i16 %W_buf_1_0_0_load, i16 %W_buf_1_0_1_load, i16 %W_buf_1_0_2_load, i16 %W_buf_1_1_0_load, i16 %W_buf_1_1_1_load, i16 %W_buf_1_1_2_load, i16 %W_buf_1_2_0_load, i16 %W_buf_1_2_1_load, i16 %W_buf_1_2_2_load, i16 %W_buf_2_0_0_load, i16 %W_buf_2_0_1_load, i16 %W_buf_2_0_2_load, i16 %W_buf_2_1_0_load, i16 %W_buf_2_1_1_load, i16 %W_buf_2_1_2_load, i16 %W_buf_2_2_0_load, i16 %W_buf_2_2_1_load, i16 %W_buf_2_2_2_load" [utils.cpp:95]   --->   Operation 109 'call' 'call_ln95' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 2.32>
+ST_4 : Operation 110 [1/2] (0.00ns)   --->   "%call_ln95 = call void @conv_3x3_Pipeline_VITIS_LOOP_83_2_VITIS_LOOP_85_3, i10 %sub_ln95, i16 %Y_buf, i16 %X_buf_0_0_0, i16 %X_buf_0_0_1, i16 %X_buf_0_0_2, i16 %X_buf_0_1_0, i16 %X_buf_0_1_1, i16 %X_buf_0_1_2, i16 %X_buf_0_2_0, i16 %X_buf_0_2_1, i16 %X_buf_0_2_2, i16 %X_buf_1_0_0, i16 %X_buf_1_0_1, i16 %X_buf_1_0_2, i16 %X_buf_1_1_0, i16 %X_buf_1_1_1, i16 %X_buf_1_1_2, i16 %X_buf_1_2_0, i16 %X_buf_1_2_1, i16 %X_buf_1_2_2, i16 %X_buf_2_0_0, i16 %X_buf_2_0_1, i16 %X_buf_2_0_2, i16 %X_buf_2_1_0, i16 %X_buf_2_1_1, i16 %X_buf_2_1_2, i16 %X_buf_2_2_0, i16 %X_buf_2_2_1, i16 %X_buf_2_2_2, i16 %W_buf_0_0_0_load, i28 %lhs_1, i16 %W_buf_0_0_1_load, i16 %W_buf_0_0_2_load, i16 %W_buf_0_1_0_load, i16 %W_buf_0_1_1_load, i16 %W_buf_0_1_2_load, i16 %W_buf_0_2_0_load, i16 %W_buf_0_2_1_load, i16 %W_buf_0_2_2_load, i16 %W_buf_1_0_0_load, i16 %W_buf_1_0_1_load, i16 %W_buf_1_0_2_load, i16 %W_buf_1_1_0_load, i16 %W_buf_1_1_1_load, i16 %W_buf_1_1_2_load, i16 %W_buf_1_2_0_load, i16 %W_buf_1_2_1_load, i16 %W_buf_1_2_2_load, i16 %W_buf_2_0_0_load, i16 %W_buf_2_0_1_load, i16 %W_buf_2_0_2_load, i16 %W_buf_2_1_0_load, i16 %W_buf_2_1_1_load, i16 %W_buf_2_1_2_load, i16 %W_buf_2_2_0_load, i16 %W_buf_2_2_1_load, i16 %W_buf_2_2_2_load" [utils.cpp:95]   --->   Operation 110 'call' 'call_ln95' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 111 [1/1] (0.00ns)   --->   "%or_ln80 = or i3 %trunc_ln80, i3 1" [utils.cpp:80]   --->   Operation 111 'or' 'or_ln80' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 112 [1/1] (0.00ns)   --->   "%or_ln80_cast = zext i3 %or_ln80" [utils.cpp:80]   --->   Operation 112 'zext' 'or_ln80_cast' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 113 [1/1] (0.00ns)   --->   "%B_buf_addr_1 = getelementptr i16 %B_buf, i64 0, i64 %or_ln80_cast" [utils.cpp:80]   --->   Operation 113 'getelementptr' 'B_buf_addr_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 114 [2/2] (2.32ns)   --->   "%B_buf_load_1 = load i3 %B_buf_addr_1" [utils.cpp:80]   --->   Operation 114 'load' 'B_buf_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_4 : Operation 115 [1/1] (0.00ns)   --->   "%W_buf_0_0_0_addr_1 = getelementptr i16 %W_buf_0_0_0, i64 0, i64 %or_ln80_cast" [utils.cpp:80]   --->   Operation 115 'getelementptr' 'W_buf_0_0_0_addr_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 116 [2/2] (2.32ns)   --->   "%W_buf_0_0_0_load_1 = load i3 %W_buf_0_0_0_addr_1" [utils.cpp:80]   --->   Operation 116 'load' 'W_buf_0_0_0_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_4 : Operation 117 [1/1] (0.00ns)   --->   "%W_buf_0_0_1_addr_1 = getelementptr i16 %W_buf_0_0_1, i64 0, i64 %or_ln80_cast" [utils.cpp:80]   --->   Operation 117 'getelementptr' 'W_buf_0_0_1_addr_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 118 [2/2] (2.32ns)   --->   "%W_buf_0_0_1_load_1 = load i3 %W_buf_0_0_1_addr_1" [utils.cpp:80]   --->   Operation 118 'load' 'W_buf_0_0_1_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_4 : Operation 119 [1/1] (0.00ns)   --->   "%W_buf_0_0_2_addr_1 = getelementptr i16 %W_buf_0_0_2, i64 0, i64 %or_ln80_cast" [utils.cpp:80]   --->   Operation 119 'getelementptr' 'W_buf_0_0_2_addr_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 120 [2/2] (2.32ns)   --->   "%W_buf_0_0_2_load_1 = load i3 %W_buf_0_0_2_addr_1" [utils.cpp:80]   --->   Operation 120 'load' 'W_buf_0_0_2_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_4 : Operation 121 [1/1] (0.00ns)   --->   "%W_buf_0_1_0_addr_1 = getelementptr i16 %W_buf_0_1_0, i64 0, i64 %or_ln80_cast" [utils.cpp:80]   --->   Operation 121 'getelementptr' 'W_buf_0_1_0_addr_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 122 [2/2] (2.32ns)   --->   "%W_buf_0_1_0_load_1 = load i3 %W_buf_0_1_0_addr_1" [utils.cpp:80]   --->   Operation 122 'load' 'W_buf_0_1_0_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_4 : Operation 123 [1/1] (0.00ns)   --->   "%W_buf_0_1_1_addr_1 = getelementptr i16 %W_buf_0_1_1, i64 0, i64 %or_ln80_cast" [utils.cpp:80]   --->   Operation 123 'getelementptr' 'W_buf_0_1_1_addr_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 124 [2/2] (2.32ns)   --->   "%W_buf_0_1_1_load_1 = load i3 %W_buf_0_1_1_addr_1" [utils.cpp:80]   --->   Operation 124 'load' 'W_buf_0_1_1_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_4 : Operation 125 [1/1] (0.00ns)   --->   "%W_buf_0_1_2_addr_1 = getelementptr i16 %W_buf_0_1_2, i64 0, i64 %or_ln80_cast" [utils.cpp:80]   --->   Operation 125 'getelementptr' 'W_buf_0_1_2_addr_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 126 [2/2] (2.32ns)   --->   "%W_buf_0_1_2_load_1 = load i3 %W_buf_0_1_2_addr_1" [utils.cpp:80]   --->   Operation 126 'load' 'W_buf_0_1_2_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_4 : Operation 127 [1/1] (0.00ns)   --->   "%W_buf_0_2_0_addr_1 = getelementptr i16 %W_buf_0_2_0, i64 0, i64 %or_ln80_cast" [utils.cpp:80]   --->   Operation 127 'getelementptr' 'W_buf_0_2_0_addr_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 128 [2/2] (2.32ns)   --->   "%W_buf_0_2_0_load_1 = load i3 %W_buf_0_2_0_addr_1" [utils.cpp:80]   --->   Operation 128 'load' 'W_buf_0_2_0_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_4 : Operation 129 [1/1] (0.00ns)   --->   "%W_buf_0_2_1_addr_1 = getelementptr i16 %W_buf_0_2_1, i64 0, i64 %or_ln80_cast" [utils.cpp:80]   --->   Operation 129 'getelementptr' 'W_buf_0_2_1_addr_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 130 [2/2] (2.32ns)   --->   "%W_buf_0_2_1_load_1 = load i3 %W_buf_0_2_1_addr_1" [utils.cpp:80]   --->   Operation 130 'load' 'W_buf_0_2_1_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_4 : Operation 131 [1/1] (0.00ns)   --->   "%W_buf_0_2_2_addr_1 = getelementptr i16 %W_buf_0_2_2, i64 0, i64 %or_ln80_cast" [utils.cpp:80]   --->   Operation 131 'getelementptr' 'W_buf_0_2_2_addr_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 132 [2/2] (2.32ns)   --->   "%W_buf_0_2_2_load_1 = load i3 %W_buf_0_2_2_addr_1" [utils.cpp:80]   --->   Operation 132 'load' 'W_buf_0_2_2_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_4 : Operation 133 [1/1] (0.00ns)   --->   "%W_buf_1_0_0_addr_1 = getelementptr i16 %W_buf_1_0_0, i64 0, i64 %or_ln80_cast" [utils.cpp:80]   --->   Operation 133 'getelementptr' 'W_buf_1_0_0_addr_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 134 [2/2] (2.32ns)   --->   "%W_buf_1_0_0_load_1 = load i3 %W_buf_1_0_0_addr_1" [utils.cpp:80]   --->   Operation 134 'load' 'W_buf_1_0_0_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_4 : Operation 135 [1/1] (0.00ns)   --->   "%W_buf_1_0_1_addr_1 = getelementptr i16 %W_buf_1_0_1, i64 0, i64 %or_ln80_cast" [utils.cpp:80]   --->   Operation 135 'getelementptr' 'W_buf_1_0_1_addr_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 136 [2/2] (2.32ns)   --->   "%W_buf_1_0_1_load_1 = load i3 %W_buf_1_0_1_addr_1" [utils.cpp:80]   --->   Operation 136 'load' 'W_buf_1_0_1_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_4 : Operation 137 [1/1] (0.00ns)   --->   "%W_buf_1_0_2_addr_1 = getelementptr i16 %W_buf_1_0_2, i64 0, i64 %or_ln80_cast" [utils.cpp:80]   --->   Operation 137 'getelementptr' 'W_buf_1_0_2_addr_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 138 [2/2] (2.32ns)   --->   "%W_buf_1_0_2_load_1 = load i3 %W_buf_1_0_2_addr_1" [utils.cpp:80]   --->   Operation 138 'load' 'W_buf_1_0_2_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_4 : Operation 139 [1/1] (0.00ns)   --->   "%W_buf_1_1_0_addr_1 = getelementptr i16 %W_buf_1_1_0, i64 0, i64 %or_ln80_cast" [utils.cpp:80]   --->   Operation 139 'getelementptr' 'W_buf_1_1_0_addr_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 140 [2/2] (2.32ns)   --->   "%W_buf_1_1_0_load_1 = load i3 %W_buf_1_1_0_addr_1" [utils.cpp:80]   --->   Operation 140 'load' 'W_buf_1_1_0_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_4 : Operation 141 [1/1] (0.00ns)   --->   "%W_buf_1_1_1_addr_1 = getelementptr i16 %W_buf_1_1_1, i64 0, i64 %or_ln80_cast" [utils.cpp:80]   --->   Operation 141 'getelementptr' 'W_buf_1_1_1_addr_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 142 [2/2] (2.32ns)   --->   "%W_buf_1_1_1_load_1 = load i3 %W_buf_1_1_1_addr_1" [utils.cpp:80]   --->   Operation 142 'load' 'W_buf_1_1_1_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_4 : Operation 143 [1/1] (0.00ns)   --->   "%W_buf_1_1_2_addr_1 = getelementptr i16 %W_buf_1_1_2, i64 0, i64 %or_ln80_cast" [utils.cpp:80]   --->   Operation 143 'getelementptr' 'W_buf_1_1_2_addr_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 144 [2/2] (2.32ns)   --->   "%W_buf_1_1_2_load_1 = load i3 %W_buf_1_1_2_addr_1" [utils.cpp:80]   --->   Operation 144 'load' 'W_buf_1_1_2_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_4 : Operation 145 [1/1] (0.00ns)   --->   "%W_buf_1_2_0_addr_1 = getelementptr i16 %W_buf_1_2_0, i64 0, i64 %or_ln80_cast" [utils.cpp:80]   --->   Operation 145 'getelementptr' 'W_buf_1_2_0_addr_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 146 [2/2] (2.32ns)   --->   "%W_buf_1_2_0_load_1 = load i3 %W_buf_1_2_0_addr_1" [utils.cpp:80]   --->   Operation 146 'load' 'W_buf_1_2_0_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_4 : Operation 147 [1/1] (0.00ns)   --->   "%W_buf_1_2_1_addr_1 = getelementptr i16 %W_buf_1_2_1, i64 0, i64 %or_ln80_cast" [utils.cpp:80]   --->   Operation 147 'getelementptr' 'W_buf_1_2_1_addr_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 148 [2/2] (2.32ns)   --->   "%W_buf_1_2_1_load_1 = load i3 %W_buf_1_2_1_addr_1" [utils.cpp:80]   --->   Operation 148 'load' 'W_buf_1_2_1_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_4 : Operation 149 [1/1] (0.00ns)   --->   "%W_buf_1_2_2_addr_1 = getelementptr i16 %W_buf_1_2_2, i64 0, i64 %or_ln80_cast" [utils.cpp:80]   --->   Operation 149 'getelementptr' 'W_buf_1_2_2_addr_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 150 [2/2] (2.32ns)   --->   "%W_buf_1_2_2_load_1 = load i3 %W_buf_1_2_2_addr_1" [utils.cpp:80]   --->   Operation 150 'load' 'W_buf_1_2_2_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_4 : Operation 151 [1/1] (0.00ns)   --->   "%W_buf_2_0_0_addr_1 = getelementptr i16 %W_buf_2_0_0, i64 0, i64 %or_ln80_cast" [utils.cpp:80]   --->   Operation 151 'getelementptr' 'W_buf_2_0_0_addr_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 152 [2/2] (2.32ns)   --->   "%W_buf_2_0_0_load_1 = load i3 %W_buf_2_0_0_addr_1" [utils.cpp:80]   --->   Operation 152 'load' 'W_buf_2_0_0_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_4 : Operation 153 [1/1] (0.00ns)   --->   "%W_buf_2_0_1_addr_1 = getelementptr i16 %W_buf_2_0_1, i64 0, i64 %or_ln80_cast" [utils.cpp:80]   --->   Operation 153 'getelementptr' 'W_buf_2_0_1_addr_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 154 [2/2] (2.32ns)   --->   "%W_buf_2_0_1_load_1 = load i3 %W_buf_2_0_1_addr_1" [utils.cpp:80]   --->   Operation 154 'load' 'W_buf_2_0_1_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_4 : Operation 155 [1/1] (0.00ns)   --->   "%W_buf_2_0_2_addr_1 = getelementptr i16 %W_buf_2_0_2, i64 0, i64 %or_ln80_cast" [utils.cpp:80]   --->   Operation 155 'getelementptr' 'W_buf_2_0_2_addr_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 156 [2/2] (2.32ns)   --->   "%W_buf_2_0_2_load_1 = load i3 %W_buf_2_0_2_addr_1" [utils.cpp:80]   --->   Operation 156 'load' 'W_buf_2_0_2_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_4 : Operation 157 [1/1] (0.00ns)   --->   "%W_buf_2_1_0_addr_1 = getelementptr i16 %W_buf_2_1_0, i64 0, i64 %or_ln80_cast" [utils.cpp:80]   --->   Operation 157 'getelementptr' 'W_buf_2_1_0_addr_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 158 [2/2] (2.32ns)   --->   "%W_buf_2_1_0_load_1 = load i3 %W_buf_2_1_0_addr_1" [utils.cpp:80]   --->   Operation 158 'load' 'W_buf_2_1_0_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_4 : Operation 159 [1/1] (0.00ns)   --->   "%W_buf_2_1_1_addr_1 = getelementptr i16 %W_buf_2_1_1, i64 0, i64 %or_ln80_cast" [utils.cpp:80]   --->   Operation 159 'getelementptr' 'W_buf_2_1_1_addr_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 160 [2/2] (2.32ns)   --->   "%W_buf_2_1_1_load_1 = load i3 %W_buf_2_1_1_addr_1" [utils.cpp:80]   --->   Operation 160 'load' 'W_buf_2_1_1_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_4 : Operation 161 [1/1] (0.00ns)   --->   "%W_buf_2_1_2_addr_1 = getelementptr i16 %W_buf_2_1_2, i64 0, i64 %or_ln80_cast" [utils.cpp:80]   --->   Operation 161 'getelementptr' 'W_buf_2_1_2_addr_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 162 [2/2] (2.32ns)   --->   "%W_buf_2_1_2_load_1 = load i3 %W_buf_2_1_2_addr_1" [utils.cpp:80]   --->   Operation 162 'load' 'W_buf_2_1_2_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_4 : Operation 163 [1/1] (0.00ns)   --->   "%W_buf_2_2_0_addr_1 = getelementptr i16 %W_buf_2_2_0, i64 0, i64 %or_ln80_cast" [utils.cpp:80]   --->   Operation 163 'getelementptr' 'W_buf_2_2_0_addr_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 164 [2/2] (2.32ns)   --->   "%W_buf_2_2_0_load_1 = load i3 %W_buf_2_2_0_addr_1" [utils.cpp:80]   --->   Operation 164 'load' 'W_buf_2_2_0_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_4 : Operation 165 [1/1] (0.00ns)   --->   "%W_buf_2_2_1_addr_1 = getelementptr i16 %W_buf_2_2_1, i64 0, i64 %or_ln80_cast" [utils.cpp:80]   --->   Operation 165 'getelementptr' 'W_buf_2_2_1_addr_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 166 [2/2] (2.32ns)   --->   "%W_buf_2_2_1_load_1 = load i3 %W_buf_2_2_1_addr_1" [utils.cpp:80]   --->   Operation 166 'load' 'W_buf_2_2_1_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_4 : Operation 167 [1/1] (0.00ns)   --->   "%W_buf_2_2_2_addr_1 = getelementptr i16 %W_buf_2_2_2, i64 0, i64 %or_ln80_cast" [utils.cpp:80]   --->   Operation 167 'getelementptr' 'W_buf_2_2_2_addr_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 168 [2/2] (2.32ns)   --->   "%W_buf_2_2_2_load_1 = load i3 %W_buf_2_2_2_addr_1" [utils.cpp:80]   --->   Operation 168 'load' 'W_buf_2_2_2_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+
+State 5 <SV = 4> <Delay = 2.32>
+ST_5 : Operation 169 [1/1] (0.00ns)   --->   "%tmp_36 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i3.i5, i3 %or_ln80, i5 0" [utils.cpp:95]   --->   Operation 169 'bitconcatenate' 'tmp_36' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 170 [1/1] (0.00ns)   --->   "%zext_ln95_6 = zext i8 %tmp_36" [utils.cpp:95]   --->   Operation 170 'zext' 'zext_ln95_6' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 171 [1/1] (0.00ns)   --->   "%tmp_40 = bitconcatenate i5 @_ssdm_op_BitConcatenate.i5.i3.i2, i3 %or_ln80, i2 0" [utils.cpp:95]   --->   Operation 171 'bitconcatenate' 'tmp_40' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 172 [1/1] (0.00ns)   --->   "%zext_ln95_7 = zext i5 %tmp_40" [utils.cpp:95]   --->   Operation 172 'zext' 'zext_ln95_7' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 173 [1/1] (1.91ns)   --->   "%sub_ln95_1 = sub i9 %zext_ln95_6, i9 %zext_ln95_7" [utils.cpp:95]   --->   Operation 173 'sub' 'sub_ln95_1' <Predicate = true> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 174 [1/2] (2.32ns)   --->   "%B_buf_load_1 = load i3 %B_buf_addr_1" [utils.cpp:80]   --->   Operation 174 'load' 'B_buf_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_5 : Operation 175 [1/2] (2.32ns)   --->   "%W_buf_0_0_0_load_1 = load i3 %W_buf_0_0_0_addr_1" [utils.cpp:80]   --->   Operation 175 'load' 'W_buf_0_0_0_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_5 : Operation 176 [1/1] (0.00ns)   --->   "%lhs_s = bitconcatenate i28 @_ssdm_op_BitConcatenate.i28.i16.i12, i16 %B_buf_load_1, i12 0" [utils.cpp:80]   --->   Operation 176 'bitconcatenate' 'lhs_s' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 177 [1/2] (2.32ns)   --->   "%W_buf_0_0_1_load_1 = load i3 %W_buf_0_0_1_addr_1" [utils.cpp:80]   --->   Operation 177 'load' 'W_buf_0_0_1_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_5 : Operation 178 [1/2] (2.32ns)   --->   "%W_buf_0_0_2_load_1 = load i3 %W_buf_0_0_2_addr_1" [utils.cpp:80]   --->   Operation 178 'load' 'W_buf_0_0_2_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_5 : Operation 179 [1/2] (2.32ns)   --->   "%W_buf_0_1_0_load_1 = load i3 %W_buf_0_1_0_addr_1" [utils.cpp:80]   --->   Operation 179 'load' 'W_buf_0_1_0_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_5 : Operation 180 [1/2] (2.32ns)   --->   "%W_buf_0_1_1_load_1 = load i3 %W_buf_0_1_1_addr_1" [utils.cpp:80]   --->   Operation 180 'load' 'W_buf_0_1_1_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_5 : Operation 181 [1/2] (2.32ns)   --->   "%W_buf_0_1_2_load_1 = load i3 %W_buf_0_1_2_addr_1" [utils.cpp:80]   --->   Operation 181 'load' 'W_buf_0_1_2_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_5 : Operation 182 [1/2] (2.32ns)   --->   "%W_buf_0_2_0_load_1 = load i3 %W_buf_0_2_0_addr_1" [utils.cpp:80]   --->   Operation 182 'load' 'W_buf_0_2_0_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_5 : Operation 183 [1/2] (2.32ns)   --->   "%W_buf_0_2_1_load_1 = load i3 %W_buf_0_2_1_addr_1" [utils.cpp:80]   --->   Operation 183 'load' 'W_buf_0_2_1_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_5 : Operation 184 [1/2] (2.32ns)   --->   "%W_buf_0_2_2_load_1 = load i3 %W_buf_0_2_2_addr_1" [utils.cpp:80]   --->   Operation 184 'load' 'W_buf_0_2_2_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_5 : Operation 185 [1/2] (2.32ns)   --->   "%W_buf_1_0_0_load_1 = load i3 %W_buf_1_0_0_addr_1" [utils.cpp:80]   --->   Operation 185 'load' 'W_buf_1_0_0_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_5 : Operation 186 [1/2] (2.32ns)   --->   "%W_buf_1_0_1_load_1 = load i3 %W_buf_1_0_1_addr_1" [utils.cpp:80]   --->   Operation 186 'load' 'W_buf_1_0_1_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_5 : Operation 187 [1/2] (2.32ns)   --->   "%W_buf_1_0_2_load_1 = load i3 %W_buf_1_0_2_addr_1" [utils.cpp:80]   --->   Operation 187 'load' 'W_buf_1_0_2_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_5 : Operation 188 [1/2] (2.32ns)   --->   "%W_buf_1_1_0_load_1 = load i3 %W_buf_1_1_0_addr_1" [utils.cpp:80]   --->   Operation 188 'load' 'W_buf_1_1_0_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_5 : Operation 189 [1/2] (2.32ns)   --->   "%W_buf_1_1_1_load_1 = load i3 %W_buf_1_1_1_addr_1" [utils.cpp:80]   --->   Operation 189 'load' 'W_buf_1_1_1_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_5 : Operation 190 [1/2] (2.32ns)   --->   "%W_buf_1_1_2_load_1 = load i3 %W_buf_1_1_2_addr_1" [utils.cpp:80]   --->   Operation 190 'load' 'W_buf_1_1_2_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_5 : Operation 191 [1/2] (2.32ns)   --->   "%W_buf_1_2_0_load_1 = load i3 %W_buf_1_2_0_addr_1" [utils.cpp:80]   --->   Operation 191 'load' 'W_buf_1_2_0_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_5 : Operation 192 [1/2] (2.32ns)   --->   "%W_buf_1_2_1_load_1 = load i3 %W_buf_1_2_1_addr_1" [utils.cpp:80]   --->   Operation 192 'load' 'W_buf_1_2_1_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_5 : Operation 193 [1/2] (2.32ns)   --->   "%W_buf_1_2_2_load_1 = load i3 %W_buf_1_2_2_addr_1" [utils.cpp:80]   --->   Operation 193 'load' 'W_buf_1_2_2_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_5 : Operation 194 [1/2] (2.32ns)   --->   "%W_buf_2_0_0_load_1 = load i3 %W_buf_2_0_0_addr_1" [utils.cpp:80]   --->   Operation 194 'load' 'W_buf_2_0_0_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_5 : Operation 195 [1/2] (2.32ns)   --->   "%W_buf_2_0_1_load_1 = load i3 %W_buf_2_0_1_addr_1" [utils.cpp:80]   --->   Operation 195 'load' 'W_buf_2_0_1_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_5 : Operation 196 [1/2] (2.32ns)   --->   "%W_buf_2_0_2_load_1 = load i3 %W_buf_2_0_2_addr_1" [utils.cpp:80]   --->   Operation 196 'load' 'W_buf_2_0_2_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_5 : Operation 197 [1/2] (2.32ns)   --->   "%W_buf_2_1_0_load_1 = load i3 %W_buf_2_1_0_addr_1" [utils.cpp:80]   --->   Operation 197 'load' 'W_buf_2_1_0_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_5 : Operation 198 [1/2] (2.32ns)   --->   "%W_buf_2_1_1_load_1 = load i3 %W_buf_2_1_1_addr_1" [utils.cpp:80]   --->   Operation 198 'load' 'W_buf_2_1_1_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_5 : Operation 199 [1/2] (2.32ns)   --->   "%W_buf_2_1_2_load_1 = load i3 %W_buf_2_1_2_addr_1" [utils.cpp:80]   --->   Operation 199 'load' 'W_buf_2_1_2_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_5 : Operation 200 [1/2] (2.32ns)   --->   "%W_buf_2_2_0_load_1 = load i3 %W_buf_2_2_0_addr_1" [utils.cpp:80]   --->   Operation 200 'load' 'W_buf_2_2_0_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_5 : Operation 201 [1/2] (2.32ns)   --->   "%W_buf_2_2_1_load_1 = load i3 %W_buf_2_2_1_addr_1" [utils.cpp:80]   --->   Operation 201 'load' 'W_buf_2_2_1_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_5 : Operation 202 [1/2] (2.32ns)   --->   "%W_buf_2_2_2_load_1 = load i3 %W_buf_2_2_2_addr_1" [utils.cpp:80]   --->   Operation 202 'load' 'W_buf_2_2_2_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_5 : Operation 203 [2/2] (0.00ns)   --->   "%call_ln95 = call void @conv_3x3_Pipeline_VITIS_LOOP_83_2_VITIS_LOOP_85_33, i9 %sub_ln95_1, i16 %Y_buf, i16 %X_buf_0_0_0, i16 %X_buf_0_0_1, i16 %X_buf_0_0_2, i16 %X_buf_0_1_0, i16 %X_buf_0_1_1, i16 %X_buf_0_1_2, i16 %X_buf_0_2_0, i16 %X_buf_0_2_1, i16 %X_buf_0_2_2, i16 %X_buf_1_0_0, i16 %X_buf_1_0_1, i16 %X_buf_1_0_2, i16 %X_buf_1_1_0, i16 %X_buf_1_1_1, i16 %X_buf_1_1_2, i16 %X_buf_1_2_0, i16 %X_buf_1_2_1, i16 %X_buf_1_2_2, i16 %X_buf_2_0_0, i16 %X_buf_2_0_1, i16 %X_buf_2_0_2, i16 %X_buf_2_1_0, i16 %X_buf_2_1_1, i16 %X_buf_2_1_2, i16 %X_buf_2_2_0, i16 %X_buf_2_2_1, i16 %X_buf_2_2_2, i16 %W_buf_0_0_0_load_1, i28 %lhs_s, i16 %W_buf_0_0_1_load_1, i16 %W_buf_0_0_2_load_1, i16 %W_buf_0_1_0_load_1, i16 %W_buf_0_1_1_load_1, i16 %W_buf_0_1_2_load_1, i16 %W_buf_0_2_0_load_1, i16 %W_buf_0_2_1_load_1, i16 %W_buf_0_2_2_load_1, i16 %W_buf_1_0_0_load_1, i16 %W_buf_1_0_1_load_1, i16 %W_buf_1_0_2_load_1, i16 %W_buf_1_1_0_load_1, i16 %W_buf_1_1_1_load_1, i16 %W_buf_1_1_2_load_1, i16 %W_buf_1_2_0_load_1, i16 %W_buf_1_2_1_load_1, i16 %W_buf_1_2_2_load_1, i16 %W_buf_2_0_0_load_1, i16 %W_buf_2_0_1_load_1, i16 %W_buf_2_0_2_load_1, i16 %W_buf_2_1_0_load_1, i16 %W_buf_2_1_1_load_1, i16 %W_buf_2_1_2_load_1, i16 %W_buf_2_2_0_load_1, i16 %W_buf_2_2_1_load_1, i16 %W_buf_2_2_2_load_1" [utils.cpp:95]   --->   Operation 203 'call' 'call_ln95' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 204 [1/1] (0.00ns)   --->   "%specloopname_ln80 = specloopname void @_ssdm_op_SpecLoopName, void @empty_9" [utils.cpp:80]   --->   Operation 204 'specloopname' 'specloopname_ln80' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 205 [1/2] (0.00ns)   --->   "%call_ln95 = call void @conv_3x3_Pipeline_VITIS_LOOP_83_2_VITIS_LOOP_85_33, i9 %sub_ln95_1, i16 %Y_buf, i16 %X_buf_0_0_0, i16 %X_buf_0_0_1, i16 %X_buf_0_0_2, i16 %X_buf_0_1_0, i16 %X_buf_0_1_1, i16 %X_buf_0_1_2, i16 %X_buf_0_2_0, i16 %X_buf_0_2_1, i16 %X_buf_0_2_2, i16 %X_buf_1_0_0, i16 %X_buf_1_0_1, i16 %X_buf_1_0_2, i16 %X_buf_1_1_0, i16 %X_buf_1_1_1, i16 %X_buf_1_1_2, i16 %X_buf_1_2_0, i16 %X_buf_1_2_1, i16 %X_buf_1_2_2, i16 %X_buf_2_0_0, i16 %X_buf_2_0_1, i16 %X_buf_2_0_2, i16 %X_buf_2_1_0, i16 %X_buf_2_1_1, i16 %X_buf_2_1_2, i16 %X_buf_2_2_0, i16 %X_buf_2_2_1, i16 %X_buf_2_2_2, i16 %W_buf_0_0_0_load_1, i28 %lhs_s, i16 %W_buf_0_0_1_load_1, i16 %W_buf_0_0_2_load_1, i16 %W_buf_0_1_0_load_1, i16 %W_buf_0_1_1_load_1, i16 %W_buf_0_1_2_load_1, i16 %W_buf_0_2_0_load_1, i16 %W_buf_0_2_1_load_1, i16 %W_buf_0_2_2_load_1, i16 %W_buf_1_0_0_load_1, i16 %W_buf_1_0_1_load_1, i16 %W_buf_1_0_2_load_1, i16 %W_buf_1_1_0_load_1, i16 %W_buf_1_1_1_load_1, i16 %W_buf_1_1_2_load_1, i16 %W_buf_1_2_0_load_1, i16 %W_buf_1_2_1_load_1, i16 %W_buf_1_2_2_load_1, i16 %W_buf_2_0_0_load_1, i16 %W_buf_2_0_1_load_1, i16 %W_buf_2_0_2_load_1, i16 %W_buf_2_1_0_load_1, i16 %W_buf_2_1_1_load_1, i16 %W_buf_2_1_2_load_1, i16 %W_buf_2_2_0_load_1, i16 %W_buf_2_2_1_load_1, i16 %W_buf_2_2_2_load_1" [utils.cpp:95]   --->   Operation 205 'call' 'call_ln95' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 206 [1/1] (0.00ns)   --->   "%br_ln80 = br void %VITIS_LOOP_83_2" [utils.cpp:80]   --->   Operation 206 'br' 'br_ln80' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 1.59ns
+The critical path consists of the following:
+	'alloca' operation ('f') [57]  (0 ns)
+	'store' operation ('store_ln80', utils.cpp:80) of constant 0 on local variable 'f' [58]  (1.59 ns)
+
+ <State 2>: 3.32ns
+The critical path consists of the following:
+	'load' operation ('f', utils.cpp:80) on local variable 'f' [61]  (0 ns)
+	'add' operation ('add_ln80', utils.cpp:80) [197]  (1.74 ns)
+	'store' operation ('store_ln80', utils.cpp:80) of variable 'add_ln80', utils.cpp:80 on local variable 'f' [198]  (1.59 ns)
+
+ <State 3>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('B_buf_load', utils.cpp:80) on array 'B_buf' [75]  (2.32 ns)
+
+ <State 4>: 2.32ns
+The critical path consists of the following:
+	'or' operation ('or_ln80', utils.cpp:80) [132]  (0 ns)
+	'getelementptr' operation ('B_buf_addr_1', utils.cpp:80) [139]  (0 ns)
+	'load' operation ('B_buf_load_1', utils.cpp:80) on array 'B_buf' [140]  (2.32 ns)
+
+ <State 5>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('B_buf_load_1', utils.cpp:80) on array 'B_buf' [140]  (2.32 ns)
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

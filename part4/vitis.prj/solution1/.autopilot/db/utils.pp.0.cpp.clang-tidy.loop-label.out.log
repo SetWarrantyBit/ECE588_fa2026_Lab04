@@ -1,0 +1,105 @@
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part4/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp:33966:7: warning: Added loop label VITIS_LOOP_1211_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1211_1: 
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part4/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp:33966:7: note: FIX-IT applied suggested code changes
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part4/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp:34940:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part4/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp:34940:5: note: FIX-IT applied suggested code changes
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part4/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp:34954:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part4/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp:34954:5: note: FIX-IT applied suggested code changes
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part4/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp:34968:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part4/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp:34968:5: note: FIX-IT applied suggested code changes
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part4/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp:36567:7: warning: Added loop label VITIS_LOOP_1245_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1245_1: 
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part4/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp:36567:7: note: FIX-IT applied suggested code changes
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part4/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp:38395:5: warning: Added loop label VITIS_LOOP_29_1:   [xilinx-label-all-loops]
+    for (int c = 0; c < 3; c++)
+    ^~~
+    VITIS_LOOP_29_1: 
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part4/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp:38395:5: note: FIX-IT applied suggested code changes
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part4/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp:38397:9: warning: Added loop label VITIS_LOOP_31_2:   [xilinx-label-all-loops]
+        for (int i = 0; i < 28 + (2 * 1); i++)
+        ^~~
+        VITIS_LOOP_31_2: 
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part4/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp:38397:9: note: FIX-IT applied suggested code changes
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part4/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp:38399:13: warning: Added loop label VITIS_LOOP_33_3:   [xilinx-label-all-loops]
+            for (int j = 0; j < 28 + (2 * 1); j++)
+            ^~~
+            VITIS_LOOP_33_3: 
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part4/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp:38399:13: note: FIX-IT applied suggested code changes
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part4/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp:38426:5: warning: Added loop label VITIS_LOOP_60_1:   [xilinx-label-all-loops]
+    for (int f = 0; f < 8; f++)
+    ^~~
+    VITIS_LOOP_60_1: 
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part4/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp:38426:5: note: FIX-IT applied suggested code changes
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part4/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp:38428:9: warning: Added loop label VITIS_LOOP_62_2:   [xilinx-label-all-loops]
+        for (int c = 0; c < 3; c++)
+        ^~~
+        VITIS_LOOP_62_2: 
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part4/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp:38428:9: note: FIX-IT applied suggested code changes
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part4/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp:38429:13: warning: Added loop label VITIS_LOOP_63_3:   [xilinx-label-all-loops]
+            for (int kh = 0; kh < 3; kh++)
+            ^~~
+            VITIS_LOOP_63_3: 
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part4/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp:38429:13: note: FIX-IT applied suggested code changes
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part4/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp:38430:17: warning: Added loop label VITIS_LOOP_64_4:   [xilinx-label-all-loops]
+                for (int kw = 0; kw < 3; kw++)
+                ^~~
+                VITIS_LOOP_64_4: 
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part4/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp:38430:17: note: FIX-IT applied suggested code changes
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part4/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp:38446:5: warning: Added loop label VITIS_LOOP_80_1:   [xilinx-label-all-loops]
+    for (int f = 0; f < 8; f++)
+    ^~~
+    VITIS_LOOP_80_1: 
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part4/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp:38446:5: note: FIX-IT applied suggested code changes
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part4/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp:38449:2: warning: Added loop label VITIS_LOOP_83_2:   [xilinx-label-all-loops]
+ for (int i = 0; i < 28 / 1; i++)
+ ^~~
+ VITIS_LOOP_83_2: 
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part4/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp:38449:2: note: FIX-IT applied suggested code changes
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part4/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp:38451:13: warning: Added loop label VITIS_LOOP_85_3:   [xilinx-label-all-loops]
+            for (int j = 0; j < 28 / 1; j++)
+            ^~~
+            VITIS_LOOP_85_3: 
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part4/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp:38451:13: note: FIX-IT applied suggested code changes
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part4/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp:38456:17: warning: Added loop label VITIS_LOOP_90_4:   [xilinx-label-all-loops]
+                for (int c = 0; c < 3; c++)
+                ^~~
+                VITIS_LOOP_90_4: 
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part4/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp:38456:17: note: FIX-IT applied suggested code changes
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part4/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp:38457:21: warning: Added loop label VITIS_LOOP_91_5:   [xilinx-label-all-loops]
+                    for (int kh = 0; kh < 3; kh++)
+                    ^~~
+                    VITIS_LOOP_91_5: 
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part4/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp:38457:21: note: FIX-IT applied suggested code changes
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part4/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp:38458:25: warning: Added loop label VITIS_LOOP_92_6:   [xilinx-label-all-loops]
+                        for (int kw = 0; kw < 3; kw++)
+                        ^~~
+                        VITIS_LOOP_92_6: 
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part4/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp:38458:25: note: FIX-IT applied suggested code changes
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part4/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp:38482:5: warning: Added loop label VITIS_LOOP_116_1:   [xilinx-label-all-loops]
+    for (int f = 0; f < 8; f++)
+    ^~~
+    VITIS_LOOP_116_1: 
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part4/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp:38482:5: note: FIX-IT applied suggested code changes
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part4/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp:38483:9: warning: Added loop label VITIS_LOOP_117_2:   [xilinx-label-all-loops]
+        for (int i = 0; i < 28 / 1; i++)
+        ^~~
+        VITIS_LOOP_117_2: 
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part4/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp:38483:9: note: FIX-IT applied suggested code changes
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part4/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp:38484:13: warning: Added loop label VITIS_LOOP_118_3:   [xilinx-label-all-loops]
+            for (int j = 0; j < 28 / 1; j++)
+            ^~~
+            VITIS_LOOP_118_3: 
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab04/part4/vitis.prj/solution1/.autopilot/db/utils.pp.0.cpp:38484:13: note: FIX-IT applied suggested code changes

@@ -1,0 +1,34 @@
+remark: utils.cpp:89:34: Loop 'VITIS_LOOP_89_4' is marked as complete unroll implied by the pipeline pragma
+remark: utils.cpp:90:38: Loop 'VITIS_LOOP_90_5' is marked as complete unroll implied by the pipeline pragma
+remark: utils.cpp:91:42: Loop 'VITIS_LOOP_91_6' is marked as complete unroll implied by the pipeline pragma
+remark: utils.cpp:77:0: Unrolling loop 'VITIS_LOOP_89_4' (utils.cpp:89:34) in function 'conv_3x3' completely with a factor of 3
+remark: utils.cpp:77:0: Unrolling loop 'VITIS_LOOP_90_5' (utils.cpp:90:38) in function 'conv_3x3' completely with a factor of 3
+remark: utils.cpp:77:0: Unrolling loop 'VITIS_LOOP_91_6' (utils.cpp:91:42) in function 'conv_3x3' completely with a factor of 3
+remark: utils.cpp:77:0: Unrolling loop 'VITIS_LOOP_91_6' (utils.cpp:91:42) in function 'conv_3x3' completely with a factor of 3
+remark: utils.cpp:77:0: Unrolling loop 'VITIS_LOOP_91_6' (utils.cpp:91:42) in function 'conv_3x3' completely with a factor of 3
+remark: utils.cpp:77:0: Unrolling loop 'VITIS_LOOP_90_5' (utils.cpp:90:38) in function 'conv_3x3' completely with a factor of 3
+remark: utils.cpp:77:0: Unrolling loop 'VITIS_LOOP_91_6' (utils.cpp:91:42) in function 'conv_3x3' completely with a factor of 3
+remark: utils.cpp:77:0: Unrolling loop 'VITIS_LOOP_91_6' (utils.cpp:91:42) in function 'conv_3x3' completely with a factor of 3
+remark: utils.cpp:77:0: Unrolling loop 'VITIS_LOOP_91_6' (utils.cpp:91:42) in function 'conv_3x3' completely with a factor of 3
+remark: utils.cpp:77:0: Unrolling loop 'VITIS_LOOP_90_5' (utils.cpp:90:38) in function 'conv_3x3' completely with a factor of 3
+remark: utils.cpp:77:0: Unrolling loop 'VITIS_LOOP_91_6' (utils.cpp:91:42) in function 'conv_3x3' completely with a factor of 3
+remark: utils.cpp:77:0: Unrolling loop 'VITIS_LOOP_91_6' (utils.cpp:91:42) in function 'conv_3x3' completely with a factor of 3
+remark: utils.cpp:77:0: Unrolling loop 'VITIS_LOOP_91_6' (utils.cpp:91:42) in function 'conv_3x3' completely with a factor of 3
+remark: tiled_conv.cpp:13:0: Inlining function 'load_input_tile_from_DRAM(float (*) [224][224], float (*) [30][30], int, int)' into 'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])'
+remark: tiled_conv.cpp:13:0: Inlining function 'load_layer_params_from_DRAM(float (*) [3][3][3], float*, float (*) [3][3][3], float*, int)' into 'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])'
+remark: tiled_conv.cpp:13:0: Inlining function 'store_output_tile_to_DRAM(float (*) [28][28], float (*) [224][224], int, int, int)' into 'tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224])'
+remark: tiled_conv.cpp:21:7: Applying array_partition to 'conv_in_buf': Complete partitioning on dimension 1. Cyclic partitioning with factor 3 on dimension 2. Cyclic partitioning with factor 3 on dimension 3.
+remark: tiled_conv.cpp:22:10: Applying array_partition to 'conv_wt_buf': Complete partitioning on dimension 2. Complete partitioning on dimension 3. Complete partitioning on dimension 4.
+remark: utils.cpp:60:22: Sequential read of length 432 has been inferred _XLX_SEP_ OldID=for.inc.i9.load.5,  _XLX_SEP_ scevgepseq weights wt VITIS_LOOP_60_1 utils.cpp:60:22 tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224]) 
+remark: utils.cpp:60:22: Sequential read of length 16 has been inferred _XLX_SEP_ OldID=for.inc38.i.load.2,  _XLX_SEP_ scevgep254seq biases wt VITIS_LOOP_60_1 utils.cpp:60:22 tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224]) 
+remark: utils.cpp:117:31: Sequential write of length 28 has been inferred _XLX_SEP_ OldID=for.body11.i.store.10,  _XLX_SEP_ scevgep255seq output_fm fm VITIS_LOOP_117_3 utils.cpp:117:31 tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224]) 
+remark: utils.cpp:42:42: Access load is in the conditional branch _XLX_SEP_ if.else.i.load.1 input_fm fm VITIS_LOOP_33_3 utils.cpp:33:30 tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224]) 
+remark: utils.cpp:117:31: Stride is incompatible _XLX_SEP_ scevgep255seq output_fm fm VITIS_LOOP_116_2 utils.cpp:116:27 tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224]) 
+remark: utils.cpp:60:22: Access is clobbered by load _XLX_SEP_ scevgep254seq biases wt tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224]) 
+remark: utils.cpp:60:22: Access is clobbered by load _XLX_SEP_ scevgepseq weights wt tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224]) 
+remark: utils.cpp:117:31: Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 _XLX_SEP_ scevgep255seq output_fm fm VITIS_LOOP_117_3 utils.cpp:117:31 tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224]) 
+remark: utils.cpp:60:22: Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 _XLX_SEP_ scevgep254seq biases wt VITIS_LOOP_60_1 utils.cpp:60:22 tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224]) 
+remark: utils.cpp:60:22: Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 _XLX_SEP_ scevgepseq weights wt VITIS_LOOP_64_4 utils.cpp:64:34 tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224]) 
+remark: utils.cpp:60:22: Could not burst due to multiple potential reads to the same bundle in the same region. _XLX_SEP_ seq  wt tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224]) 
+remark: utils.cpp:117:31: Multiple burst writes of length 28 and bit width 32 has been inferred. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. _XLX_SEP_ seq2  fm VITIS_LOOP_117_3 utils.cpp:117:31 tiled_conv(float (*) [224][224], float (*) [3][3][3], float*, float (*) [224][224]) 
+remark: utils.cpp:117:31: Multiple burst writes of length 28 and bit width 32 in loop 'VITIS_LOOP_117_3'(utils.cpp:117:31) has been inferred on bundle 'fm'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.

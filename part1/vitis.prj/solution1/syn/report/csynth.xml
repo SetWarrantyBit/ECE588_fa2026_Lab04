@@ -19,29 +19,29 @@
         </SummaryOfTimingAnalysis>
         <SummaryOfOverallLatency>
             <unit>clock cycles</unit>
-            <Best-caseLatency>6653249</Best-caseLatency>
-            <Average-caseLatency>6653249</Average-caseLatency>
-            <Worst-caseLatency>6653249</Worst-caseLatency>
-            <Best-caseRealTimeLatency>66.532 ms</Best-caseRealTimeLatency>
-            <Average-caseRealTimeLatency>66.532 ms</Average-caseRealTimeLatency>
-            <Worst-caseRealTimeLatency>66.532 ms</Worst-caseRealTimeLatency>
-            <Interval-min>6653250</Interval-min>
-            <Interval-max>6653250</Interval-max>
+            <Best-caseLatency>7422721</Best-caseLatency>
+            <Average-caseLatency>7422721</Average-caseLatency>
+            <Worst-caseLatency>7422721</Worst-caseLatency>
+            <Best-caseRealTimeLatency>74.227 ms</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>74.227 ms</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>74.227 ms</Worst-caseRealTimeLatency>
+            <Interval-min>7422722</Interval-min>
+            <Interval-max>7422722</Interval-max>
         </SummaryOfOverallLatency>
         <SummaryOfLoopLatency>
             <VITIS_LOOP_33_1_VITIS_LOOP_35_2>
                 <Slack>7.30</Slack>
-                <TripCount>16</TripCount>
-                <Latency>6653248</Latency>
-                <AbsoluteTimeLatency>66532480</AbsoluteTimeLatency>
-                <IterationLatency>415828</IterationLatency>
+                <TripCount>64</TripCount>
+                <Latency>7422720</Latency>
+                <AbsoluteTimeLatency>74227200</AbsoluteTimeLatency>
+                <IterationLatency>115980</IterationLatency>
                 <InstanceList/>
                 <VITIS_LOOP_46_3>
                     <Slack>7.30</Slack>
                     <TripCount>8</TripCount>
-                    <Latency>405656</Latency>
-                    <AbsoluteTimeLatency>4056560</AbsoluteTimeLatency>
-                    <IterationLatency>50707</IterationLatency>
+                    <Latency>113200</Latency>
+                    <AbsoluteTimeLatency>1132000</AbsoluteTimeLatency>
+                    <IterationLatency>14150</IterationLatency>
                     <InstanceList/>
                 </VITIS_LOOP_46_3>
             </VITIS_LOOP_33_1_VITIS_LOOP_35_2>
@@ -49,10 +49,10 @@
     </PerformanceEstimates>
     <AreaEstimates>
         <Resources>
-            <BRAM_18K>91</BRAM_18K>
+            <BRAM_18K>43</BRAM_18K>
             <DSP>136</DSP>
-            <FF>28238</FF>
-            <LUT>41615</LUT>
+            <FF>29875</FF>
+            <LUT>45434</LUT>
             <URAM>0</URAM>
         </Resources>
         <AvailableResources>
@@ -1366,39 +1366,55 @@
         </RtlPorts>
     </InterfaceSummary>
     <RTLDesignHierarchy>
-        <TopModule MAX_DEPTH="3">
+        <TopModule MAX_DEPTH="4">
             <ModuleName>tiled_conv</ModuleName>
             <InstancesList>
                 <Instance>
-                    <InstName>grp_tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3_fu_420</InstName>
+                    <InstName>grp_tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3_fu_412</InstName>
                     <ModuleName>tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>420</ID>
-                    <BindInstances>tmp_fu_804_p2 empty_fu_814_p2 mul_6ns_8ns_13_1_1_U3 sub_ln42_fu_868_p2 add_ln29_2_fu_659_p2 add_ln29_fu_710_p2 mul_2ns_19ns_20_1_1_U4 add_ln29_1_fu_1057_p2 add_ln31_fu_747_p2 tmp_mid1_fu_905_p2 p_mid1_fu_915_p2 mul_6ns_8ns_13_1_1_U5 sub_ln42_2_fu_987_p2 add_ln39_1_fu_1003_p2 add_ln39_fu_1013_p2 mul_6ns_8ns_13_1_1_U7 add_ln42_fu_1109_p2 add_ln42_1_fu_1119_p2 add_ln33_fu_780_p2 add_ln31_1_fu_671_p2</BindInstances>
+                    <ID>412</ID>
+                    <BindInstances>tmp_fu_810_p2 empty_fu_820_p2 mul_5ns_7ns_11_1_1_U4 sub_ln42_fu_874_p2 add_ln29_2_fu_659_p2 add_ln29_fu_710_p2 mul_2ns_19ns_20_1_1_U5 add_ln29_1_fu_1058_p2 add_ln31_fu_747_p2 tmp_mid1_fu_911_p2 p_mid1_fu_921_p2 mul_5ns_7ns_11_1_1_U6 sub_ln42_2_fu_993_p2 add_ln39_1_fu_1009_p2 add_ln39_fu_1019_p2 mul_5ns_7ns_11_1_1_U7 add_ln42_fu_1110_p2 add_ln42_1_fu_1120_p2 add_ln33_fu_786_p2 add_ln31_1_fu_671_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_tiled_conv_Pipeline_VITIS_LOOP_60_1_fu_458</InstName>
+                    <InstName>grp_tiled_conv_Pipeline_VITIS_LOOP_60_1_fu_450</InstName>
                     <ModuleName>tiled_conv_Pipeline_VITIS_LOOP_60_1</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>458</ID>
+                    <ID>450</ID>
                     <BindInstances>add_ln60_fu_913_p2 next_mul_fu_1340_p2 add_ln65_fu_926_p2 add_ln65_1_fu_947_p2 add_ln65_2_fu_962_p2 add_ln65_3_fu_977_p2 add_ln65_4_fu_992_p2 add_ln65_5_fu_1007_p2 add_ln65_6_fu_1022_p2 add_ln65_7_fu_1037_p2 add_ln65_8_fu_1052_p2 add_ln65_9_fu_1067_p2 add_ln65_10_fu_1082_p2 add_ln65_11_fu_1097_p2 add_ln65_12_fu_1112_p2 add_ln65_13_fu_1127_p2 add_ln65_14_fu_1142_p2 add_ln65_15_fu_1157_p2 add_ln65_16_fu_1172_p2 add_ln65_17_fu_1187_p2 add_ln65_18_fu_1202_p2 add_ln65_19_fu_1217_p2 add_ln65_20_fu_1232_p2 add_ln65_21_fu_1247_p2 add_ln65_22_fu_1262_p2 add_ln65_23_fu_1277_p2 add_ln65_24_fu_1292_p2 add_ln65_25_fu_1307_p2 add_ln65_26_fu_1322_p2 add_ln67_fu_1345_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_conv_3x3_fu_494</InstName>
+                    <InstName>grp_conv_3x3_fu_486</InstName>
                     <ModuleName>conv_3x3</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>494</ID>
-                    <BindInstances>indvars_iv_next75_fu_3115_p2 empty_44_fu_3120_p2 mul_6ns_8ns_13_1_1_U133 mul_6ns_8ns_13_1_1_U134 mul_6ns_8ns_13_1_1_U135 add_ln80_1_fu_2914_p2 add_ln80_fu_2926_p2 sub_ln94_fu_3222_p2 indvars_iv_next75_dup_fu_3067_p2 add_ln94_fu_3263_p2 indvars_iv_next75_mid1_fu_3295_p2 p_mid1_fu_3300_p2 mul_6ns_8ns_13_1_1_U136 add_ln92_2_fu_3359_p2 mul_6ns_8ns_13_1_1_U137 add_ln92_3_fu_3521_p2 mul_6ns_8ns_13_1_1_U138 add_ln92_4_fu_3545_p2 mul_6ns_8ns_13_1_1_U139 add_ln92_5_fu_3554_p2 add_ln92_6_fu_3590_p2 add_ln92_7_fu_3627_p2 fmul_32ns_32ns_32_4_max_dsp_1_U102 fadd_32ns_32ns_32_5_full_dsp_1_U75 add_ln92_fu_3040_p2 mul_6ns_8ns_13_1_1_U132 add_ln92_8_fu_3667_p2 add_ln92_9_fu_3703_p2 add_ln92_10_fu_3740_p2 fmul_32ns_32ns_32_4_max_dsp_1_U103 fadd_32ns_32ns_32_5_full_dsp_1_U76 add_ln92_1_fu_3478_p2 mul_6ns_8ns_13_1_1_U140 add_ln92_11_fu_3780_p2 add_ln92_12_fu_3816_p2 add_ln92_13_fu_3853_p2 fmul_32ns_32ns_32_4_max_dsp_1_U104 fadd_32ns_32ns_32_5_full_dsp_1_U77 fmul_32ns_32ns_32_4_max_dsp_1_U105 fadd_32ns_32ns_32_5_full_dsp_1_U78 fmul_32ns_32ns_32_4_max_dsp_1_U106 fadd_32ns_32ns_32_5_full_dsp_1_U79 fmul_32ns_32ns_32_4_max_dsp_1_U107 fadd_32ns_32ns_32_5_full_dsp_1_U80 fmul_32ns_32ns_32_4_max_dsp_1_U108 fadd_32ns_32ns_32_5_full_dsp_1_U81 fmul_32ns_32ns_32_4_max_dsp_1_U109 fadd_32ns_32ns_32_5_full_dsp_1_U82 fmul_32ns_32ns_32_4_max_dsp_1_U110 fadd_32ns_32ns_32_5_full_dsp_1_U83 fmul_32ns_32ns_32_4_max_dsp_1_U111 fadd_32ns_32ns_32_5_full_dsp_1_U84 fmul_32ns_32ns_32_4_max_dsp_1_U112 fadd_32ns_32ns_32_5_full_dsp_1_U85 fmul_32ns_32ns_32_4_max_dsp_1_U113 fadd_32ns_32ns_32_5_full_dsp_1_U86 fmul_32ns_32ns_32_4_max_dsp_1_U114 fadd_32ns_32ns_32_5_full_dsp_1_U87 fmul_32ns_32ns_32_4_max_dsp_1_U115 fadd_32ns_32ns_32_5_full_dsp_1_U88 fmul_32ns_32ns_32_4_max_dsp_1_U116 fadd_32ns_32ns_32_5_full_dsp_1_U89 fmul_32ns_32ns_32_4_max_dsp_1_U117 fadd_32ns_32ns_32_5_full_dsp_1_U90 fmul_32ns_32ns_32_4_max_dsp_1_U118 fadd_32ns_32ns_32_5_full_dsp_1_U91 fmul_32ns_32ns_32_4_max_dsp_1_U119 fadd_32ns_32ns_32_5_full_dsp_1_U92 fmul_32ns_32ns_32_4_max_dsp_1_U120 fadd_32ns_32ns_32_5_full_dsp_1_U93 fmul_32ns_32ns_32_4_max_dsp_1_U121 fadd_32ns_32ns_32_5_full_dsp_1_U94 fmul_32ns_32ns_32_4_max_dsp_1_U122 fadd_32ns_32ns_32_5_full_dsp_1_U95 fmul_32ns_32ns_32_4_max_dsp_1_U123 fadd_32ns_32ns_32_5_full_dsp_1_U96 fmul_32ns_32ns_32_4_max_dsp_1_U124 fadd_32ns_32ns_32_5_full_dsp_1_U97 fmul_32ns_32ns_32_4_max_dsp_1_U125 fadd_32ns_32ns_32_5_full_dsp_1_U98 fmul_32ns_32ns_32_4_max_dsp_1_U126 fadd_32ns_32ns_32_5_full_dsp_1_U99 fmul_32ns_32ns_32_4_max_dsp_1_U127 fadd_32ns_32ns_32_5_full_dsp_1_U100 fmul_32ns_32ns_32_4_max_dsp_1_U128 fadd_32ns_32ns_32_5_full_dsp_1_U101 add_ln82_fu_2978_p2</BindInstances>
+                    <ID>486</ID>
+                    <InstancesList>
+                        <Instance>
+                            <InstName>grp_conv_3x3_Pipeline_VITIS_LOOP_83_2_VITIS_LOOP_85_3_fu_742</InstName>
+                            <ModuleName>conv_3x3_Pipeline_VITIS_LOOP_83_2_VITIS_LOOP_85_3</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>742</ID>
+                            <BindInstances>indvars_iv_next180_fu_2697_p2 mul_5ns_7ns_11_1_1_U133 mul_5ns_7ns_11_1_1_U129 add_ln83_1_fu_2729_p2 add_ln95_fu_4557_p2 indvars_iv_next180_mid1_fu_2831_p2 add_ln93_4_fu_2970_p2 mul_5ns_7ns_11_1_1_U134 add_ln93_5_fu_2994_p2 add_ln83_fu_2879_p2 mul_5ns_7ns_11_1_1_U135 add_ln93_6_fu_3018_p2 mul_5ns_7ns_11_1_1_U136 add_ln93_7_fu_3027_p2 add_ln93_8_fu_3064_p2 add_ln93_9_fu_3101_p2 add_ln93_fu_2772_p2 mul_5ns_7ns_11_1_1_U132 add_ln93_10_fu_3141_p2 add_ln93_11_fu_3178_p2 add_ln93_12_fu_3215_p2 add_ln93_1_fu_2927_p2 mul_5ns_7ns_11_1_1_U137 add_ln93_13_fu_3255_p2 add_ln93_14_fu_3292_p2 add_ln93_15_fu_3329_p2</BindInstances>
+                        </Instance>
+                        <Instance>
+                            <InstName>grp_conv_3x3_Pipeline_VITIS_LOOP_83_2_VITIS_LOOP_85_33_fu_859</InstName>
+                            <ModuleName>conv_3x3_Pipeline_VITIS_LOOP_83_2_VITIS_LOOP_85_33</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>859</ID>
+                            <BindInstances>indvars_iv_next188_fu_2697_p2 mul_5ns_7ns_11_1_1_U362 mul_5ns_7ns_11_1_1_U358 add_ln83_fu_2729_p2 add_ln95_fu_4557_p2 indvars_iv_next188_mid1_fu_2831_p2 add_ln93_fu_2970_p2 mul_5ns_7ns_11_1_1_U363 add_ln93_1_fu_2994_p2 add_ln83_1_fu_2879_p2 mul_5ns_7ns_11_1_1_U364 add_ln93_4_fu_3018_p2 mul_5ns_7ns_11_1_1_U365 add_ln93_5_fu_3027_p2 add_ln93_6_fu_3064_p2 add_ln93_7_fu_3101_p2 add_ln93_2_fu_2772_p2 mul_5ns_7ns_11_1_1_U361 add_ln93_8_fu_3141_p2 add_ln93_9_fu_3178_p2 add_ln93_10_fu_3215_p2 add_ln93_3_fu_2927_p2 mul_5ns_7ns_11_1_1_U366 add_ln93_11_fu_3255_p2 add_ln93_12_fu_3292_p2 add_ln93_13_fu_3329_p2</BindInstances>
+                        </Instance>
+                    </InstancesList>
+                    <BindInstances>sub_ln95_fu_1225_p2 sub_ln95_1_fu_1294_p2 add_ln80_fu_1192_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_tiled_conv_Pipeline_VITIS_LOOP_115_1_VITIS_LOOP_116_2_fu_554</InstName>
-                    <ModuleName>tiled_conv_Pipeline_VITIS_LOOP_115_1_VITIS_LOOP_116_2</ModuleName>
+                    <InstName>grp_tiled_conv_Pipeline_VITIS_LOOP_116_1_VITIS_LOOP_117_2_fu_546</InstName>
+                    <ModuleName>tiled_conv_Pipeline_VITIS_LOOP_116_1_VITIS_LOOP_117_2</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>554</ID>
-                    <BindInstances>add_ln115_2_fu_1288_p2 add_ln115_fu_1300_p2 sub_ln119_fu_1352_p2 add_ln115_1_fu_1362_p2 mac_muladd_6ns_18ns_19s_25_4_1_U309 add_ln119_fu_1388_p2 sub_ln119_1_fu_1414_p2 add_ln119_1_fu_1612_p2 add_ln119_2_fu_1622_p2 add_ln119_3_fu_1682_p2 add_ln119_4_fu_1692_p2 add_ln119_5_fu_1752_p2 add_ln119_6_fu_1762_p2 add_ln119_7_fu_1822_p2 add_ln119_8_fu_1832_p2 add_ln119_9_fu_1892_p2 add_ln119_10_fu_1902_p2 add_ln119_11_fu_1962_p2 add_ln119_12_fu_1972_p2 add_ln119_13_fu_2032_p2 add_ln119_14_fu_2042_p2 add_ln119_15_fu_2102_p2 add_ln119_16_fu_2112_p2 add_ln119_17_fu_2172_p2 add_ln119_18_fu_2182_p2 add_ln119_19_fu_2242_p2 add_ln119_20_fu_2252_p2 add_ln119_21_fu_2312_p2 add_ln119_22_fu_2322_p2 add_ln119_23_fu_2382_p2 add_ln119_24_fu_2392_p2 add_ln119_25_fu_2452_p2 add_ln119_26_fu_2462_p2 add_ln119_27_fu_2522_p2 add_ln119_28_fu_2532_p2 add_ln119_29_fu_2592_p2 add_ln119_30_fu_2602_p2 add_ln119_31_fu_2662_p2 add_ln119_32_fu_2672_p2 add_ln119_33_fu_2732_p2 add_ln119_34_fu_2742_p2 add_ln119_35_fu_2802_p2 add_ln119_36_fu_2812_p2 add_ln119_37_fu_2872_p2 add_ln119_38_fu_2882_p2 add_ln119_39_fu_2942_p2 add_ln119_40_fu_2952_p2 add_ln119_41_fu_3012_p2 add_ln119_42_fu_3022_p2 add_ln119_43_fu_3082_p2 add_ln119_44_fu_3092_p2 add_ln119_45_fu_3152_p2 add_ln119_46_fu_3162_p2 add_ln119_47_fu_3222_p2 add_ln119_48_fu_3232_p2 empty_33_fu_1459_p2 empty_34_fu_1484_p2 mac_muladd_6ns_18ns_19s_25_4_1_U309 empty_35_fu_1517_p2 add_ln116_fu_4629_p2</BindInstances>
+                    <ID>546</ID>
+                    <BindInstances>add_ln116_2_fu_742_p2 add_ln116_fu_754_p2 sub_ln120_fu_806_p2 add_ln116_1_fu_816_p2 mac_muladd_6ns_18ns_19s_25_4_1_U697 add_ln120_fu_842_p2 sub_ln120_1_fu_868_p2 add_ln120_1_fu_948_p2 add_ln120_2_fu_958_p2 add_ln120_3_fu_996_p2 add_ln120_4_fu_1006_p2 add_ln120_5_fu_1066_p2 add_ln120_6_fu_1076_p2 add_ln120_7_fu_1136_p2 add_ln120_8_fu_1146_p2 add_ln120_9_fu_1206_p2 add_ln120_10_fu_1216_p2 add_ln120_11_fu_1276_p2 add_ln120_12_fu_1286_p2 add_ln120_13_fu_1346_p2 add_ln120_14_fu_1356_p2 add_ln120_15_fu_1416_p2 add_ln120_16_fu_1426_p2 add_ln120_17_fu_1486_p2 add_ln120_18_fu_1496_p2 add_ln120_19_fu_1556_p2 add_ln120_20_fu_1566_p2 add_ln120_21_fu_1626_p2 add_ln120_22_fu_1636_p2 add_ln120_23_fu_1696_p2 add_ln120_24_fu_1706_p2 empty_34_fu_913_p2 empty_35_fu_938_p2 mac_muladd_6ns_18ns_19s_25_4_1_U697 empty_36_fu_971_p2 add_ln117_fu_2410_p2</BindInstances>
                 </Instance>
             </InstancesList>
-            <BindInstances>conv_in_buf_U conv_in_buf_1_U conv_in_buf_2_U conv_in_buf_3_U conv_in_buf_4_U conv_in_buf_5_U conv_in_buf_6_U conv_in_buf_7_U conv_in_buf_8_U conv_in_buf_9_U conv_in_buf_10_U conv_in_buf_11_U conv_in_buf_12_U conv_in_buf_13_U conv_in_buf_14_U conv_in_buf_15_U conv_in_buf_16_U conv_in_buf_17_U conv_in_buf_18_U conv_in_buf_19_U conv_in_buf_20_U conv_in_buf_21_U conv_in_buf_22_U conv_in_buf_23_U conv_in_buf_24_U conv_in_buf_25_U conv_in_buf_26_U conv_wt_buf_U conv_wt_buf_1_U conv_wt_buf_2_U conv_wt_buf_3_U conv_wt_buf_4_U conv_wt_buf_5_U conv_wt_buf_6_U conv_wt_buf_7_U conv_wt_buf_8_U conv_wt_buf_9_U conv_wt_buf_10_U conv_wt_buf_11_U conv_wt_buf_12_U conv_wt_buf_13_U conv_wt_buf_14_U conv_wt_buf_15_U conv_wt_buf_16_U conv_wt_buf_17_U conv_wt_buf_18_U conv_wt_buf_19_U conv_wt_buf_20_U conv_wt_buf_21_U conv_wt_buf_22_U conv_wt_buf_23_U conv_wt_buf_24_U conv_wt_buf_25_U conv_wt_buf_26_U conv_bias_buf_U conv_out_buf_U empty_38_fu_613_p2 add_ln33_1_fu_625_p2 add_ln33_fu_634_p2 p_mid184_fu_674_p2 sub_ln27_fu_730_p2 p_mid129_fu_737_p2 sub_ln42_1_fu_769_p2 empty_42_fu_800_p2 tmp6_fu_810_p2 add_ln46_1_fu_815_p2 add_ln46_fu_827_p2 add_ln58_fu_849_p2 add_ln58_1_fu_858_p2 add_ln35_fu_885_p2</BindInstances>
+            <BindInstances>conv_in_buf_U conv_in_buf_1_U conv_in_buf_2_U conv_in_buf_3_U conv_in_buf_4_U conv_in_buf_5_U conv_in_buf_6_U conv_in_buf_7_U conv_in_buf_8_U conv_in_buf_9_U conv_in_buf_10_U conv_in_buf_11_U conv_in_buf_12_U conv_in_buf_13_U conv_in_buf_14_U conv_in_buf_15_U conv_in_buf_16_U conv_in_buf_17_U conv_in_buf_18_U conv_in_buf_19_U conv_in_buf_20_U conv_in_buf_21_U conv_in_buf_22_U conv_in_buf_23_U conv_in_buf_24_U conv_in_buf_25_U conv_in_buf_26_U conv_wt_buf_U conv_wt_buf_1_U conv_wt_buf_2_U conv_wt_buf_3_U conv_wt_buf_4_U conv_wt_buf_5_U conv_wt_buf_6_U conv_wt_buf_7_U conv_wt_buf_8_U conv_wt_buf_9_U conv_wt_buf_10_U conv_wt_buf_11_U conv_wt_buf_12_U conv_wt_buf_13_U conv_wt_buf_14_U conv_wt_buf_15_U conv_wt_buf_16_U conv_wt_buf_17_U conv_wt_buf_18_U conv_wt_buf_19_U conv_wt_buf_20_U conv_wt_buf_21_U conv_wt_buf_22_U conv_wt_buf_23_U conv_wt_buf_24_U conv_wt_buf_25_U conv_wt_buf_26_U conv_bias_buf_U conv_out_buf_U empty_39_fu_605_p2 add_ln33_1_fu_617_p2 add_ln33_fu_626_p2 p_mid184_fu_666_p2 sub_ln27_fu_722_p2 p_mid129_fu_729_p2 sub_ln42_1_fu_761_p2 empty_43_fu_792_p2 tmp6_fu_802_p2 add_ln46_1_fu_807_p2 add_ln46_fu_819_p2 add_ln58_fu_841_p2 add_ln58_1_fu_850_p2 add_ln35_fu_877_p2</BindInstances>
         </TopModule>
     </RTLDesignHierarchy>
     <ModuleInformation>
@@ -1414,22 +1430,22 @@
                     <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>10168</Best-caseLatency>
-                    <Average-caseLatency>10168</Average-caseLatency>
-                    <Worst-caseLatency>10168</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>0.102 ms</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>0.102 ms</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>0.102 ms</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>10168</PipelineInitiationInterval>
+                    <Best-caseLatency>2776</Best-caseLatency>
+                    <Average-caseLatency>2776</Average-caseLatency>
+                    <Worst-caseLatency>2776</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>27.760 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>27.760 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>27.760 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>2776</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
                     <VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3>
                         <Name>VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3</Name>
                         <Slack>7.30</Slack>
-                        <TripCount>10092</TripCount>
-                        <Latency>10166</Latency>
-                        <AbsoluteTimeLatency>0.102 ms</AbsoluteTimeLatency>
+                        <TripCount>2700</TripCount>
+                        <Latency>2774</Latency>
+                        <AbsoluteTimeLatency>27.740 us</AbsoluteTimeLatency>
                         <PipelineII>1</PipelineII>
                         <PipelineDepth>76</PipelineDepth>
                         <PipelineType>yes</PipelineType>
@@ -1442,10 +1458,10 @@
                     <DSP>0</DSP>
                     <AVAIL_DSP>220</AVAIL_DSP>
                     <UTIL_DSP>0</UTIL_DSP>
-                    <FF>1289</FF>
+                    <FF>1182</FF>
                     <AVAIL_FF>106400</AVAIL_FF>
                     <UTIL_FF>1</UTIL_FF>
-                    <LUT>1719</LUT>
+                    <LUT>1604</LUT>
                     <AVAIL_LUT>53200</AVAIL_LUT>
                     <UTIL_LUT>3</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
@@ -1457,25 +1473,25 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3" OPTYPE="add" PRAGMA="" RTLNAME="tmp_fu_804_p2" SOURCE="utils.cpp:31" URAM="0" VARIABLE="tmp"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3" OPTYPE="add" PRAGMA="" RTLNAME="empty_fu_814_p2" SOURCE="utils.cpp:31" URAM="0" VARIABLE="empty"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3" OPTYPE="mul" PRAGMA="" RTLNAME="mul_6ns_8ns_13_1_1_U3" SOURCE="" URAM="0" VARIABLE="mul"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln42_fu_868_p2" SOURCE="utils.cpp:42" URAM="0" VARIABLE="sub_ln42"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3" OPTYPE="add" PRAGMA="" RTLNAME="tmp_fu_810_p2" SOURCE="utils.cpp:31" URAM="0" VARIABLE="tmp"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3" OPTYPE="add" PRAGMA="" RTLNAME="empty_fu_820_p2" SOURCE="utils.cpp:31" URAM="0" VARIABLE="empty"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3" OPTYPE="mul" PRAGMA="" RTLNAME="mul_5ns_7ns_11_1_1_U4" SOURCE="" URAM="0" VARIABLE="mul"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln42_fu_874_p2" SOURCE="utils.cpp:42" URAM="0" VARIABLE="sub_ln42"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln29_2_fu_659_p2" SOURCE="utils.cpp:29" URAM="0" VARIABLE="add_ln29_2"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln29_fu_710_p2" SOURCE="utils.cpp:29" URAM="0" VARIABLE="add_ln29"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3" OPTYPE="mul" PRAGMA="" RTLNAME="mul_2ns_19ns_20_1_1_U4" SOURCE="utils.cpp:29" URAM="0" VARIABLE="mul_ln29"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln29_1_fu_1057_p2" SOURCE="utils.cpp:29" URAM="0" VARIABLE="add_ln29_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3" OPTYPE="mul" PRAGMA="" RTLNAME="mul_2ns_19ns_20_1_1_U5" SOURCE="utils.cpp:29" URAM="0" VARIABLE="mul_ln29"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln29_1_fu_1058_p2" SOURCE="utils.cpp:29" URAM="0" VARIABLE="add_ln29_1"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln31_fu_747_p2" SOURCE="utils.cpp:31" URAM="0" VARIABLE="add_ln31"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3" OPTYPE="add" PRAGMA="" RTLNAME="tmp_mid1_fu_905_p2" SOURCE="utils.cpp:31" URAM="0" VARIABLE="tmp_mid1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3" OPTYPE="add" PRAGMA="" RTLNAME="p_mid1_fu_915_p2" SOURCE="utils.cpp:31" URAM="0" VARIABLE="p_mid1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3" OPTYPE="mul" PRAGMA="" RTLNAME="mul_6ns_8ns_13_1_1_U5" SOURCE="utils.cpp:31" URAM="0" VARIABLE="mul94"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln42_2_fu_987_p2" SOURCE="utils.cpp:42" URAM="0" VARIABLE="sub_ln42_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln39_1_fu_1003_p2" SOURCE="utils.cpp:39" URAM="0" VARIABLE="add_ln39_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln39_fu_1013_p2" SOURCE="utils.cpp:39" URAM="0" VARIABLE="add_ln39"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3" OPTYPE="mul" PRAGMA="" RTLNAME="mul_6ns_8ns_13_1_1_U7" SOURCE="utils.cpp:40" URAM="0" VARIABLE="mul_ln40"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln42_fu_1109_p2" SOURCE="utils.cpp:42" URAM="0" VARIABLE="add_ln42"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln42_1_fu_1119_p2" SOURCE="utils.cpp:42" URAM="0" VARIABLE="add_ln42_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln33_fu_780_p2" SOURCE="utils.cpp:33" URAM="0" VARIABLE="add_ln33"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3" OPTYPE="add" PRAGMA="" RTLNAME="tmp_mid1_fu_911_p2" SOURCE="utils.cpp:31" URAM="0" VARIABLE="tmp_mid1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3" OPTYPE="add" PRAGMA="" RTLNAME="p_mid1_fu_921_p2" SOURCE="utils.cpp:31" URAM="0" VARIABLE="p_mid1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3" OPTYPE="mul" PRAGMA="" RTLNAME="mul_5ns_7ns_11_1_1_U6" SOURCE="utils.cpp:31" URAM="0" VARIABLE="mul94"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln42_2_fu_993_p2" SOURCE="utils.cpp:42" URAM="0" VARIABLE="sub_ln42_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln39_1_fu_1009_p2" SOURCE="utils.cpp:39" URAM="0" VARIABLE="add_ln39_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln39_fu_1019_p2" SOURCE="utils.cpp:39" URAM="0" VARIABLE="add_ln39"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3" OPTYPE="mul" PRAGMA="" RTLNAME="mul_5ns_7ns_11_1_1_U7" SOURCE="utils.cpp:40" URAM="0" VARIABLE="mul_ln40"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln42_fu_1110_p2" SOURCE="utils.cpp:42" URAM="0" VARIABLE="add_ln42"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln42_1_fu_1120_p2" SOURCE="utils.cpp:42" URAM="0" VARIABLE="add_ln42_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln33_fu_786_p2" SOURCE="utils.cpp:33" URAM="0" VARIABLE="add_ln33"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln31_1_fu_671_p2" SOURCE="utils.cpp:31" URAM="0" VARIABLE="add_ln31_1"/>
             </BindNodes>
         </Module>
@@ -1567,9 +1583,9 @@
             </BindNodes>
         </Module>
         <Module>
-            <Name>conv_3x3</Name>
+            <Name>conv_3x3_Pipeline_VITIS_LOOP_83_2_VITIS_LOOP_85_3</Name>
             <Loops>
-                <VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3/>
+                <VITIS_LOOP_83_2_VITIS_LOOP_85_3/>
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
@@ -1578,40 +1594,40 @@
                     <EstimatedClockPeriod>7.256</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>25242</Best-caseLatency>
-                    <Average-caseLatency>25242</Average-caseLatency>
-                    <Worst-caseLatency>25242</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>0.252 ms</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>0.252 ms</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>0.252 ms</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>25242</PipelineInitiationInterval>
+                    <Best-caseLatency>935</Best-caseLatency>
+                    <Average-caseLatency>935</Average-caseLatency>
+                    <Worst-caseLatency>935</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>9.350 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>9.350 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>9.350 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>935</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
-                    <VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3>
-                        <Name>VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3</Name>
+                    <VITIS_LOOP_83_2_VITIS_LOOP_85_3>
+                        <Name>VITIS_LOOP_83_2_VITIS_LOOP_85_3</Name>
                         <Slack>7.30</Slack>
-                        <TripCount>25088</TripCount>
-                        <Latency>25240</Latency>
-                        <AbsoluteTimeLatency>0.252 ms</AbsoluteTimeLatency>
+                        <TripCount>784</TripCount>
+                        <Latency>933</Latency>
+                        <AbsoluteTimeLatency>9.330 us</AbsoluteTimeLatency>
                         <PipelineII>1</PipelineII>
-                        <PipelineDepth>154</PipelineDepth>
+                        <PipelineDepth>151</PipelineDepth>
                         <PipelineType>yes</PipelineType>
                         <InstanceList/>
-                    </VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3>
+                    </VITIS_LOOP_83_2_VITIS_LOOP_85_3>
                 </SummaryOfLoopLatency>
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <DSP>135</DSP>
+                    <DSP>0</DSP>
                     <AVAIL_DSP>220</AVAIL_DSP>
-                    <UTIL_DSP>61</UTIL_DSP>
-                    <FF>17892</FF>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <FF>5305</FF>
                     <AVAIL_FF>106400</AVAIL_FF>
-                    <UTIL_FF>16</UTIL_FF>
-                    <LUT>25413</LUT>
+                    <UTIL_FF>4</UTIL_FF>
+                    <LUT>4754</LUT>
                     <AVAIL_LUT>53200</AVAIL_LUT>
-                    <UTIL_LUT>47</UTIL_LUT>
+                    <UTIL_LUT>8</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
                     <AVAIL_BRAM>280</AVAIL_BRAM>
                     <UTIL_BRAM>0</UTIL_BRAM>
@@ -1621,99 +1637,184 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="add" PRAGMA="" RTLNAME="indvars_iv_next75_fu_3115_p2" SOURCE="" URAM="0" VARIABLE="indvars_iv_next75"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="add" PRAGMA="" RTLNAME="empty_44_fu_3120_p2" SOURCE="" URAM="0" VARIABLE="empty_44"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="mul" PRAGMA="" RTLNAME="mul_6ns_8ns_13_1_1_U133" SOURCE="" URAM="0" VARIABLE="mul6"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="mul" PRAGMA="" RTLNAME="mul_6ns_8ns_13_1_1_U134" SOURCE="" URAM="0" VARIABLE="mul3"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="mul" PRAGMA="" RTLNAME="mul_6ns_8ns_13_1_1_U135" SOURCE="" URAM="0" VARIABLE="mul1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln80_1_fu_2914_p2" SOURCE="utils.cpp:80" URAM="0" VARIABLE="add_ln80_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln80_fu_2926_p2" SOURCE="utils.cpp:80" URAM="0" VARIABLE="add_ln80"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln94_fu_3222_p2" SOURCE="utils.cpp:94" URAM="0" VARIABLE="sub_ln94"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="add" PRAGMA="" RTLNAME="indvars_iv_next75_dup_fu_3067_p2" SOURCE="utils.cpp:80" URAM="0" VARIABLE="indvars_iv_next75_dup"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln94_fu_3263_p2" SOURCE="utils.cpp:94" URAM="0" VARIABLE="add_ln94"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="add" PRAGMA="" RTLNAME="indvars_iv_next75_mid1_fu_3295_p2" SOURCE="utils.cpp:80" URAM="0" VARIABLE="indvars_iv_next75_mid1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="add" PRAGMA="" RTLNAME="p_mid1_fu_3300_p2" SOURCE="utils.cpp:80" URAM="0" VARIABLE="p_mid1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="mul" PRAGMA="" RTLNAME="mul_6ns_8ns_13_1_1_U136" SOURCE="utils.cpp:80" URAM="0" VARIABLE="mul28"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln92_2_fu_3359_p2" SOURCE="utils.cpp:92" URAM="0" VARIABLE="add_ln92_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="mul" PRAGMA="" RTLNAME="mul_6ns_8ns_13_1_1_U137" SOURCE="utils.cpp:80" URAM="0" VARIABLE="mul23"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln92_3_fu_3521_p2" SOURCE="utils.cpp:92" URAM="0" VARIABLE="add_ln92_3"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="mul" PRAGMA="" RTLNAME="mul_6ns_8ns_13_1_1_U138" SOURCE="utils.cpp:80" URAM="0" VARIABLE="mul18"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln92_4_fu_3545_p2" SOURCE="utils.cpp:92" URAM="0" VARIABLE="add_ln92_4"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="mul" PRAGMA="" RTLNAME="mul_6ns_8ns_13_1_1_U139" SOURCE="utils.cpp:92" URAM="0" VARIABLE="mul_ln92"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln92_5_fu_3554_p2" SOURCE="utils.cpp:92" URAM="0" VARIABLE="add_ln92_5"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln92_6_fu_3590_p2" SOURCE="utils.cpp:92" URAM="0" VARIABLE="add_ln92_6"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln92_7_fu_3627_p2" SOURCE="utils.cpp:92" URAM="0" VARIABLE="add_ln92_7"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U102" SOURCE="utils.cpp:92" URAM="0" VARIABLE="mul"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U75" SOURCE="utils.cpp:92" URAM="0" VARIABLE="sum"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln92_fu_3040_p2" SOURCE="utils.cpp:92" URAM="0" VARIABLE="add_ln92"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="mul" PRAGMA="" RTLNAME="mul_6ns_8ns_13_1_1_U132" SOURCE="utils.cpp:92" URAM="0" VARIABLE="mul_ln92_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln92_8_fu_3667_p2" SOURCE="utils.cpp:92" URAM="0" VARIABLE="add_ln92_8"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln92_9_fu_3703_p2" SOURCE="utils.cpp:92" URAM="0" VARIABLE="add_ln92_9"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln92_10_fu_3740_p2" SOURCE="utils.cpp:92" URAM="0" VARIABLE="add_ln92_10"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U103" SOURCE="utils.cpp:92" URAM="0" VARIABLE="mul37_s"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U76" SOURCE="utils.cpp:92" URAM="0" VARIABLE="sum_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln92_1_fu_3478_p2" SOURCE="utils.cpp:92" URAM="0" VARIABLE="add_ln92_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="mul" PRAGMA="" RTLNAME="mul_6ns_8ns_13_1_1_U140" SOURCE="utils.cpp:92" URAM="0" VARIABLE="mul_ln92_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln92_11_fu_3780_p2" SOURCE="utils.cpp:92" URAM="0" VARIABLE="add_ln92_11"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln92_12_fu_3816_p2" SOURCE="utils.cpp:92" URAM="0" VARIABLE="add_ln92_12"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln92_13_fu_3853_p2" SOURCE="utils.cpp:92" URAM="0" VARIABLE="add_ln92_13"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U104" SOURCE="utils.cpp:92" URAM="0" VARIABLE="mul37_3"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U77" SOURCE="utils.cpp:92" URAM="0" VARIABLE="sum_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U105" SOURCE="utils.cpp:92" URAM="0" VARIABLE="mul37_4"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U78" SOURCE="utils.cpp:92" URAM="0" VARIABLE="sum_3"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U106" SOURCE="utils.cpp:92" URAM="0" VARIABLE="mul37_146_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U79" SOURCE="utils.cpp:92" URAM="0" VARIABLE="sum_4"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U107" SOURCE="utils.cpp:92" URAM="0" VARIABLE="mul37_146_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U80" SOURCE="utils.cpp:92" URAM="0" VARIABLE="sum_5"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U108" SOURCE="utils.cpp:92" URAM="0" VARIABLE="mul37_5"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U81" SOURCE="utils.cpp:92" URAM="0" VARIABLE="sum_6"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U109" SOURCE="utils.cpp:92" URAM="0" VARIABLE="mul37_254_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U82" SOURCE="utils.cpp:92" URAM="0" VARIABLE="sum_7"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U110" SOURCE="utils.cpp:92" URAM="0" VARIABLE="mul37_254_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U83" SOURCE="utils.cpp:92" URAM="0" VARIABLE="sum_8"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U111" SOURCE="utils.cpp:92" URAM="0" VARIABLE="mul37_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U84" SOURCE="utils.cpp:92" URAM="0" VARIABLE="sum_9"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U112" SOURCE="utils.cpp:92" URAM="0" VARIABLE="mul37_1_s"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U85" SOURCE="utils.cpp:92" URAM="0" VARIABLE="sum_10"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U113" SOURCE="utils.cpp:92" URAM="0" VARIABLE="mul37_1_3"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U86" SOURCE="utils.cpp:92" URAM="0" VARIABLE="sum_11"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U114" SOURCE="utils.cpp:92" URAM="0" VARIABLE="mul37_1_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U87" SOURCE="utils.cpp:92" URAM="0" VARIABLE="sum_12"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U115" SOURCE="utils.cpp:92" URAM="0" VARIABLE="mul37_1_1_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U88" SOURCE="utils.cpp:92" URAM="0" VARIABLE="sum_13"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U116" SOURCE="utils.cpp:92" URAM="0" VARIABLE="mul37_1_1_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U89" SOURCE="utils.cpp:92" URAM="0" VARIABLE="sum_14"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U117" SOURCE="utils.cpp:92" URAM="0" VARIABLE="mul37_1_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U90" SOURCE="utils.cpp:92" URAM="0" VARIABLE="sum_15"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U118" SOURCE="utils.cpp:92" URAM="0" VARIABLE="mul37_1_2_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U91" SOURCE="utils.cpp:92" URAM="0" VARIABLE="sum_16"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U119" SOURCE="utils.cpp:92" URAM="0" VARIABLE="mul37_1_2_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U92" SOURCE="utils.cpp:92" URAM="0" VARIABLE="sum_17"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U120" SOURCE="utils.cpp:92" URAM="0" VARIABLE="mul37_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U93" SOURCE="utils.cpp:92" URAM="0" VARIABLE="sum_18"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U121" SOURCE="utils.cpp:92" URAM="0" VARIABLE="mul37_2_s"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U94" SOURCE="utils.cpp:92" URAM="0" VARIABLE="sum_19"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U122" SOURCE="utils.cpp:92" URAM="0" VARIABLE="mul37_2_3"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U95" SOURCE="utils.cpp:92" URAM="0" VARIABLE="sum_20"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U123" SOURCE="utils.cpp:92" URAM="0" VARIABLE="mul37_2_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U96" SOURCE="utils.cpp:92" URAM="0" VARIABLE="sum_21"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U124" SOURCE="utils.cpp:92" URAM="0" VARIABLE="mul37_2_1_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U97" SOURCE="utils.cpp:92" URAM="0" VARIABLE="sum_22"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U125" SOURCE="utils.cpp:92" URAM="0" VARIABLE="mul37_2_1_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U98" SOURCE="utils.cpp:92" URAM="0" VARIABLE="sum_23"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U126" SOURCE="utils.cpp:92" URAM="0" VARIABLE="mul37_2_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U99" SOURCE="utils.cpp:92" URAM="0" VARIABLE="sum_24"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U127" SOURCE="utils.cpp:92" URAM="0" VARIABLE="mul37_2_2_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U100" SOURCE="utils.cpp:92" URAM="0" VARIABLE="sum_25"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U128" SOURCE="utils.cpp:92" URAM="0" VARIABLE="mul37_2_2_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U101" SOURCE="utils.cpp:92" URAM="0" VARIABLE="sum_26"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_80_1_VITIS_LOOP_82_2_VITIS_LOOP_84_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln82_fu_2978_p2" SOURCE="utils.cpp:82" URAM="0" VARIABLE="add_ln82"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="add" PRAGMA="" RTLNAME="indvars_iv_next180_fu_2697_p2" SOURCE="" URAM="0" VARIABLE="indvars_iv_next180"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="mul" PRAGMA="" RTLNAME="mul_5ns_7ns_11_1_1_U133" SOURCE="" URAM="0" VARIABLE="mul4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="mul" PRAGMA="" RTLNAME="mul_5ns_7ns_11_1_1_U129" SOURCE="" URAM="0" VARIABLE="mul2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln83_1_fu_2729_p2" SOURCE="utils.cpp:83" URAM="0" VARIABLE="add_ln83_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln95_fu_4557_p2" SOURCE="utils.cpp:95" URAM="0" VARIABLE="add_ln95"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="add" PRAGMA="" RTLNAME="indvars_iv_next180_mid1_fu_2831_p2" SOURCE="" URAM="0" VARIABLE="indvars_iv_next180_mid1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln93_4_fu_2970_p2" SOURCE="utils.cpp:93" URAM="0" VARIABLE="add_ln93_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="mul" PRAGMA="" RTLNAME="mul_5ns_7ns_11_1_1_U134" SOURCE="" URAM="0" VARIABLE="mul22"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln93_5_fu_2994_p2" SOURCE="utils.cpp:93" URAM="0" VARIABLE="add_ln93_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln83_fu_2879_p2" SOURCE="utils.cpp:83" URAM="0" VARIABLE="add_ln83"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="mul" PRAGMA="" RTLNAME="mul_5ns_7ns_11_1_1_U135" SOURCE="utils.cpp:83" URAM="0" VARIABLE="mul_ln83"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln93_6_fu_3018_p2" SOURCE="utils.cpp:93" URAM="0" VARIABLE="add_ln93_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="mul" PRAGMA="" RTLNAME="mul_5ns_7ns_11_1_1_U136" SOURCE="utils.cpp:93" URAM="0" VARIABLE="mul_ln93"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln93_7_fu_3027_p2" SOURCE="utils.cpp:93" URAM="0" VARIABLE="add_ln93_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln93_8_fu_3064_p2" SOURCE="utils.cpp:93" URAM="0" VARIABLE="add_ln93_8"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln93_9_fu_3101_p2" SOURCE="utils.cpp:93" URAM="0" VARIABLE="add_ln93_9"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln93_fu_2772_p2" SOURCE="utils.cpp:93" URAM="0" VARIABLE="add_ln93"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="mul" PRAGMA="" RTLNAME="mul_5ns_7ns_11_1_1_U132" SOURCE="utils.cpp:93" URAM="0" VARIABLE="mul_ln93_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln93_10_fu_3141_p2" SOURCE="utils.cpp:93" URAM="0" VARIABLE="add_ln93_10"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln93_11_fu_3178_p2" SOURCE="utils.cpp:93" URAM="0" VARIABLE="add_ln93_11"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln93_12_fu_3215_p2" SOURCE="utils.cpp:93" URAM="0" VARIABLE="add_ln93_12"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln93_1_fu_2927_p2" SOURCE="utils.cpp:93" URAM="0" VARIABLE="add_ln93_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="mul" PRAGMA="" RTLNAME="mul_5ns_7ns_11_1_1_U137" SOURCE="utils.cpp:93" URAM="0" VARIABLE="mul_ln93_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln93_13_fu_3255_p2" SOURCE="utils.cpp:93" URAM="0" VARIABLE="add_ln93_13"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln93_14_fu_3292_p2" SOURCE="utils.cpp:93" URAM="0" VARIABLE="add_ln93_14"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln93_15_fu_3329_p2" SOURCE="utils.cpp:93" URAM="0" VARIABLE="add_ln93_15"/>
             </BindNodes>
         </Module>
         <Module>
-            <Name>tiled_conv_Pipeline_VITIS_LOOP_115_1_VITIS_LOOP_116_2</Name>
+            <Name>conv_3x3_Pipeline_VITIS_LOOP_83_2_VITIS_LOOP_85_33</Name>
             <Loops>
-                <VITIS_LOOP_115_1_VITIS_LOOP_116_2/>
+                <VITIS_LOOP_83_2_VITIS_LOOP_85_3/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.256</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>935</Best-caseLatency>
+                    <Average-caseLatency>935</Average-caseLatency>
+                    <Worst-caseLatency>935</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>9.350 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>9.350 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>9.350 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>935</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_83_2_VITIS_LOOP_85_3>
+                        <Name>VITIS_LOOP_83_2_VITIS_LOOP_85_3</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>784</TripCount>
+                        <Latency>933</Latency>
+                        <AbsoluteTimeLatency>9.330 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>151</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_83_2_VITIS_LOOP_85_3>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <FF>5304</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>4</UTIL_FF>
+                    <LUT>4755</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>8</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="add" PRAGMA="" RTLNAME="indvars_iv_next188_fu_2697_p2" SOURCE="" URAM="0" VARIABLE="indvars_iv_next188"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="mul" PRAGMA="" RTLNAME="mul_5ns_7ns_11_1_1_U362" SOURCE="" URAM="0" VARIABLE="mul33"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="mul" PRAGMA="" RTLNAME="mul_5ns_7ns_11_1_1_U358" SOURCE="" URAM="0" VARIABLE="mul31"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln83_fu_2729_p2" SOURCE="utils.cpp:83" URAM="0" VARIABLE="add_ln83"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln95_fu_4557_p2" SOURCE="utils.cpp:95" URAM="0" VARIABLE="add_ln95"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="add" PRAGMA="" RTLNAME="indvars_iv_next188_mid1_fu_2831_p2" SOURCE="" URAM="0" VARIABLE="indvars_iv_next188_mid1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln93_fu_2970_p2" SOURCE="utils.cpp:93" URAM="0" VARIABLE="add_ln93"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="mul" PRAGMA="" RTLNAME="mul_5ns_7ns_11_1_1_U363" SOURCE="" URAM="0" VARIABLE="mul51"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln93_1_fu_2994_p2" SOURCE="utils.cpp:93" URAM="0" VARIABLE="add_ln93_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln83_1_fu_2879_p2" SOURCE="utils.cpp:83" URAM="0" VARIABLE="add_ln83_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="mul" PRAGMA="" RTLNAME="mul_5ns_7ns_11_1_1_U364" SOURCE="utils.cpp:83" URAM="0" VARIABLE="mul_ln83"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln93_4_fu_3018_p2" SOURCE="utils.cpp:93" URAM="0" VARIABLE="add_ln93_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="mul" PRAGMA="" RTLNAME="mul_5ns_7ns_11_1_1_U365" SOURCE="utils.cpp:93" URAM="0" VARIABLE="mul_ln93"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln93_5_fu_3027_p2" SOURCE="utils.cpp:93" URAM="0" VARIABLE="add_ln93_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln93_6_fu_3064_p2" SOURCE="utils.cpp:93" URAM="0" VARIABLE="add_ln93_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln93_7_fu_3101_p2" SOURCE="utils.cpp:93" URAM="0" VARIABLE="add_ln93_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln93_2_fu_2772_p2" SOURCE="utils.cpp:93" URAM="0" VARIABLE="add_ln93_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="mul" PRAGMA="" RTLNAME="mul_5ns_7ns_11_1_1_U361" SOURCE="utils.cpp:93" URAM="0" VARIABLE="mul_ln93_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln93_8_fu_3141_p2" SOURCE="utils.cpp:93" URAM="0" VARIABLE="add_ln93_8"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln93_9_fu_3178_p2" SOURCE="utils.cpp:93" URAM="0" VARIABLE="add_ln93_9"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln93_10_fu_3215_p2" SOURCE="utils.cpp:93" URAM="0" VARIABLE="add_ln93_10"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln93_3_fu_2927_p2" SOURCE="utils.cpp:93" URAM="0" VARIABLE="add_ln93_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="mul" PRAGMA="" RTLNAME="mul_5ns_7ns_11_1_1_U366" SOURCE="utils.cpp:93" URAM="0" VARIABLE="mul_ln93_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln93_11_fu_3255_p2" SOURCE="utils.cpp:93" URAM="0" VARIABLE="add_ln93_11"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln93_12_fu_3292_p2" SOURCE="utils.cpp:93" URAM="0" VARIABLE="add_ln93_12"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_83_2_VITIS_LOOP_85_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln93_13_fu_3329_p2" SOURCE="utils.cpp:93" URAM="0" VARIABLE="add_ln93_13"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>conv_3x3</Name>
+            <Loops>
+                <VITIS_LOOP_80_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.256</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>7501</Best-caseLatency>
+                    <Average-caseLatency>7501</Average-caseLatency>
+                    <Worst-caseLatency>7501</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>75.010 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>75.010 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>75.010 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>7501</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_80_1>
+                        <Name>VITIS_LOOP_80_1</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>4</TripCount>
+                        <Latency>7500</Latency>
+                        <AbsoluteTimeLatency>75.000 us</AbsoluteTimeLatency>
+                        <IterationLatency>1875</IterationLatency>
+                        <PipelineDepth>1875</PipelineDepth>
+                        <PipelineType>no</PipelineType>
+                        <InstanceList>
+                            <Instance>grp_conv_3x3_Pipeline_VITIS_LOOP_83_2_VITIS_LOOP_85_3_fu_742</Instance>
+                            <Instance>grp_conv_3x3_Pipeline_VITIS_LOOP_83_2_VITIS_LOOP_85_33_fu_859</Instance>
+                        </InstanceList>
+                    </VITIS_LOOP_80_1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <DSP>135</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>61</UTIL_DSP>
+                    <FF>20936</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>19</UTIL_FF>
+                    <LUT>32267</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>60</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_80_1" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln95_fu_1225_p2" SOURCE="utils.cpp:95" URAM="0" VARIABLE="sub_ln95"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_80_1" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln95_1_fu_1294_p2" SOURCE="utils.cpp:95" URAM="0" VARIABLE="sub_ln95_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_80_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln80_fu_1192_p2" SOURCE="utils.cpp:80" URAM="0" VARIABLE="add_ln80"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>tiled_conv_Pipeline_VITIS_LOOP_116_1_VITIS_LOOP_117_2</Name>
+            <Loops>
+                <VITIS_LOOP_116_1_VITIS_LOOP_117_2/>
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
@@ -1722,27 +1823,27 @@
                     <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>25162</Best-caseLatency>
-                    <Average-caseLatency>25162</Average-caseLatency>
-                    <Worst-caseLatency>25162</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>0.252 ms</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>0.252 ms</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>0.252 ms</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>25162</PipelineInitiationInterval>
+                    <Best-caseLatency>6346</Best-caseLatency>
+                    <Average-caseLatency>6346</Average-caseLatency>
+                    <Worst-caseLatency>6346</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>63.460 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>63.460 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>63.460 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>6346</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
-                    <VITIS_LOOP_115_1_VITIS_LOOP_116_2>
-                        <Name>VITIS_LOOP_115_1_VITIS_LOOP_116_2</Name>
+                    <VITIS_LOOP_116_1_VITIS_LOOP_117_2>
+                        <Name>VITIS_LOOP_116_1_VITIS_LOOP_117_2</Name>
                         <Slack>7.30</Slack>
-                        <TripCount>448</TripCount>
-                        <Latency>25160</Latency>
-                        <AbsoluteTimeLatency>0.252 ms</AbsoluteTimeLatency>
-                        <PipelineII>56</PipelineII>
-                        <PipelineDepth>129</PipelineDepth>
+                        <TripCount>224</TripCount>
+                        <Latency>6344</Latency>
+                        <AbsoluteTimeLatency>63.440 us</AbsoluteTimeLatency>
+                        <PipelineII>28</PipelineII>
+                        <PipelineDepth>101</PipelineDepth>
                         <PipelineType>yes</PipelineType>
                         <InstanceList/>
-                    </VITIS_LOOP_115_1_VITIS_LOOP_116_2>
+                    </VITIS_LOOP_116_1_VITIS_LOOP_117_2>
                 </SummaryOfLoopLatency>
             </PerformanceEstimates>
             <AreaEstimates>
@@ -1750,12 +1851,12 @@
                     <DSP>1</DSP>
                     <AVAIL_DSP>220</AVAIL_DSP>
                     <UTIL_DSP>~0</UTIL_DSP>
-                    <FF>2924</FF>
+                    <FF>1613</FF>
                     <AVAIL_FF>106400</AVAIL_FF>
-                    <UTIL_FF>2</UTIL_FF>
-                    <LUT>6023</LUT>
+                    <UTIL_FF>1</UTIL_FF>
+                    <LUT>3095</LUT>
                     <AVAIL_LUT>53200</AVAIL_LUT>
-                    <UTIL_LUT>11</UTIL_LUT>
+                    <UTIL_LUT>5</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
                     <AVAIL_BRAM>280</AVAIL_BRAM>
                     <UTIL_BRAM>0</UTIL_BRAM>
@@ -1765,66 +1866,42 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln115_2_fu_1288_p2" SOURCE="utils.cpp:115" URAM="0" VARIABLE="add_ln115_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln115_fu_1300_p2" SOURCE="utils.cpp:115" URAM="0" VARIABLE="add_ln115"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln119_fu_1352_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="sub_ln119"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln115_1_fu_1362_p2" SOURCE="utils.cpp:115" URAM="0" VARIABLE="add_ln115_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_6ns_18ns_19s_25_4_1_U309" SOURCE="utils.cpp:115" URAM="0" VARIABLE="mul_ln115"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_fu_1388_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln119_1_fu_1414_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="sub_ln119_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_1_fu_1612_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_2_fu_1622_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_3_fu_1682_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_3"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_4_fu_1692_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_4"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_5_fu_1752_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_5"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_6_fu_1762_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_6"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_7_fu_1822_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_7"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_8_fu_1832_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_8"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_9_fu_1892_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_9"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_10_fu_1902_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_10"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_11_fu_1962_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_11"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_12_fu_1972_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_12"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_13_fu_2032_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_13"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_14_fu_2042_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_14"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_15_fu_2102_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_15"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_16_fu_2112_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_16"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_17_fu_2172_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_17"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_18_fu_2182_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_18"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_19_fu_2242_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_19"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_20_fu_2252_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_20"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_21_fu_2312_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_21"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_22_fu_2322_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_22"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_23_fu_2382_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_23"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_24_fu_2392_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_24"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_25_fu_2452_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_25"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_26_fu_2462_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_26"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_27_fu_2522_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_27"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_28_fu_2532_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_28"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_29_fu_2592_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_29"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_30_fu_2602_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_30"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_31_fu_2662_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_31"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_32_fu_2672_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_32"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_33_fu_2732_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_33"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_34_fu_2742_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_34"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_35_fu_2802_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_35"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_36_fu_2812_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_36"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_37_fu_2872_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_37"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_38_fu_2882_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_38"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_39_fu_2942_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_39"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_40_fu_2952_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_40"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_41_fu_3012_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_41"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_42_fu_3022_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_42"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_43_fu_3082_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_43"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_44_fu_3092_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_44"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_45_fu_3152_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_45"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_46_fu_3162_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_46"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_47_fu_3222_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_47"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_48_fu_3232_p2" SOURCE="utils.cpp:119" URAM="0" VARIABLE="add_ln119_48"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="empty_33_fu_1459_p2" SOURCE="utils.cpp:115" URAM="0" VARIABLE="empty_33"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="sub" PRAGMA="" RTLNAME="empty_34_fu_1484_p2" SOURCE="utils.cpp:115" URAM="0" VARIABLE="empty_34"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_6ns_18ns_19s_25_4_1_U309" SOURCE="utils.cpp:115" URAM="0" VARIABLE="tmp7"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="empty_35_fu_1517_p2" SOURCE="utils.cpp:115" URAM="0" VARIABLE="empty_35"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_1_VITIS_LOOP_116_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln116_fu_4629_p2" SOURCE="utils.cpp:116" URAM="0" VARIABLE="add_ln116"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_116_1_VITIS_LOOP_117_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln116_2_fu_742_p2" SOURCE="utils.cpp:116" URAM="0" VARIABLE="add_ln116_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_116_1_VITIS_LOOP_117_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln116_fu_754_p2" SOURCE="utils.cpp:116" URAM="0" VARIABLE="add_ln116"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_116_1_VITIS_LOOP_117_2" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln120_fu_806_p2" SOURCE="utils.cpp:120" URAM="0" VARIABLE="sub_ln120"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_116_1_VITIS_LOOP_117_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln116_1_fu_816_p2" SOURCE="utils.cpp:116" URAM="0" VARIABLE="add_ln116_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_116_1_VITIS_LOOP_117_2" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_6ns_18ns_19s_25_4_1_U697" SOURCE="utils.cpp:116" URAM="0" VARIABLE="mul_ln116"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_116_1_VITIS_LOOP_117_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln120_fu_842_p2" SOURCE="utils.cpp:120" URAM="0" VARIABLE="add_ln120"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_116_1_VITIS_LOOP_117_2" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln120_1_fu_868_p2" SOURCE="utils.cpp:120" URAM="0" VARIABLE="sub_ln120_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_116_1_VITIS_LOOP_117_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln120_1_fu_948_p2" SOURCE="utils.cpp:120" URAM="0" VARIABLE="add_ln120_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_116_1_VITIS_LOOP_117_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln120_2_fu_958_p2" SOURCE="utils.cpp:120" URAM="0" VARIABLE="add_ln120_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_116_1_VITIS_LOOP_117_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln120_3_fu_996_p2" SOURCE="utils.cpp:120" URAM="0" VARIABLE="add_ln120_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_116_1_VITIS_LOOP_117_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln120_4_fu_1006_p2" SOURCE="utils.cpp:120" URAM="0" VARIABLE="add_ln120_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_116_1_VITIS_LOOP_117_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln120_5_fu_1066_p2" SOURCE="utils.cpp:120" URAM="0" VARIABLE="add_ln120_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_116_1_VITIS_LOOP_117_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln120_6_fu_1076_p2" SOURCE="utils.cpp:120" URAM="0" VARIABLE="add_ln120_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_116_1_VITIS_LOOP_117_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln120_7_fu_1136_p2" SOURCE="utils.cpp:120" URAM="0" VARIABLE="add_ln120_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_116_1_VITIS_LOOP_117_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln120_8_fu_1146_p2" SOURCE="utils.cpp:120" URAM="0" VARIABLE="add_ln120_8"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_116_1_VITIS_LOOP_117_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln120_9_fu_1206_p2" SOURCE="utils.cpp:120" URAM="0" VARIABLE="add_ln120_9"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_116_1_VITIS_LOOP_117_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln120_10_fu_1216_p2" SOURCE="utils.cpp:120" URAM="0" VARIABLE="add_ln120_10"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_116_1_VITIS_LOOP_117_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln120_11_fu_1276_p2" SOURCE="utils.cpp:120" URAM="0" VARIABLE="add_ln120_11"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_116_1_VITIS_LOOP_117_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln120_12_fu_1286_p2" SOURCE="utils.cpp:120" URAM="0" VARIABLE="add_ln120_12"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_116_1_VITIS_LOOP_117_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln120_13_fu_1346_p2" SOURCE="utils.cpp:120" URAM="0" VARIABLE="add_ln120_13"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_116_1_VITIS_LOOP_117_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln120_14_fu_1356_p2" SOURCE="utils.cpp:120" URAM="0" VARIABLE="add_ln120_14"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_116_1_VITIS_LOOP_117_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln120_15_fu_1416_p2" SOURCE="utils.cpp:120" URAM="0" VARIABLE="add_ln120_15"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_116_1_VITIS_LOOP_117_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln120_16_fu_1426_p2" SOURCE="utils.cpp:120" URAM="0" VARIABLE="add_ln120_16"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_116_1_VITIS_LOOP_117_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln120_17_fu_1486_p2" SOURCE="utils.cpp:120" URAM="0" VARIABLE="add_ln120_17"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_116_1_VITIS_LOOP_117_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln120_18_fu_1496_p2" SOURCE="utils.cpp:120" URAM="0" VARIABLE="add_ln120_18"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_116_1_VITIS_LOOP_117_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln120_19_fu_1556_p2" SOURCE="utils.cpp:120" URAM="0" VARIABLE="add_ln120_19"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_116_1_VITIS_LOOP_117_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln120_20_fu_1566_p2" SOURCE="utils.cpp:120" URAM="0" VARIABLE="add_ln120_20"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_116_1_VITIS_LOOP_117_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln120_21_fu_1626_p2" SOURCE="utils.cpp:120" URAM="0" VARIABLE="add_ln120_21"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_116_1_VITIS_LOOP_117_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln120_22_fu_1636_p2" SOURCE="utils.cpp:120" URAM="0" VARIABLE="add_ln120_22"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_116_1_VITIS_LOOP_117_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln120_23_fu_1696_p2" SOURCE="utils.cpp:120" URAM="0" VARIABLE="add_ln120_23"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_116_1_VITIS_LOOP_117_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln120_24_fu_1706_p2" SOURCE="utils.cpp:120" URAM="0" VARIABLE="add_ln120_24"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_116_1_VITIS_LOOP_117_2" OPTYPE="add" PRAGMA="" RTLNAME="empty_34_fu_913_p2" SOURCE="utils.cpp:116" URAM="0" VARIABLE="empty_34"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_116_1_VITIS_LOOP_117_2" OPTYPE="sub" PRAGMA="" RTLNAME="empty_35_fu_938_p2" SOURCE="utils.cpp:116" URAM="0" VARIABLE="empty_35"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_116_1_VITIS_LOOP_117_2" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_6ns_18ns_19s_25_4_1_U697" SOURCE="utils.cpp:116" URAM="0" VARIABLE="tmp7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_116_1_VITIS_LOOP_117_2" OPTYPE="add" PRAGMA="" RTLNAME="empty_36_fu_971_p2" SOURCE="utils.cpp:116" URAM="0" VARIABLE="empty_36"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_116_1_VITIS_LOOP_117_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln117_fu_2410_p2" SOURCE="utils.cpp:117" URAM="0" VARIABLE="add_ln117"/>
             </BindNodes>
         </Module>
         <Module>
@@ -1841,41 +1918,41 @@
                     <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>6653249</Best-caseLatency>
-                    <Average-caseLatency>6653249</Average-caseLatency>
-                    <Worst-caseLatency>6653249</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>66.532 ms</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>66.532 ms</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>66.532 ms</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>6653250</PipelineInitiationInterval>
+                    <Best-caseLatency>7422721</Best-caseLatency>
+                    <Average-caseLatency>7422721</Average-caseLatency>
+                    <Worst-caseLatency>7422721</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>74.227 ms</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>74.227 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>74.227 ms</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>7422722</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
                     <VITIS_LOOP_33_1_VITIS_LOOP_35_2>
                         <Name>VITIS_LOOP_33_1_VITIS_LOOP_35_2</Name>
                         <Slack>7.30</Slack>
-                        <TripCount>16</TripCount>
-                        <Latency>6653248</Latency>
-                        <AbsoluteTimeLatency>66.532 ms</AbsoluteTimeLatency>
-                        <IterationLatency>415828</IterationLatency>
-                        <PipelineDepth>415828</PipelineDepth>
+                        <TripCount>64</TripCount>
+                        <Latency>7422720</Latency>
+                        <AbsoluteTimeLatency>74.227 ms</AbsoluteTimeLatency>
+                        <IterationLatency>115980</IterationLatency>
+                        <PipelineDepth>115980</PipelineDepth>
                         <PipelineType>no</PipelineType>
                         <InstanceList>
-                            <Instance>grp_tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3_fu_420</Instance>
+                            <Instance>grp_tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3_fu_412</Instance>
                         </InstanceList>
                         <VITIS_LOOP_46_3>
                             <Name>VITIS_LOOP_46_3</Name>
                             <Slack>7.30</Slack>
                             <TripCount>8</TripCount>
-                            <Latency>405656</Latency>
-                            <AbsoluteTimeLatency>4.057 ms</AbsoluteTimeLatency>
-                            <IterationLatency>50707</IterationLatency>
-                            <PipelineDepth>50707</PipelineDepth>
+                            <Latency>113200</Latency>
+                            <AbsoluteTimeLatency>1.132 ms</AbsoluteTimeLatency>
+                            <IterationLatency>14150</IterationLatency>
+                            <PipelineDepth>14150</PipelineDepth>
                             <PipelineType>no</PipelineType>
                             <InstanceList>
-                                <Instance>grp_tiled_conv_Pipeline_VITIS_LOOP_60_1_fu_458</Instance>
-                                <Instance>grp_conv_3x3_fu_494</Instance>
-                                <Instance>grp_tiled_conv_Pipeline_VITIS_LOOP_115_1_VITIS_LOOP_116_2_fu_554</Instance>
+                                <Instance>grp_tiled_conv_Pipeline_VITIS_LOOP_60_1_fu_450</Instance>
+                                <Instance>grp_conv_3x3_fu_486</Instance>
+                                <Instance>grp_tiled_conv_Pipeline_VITIS_LOOP_116_1_VITIS_LOOP_117_2_fu_546</Instance>
                             </InstanceList>
                         </VITIS_LOOP_46_3>
                     </VITIS_LOOP_33_1_VITIS_LOOP_35_2>
@@ -1883,51 +1960,51 @@
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <BRAM_18K>91</BRAM_18K>
+                    <BRAM_18K>43</BRAM_18K>
                     <AVAIL_BRAM>280</AVAIL_BRAM>
-                    <UTIL_BRAM>32</UTIL_BRAM>
+                    <UTIL_BRAM>15</UTIL_BRAM>
                     <DSP>136</DSP>
                     <AVAIL_DSP>220</AVAIL_DSP>
                     <UTIL_DSP>61</UTIL_DSP>
-                    <FF>28238</FF>
+                    <FF>29875</FF>
                     <AVAIL_FF>106400</AVAIL_FF>
-                    <UTIL_FF>26</UTIL_FF>
-                    <LUT>41615</LUT>
+                    <UTIL_FF>28</UTIL_FF>
+                    <LUT>45434</LUT>
                     <AVAIL_LUT>53200</AVAIL_LUT>
-                    <UTIL_LUT>78</UTIL_LUT>
+                    <UTIL_LUT>85</UTIL_LUT>
                     <URAM>0</URAM>
                     <AVAIL_URAM>0</AVAIL_URAM>
                     <UTIL_URAM>0</UTIL_URAM>
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_1_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_1"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_2_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_2"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_3_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_3"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_4_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_4"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_5_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_5"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_6_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_6"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_7_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_7"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_8_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_8"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_9_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_9"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_10_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_10"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_11_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_11"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_12_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_12"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_13_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_13"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_14_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_14"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_15_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_15"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_16_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_16"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_17_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_17"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_18_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_18"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_19_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_19"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_20_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_20"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_21_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_21"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_22_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_22"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_23_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_23"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_24_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_24"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_25_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_25"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_26_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_26"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_1_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_1"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_2_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_2"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_3_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_3"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_4_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_4"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_5_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_5"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_6_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_6"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_7_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_7"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_8_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_8"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_9_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_9"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_10_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_10"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_11_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_11"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_12_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_12"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_13_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_13"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_14_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_14"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_15_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_15"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_16_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_16"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_17_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_17"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_18_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_18"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_19_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_19"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_20_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_20"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_21_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_21"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_22_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_22"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_23_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_23"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_24_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_24"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_25_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_25"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_in_buf_26_U" SOURCE="tiled_conv.cpp:21" URAM="0" VARIABLE="conv_in_buf_26"/>
                 <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_wt_buf_U" SOURCE="tiled_conv.cpp:22" URAM="0" VARIABLE="conv_wt_buf"/>
                 <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_wt_buf_1_U" SOURCE="tiled_conv.cpp:22" URAM="0" VARIABLE="conv_wt_buf_1"/>
                 <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_wt_buf_2_U" SOURCE="tiled_conv.cpp:22" URAM="0" VARIABLE="conv_wt_buf_2"/>
@@ -1956,21 +2033,21 @@
                 <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_wt_buf_25_U" SOURCE="tiled_conv.cpp:22" URAM="0" VARIABLE="conv_wt_buf_25"/>
                 <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_wt_buf_26_U" SOURCE="tiled_conv.cpp:22" URAM="0" VARIABLE="conv_wt_buf_26"/>
                 <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="conv_bias_buf_U" SOURCE="tiled_conv.cpp:23" URAM="0" VARIABLE="conv_bias_buf"/>
-                <BindNode BINDTYPE="storage" BRAM="64" BUNDLEDNAME="" DISPNAME="bind_storage rom_np" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_np" PRAGMA="" RTLNAME="conv_out_buf_U" SOURCE="tiled_conv.cpp:24" URAM="0" VARIABLE="conv_out_buf"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_33_1_VITIS_LOOP_35_2" OPTYPE="sub" PRAGMA="" RTLNAME="empty_38_fu_613_p2" SOURCE="" URAM="0" VARIABLE="empty_38"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_33_1_VITIS_LOOP_35_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln33_1_fu_625_p2" SOURCE="tiled_conv.cpp:33" URAM="0" VARIABLE="add_ln33_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_33_1_VITIS_LOOP_35_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln33_fu_634_p2" SOURCE="tiled_conv.cpp:33" URAM="0" VARIABLE="add_ln33"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_33_1_VITIS_LOOP_35_2" OPTYPE="sub" PRAGMA="" RTLNAME="p_mid184_fu_674_p2" SOURCE="tiled_conv.cpp:33" URAM="0" VARIABLE="p_mid184"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_33_1_VITIS_LOOP_35_2" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln27_fu_730_p2" SOURCE="utils.cpp:27" URAM="0" VARIABLE="sub_ln27"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_33_1_VITIS_LOOP_35_2" OPTYPE="add" PRAGMA="" RTLNAME="p_mid129_fu_737_p2" SOURCE="tiled_conv.cpp:33" URAM="0" VARIABLE="p_mid129"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_33_1_VITIS_LOOP_35_2" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln42_1_fu_769_p2" SOURCE="utils.cpp:42" URAM="0" VARIABLE="sub_ln42_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_33_1_VITIS_LOOP_35_2" OPTYPE="sub" PRAGMA="" RTLNAME="empty_42_fu_800_p2" SOURCE="utils.cpp:27" URAM="0" VARIABLE="empty_42"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_33_1_VITIS_LOOP_35_2" OPTYPE="add" PRAGMA="" RTLNAME="tmp6_fu_810_p2" SOURCE="tiled_conv.cpp:46" URAM="0" VARIABLE="tmp6"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_46_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln46_1_fu_815_p2" SOURCE="tiled_conv.cpp:46" URAM="0" VARIABLE="add_ln46_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_46_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln46_fu_827_p2" SOURCE="tiled_conv.cpp:46" URAM="0" VARIABLE="add_ln46"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_46_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln58_fu_849_p2" SOURCE="utils.cpp:58" URAM="0" VARIABLE="add_ln58"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_46_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln58_1_fu_858_p2" SOURCE="utils.cpp:58" URAM="0" VARIABLE="add_ln58_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_33_1_VITIS_LOOP_35_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln35_fu_885_p2" SOURCE="tiled_conv.cpp:35" URAM="0" VARIABLE="add_ln35"/>
+                <BindNode BINDTYPE="storage" BRAM="16" BUNDLEDNAME="" DISPNAME="bind_storage rom_np" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_np" PRAGMA="" RTLNAME="conv_out_buf_U" SOURCE="" URAM="0" VARIABLE="conv_out_buf"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_33_1_VITIS_LOOP_35_2" OPTYPE="sub" PRAGMA="" RTLNAME="empty_39_fu_605_p2" SOURCE="" URAM="0" VARIABLE="empty_39"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_33_1_VITIS_LOOP_35_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln33_1_fu_617_p2" SOURCE="tiled_conv.cpp:33" URAM="0" VARIABLE="add_ln33_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_33_1_VITIS_LOOP_35_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln33_fu_626_p2" SOURCE="tiled_conv.cpp:33" URAM="0" VARIABLE="add_ln33"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_33_1_VITIS_LOOP_35_2" OPTYPE="sub" PRAGMA="" RTLNAME="p_mid184_fu_666_p2" SOURCE="tiled_conv.cpp:33" URAM="0" VARIABLE="p_mid184"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_33_1_VITIS_LOOP_35_2" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln27_fu_722_p2" SOURCE="utils.cpp:27" URAM="0" VARIABLE="sub_ln27"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_33_1_VITIS_LOOP_35_2" OPTYPE="add" PRAGMA="" RTLNAME="p_mid129_fu_729_p2" SOURCE="tiled_conv.cpp:33" URAM="0" VARIABLE="p_mid129"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_33_1_VITIS_LOOP_35_2" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln42_1_fu_761_p2" SOURCE="utils.cpp:42" URAM="0" VARIABLE="sub_ln42_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_33_1_VITIS_LOOP_35_2" OPTYPE="sub" PRAGMA="" RTLNAME="empty_43_fu_792_p2" SOURCE="utils.cpp:27" URAM="0" VARIABLE="empty_43"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_33_1_VITIS_LOOP_35_2" OPTYPE="add" PRAGMA="" RTLNAME="tmp6_fu_802_p2" SOURCE="tiled_conv.cpp:46" URAM="0" VARIABLE="tmp6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_46_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln46_1_fu_807_p2" SOURCE="tiled_conv.cpp:46" URAM="0" VARIABLE="add_ln46_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_46_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln46_fu_819_p2" SOURCE="tiled_conv.cpp:46" URAM="0" VARIABLE="add_ln46"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_46_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln58_fu_841_p2" SOURCE="utils.cpp:58" URAM="0" VARIABLE="add_ln58"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_46_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln58_1_fu_850_p2" SOURCE="utils.cpp:58" URAM="0" VARIABLE="add_ln58_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_33_1_VITIS_LOOP_35_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln35_fu_877_p2" SOURCE="tiled_conv.cpp:35" URAM="0" VARIABLE="add_ln35"/>
             </BindNodes>
         </Module>
     </ModuleInformation>
@@ -2356,17 +2433,17 @@
             <item name="Inferred Burst Summary">
                 <table>
                     <keys size="6">HW Interface, Loop, Direction, Length, Width, Location</keys>
-                    <column name="m_axi_fm">VITIS_LOOP_117_3, write, 56, 32, utils.cpp:117:31</column>
+                    <column name="m_axi_fm">VITIS_LOOP_118_3, write, 28, 32, utils.cpp:118:31</column>
                 </table>
             </item>
             <item name="Inferred Bursts and Widening Missed">
                 <table>
                     <keys size="6">HW Interface, Variable, Loop, Problem, Resolution, Location</keys>
                     <column name="m_axi_fm">input_fm, VITIS_LOOP_33_3, Access load is in the conditional branch, 214-232, utils.cpp:33:30</column>
-                    <column name="m_axi_fm">output_fm, VITIS_LOOP_116_2, Stride is incompatible, 214-230, utils.cpp:116:27</column>
+                    <column name="m_axi_fm">output_fm, VITIS_LOOP_117_2, Stride is incompatible, 214-230, utils.cpp:117:27</column>
                     <column name="m_axi_wt">biases, , Access is clobbered by load, 214-231, utils.cpp:60:22</column>
                     <column name="m_axi_wt">weights, , Access is clobbered by load, 214-231, utils.cpp:60:22</column>
-                    <column name="m_axi_fm">output_fm, VITIS_LOOP_117_3, Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0, 214-353, utils.cpp:117:31</column>
+                    <column name="m_axi_fm">output_fm, VITIS_LOOP_118_3, Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0, 214-353, utils.cpp:118:31</column>
                     <column name="m_axi_wt">biases, VITIS_LOOP_60_1, Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0, 214-353, utils.cpp:60:22</column>
                     <column name="m_axi_wt">weights, VITIS_LOOP_64_4, Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0, 214-353, utils.cpp:64:34</column>
                     <column name="m_axi_wt">, , Could not burst due to multiple potential reads to the same bundle in the same region., 214-224, utils.cpp:60:22</column>
@@ -2386,7 +2463,8 @@
         <Pragma type="array_partition" location="tiled_conv.cpp:29" status="valid" parentFunction="tiled_conv" variable="conv_wt_buf" isDirective="0" options="variable=conv_wt_buf complete dim=2"/>
         <Pragma type="array_partition" location="tiled_conv.cpp:30" status="valid" parentFunction="tiled_conv" variable="conv_wt_buf" isDirective="0" options="variable=conv_wt_buf complete dim=3"/>
         <Pragma type="array_partition" location="tiled_conv.cpp:31" status="valid" parentFunction="tiled_conv" variable="conv_wt_buf" isDirective="0" options="variable=conv_wt_buf complete dim=4"/>
-        <Pragma type="pipeline" location="utils.cpp:86" status="valid" parentFunction="conv_3x3" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="unroll" location="utils.cpp:82" status="valid" parentFunction="conv_3x3" variable="" isDirective="0" options="factor=2"/>
+        <Pragma type="pipeline" location="utils.cpp:87" status="valid" parentFunction="conv_3x3" variable="" isDirective="0" options="II=1"/>
     </PragmaReport>
 </profile>
 

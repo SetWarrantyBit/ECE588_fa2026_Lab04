@@ -1,21 +1,26 @@
 set SynModuleInfo {
   {SRCNAME tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 MODELNAME tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3 RTLNAME tiled_conv_tiled_conv_Pipeline_VITIS_LOOP_29_1_VITIS_LOOP_31_2_VITIS_LOOP_33_3
     SUBMODULES {
-      {MODELNAME tiled_conv_urem_6ns_3ns_2_10_1 RTLNAME tiled_conv_urem_6ns_3ns_2_10_1 BINDTYPE op TYPE urem IMPL auto LATENCY 9 ALLOW_PRAGMA 1}
-      {MODELNAME tiled_conv_mul_6ns_8ns_13_1_1 RTLNAME tiled_conv_mul_6ns_8ns_13_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+      {MODELNAME tiled_conv_urem_5ns_3ns_2_9_1 RTLNAME tiled_conv_urem_5ns_3ns_2_9_1 BINDTYPE op TYPE urem IMPL auto LATENCY 8 ALLOW_PRAGMA 1}
+      {MODELNAME tiled_conv_mul_5ns_7ns_11_1_1 RTLNAME tiled_conv_mul_5ns_7ns_11_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
       {MODELNAME tiled_conv_mul_2ns_19ns_20_1_1 RTLNAME tiled_conv_mul_2ns_19ns_20_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
       {MODELNAME tiled_conv_flow_control_loop_pipe_sequential_init RTLNAME tiled_conv_flow_control_loop_pipe_sequential_init BINDTYPE interface TYPE internal_upc_flow_control INSTNAME tiled_conv_flow_control_loop_pipe_sequential_init_U}
     }
   }
   {SRCNAME tiled_conv_Pipeline_VITIS_LOOP_60_1 MODELNAME tiled_conv_Pipeline_VITIS_LOOP_60_1 RTLNAME tiled_conv_tiled_conv_Pipeline_VITIS_LOOP_60_1}
+  {SRCNAME conv_3x3_Pipeline_VITIS_LOOP_83_2_VITIS_LOOP_85_3 MODELNAME conv_3x3_Pipeline_VITIS_LOOP_83_2_VITIS_LOOP_85_3 RTLNAME tiled_conv_conv_3x3_Pipeline_VITIS_LOOP_83_2_VITIS_LOOP_85_3
+    SUBMODULES {
+      {MODELNAME tiled_conv_mux_32_32_1_1 RTLNAME tiled_conv_mux_32_32_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+    }
+  }
+  {SRCNAME conv_3x3_Pipeline_VITIS_LOOP_83_2_VITIS_LOOP_85_33 MODELNAME conv_3x3_Pipeline_VITIS_LOOP_83_2_VITIS_LOOP_85_33 RTLNAME tiled_conv_conv_3x3_Pipeline_VITIS_LOOP_83_2_VITIS_LOOP_85_33}
   {SRCNAME conv_3x3 MODELNAME conv_3x3 RTLNAME tiled_conv_conv_3x3
     SUBMODULES {
       {MODELNAME tiled_conv_fadd_32ns_32ns_32_5_full_dsp_1 RTLNAME tiled_conv_fadd_32ns_32ns_32_5_full_dsp_1 BINDTYPE op TYPE fadd IMPL fulldsp LATENCY 4 ALLOW_PRAGMA 1}
       {MODELNAME tiled_conv_fmul_32ns_32ns_32_4_max_dsp_1 RTLNAME tiled_conv_fmul_32ns_32ns_32_4_max_dsp_1 BINDTYPE op TYPE fmul IMPL maxdsp LATENCY 3 ALLOW_PRAGMA 1}
-      {MODELNAME tiled_conv_mux_32_32_1_1 RTLNAME tiled_conv_mux_32_32_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
     }
   }
-  {SRCNAME tiled_conv_Pipeline_VITIS_LOOP_115_1_VITIS_LOOP_116_2 MODELNAME tiled_conv_Pipeline_VITIS_LOOP_115_1_VITIS_LOOP_116_2 RTLNAME tiled_conv_tiled_conv_Pipeline_VITIS_LOOP_115_1_VITIS_LOOP_116_2
+  {SRCNAME tiled_conv_Pipeline_VITIS_LOOP_116_1_VITIS_LOOP_117_2 MODELNAME tiled_conv_Pipeline_VITIS_LOOP_116_1_VITIS_LOOP_117_2 RTLNAME tiled_conv_tiled_conv_Pipeline_VITIS_LOOP_116_1_VITIS_LOOP_117_2
     SUBMODULES {
       {MODELNAME tiled_conv_fcmp_32ns_32ns_1_2_no_dsp_1 RTLNAME tiled_conv_fcmp_32ns_32ns_1_2_no_dsp_1 BINDTYPE op TYPE fcmp IMPL auto LATENCY 1 ALLOW_PRAGMA 1}
       {MODELNAME tiled_conv_mac_muladd_6ns_18ns_19s_25_4_1 RTLNAME tiled_conv_mac_muladd_6ns_18ns_19s_25_4_1 BINDTYPE op TYPE all IMPL dsp48 LATENCY 3 ALLOW_PRAGMA 1}

@@ -703,7 +703,7 @@ newFuncRoot:5 %sext_ln60_cast = sext i62 %sext_ln60_read
 
 <Node id="38" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-newFuncRoot:6 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %wt, void @empty_17, i32 0, i32 0, void @empty_18, i32 64, i32 1, void @empty_12, void @empty_11, void @empty_18, i32 16, i32 16, i32 16, i32 16, void @empty_18, void @empty_18, i32 4294967295, i32 0
+newFuncRoot:6 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %wt, void @empty_17, i32 0, i32 0, void @empty_18, i32 64, i32 1, void @empty_13, void @empty_12, void @empty_18, i32 16, i32 16, i32 16, i32 16, void @empty_18, void @empty_18, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -34049,7 +34049,7 @@ VITIS_LOOP_62_2.i.split:226 %wt_addr_read = read i32 @_ssdm_op_Read.m_axi.i32P1A
 
 <Node id="54" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-VITIS_LOOP_62_2.i.split:3 %specloopname_ln60 = specloopname void @_ssdm_op_SpecLoopName, void @empty_13
+VITIS_LOOP_62_2.i.split:3 %specloopname_ln60 = specloopname void @_ssdm_op_SpecLoopName, void @empty_14
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln60"/></StgValue>
@@ -34276,9 +34276,9 @@ VITIS_LOOP_62_2.i.split:232 %br_ln60 = br void %VITIS_LOOP_62_2.i
 </dataflow>
 <dataflow id="2544" from="StgValue_2522" to="specinterface_ln0" fromId="2522" toId="109">
 </dataflow>
-<dataflow id="2546" from="empty_12" to="specinterface_ln0" fromId="2545" toId="109">
+<dataflow id="2546" from="empty_13" to="specinterface_ln0" fromId="2545" toId="109">
 </dataflow>
-<dataflow id="2548" from="empty_11" to="specinterface_ln0" fromId="2547" toId="109">
+<dataflow id="2548" from="empty_12" to="specinterface_ln0" fromId="2547" toId="109">
 </dataflow>
 <dataflow id="2549" from="empty_18" to="specinterface_ln0" fromId="2540" toId="109">
 </dataflow>
@@ -46840,7 +46840,7 @@ VITIS_LOOP_62_2.i.split:232 %br_ln60 = br void %VITIS_LOOP_62_2.i
 </dataflow>
 <dataflow id="8870" from="_ssdm_op_SpecLoopName" to="specloopname_ln60" fromId="8869" toId="2280">
 </dataflow>
-<dataflow id="8872" from="empty_13" to="specloopname_ln60" fromId="8871" toId="2280">
+<dataflow id="8872" from="empty_14" to="specloopname_ln60" fromId="8871" toId="2280">
 </dataflow>
 <dataflow id="8873" from="wt_addr_read" to="bitcast_ln67" fromId="2279" toId="2281">
 </dataflow>

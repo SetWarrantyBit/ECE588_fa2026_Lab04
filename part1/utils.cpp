@@ -79,6 +79,7 @@ void conv_3x3(
     // TODO: YOUR IMPLEMENTATION GOES HERE
     for (int f = 0; f < OUT_BUF_DEPTH; f++)          // kernel (0~3)
     {
+#pragma HLS UNROLL factor=2
         for (int i = 0; i < OUT_BUF_HW; i++)         // output row (0~6)
         {
             for (int j = 0; j < OUT_BUF_HW; j++)     // output col (0~6)

@@ -1,0 +1,936 @@
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: utils.cpp, Line: 90, Column: 34 }
+Function:        _Z8conv_3x3PA30_A30_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_PA28_A28_S2_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_90_4
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: utils.cpp, Line: 91, Column: 38 }
+Function:        _Z8conv_3x3PA30_A30_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_PA28_A28_S2_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_91_5
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: utils.cpp, Line: 92, Column: 42 }
+Function:        _Z8conv_3x3PA30_A30_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_PA28_A28_S2_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_92_6
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartiallyUnroll
+DebugLoc:        { File: utils.cpp, Line: 77, Column: 0 }
+Function:        _Z8conv_3x3PA30_A30_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_PA28_A28_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_80_1
+  - String:          ''' ('
+  - LoopLoc:         'utils.cpp:80:22'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv_3x3
+  - String:          ''' partially '
+  - String:          ''
+  - String:          'with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: utils.cpp, Line: 77, Column: 0 }
+Function:        _Z8conv_3x3PA30_A30_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_PA28_A28_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_90_4
+  - String:          ''' ('
+  - LoopLoc:         'utils.cpp:90:34'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv_3x3
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: utils.cpp, Line: 77, Column: 0 }
+Function:        _Z8conv_3x3PA30_A30_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_PA28_A28_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_91_5
+  - String:          ''' ('
+  - LoopLoc:         'utils.cpp:91:38'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv_3x3
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: utils.cpp, Line: 77, Column: 0 }
+Function:        _Z8conv_3x3PA30_A30_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_PA28_A28_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_92_6
+  - String:          ''' ('
+  - LoopLoc:         'utils.cpp:92:42'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv_3x3
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: utils.cpp, Line: 77, Column: 0 }
+Function:        _Z8conv_3x3PA30_A30_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_PA28_A28_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_92_6
+  - String:          ''' ('
+  - LoopLoc:         'utils.cpp:92:42'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv_3x3
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: utils.cpp, Line: 77, Column: 0 }
+Function:        _Z8conv_3x3PA30_A30_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_PA28_A28_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_92_6
+  - String:          ''' ('
+  - LoopLoc:         'utils.cpp:92:42'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv_3x3
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: utils.cpp, Line: 77, Column: 0 }
+Function:        _Z8conv_3x3PA30_A30_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_PA28_A28_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_91_5
+  - String:          ''' ('
+  - LoopLoc:         'utils.cpp:91:38'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv_3x3
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: utils.cpp, Line: 77, Column: 0 }
+Function:        _Z8conv_3x3PA30_A30_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_PA28_A28_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_92_6
+  - String:          ''' ('
+  - LoopLoc:         'utils.cpp:92:42'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv_3x3
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: utils.cpp, Line: 77, Column: 0 }
+Function:        _Z8conv_3x3PA30_A30_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_PA28_A28_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_92_6
+  - String:          ''' ('
+  - LoopLoc:         'utils.cpp:92:42'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv_3x3
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: utils.cpp, Line: 77, Column: 0 }
+Function:        _Z8conv_3x3PA30_A30_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_PA28_A28_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_92_6
+  - String:          ''' ('
+  - LoopLoc:         'utils.cpp:92:42'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv_3x3
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: utils.cpp, Line: 77, Column: 0 }
+Function:        _Z8conv_3x3PA30_A30_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_PA28_A28_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_91_5
+  - String:          ''' ('
+  - LoopLoc:         'utils.cpp:91:38'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv_3x3
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: utils.cpp, Line: 77, Column: 0 }
+Function:        _Z8conv_3x3PA30_A30_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_PA28_A28_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_92_6
+  - String:          ''' ('
+  - LoopLoc:         'utils.cpp:92:42'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv_3x3
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: utils.cpp, Line: 77, Column: 0 }
+Function:        _Z8conv_3x3PA30_A30_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_PA28_A28_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_92_6
+  - String:          ''' ('
+  - LoopLoc:         'utils.cpp:92:42'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv_3x3
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: utils.cpp, Line: 77, Column: 0 }
+Function:        _Z8conv_3x3PA30_A30_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_PA28_A28_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_92_6
+  - String:          ''' ('
+  - LoopLoc:         'utils.cpp:92:42'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv_3x3
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: utils.cpp, Line: 77, Column: 0 }
+Function:        _Z8conv_3x3PA30_A30_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_PA28_A28_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_90_4
+  - String:          ''' ('
+  - LoopLoc:         'utils.cpp:90:34'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv_3x3
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: utils.cpp, Line: 77, Column: 0 }
+Function:        _Z8conv_3x3PA30_A30_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_PA28_A28_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_91_5
+  - String:          ''' ('
+  - LoopLoc:         'utils.cpp:91:38'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv_3x3
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: utils.cpp, Line: 77, Column: 0 }
+Function:        _Z8conv_3x3PA30_A30_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_PA28_A28_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_92_6
+  - String:          ''' ('
+  - LoopLoc:         'utils.cpp:92:42'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv_3x3
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: utils.cpp, Line: 77, Column: 0 }
+Function:        _Z8conv_3x3PA30_A30_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_PA28_A28_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_92_6
+  - String:          ''' ('
+  - LoopLoc:         'utils.cpp:92:42'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv_3x3
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: utils.cpp, Line: 77, Column: 0 }
+Function:        _Z8conv_3x3PA30_A30_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_PA28_A28_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_92_6
+  - String:          ''' ('
+  - LoopLoc:         'utils.cpp:92:42'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv_3x3
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: utils.cpp, Line: 77, Column: 0 }
+Function:        _Z8conv_3x3PA30_A30_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_PA28_A28_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_91_5
+  - String:          ''' ('
+  - LoopLoc:         'utils.cpp:91:38'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv_3x3
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: utils.cpp, Line: 77, Column: 0 }
+Function:        _Z8conv_3x3PA30_A30_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_PA28_A28_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_92_6
+  - String:          ''' ('
+  - LoopLoc:         'utils.cpp:92:42'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv_3x3
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: utils.cpp, Line: 77, Column: 0 }
+Function:        _Z8conv_3x3PA30_A30_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_PA28_A28_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_92_6
+  - String:          ''' ('
+  - LoopLoc:         'utils.cpp:92:42'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv_3x3
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: utils.cpp, Line: 77, Column: 0 }
+Function:        _Z8conv_3x3PA30_A30_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_PA28_A28_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_92_6
+  - String:          ''' ('
+  - LoopLoc:         'utils.cpp:92:42'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv_3x3
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: utils.cpp, Line: 77, Column: 0 }
+Function:        _Z8conv_3x3PA30_A30_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_PA28_A28_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_91_5
+  - String:          ''' ('
+  - LoopLoc:         'utils.cpp:91:38'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv_3x3
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: utils.cpp, Line: 77, Column: 0 }
+Function:        _Z8conv_3x3PA30_A30_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_PA28_A28_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_92_6
+  - String:          ''' ('
+  - LoopLoc:         'utils.cpp:92:42'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv_3x3
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: utils.cpp, Line: 77, Column: 0 }
+Function:        _Z8conv_3x3PA30_A30_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_PA28_A28_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_92_6
+  - String:          ''' ('
+  - LoopLoc:         'utils.cpp:92:42'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv_3x3
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: utils.cpp, Line: 77, Column: 0 }
+Function:        _Z8conv_3x3PA30_A30_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_PA28_A28_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_92_6
+  - String:          ''' ('
+  - LoopLoc:         'utils.cpp:92:42'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv_3x3
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
+Function:        _Z10tiled_convPA224_A224_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_S5_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'load_input_tile_from_DRAM(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [224][224], ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [30][30], int, int)'
+    DebugLoc:        { File: utils.cpp, Line: 23, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'tiled_conv(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [224][224], ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3][3][3], ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [224][224])'
+    DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
+Function:        _Z10tiled_convPA224_A224_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_S5_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'load_layer_params_from_DRAM(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3][3][3], ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3][3][3], ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, int)'
+    DebugLoc:        { File: utils.cpp, Line: 55, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'tiled_conv(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [224][224], ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3][3][3], ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [224][224])'
+    DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
+Function:        _Z10tiled_convPA224_A224_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_S5_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'store_output_tile_to_DRAM(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [28][28], ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [224][224], int, int, int)'
+    DebugLoc:        { File: utils.cpp, Line: 108, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'tiled_conv(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [224][224], ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3][3][3], ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [224][224])'
+    DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: tiled_conv.cpp, Line: 20, Column: 7 }
+Function:        _Z10tiled_convPA224_A224_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_S5_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          conv_in_buf
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '3'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '3'
+  - String:          ' on dimension '
+  - Dim:             '3'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: tiled_conv.cpp, Line: 21, Column: 10 }
+Function:        _Z10tiled_convPA224_A224_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_S5_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          conv_wt_buf
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '3'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '4'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+Function:        apatb_tiled_conv_ir
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        maxi
+  - String:          ' variable '''
+  - Name:            output_fm
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=none'
+  - String:          ' mode in '
+  - Bitwidth:        '16'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
+Function:        _Z10tiled_convPA224_A224_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_S5_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        maxi
+  - String:          ' variable '''
+  - Name:            weights
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=none'
+  - String:          ' mode in '
+  - Bitwidth:        '16'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+Function:        apatb_tiled_conv_ir
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        maxi
+  - String:          ' variable '''
+  - Name:            input_fm
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=none'
+  - String:          ' mode in '
+  - Bitwidth:        '16'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: utils.cpp, Line: 60, Column: 22 }
+Function:        _Z10tiled_convPA224_A224_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_S5_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '216'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc.i8.load.32
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - String:          ' '
+  - ArrayName:       weights
+  - String:          ' '
+  - BundleName:      wt
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_60_1
+  - String:          ' '
+  - LoopLoc:         'utils.cpp:60:22'
+  - String:          ' '
+  - Function:        'tiled_conv(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [224][224], ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3][3][3], ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [224][224])'
+    DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: utils.cpp, Line: 60, Column: 22 }
+Function:        _Z10tiled_convPA224_A224_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_S5_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '8'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc38.i.load.3
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep1seq
+  - String:          ' '
+  - ArrayName:       biases
+  - String:          ' '
+  - BundleName:      wt
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_60_1
+  - String:          ' '
+  - LoopLoc:         'utils.cpp:60:22'
+  - String:          ' '
+  - Function:        'tiled_conv(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [224][224], ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3][3][3], ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [224][224])'
+    DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: utils.cpp, Line: 118, Column: 31 }
+Function:        _Z10tiled_convPA224_A224_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_S5_
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of length '
+  - Length:          '28'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.body11.i.store.12
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep2seq
+  - String:          ' '
+  - ArrayName:       output_fm
+  - String:          ' '
+  - BundleName:      fm
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_118_3
+  - String:          ' '
+  - LoopLoc:         'utils.cpp:118:31'
+  - String:          ' '
+  - Function:        'tiled_conv(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [224][224], ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3][3][3], ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [224][224])'
+    DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: utils.cpp, Line: 42, Column: 40 }
+Function:        _Z10tiled_convPA224_A224_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_S5_
+Args:            
+  - String:          'Access '
+  - Access:          load
+    DebugLoc:        { File: utils.cpp, Line: 42, Column: 40 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        if.else.i.load.1
+  - String:          ' '
+  - ArrayName:       input_fm
+  - String:          ' '
+  - BundleName:      fm
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_33_3
+  - String:          ' '
+  - LoopLoc:         'utils.cpp:33:30'
+  - String:          ' '
+  - Function:        'tiled_conv(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [224][224], ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3][3][3], ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [224][224])'
+    DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: utils.cpp, Line: 118, Column: 31 }
+Function:        _Z10tiled_convPA224_A224_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_S5_
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep2seq
+  - String:          ' '
+  - ArrayName:       output_fm
+  - String:          ' '
+  - BundleName:      fm
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_117_2
+  - String:          ' '
+  - LoopLoc:         'utils.cpp:117:27'
+  - String:          ' '
+  - Function:        'tiled_conv(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [224][224], ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3][3][3], ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [224][224])'
+    DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+DebugLoc:        { File: utils.cpp, Line: 60, Column: 22 }
+Function:        _Z10tiled_convPA224_A224_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_S5_
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     load
+    DebugLoc:        { File: utils.cpp, Line: 65, Column: 47 }
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep1seq
+  - String:          ' '
+  - ArrayName:       biases
+  - String:          ' '
+  - BundleName:      wt
+  - String:          ' '
+  - Function:        'tiled_conv(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [224][224], ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3][3][3], ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [224][224])'
+    DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+DebugLoc:        { File: utils.cpp, Line: 60, Column: 22 }
+Function:        _Z10tiled_convPA224_A224_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_S5_
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     load
+    DebugLoc:        { File: utils.cpp, Line: 67, Column: 23 }
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - String:          ' '
+  - ArrayName:       weights
+  - String:          ' '
+  - BundleName:      wt
+  - String:          ' '
+  - Function:        'tiled_conv(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [224][224], ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3][3][3], ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [224][224])'
+    DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: utils.cpp, Line: 118, Column: 31 }
+Function:        _Z10tiled_convPA224_A224_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_S5_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i16
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep2seq
+  - String:          ' '
+  - ArrayName:       output_fm
+  - String:          ' '
+  - BundleName:      fm
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_118_3
+  - String:          ' '
+  - LoopLoc:         'utils.cpp:118:31'
+  - String:          ' '
+  - Function:        'tiled_conv(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [224][224], ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3][3][3], ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [224][224])'
+    DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: utils.cpp, Line: 60, Column: 22 }
+Function:        _Z10tiled_convPA224_A224_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_S5_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i16
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep1seq
+  - String:          ' '
+  - ArrayName:       biases
+  - String:          ' '
+  - BundleName:      wt
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_60_1
+  - String:          ' '
+  - LoopLoc:         'utils.cpp:60:22'
+  - String:          ' '
+  - Function:        'tiled_conv(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [224][224], ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3][3][3], ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [224][224])'
+    DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: utils.cpp, Line: 60, Column: 22 }
+Function:        _Z10tiled_convPA224_A224_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_S5_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i16
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - String:          ' '
+  - ArrayName:       weights
+  - String:          ' '
+  - BundleName:      wt
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_64_4
+  - String:          ' '
+  - LoopLoc:         'utils.cpp:64:34'
+  - String:          ' '
+  - Function:        'tiled_conv(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [224][224], ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3][3][3], ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [224][224])'
+    DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            BurstConflict
+DebugLoc:        { File: utils.cpp, Line: 60, Column: 22 }
+Function:        _Z10tiled_convPA224_A224_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_S5_
+Args:            
+  - String:          'Could not burst due to multiple potential '
+  - Direction:       reads
+  - String:          ' to the same bundle in the same region.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      wt
+  - String:          ' '
+  - Function:        'tiled_conv(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [224][224], ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3][3][3], ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [224][224])'
+    DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: utils.cpp, Line: 118, Column: 31 }
+Function:        _Z10tiled_convPA224_A224_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_S5_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '28'
+  - String:          ' and bit width '
+  - Width:           '16'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq2
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      fm
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_118_3
+  - String:          ' '
+  - LoopLoc:         'utils.cpp:118:31'
+  - String:          ' '
+  - Function:        'tiled_conv(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [224][224], ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3][3][3], ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [224][224])'
+    DebugLoc:        { File: tiled_conv.cpp, Line: 13, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: utils.cpp, Line: 118, Column: 31 }
+Function:        _Z10tiled_convPA224_A224_8ap_fixedILi16ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA3_A3_A3_S2_PS2_S5_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '28'
+  - String:          ' and bit width '
+  - Width:           '16'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_118_3
+  - String:          '''('
+  - LoopLoc:         'utils.cpp:118:31'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      fm
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
